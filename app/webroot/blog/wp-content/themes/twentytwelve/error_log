@@ -1,0 +1,2 @@
+[28-Oct-2013 09:18:59 America/Los_Angeles] PHP Fatal error:  Call to undefined function get_header() in /home/gourmet/public_html/app/webroot/blog/wp-content/themes/twentytwelve/tag.php on line 14
+[28-Oct-2013 22:13:25 America/Los_Angeles] PHP Fatal error:  Call to undefined function get_header() in /home/gourmet/public_html/app/webroot/blog/wp-content/themes/twentytwelve/tag.php on line 14

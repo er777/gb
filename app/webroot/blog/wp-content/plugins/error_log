@@ -1,0 +1,2 @@
+[05-Nov-2013 10:31:54 America/Los_Angeles] PHP Fatal error:  Call to undefined function add_action() in /home/gourmet/public_html/app/webroot/blog/wp-content/plugins/hello.php on line 60
+[06-Nov-2013 04:31:22 America/Los_Angeles] PHP Fatal error:  Call to undefined function add_action() in /home/gourmet/public_html/app/webroot/blog/wp-content/plugins/hello.php on line 60
