@@ -1,0 +1,6 @@
+[submodule "app/Plugin/Blog"]
+	path = app/Plugin/Blog
+	url = git://github.com/neilcrookes/CakePHP-Blog-Plugin.git
+[submodule "app/plugins/habtm_counter_cache"]
+	path = app/plugins/habtm_counter_cache
+	url = git://github.com/neilcrookes/CakePHP-HABTM-Counter-Cache-Plugin.git
