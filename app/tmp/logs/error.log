@@ -2606,3 +2606,268 @@ Stack Trace:
 #12 /home/gogo/public_html/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #13 /home/gogo/public_html/index.php(43): require('/home/gogo/publ...')
 #14 {main}
+2013-11-10 10:58:41 Warning: Warning (512): Model "Ustradition" is not associated with model "User" in [/home/gogo/public_html/lib/Cake/Model/Behavior/ContainableBehavior.php, line 344]
+Trace:
+ContainableBehavior::containments() - CORE/Cake/Model/Behavior/ContainableBehavior.php, line 344
+ContainableBehavior::beforeFind() - CORE/Cake/Model/Behavior/ContainableBehavior.php, line 125
+ObjectCollection::trigger() - CORE/Cake/Utility/ObjectCollection.php, line 132
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE/Cake/Event/CakeEventManager.php, line 248
+Model::buildQuery() - CORE/Cake/Model/Model.php, line 2799
+Model::find() - CORE/Cake/Model/Model.php, line 2717
+AppController::beforeFilter() - APP/Controller/AppController.php, line 111
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE/Cake/Event/CakeEventManager.php, line 248
+Controller::startupProcess() - CORE/Cake/Controller/Controller.php, line 674
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 184
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 97
+
+2013-11-10 10:58:41 Warning: Warning (512): Model "Ustradition" is not associated with model "Ustradition" in [/home/gogo/public_html/lib/Cake/Model/Behavior/ContainableBehavior.php, line 344]
+Trace:
+ContainableBehavior::containments() - CORE/Cake/Model/Behavior/ContainableBehavior.php, line 344
+ContainableBehavior::beforeFind() - CORE/Cake/Model/Behavior/ContainableBehavior.php, line 125
+ObjectCollection::trigger() - CORE/Cake/Utility/ObjectCollection.php, line 132
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE/Cake/Event/CakeEventManager.php, line 248
+Model::buildQuery() - CORE/Cake/Model/Model.php, line 2799
+Model::find() - CORE/Cake/Model/Model.php, line 2717
+AppController::beforeFilter() - APP/Controller/AppController.php, line 111
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE/Cake/Event/CakeEventManager.php, line 248
+Controller::startupProcess() - CORE/Cake/Controller/Controller.php, line 674
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 184
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 97
+
+2013-11-10 14:48:59 Warning: Warning (512): Model "Ustradition" is not associated with model "User" in [/home/gogo/public_html/lib/Cake/Model/Behavior/ContainableBehavior.php, line 344]
+Trace:
+ContainableBehavior::containments() - CORE/Cake/Model/Behavior/ContainableBehavior.php, line 344
+ContainableBehavior::beforeFind() - CORE/Cake/Model/Behavior/ContainableBehavior.php, line 125
+ObjectCollection::trigger() - CORE/Cake/Utility/ObjectCollection.php, line 132
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE/Cake/Event/CakeEventManager.php, line 248
+Model::buildQuery() - CORE/Cake/Model/Model.php, line 2799
+Model::find() - CORE/Cake/Model/Model.php, line 2717
+AppController::beforeFilter() - APP/Controller/AppController.php, line 111
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE/Cake/Event/CakeEventManager.php, line 248
+Controller::startupProcess() - CORE/Cake/Controller/Controller.php, line 674
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 184
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 97
+
+2013-11-10 14:48:59 Warning: Warning (512): Model "Ustradition" is not associated with model "Ustradition" in [/home/gogo/public_html/lib/Cake/Model/Behavior/ContainableBehavior.php, line 344]
+Trace:
+ContainableBehavior::containments() - CORE/Cake/Model/Behavior/ContainableBehavior.php, line 344
+ContainableBehavior::beforeFind() - CORE/Cake/Model/Behavior/ContainableBehavior.php, line 125
+ObjectCollection::trigger() - CORE/Cake/Utility/ObjectCollection.php, line 132
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE/Cake/Event/CakeEventManager.php, line 248
+Model::buildQuery() - CORE/Cake/Model/Model.php, line 2799
+Model::find() - CORE/Cake/Model/Model.php, line 2717
+AppController::beforeFilter() - APP/Controller/AppController.php, line 111
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE/Cake/Event/CakeEventManager.php, line 248
+Controller::startupProcess() - CORE/Cake/Controller/Controller.php, line 674
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 184
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 97
+
+2013-11-10 16:02:20 Warning: Warning (512): Model "Ustradition" is not associated with model "User" in [/home/gogo/public_html/lib/Cake/Model/Behavior/ContainableBehavior.php, line 344]
+Trace:
+ContainableBehavior::containments() - CORE/Cake/Model/Behavior/ContainableBehavior.php, line 344
+ContainableBehavior::beforeFind() - CORE/Cake/Model/Behavior/ContainableBehavior.php, line 125
+ObjectCollection::trigger() - CORE/Cake/Utility/ObjectCollection.php, line 132
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE/Cake/Event/CakeEventManager.php, line 248
+Model::buildQuery() - CORE/Cake/Model/Model.php, line 2799
+Model::find() - CORE/Cake/Model/Model.php, line 2717
+AppController::beforeFilter() - APP/Controller/AppController.php, line 111
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE/Cake/Event/CakeEventManager.php, line 248
+Controller::startupProcess() - CORE/Cake/Controller/Controller.php, line 674
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 184
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 97
+
+2013-11-10 16:02:20 Warning: Warning (512): Model "Ustradition" is not associated with model "Ustradition" in [/home/gogo/public_html/lib/Cake/Model/Behavior/ContainableBehavior.php, line 344]
+Trace:
+ContainableBehavior::containments() - CORE/Cake/Model/Behavior/ContainableBehavior.php, line 344
+ContainableBehavior::beforeFind() - CORE/Cake/Model/Behavior/ContainableBehavior.php, line 125
+ObjectCollection::trigger() - CORE/Cake/Utility/ObjectCollection.php, line 132
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE/Cake/Event/CakeEventManager.php, line 248
+Model::buildQuery() - CORE/Cake/Model/Model.php, line 2799
+Model::find() - CORE/Cake/Model/Model.php, line 2717
+AppController::beforeFilter() - APP/Controller/AppController.php, line 111
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE/Cake/Event/CakeEventManager.php, line 248
+Controller::startupProcess() - CORE/Cake/Controller/Controller.php, line 674
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 184
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 97
+
+2013-11-10 16:03:57 Error: [MissingControllerException] Controller class ~gogoController could not be found.
+Exception Attributes: array (
+  'class' => '~gogoController',
+  'plugin' => NULL,
+)
+Request URL: /~gogo/img/drop-arrow.png
+Stack Trace:
+#0 /home/gogo/public_html/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-10 16:07:19 Error: [MissingControllerException] Controller class ~gogoController could not be found.
+Exception Attributes: array (
+  'class' => '~gogoController',
+  'plugin' => NULL,
+)
+Request URL: /~gogo/img/drop-arrow.png
+Stack Trace:
+#0 /home/gogo/public_html/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-11-10 18:55:55 Warning: Warning (512): Model "Ustradition" is not associated with model "User" in [/home/gogo/public_html/lib/Cake/Model/Behavior/ContainableBehavior.php, line 344]
+Trace:
+ContainableBehavior::containments() - CORE/Cake/Model/Behavior/ContainableBehavior.php, line 344
+ContainableBehavior::beforeFind() - CORE/Cake/Model/Behavior/ContainableBehavior.php, line 125
+ObjectCollection::trigger() - CORE/Cake/Utility/ObjectCollection.php, line 132
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE/Cake/Event/CakeEventManager.php, line 248
+Model::buildQuery() - CORE/Cake/Model/Model.php, line 2799
+Model::find() - CORE/Cake/Model/Model.php, line 2717
+AppController::beforeFilter() - APP/Controller/AppController.php, line 111
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE/Cake/Event/CakeEventManager.php, line 248
+Controller::startupProcess() - CORE/Cake/Controller/Controller.php, line 674
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 184
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 97
+
+2013-11-10 18:55:55 Warning: Warning (512): Model "Ustradition" is not associated with model "Ustradition" in [/home/gogo/public_html/lib/Cake/Model/Behavior/ContainableBehavior.php, line 344]
+Trace:
+ContainableBehavior::containments() - CORE/Cake/Model/Behavior/ContainableBehavior.php, line 344
+ContainableBehavior::beforeFind() - CORE/Cake/Model/Behavior/ContainableBehavior.php, line 125
+ObjectCollection::trigger() - CORE/Cake/Utility/ObjectCollection.php, line 132
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE/Cake/Event/CakeEventManager.php, line 248
+Model::buildQuery() - CORE/Cake/Model/Model.php, line 2799
+Model::find() - CORE/Cake/Model/Model.php, line 2717
+AppController::beforeFilter() - APP/Controller/AppController.php, line 111
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE/Cake/Event/CakeEventManager.php, line 248
+Controller::startupProcess() - CORE/Cake/Controller/Controller.php, line 674
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 184
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 97
+
+2013-11-10 19:07:44 Warning: Warning (512): Model "Ustradition" is not associated with model "User" in [/home/gogo/public_html/lib/Cake/Model/Behavior/ContainableBehavior.php, line 344]
+Trace:
+ContainableBehavior::containments() - CORE/Cake/Model/Behavior/ContainableBehavior.php, line 344
+ContainableBehavior::beforeFind() - CORE/Cake/Model/Behavior/ContainableBehavior.php, line 125
+ObjectCollection::trigger() - CORE/Cake/Utility/ObjectCollection.php, line 132
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE/Cake/Event/CakeEventManager.php, line 248
+Model::buildQuery() - CORE/Cake/Model/Model.php, line 2799
+Model::find() - CORE/Cake/Model/Model.php, line 2717
+AppController::beforeFilter() - APP/Controller/AppController.php, line 111
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE/Cake/Event/CakeEventManager.php, line 248
+Controller::startupProcess() - CORE/Cake/Controller/Controller.php, line 674
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 184
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 97
+
+2013-11-10 19:07:44 Warning: Warning (512): Model "Ustradition" is not associated with model "Ustradition" in [/home/gogo/public_html/lib/Cake/Model/Behavior/ContainableBehavior.php, line 344]
+Trace:
+ContainableBehavior::containments() - CORE/Cake/Model/Behavior/ContainableBehavior.php, line 344
+ContainableBehavior::beforeFind() - CORE/Cake/Model/Behavior/ContainableBehavior.php, line 125
+ObjectCollection::trigger() - CORE/Cake/Utility/ObjectCollection.php, line 132
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE/Cake/Event/CakeEventManager.php, line 248
+Model::buildQuery() - CORE/Cake/Model/Model.php, line 2799
+Model::find() - CORE/Cake/Model/Model.php, line 2717
+AppController::beforeFilter() - APP/Controller/AppController.php, line 111
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE/Cake/Event/CakeEventManager.php, line 248
+Controller::startupProcess() - CORE/Cake/Controller/Controller.php, line 674
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 184
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 97
+
+2013-11-10 19:24:26 Warning: Warning (512): Model "Ustradition" is not associated with model "User" in [/home/gogo/public_html/lib/Cake/Model/Behavior/ContainableBehavior.php, line 344]
+Trace:
+ContainableBehavior::containments() - CORE/Cake/Model/Behavior/ContainableBehavior.php, line 344
+ContainableBehavior::beforeFind() - CORE/Cake/Model/Behavior/ContainableBehavior.php, line 125
+ObjectCollection::trigger() - CORE/Cake/Utility/ObjectCollection.php, line 132
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE/Cake/Event/CakeEventManager.php, line 248
+Model::buildQuery() - CORE/Cake/Model/Model.php, line 2799
+Model::find() - CORE/Cake/Model/Model.php, line 2717
+AppController::beforeFilter() - APP/Controller/AppController.php, line 111
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE/Cake/Event/CakeEventManager.php, line 248
+Controller::startupProcess() - CORE/Cake/Controller/Controller.php, line 674
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 184
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 97
+
+2013-11-10 19:24:26 Warning: Warning (512): Model "Ustradition" is not associated with model "Ustradition" in [/home/gogo/public_html/lib/Cake/Model/Behavior/ContainableBehavior.php, line 344]
+Trace:
+ContainableBehavior::containments() - CORE/Cake/Model/Behavior/ContainableBehavior.php, line 344
+ContainableBehavior::beforeFind() - CORE/Cake/Model/Behavior/ContainableBehavior.php, line 125
+ObjectCollection::trigger() - CORE/Cake/Utility/ObjectCollection.php, line 132
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE/Cake/Event/CakeEventManager.php, line 248
+Model::buildQuery() - CORE/Cake/Model/Model.php, line 2799
+Model::find() - CORE/Cake/Model/Model.php, line 2717
+AppController::beforeFilter() - APP/Controller/AppController.php, line 111
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE/Cake/Event/CakeEventManager.php, line 248
+Controller::startupProcess() - CORE/Cake/Controller/Controller.php, line 674
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 184
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 97
+
+2013-11-10 19:57:59 Warning: Warning (512): Model "Ustradition" is not associated with model "User" in [/home/gogo/public_html/lib/Cake/Model/Behavior/ContainableBehavior.php, line 344]
+Trace:
+ContainableBehavior::containments() - CORE/Cake/Model/Behavior/ContainableBehavior.php, line 344
+ContainableBehavior::beforeFind() - CORE/Cake/Model/Behavior/ContainableBehavior.php, line 125
+ObjectCollection::trigger() - CORE/Cake/Utility/ObjectCollection.php, line 132
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE/Cake/Event/CakeEventManager.php, line 248
+Model::buildQuery() - CORE/Cake/Model/Model.php, line 2799
+Model::find() - CORE/Cake/Model/Model.php, line 2717
+AppController::beforeFilter() - APP/Controller/AppController.php, line 111
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE/Cake/Event/CakeEventManager.php, line 248
+Controller::startupProcess() - CORE/Cake/Controller/Controller.php, line 674
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 184
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 97
+
+2013-11-10 19:57:59 Warning: Warning (512): Model "Ustradition" is not associated with model "Ustradition" in [/home/gogo/public_html/lib/Cake/Model/Behavior/ContainableBehavior.php, line 344]
+Trace:
+ContainableBehavior::containments() - CORE/Cake/Model/Behavior/ContainableBehavior.php, line 344
+ContainableBehavior::beforeFind() - CORE/Cake/Model/Behavior/ContainableBehavior.php, line 125
+ObjectCollection::trigger() - CORE/Cake/Utility/ObjectCollection.php, line 132
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE/Cake/Event/CakeEventManager.php, line 248
+Model::buildQuery() - CORE/Cake/Model/Model.php, line 2799
+Model::find() - CORE/Cake/Model/Model.php, line 2717
+AppController::beforeFilter() - APP/Controller/AppController.php, line 111
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE/Cake/Event/CakeEventManager.php, line 248
+Controller::startupProcess() - CORE/Cake/Controller/Controller.php, line 674
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 184
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 162
+[main] - APP/webroot/index.php, line 97
+
+2013-11-10 19:58:01 Error: [MissingControllerException] Controller class ~gogoController could not be found.
+Exception Attributes: array (
+  'class' => '~gogoController',
+  'plugin' => NULL,
+)
+Request URL: /~gogo/img/drop-arrow.png
+Stack Trace:
+#0 /home/gogo/public_html/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
