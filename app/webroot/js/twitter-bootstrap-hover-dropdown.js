@@ -3,11 +3,11 @@
  * Author: Cameron Spear
  * Contributors: Mattia Larentis
  *
- * Dependencies?: Twitter Bootstrap's Dropdown plugin
+ * Dependencies: Bootstrap's Dropdown plugin, jQuery
  *
- * A simple plugin to enable twitter bootstrap dropdowns to active on hover and provide a nice user experience.
+ * A simple plugin to enable Bootstrap dropdowns to active on hover and provide a nice user experience.
  *
- * No license, do what you want. I'd love credit or a shoutout, though.
+ * License: MIT
  *
  * http://cameronspear.com/blog/twitter-bootstrap-dropdown-on-hover-plugin/
  */
@@ -25,7 +25,8 @@
         $allDropdowns = $allDropdowns.add(this.parent());
 
         return this.each(function() {
-            var $this = $(this).parent(),
+            var $this = $(this),
+                $parent = $this.parent(),
                 defaults = {
                     delay: 500,
                     instantlyCloseOthers: true
@@ -34,22 +35,59 @@
                     delay: $(this).data('delay'),
                     instantlyCloseOthers: $(this).data('close-others')
                 },
-                options = $.extend(true, {}, defaults, options, data),
+                settings = $.extend(true, {}, defaults, options, data),
                 timeout;
 
-            $this.hover(function() {
-                if(options.instantlyCloseOthers === true)
+            $parent.hover(function(event) {
+                // so a neighbor can't open the dropdown
+                if(!$parent.hasClass('open') && !$this.is(event.target)) {
+                    return true;
+                }
+
+                if(settings.instantlyCloseOthers === true)
                     $allDropdowns.removeClass('open');
 
                 window.clearTimeout(timeout);
-                $(this).addClass('open');
+                $parent.addClass('open');
+                $parent.trigger($.Event('show.bs.dropdown'));
             }, function() {
                 timeout = window.setTimeout(function() {
-                    $this.removeClass('open');
-                }, options.delay);
+                    $parent.removeClass('open');
+                    $parent.trigger('hide.bs.dropdown');
+                }, settings.delay);
+            });
+
+            // this helps with button groups!
+            $this.hover(function() {
+                if(settings.instantlyCloseOthers === true)
+                    $allDropdowns.removeClass('open');
+
+                window.clearTimeout(timeout);
+                $parent.addClass('open');
+                $parent.trigger($.Event('show.bs.dropdown'));
+            });
+
+            // handle submenus
+            $parent.find('.dropdown-submenu').each(function(){
+                var $this = $(this);
+                var subTimeout;
+                $this.hover(function() {
+                    window.clearTimeout(subTimeout);
+                    $this.children('.dropdown-menu').show();
+                    // always close submenu siblings instantly
+                    $this.siblings().children('.dropdown-menu').hide();
+                }, function() {
+                    var $submenu = $this.children('.dropdown-menu');
+                    subTimeout = window.setTimeout(function() {
+                        $submenu.hide();
+                    }, settings.delay);
+                });
             });
         });
     };
 
-    $('[data-hover="dropdown"]').dropdownHover();
+    $(document).ready(function() {
+        // apply dropdownHover to all elements with the data-hover="dropdown" attribute
+        $('[data-hover="dropdown"]').dropdownHover();
+    });
 })(jQuery, this);

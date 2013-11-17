@@ -15,20 +15,11 @@
 <!--[if lt IE 9]><link href="css/meganizr-ie.css" rel="stylesheet" type="text/css"><![endif]-->
 <!-- end Meganizr Menu Styles -->
 
-<?php echo $this->Html->css(array('bootstrap.min.css','bootstrap-responsive.min.css','homepage.css','meganizr.css')); ?>
+<?php echo $this->Html->css(array('bootstrap.min.css','homepage.css','mega-menu.css','mega-menu-responsive.css')); ?>
 <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/smoothness/jquery-ui.css" />
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
-<?php echo $this->Html->script(array('bootstrap.min.js','twitter-bootstrap-hover-dropdown.js','homepage.js','jquery.columnizer.min.js','jquery.bpopup-0.9.3.min.js')); ?>
-<!--'jquery.marquee.min.js' -->
-<?php //echo $this->App->js(); ?>
-<?php //echo $this->fetch('meta'); ?>
-<?php //echo $this->fetch('css'); ?>
-<?php //echo $this->fetch('script'); ?>
 </head>
 
 <body>
-
 	<div id="page" role="main" class="container">
 		<div id="fb-root"></div>
 		<!--<script>
@@ -41,7 +32,7 @@
 			}(document, 'script', 'facebook-jssdk'));
 			</script>-->
 		<div id="header-background">
-			<div class="container">
+			<div class="container navigation">
 				<div id="header-top"> <a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>">
 					<div class="basket"><img src="/img/global/gwm-oval.png"  alt="gourmet basket"></div>
 					</a>
@@ -66,21 +57,22 @@
 					</div>
 				</div>
 				
-				<div id="header-nav">
-					<div id="nav-wrapper"> 
-						<!-- Include Nav element --> 
-						<?php echo $this->element('nav'); ?> </div>
+			<div id="header-nav">
+				<div id="nav-wrapper"> 
+					<!-- Include Nav element --> 
+					<?php echo $this->element('nav-work'); ?> </div>
 				</div>
+			
+			<div id="gb-title"> 
+				<!--<div class="issue gb-heading">July - August 2013</div>-->
+				<h1 class="title-description center">A fresh way to shop for, learn about, prepare and enjoy foods of the world.</h1>
+				<p class=" center">Our slogan “Become a World Class Foodie” reflects our committment to help cooks of all kinds, from Moms to chefs, 
+					novices to professionals and young to old, expand their tastes, techniques and pantries to enjoy the delicious bounties <a href="#" id="welcome">(more) ...</a></p>
+			</div>
+			
+			<div id="welcome_content"> <span class="b-close btn-gb"><span>X</span></span>
 				
-				<div id="gb-title"> 
-					<!--<div class="issue gb-heading">July - August 2013</div>-->
-					<h1 class="title-description center">A fresh way to shop for, learn about, prepare and enjoy foods of the world.</h1>
-					<p class=" center">Our slogan “Become a World Class Foodie” reflects our committment to help cooks of all kinds, from Moms to chefs, 
-						novices to professionals and young to old, expand their tastes, techniques and pantries to enjoy the delicious bounties <a href="#" id="welcome">(more) ...</a></p>
-				</div>
-				
-				<div id="welcome_content"> <span class="b-close btn-gb"><span>X</span></span>
-					<h2 style="text-align:center">Welcome to Gourmet Basket &ndash; the First-Ever World Marketplace and Cultural Cuisine Magazine in One..</h2>
+					<h2 style="text-align:center;font-size:25px">The Marketplace to Explore and Experience Global Cuisines and Cultures</h2>
 					<hr />
 					<div style="text-align:center;position:relative">
 						<div id="welcome-bkngd"> <img src="/img/homepage/markets.png" width="704" height="657">
@@ -88,10 +80,7 @@
 						<?php echo $welcome['Content']['body']; ?>
 					</div>
 				</div>
-				
-			
-		
-	
+			</div>
 		
 		<div class="container feature-wrapper">
 			<div id="upper">
@@ -123,16 +112,16 @@
 			?>
 				<!--- One product -->
 				<div class="feature"> <?php echo $this->Html->image('products/image/' . $gift_product['Product']['image'], array(
-							'alt' => $gift_product['Product']['name'],
-							'class' =>'show',
-							'url' => array(
-								'subdomain' => $gift_product['User']['slug'],
-								'controller' => 'products',
-								'action' => 'view',
-								'id' => $gift_product['Product']['id'],
-								'slug' => $gift_product['Product']['slug']),
-							 ));
-						?>
+						'alt' => $gift_product['Product']['name'],
+						'class' =>'show',
+						'url' => array(
+							'subdomain' => $gift_product['User']['slug'],
+							'controller' => 'products',
+							'action' => 'view',
+							'id' => $gift_product['Product']['id'],
+							'slug' => $gift_product['Product']['slug']),
+						 ));
+					?>
 					<div class="feature-product-name"> 
 						<!--<a href="/product/<?php //echo ($product['Product']['id'].'-'.$product['Product']['slug']);?>">--> 
 						<?php echo $this->Text->truncate($gift_product['Product']['name'], 36, array('ellipsis' => '...', 'exact' => 'false')); ?> </a> </div>
@@ -232,6 +221,15 @@
 	
 	<?php echo $this->element('footer'); ?>
 	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<?php echo $this->Html->script(array('bootstrap.min.js','homepage.js','jquery.bpopup-0.9.3.min.js','twitter-bootstrap-hover-dropdown.js','fitvid.js')); ?>
+<!--'jquery.marquee.min.js' -->
+<?php //echo $this->App->js(); ?>
+<?php //echo $this->fetch('meta'); ?>
+<?php //echo $this->fetch('css'); ?>
+<?php //echo $this->fetch('script'); ?>
+
 
 <script>
 
@@ -260,16 +258,18 @@
 </script>
 
 <script type='text/javascript' src='//easy.myfonts.net/v1/js?sid=136578(font-family=Marydale+Regular)&sid=136579(font-family=Marydale+Bold)&key=TBaQWX9ZsK'></script>
+
+
 <script>
     // Drop Down Hover!
     $(document).ready(function() {
       $('.js-activated').dropdownHover(true);
       
       //Columnizer
-        $(function(){
-        $('.wide').columnize({width:250});
+       // $(function(){
+       // $('.wide').columnize({width:250});
         //$('.thin').columnize({width:200});
-    });
+   // });
     
      // Welcome
      $(function() {

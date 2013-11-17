@@ -103,7 +103,7 @@
 				</div>
 			</li>
 			
-			<li class="mzr-drop"><a class="parent" href="/special-diets">SPECIAL DIETS<b class="caret"></b></a>
+			<li class="mzr-drop"><a class="parent" href="/">SPECIAL DIETS<b class="caret"></b></a>
 				<div class="mzr-content drop-two-columns popover-content">
 					<div class="wide">
 						<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/recipes">Special Diets</a></p>
