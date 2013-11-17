@@ -21,9 +21,9 @@
 				
 			</div>
 			
-			<div class="gb-heading">Other US Traditions: </div>
-			<div class="gb-heading red list" style="font-size:120%;">
-			<?php foreach ($ustraditions as $tradition): ?>
+			<div class="nav-style-heading large">Other US Traditions</div>
+			<div class="list">
+			<?php foreach ($ustraditions as $tradition): ?> -
 				<?php echo $this->Html->link($tradition['Ustradition']['name'], array('controller' => 'ustraditions', 'action' => 'view', 'slug' => $tradition['Ustradition']['slug'])); ?><br />
 			<?php endforeach; ?>
 			</div>

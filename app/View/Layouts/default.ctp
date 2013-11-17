@@ -33,6 +33,9 @@ Android 2.1+, Chrome 4+, Firefox 2+, IE 9+, iOS 3.2+, Opera 9+, Safari 3.1+
 <?php echo $this->App->js(); ?><?php echo $this->fetch('meta'); ?><?php echo $this->fetch('css'); ?><?php echo $this->fetch('script'); ?>
 <script type="text/javascript" src="/t/track.php?id=gourmet"></script>
 
+<script type='text/javascript' src='//easy.myfonts.net/v1/js?sid=136578(font-family=Marydale+Regular)&sid=136579(font-family=Marydale+Bold)&key=TBaQWX9ZsK'></script>
+
+
 </head>
 <body class="sun">
 	<div id="page" role="main">

@@ -712,9 +712,16 @@ div.price {
 }
 
 
+.nav-style-heading {
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-weight:bold;
+	text-transform:uppercase;
+	font-size:100%;
+}
 
-
-
+.large {
+	font-size20px;
+}
 
 
 
@@ -735,6 +742,7 @@ div.price {
 
 .row.product {
 	margin-left:0;
+	margin-right:0;
 }
 
 .more {
@@ -1396,6 +1404,12 @@ div.col-md-8>div.awning>img {
 #subcat-menu span, #subcat-menu h4 {
 	color:#fff;
 	text-align: center;
+	
+}
+
+#subcat-menu h4 {
+	font-family: Marydale Regular, sans-serif;
+	text-transform:uppercase;
 }
 
 .category-summary .collapse {
