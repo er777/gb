@@ -12,8 +12,9 @@ body.sun {
 
 }
 
-body #page.container {
+body #page {
 	margin: auto;
+	max-width:1170px;
 	-webkit-box-shadow: 0 0 10px #000;
 	box-shadow: 0 0 10px #000;
 	position: relative;
@@ -86,7 +87,7 @@ img.frame {
 	position: relative;
 }
 .container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
-	width: 1024px;
+	
 }
 .col-md-3 .vendor-logo {
 	/*color:#5d996d;*/
@@ -567,15 +568,167 @@ ul.meganizr .brands .wide {
 /** VENDOR PRODUCT DISPLAY **/
 
 
+
+
+
+
+/** Bootstrap Product Display **/
+
+/* Item */
+
+.items{
+	margin: 20px 0px;
+}
+
+.items .breadcrumb{
+	background: transparent;
+	border: 0px solid #eee;
+	padding: 0px 0px 5px 0px;
+	margin: 0px 0px 10px 0px;
+	border-radius: 0px;
+	border-bottom: 1px solid #f3f3f3;
+}
+
+.item{
+	min-height: 280px;
+	max-height: 300px;
+	max-width: 250px;
+	margin: 10px auto;
+	padding: 10px 10px;
+	border: 1px solid #d5d5d5;
+	box-shadow: inset 0px 0px 1px #ddd;
+	-webkit-transition:box-shadow 1s ease;
+   	-moz-transition:box-shadow 1s ease;
+   	-o-transition:box-shadow 1s ease;
+   	transition:box-shadow 1s ease;
+}
+
+.item:hover{
+	box-shadow: inset 0px 0px 5px #ccc;
+	-webkit-transition:box-shadow 1s ease;
+   	-moz-transition:box-shadow 1s ease;
+   	-o-transition:box-shadow 1s ease;
+   	transition:box-shadow 1s ease;	
+}
+
+.item .ico{
+	color: #fff;
+	display: inline-block;
+	width: 35px;
+	height: 20px;
+	margin-left: 5px;
+}
+
+.item hr{
+	margin: 5px 0px;
+}
+
+.item .item-image{
+	max-height: 150px;
+}
+
+.item .item-image img{
+	padding: 5px 0px;
+	height: 140px;
+	width: auto;
+	display: block;
+	margin: 0 auto;
+}
+
+.item .item-details {
+	margin-top:10px;
+}
+
+.item .item-details h5 a{
+	color: #666;
+	text-align: center;
+}
+
+.item .item-details h5 a:hover{
+	text-decoration: none;
+}
+
+.item .item-details p{
+	text-align: center;
+}
+
+.item .item-price{
+	margin: 7px 0px;
+	display: inline-block;
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 2px 5px !important;
+	line-height: 20px;
+	border-radius: 5px;
+	font-size: 14px;
+	font-weight: bold;
+	background: #f3f3f3;
+	border: 1px solid #eee;
+	box-shadow: inset 0px 0px 1px #888;
+}
+
+div.blurb {
+	font-size:11px;
+	text-align:left;
+}
+
+.vendor, .vendor a {
+	text-align:center;
+	font-size:12px;
+	color:#900;
+	margin-bottom:5px;
+}
+
+div.product-name, div.product-name p, div.product-name a {
+	line-height: 14px;
+	padding: 0px;
+	margin: 0px;
+}
+
+div.price {
+	position:relative;
+	top:0px;
+	margin-right: 10px;
+	text-align: right;
+	color: #7F131F;
+}
+
+.button a, .button a:visited {
+	color: #FFF;
+	background: #F25758;
+	padding: 5px 10px;
+	border: 0px !important;
+	text-decoration: none !important;
+	font-size: 13px;
+	-webkit-transition: background 1s ease;
+	-moz-transition: background 1s ease;
+	-o-transition: background 1s ease;
+	transition: background 1s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /** PRODUCT DISPLAY - individual **/
 .col-md-9.product-column {
 	margin-left: 36px;
 }
+
 .products {
 	margin-top: 10px;
 }
+
 .row.product {
-	
+	margin-left:0;
 }
 
 .more {
@@ -627,10 +780,11 @@ ul.meganizr .brands .wide {
 	
 }
 
-.content-product .displaygroup {
+.content-product .displaygroup,
+.item .displaygroup {
 	position:absolute;
-	right:10px;
-	top: 0px;
+	right:22px;
+	top: 8px;
 	font-size:10px;
 	color:#E5E5E5;
 }
@@ -678,11 +832,6 @@ span.description p {
 	font-size:11px;
 	color:#C00;
 	font-weight: 600;
-}
-div.product-name, div.product-name p, div.product-name a {
-	line-height: 14px;
-	padding: 0px;
-	margin: 0px;
 }
 .img-polaroid {
 	max-width: 120%;
@@ -734,21 +883,13 @@ div.product-name, div.product-name p, div.product-name a {
 	margin-bottom: 15px;
 	
 }
-div.price {
-	position:relative;
-	top:31px;
-	margin-right: 10px;
-	text-align: right;
-	color: #7F131F;
-}
 .search-price {
 	font-size: 11px;
 	font-weight: bold;
 	color: #555;
 }
-div.brand {
-	margin-top: 36px;
-	margin-right: 10px;
+.brand {
+	margin-top: 10px;
 	text-align: center;
 	font-size: 11px;
 	color:#888;
@@ -1155,7 +1296,7 @@ h3.cat-list {
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5bc0de', endColorstr='#ff2f96b4', GradientType=0);
 	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 }
-}
+
 .summary p {
 	font-size: 13px;
 }
@@ -1165,6 +1306,12 @@ h3.cat-list {
 .awning {
 	position: relative;
 }
+
+.awning img {
+	width:96%;
+	
+}
+
 #awning-logo {
 	position: absolute;
 	top: 8px;
@@ -1239,7 +1386,6 @@ div.col-md-8>div.awning>img {
 }
 .category-summary, .tradition-summary, #subcat-menu {
 	position:relative;
-	width: 195px;
 	margin-top: 15px;
 	margin-bottom: 30px;
 	/*margin-left: 182px;*/
@@ -2743,11 +2889,11 @@ select.modselector {
 
 @media (min-width: 1200px) {
   .col-md-12, .container {
-    	width: 1100px;
+    	/*width: 1100px;*/
   }
   
   .container.wrapper {
-		padding-left:2.5%;
+		
 	}
 }
 
