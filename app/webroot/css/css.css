@@ -1307,8 +1307,8 @@ h3.cat-list {
 	margin-top:20px;
 }
 
-.awning img {
-	
+.awning>img {
+	width:845px
 	
 }
 
