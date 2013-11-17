@@ -4,13 +4,17 @@
 	<!--Sidebar -->
 		<div class="col-md-3 col-sm-3 hidden-xs">
 			
-			<div style="margin-bottom:20px;margin-left:0px;">
-				<img style="width:235px" src="/img/us-traditions/labels/<?php echo ($ustradition['Ustradition']['logo_image']); ?>" />
-			</div>
+			<!--<div style="margin-bottom:20px;margin-top:30px;">
+				<img style="width:235px" src="/img/us-traditions/labels/<?php //echo ($ustradition['Ustradition']['logo_image']); ?>" />
+			</div>-->
 			
 			
 			
 			<div id="subcat-menu">
+			
+			<span><p>U.S. REGIONS:</p></span>
+			<h4><?php echo $ustradition['Ustradition']['name']; ?></h4>
+			
 				<div> <?php echo $ustradition['Ustradition']['summary']; ?> </div>
 				<a style="font-style:italic" href="/articles/excellent-food-advenures/<?php echo $ustradition['Ustradition']['slug']; ?>">Read more</a>
 				

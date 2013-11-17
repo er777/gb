@@ -47,7 +47,9 @@ Android 2.1+, Chrome 4+, Firefox 2+, IE 9+, iOS 3.2+, Opera 9+, Safari 3.1+
 				}(document, 'script', 'facebook-jssdk'));
 				</script>-->
 		<div id="header-background">
-			<div class="container">
+		
+			
+			
 				<div id="header-top"> <a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>">
 					<div class="basket"><img src="/img/global/gwm-oval.png"  alt="gourmet basket"></div>
 					</a>
@@ -56,7 +58,8 @@ Android 2.1+, Chrome 4+, Firefox 2+, IE 9+, iOS 3.2+, Opera 9+, Safari 3.1+
 							<!-- Search Box --> 
 							<?php echo $this->Form->create('Product', array('type' => 'GET', 'class' => 'navbar-form', 'url' => array('controller' => 'products', 'action' => 'search'))); ?> <?php echo $this->Form->input('search', array('label' => false, 'div' => false, 'autocomplete' => 'on')); ?>
 							<?php //echo $this->Form->button('<i class="icon-search icon-white"></i> Search', array('div' => false, 'class' => 'btn btn-gb', 'escape' => false)); ?>
-							<?php echo $this->Form->end(); ?> </div>
+							<?php echo $this->Form->end(); ?>
+						</div>
 						<ul class="gb-horiz-account">
 							<li class="cart">
 								<button class="cart" type="submit">
@@ -71,22 +74,27 @@ Android 2.1+, Chrome 4+, Firefox 2+, IE 9+, iOS 3.2+, Opera 9+, Safari 3.1+
 						</ul>
 					</div>
 				</div>
-				
+			
+
 			<div id="header-nav">
 				<div id="nav-wrapper"> 
 					<!-- Include Nav element --> 
-					<?php echo $this->element('nav'); ?> </div>
+					<?php echo $this->element('nav'); ?>
+				</div>
 			</div>
+		
 			
 			<div class="container wrapper">
 				<div id="dialog-info">
 				<?php echo $this->Session->flash(); ?>
 				</div>
 				<!-- CONTENT -->
-				<?php echo $this->fetch('content'); ?> </div>
+				<?php echo $this->fetch('content'); ?>
 			</div>
 			
-		</div>
+			</div>
+			
+		
 		
 		</div>
 			<?php echo $this->element('footer'); ?>

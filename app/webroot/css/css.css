@@ -30,7 +30,7 @@ h1 {
 	font-size: 200%;
 }
 h4 {
-	display: inline;
+	
 }
 a {
 	color: #3f9179;
@@ -1388,23 +1388,30 @@ div.col-md-8>div.awning>img {
 	line-height: 20px;
 }
 .category-summary, .tradition-summary, #subcat-menu {
-	position:relative;
-	margin-top: 15px;
+	position: relative;
+	margin-top: 45px;
 	margin-bottom: 30px;
 	/*margin-left: 182px;*/
-	border:#649d78 2px solid;
+	border: #3f4b52 1px solid;
 	color: #3a3a3a;
 	text-align: left;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
-	padding: 20px;
-	 background-image: -webkit-gradient(linear, left top, left bottom, from(#f7f1e5), to(#ffffff)); /* Chrome, Safari 4+ */
-	 background-image: -webkit-linear-gradient(top, #f7f1e5, #ffffff); /* Chrome 10-25, iOS 5+, Safari 5.1+ */
-	 background-image:    -moz-linear-gradient(top, #f7f1e5, #ffffff); /* Firefox 3.6-15 */
-	 background-image:      -o-linear-gradient(top, #f7f1e5, #ffffff);; /* Opera 11.10-12.00 */
-	 background-image:         linear-gradient(to bottom, #f7f1e5, #ffffff); /* Chrome 26, Firefox 16+, IE 10+, Opera 12.50+ */
-	
+	background-image: linear-gradient(bottom, #FFFFFF 92%, #D7536D 0%);
+	background-image: -o-linear-gradient(bottom, #FFFFFF 92%, #D7536D 0%);
+	background-image: -moz-linear-gradient(bottom, #FFFFFF 92%, #D7536D 0%);
+	background-image: -webkit-linear-gradient(bottom, #FFFFFF 92%, #D7536D 0%);
+	background-image: -ms-linear-gradient(bottom, #FFFFFF 92%, #D7536D 0%);
+	padding-top: 10px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	padding-left: 20px;	
+}
+
+#subcat-menu span, #subcat-menu h4 {
+	color:#fff;
+	text-align: center;
 }
 
 .category-summary .collapse {
