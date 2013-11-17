@@ -12,7 +12,7 @@
 			
 			<div id="subcat-menu">
 				<div class="region-title">			
-					<span><p>INTERNATIONAL REGIONS:</p></span>
+					<div><p>INTERNATIONAL REGIONS:</p></div>
 					<h4><?php echo $tradition['Tradition']['name']; ?></h4>
 				</div>
 			

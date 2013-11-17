@@ -1407,7 +1407,7 @@ div.col-md-8>div.awning>img {
 	padding-left: 20px;	
 }
 
-#subcat-menu span, #subcat-menu h4 {
+#subcat-menu .region-title>span, #subcat-menu h4 {
 	color:#fff;
 	text-align: center;
 	
