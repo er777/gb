@@ -89,16 +89,21 @@ img.frame {
 .container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
 	
 }
-.col-md-3 .vendor-logo {
-	/*color:#5d996d;*/
-	font-family: 'Oregano', cursive;
-	font-size: 16px;
-	letter-spacing: 1px;
+.vendor-logo {
+	position:absolute;
+	right:311px;
+	top:15px;
+	z-index:100;
+}
+.vendor-logo img {
+	border: 5px solid #DBD4C9;
+	height:78px;
 }
 
 .vendor-logo .name {
 	font-size:21px;
 	margin-top:10px;
+	
 }
 
 .vendor-logo .plain {
@@ -720,7 +725,7 @@ div.price {
 }
 
 .large {
-	font-size20px;
+	font-size:20px;
 }
 
 
@@ -1303,7 +1308,7 @@ h3.cat-list {
 }
 
 .awning img {
-	width:100%;
+	
 	
 }
 
@@ -1314,21 +1319,22 @@ h3.cat-list {
 }
 #awning1 {
 	position: relative;
+	width:100%;
 }
 /** Awning Title **/
 	
 #awning-text-wrapper {
 	position: absolute;
 	z-index: 50;
-	top: 85px;
-	left: 200px;
-	width: 300px;
+	top: 100px;
+	left: 30px;
+	width: 780px;
 }
 #awning-text {
 	text-align: center;
 	font-size: 15px;
+	font-style:italic;
 	color: #fff;
-	text-shadow: 2px 2px #000222;
 }
 #div1 {
 	position: absolute;

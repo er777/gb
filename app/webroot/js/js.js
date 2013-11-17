@@ -61,5 +61,11 @@ $(document).ready(function(){
 
 		
 // Prepend img in Article div
-	$('#theDiv').prepend('<img id="theImg" src="theImg.png" />')
+	$('#theDiv').prepend('<img id="theImg" src="theImg.png" />');
+
+
+// Wrap curly quotes in User Shop Quote
+	$('#awning-text p').prepend('&#8220;&nbsp;');
+	$('#awning-text p').append('&#8221;');
+
 });
