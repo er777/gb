@@ -11,11 +11,12 @@
 			
 			
 			<div id="subcat-menu">
+				<div class="region-title">			
+					<span><p>U.S. REGIONS:</p></span>
+					<h4><?php echo $ustradition['Ustradition']['name']; ?></h4>
+				</div>
 			
-			<span><p>U.S. REGIONS:</p></span>
-			<h4><?php echo $ustradition['Ustradition']['name']; ?></h4>
-			
-				<div> <?php echo $ustradition['Ustradition']['summary']; ?> </div>
+				<div class="summary"> <?php echo $ustradition['Ustradition']['summary']; ?> </div>
 				<a style="font-style:italic" href="/articles/excellent-food-advenures/<?php echo $ustradition['Ustradition']['slug']; ?>">Read more</a>
 				
 			</div>
