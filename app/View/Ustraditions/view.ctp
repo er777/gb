@@ -64,7 +64,8 @@
 						  <!--<a href="single-item.html"><img src="img/photos/2.png" alt="" class="img-responsive" /></a>-->
 					
 						<?php echo $this->Html->image('products/image/' . $product['Product']['image'], array('class' => 'img-responsive','url' => array('subdomain' => $product['User']['slug'], 'controller' => 'products', 'action' => 'view', 'id' => $product['Product']['id'], 'slug' => $product['Product']['slug']), 'alt' => $product['Product']['name'])); ?>
-							<div class="product-name"> <a href="/product/<?php echo ($product['Product']['id'].'-'.$product['Product']['slug']);?>"> <?php echo $this->Text->truncate($product['Product']['name'], 40, array('ellipsis' => '...', 'exact' => 'false')); ?></a>
+							<div class="product-name">
+								<a href="/product/<?php echo ($product['Product']['id'].'-'.$product['Product']['slug']);?>"> <?php echo $this->Text->truncate($product['Product']['name'], 40, array('ellipsis' => '...', 'exact' => 'false')); ?></a>
 							</div>
 							
 						</div>
@@ -83,7 +84,7 @@
 							<div class="vendor"><?php echo $this->Html->link($product['User']['name'], array('subdomain' => $product['User']['slug'], 'controller' => 'products', 'action' => 'index')); ?>	</div>
 							
 							<!-- Price -->
-							 <div class="item-price pull-left"><?php echo $product['Product']['price']; ?></div>
+							 <div class="price pull-left"><?php echo $product['Product']['price']; ?></div>
 							 <!-- Add to cart -->
 							 <div class="button pull-right"><a href="#">Add to Cart</a></div>
 									

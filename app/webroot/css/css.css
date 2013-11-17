@@ -636,7 +636,7 @@ ul.meganizr .brands .wide {
 }
 
 .item .item-details {
-	margin-top:10px;
+	margin-top:23px;
 }
 
 .item .item-details h5 a{
@@ -679,6 +679,7 @@ div.blurb {
 }
 
 div.product-name, div.product-name p, div.product-name a {
+	font-size:13px;
 	line-height: 14px;
 	padding: 0px;
 	margin: 0px;
@@ -690,11 +691,12 @@ div.price {
 	margin-right: 10px;
 	text-align: right;
 	color: #7F131F;
+	font-size:14px;
 }
 
 .button a, .button a:visited {
 	color: #FFF;
-	background: #F25758;
+	background: #72a63a;
 	padding: 5px 10px;
 	border: 0px !important;
 	text-decoration: none !important;
@@ -810,10 +812,6 @@ h2.product-name {
 	font-family: 'Oregano', cursive;
 	color: #3F9179;
 	line-height: 25px;
-}
-.product-name a, div.price {
-	font-size: 11px;
-	text-decoration: none;
 }
 .product-label {
 	font-weight: 600;
