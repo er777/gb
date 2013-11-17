@@ -1,5 +1,4 @@
-<div class="container">
-	
+
 	<div class="row">
 	
 	<!--Sidebar -->
@@ -27,54 +26,55 @@
 	
 	<!-- Main Content -->
 	<div class="col-md-9 col-sm-9">
+		<!-- Banner -->
+		<div class="awning"> 
+		   
+			<?php if (($ustradition['Ustradition']['awning_image'])) :
+					echo $this->Html->image('/img/us-traditions/awning_image/'. $ustradition['Ustradition']['awning_image']);
+				else :
+					echo ' <img src="/img/us-traditions/awning_image/far-west.jpg" /> ';
+				endif;
+			?>
+		</div>
+		
 		<!-- Breadcrumb -->
 		<ul class="breadcrumb"></ul>
-			<!-- Banner -->
-			<div class="awning"> 
-			   
-				<?php if (($ustradition['Ustradition']['awning_image'])) :
-						echo $this->Html->image('/img/us-traditions/awning_image/'. $ustradition['Ustradition']['awning_image']);
-					else :
-						echo ' <img src="/img/us-traditions/awning_image/far-west.jpg" /> ';
-					endif;
-				?>
-			</div>
+		
+		<div class="clearfix"></div>
+		
+		<div class="row product">
 			
-			<br />
+			<?php
+				$i = 0;
+				foreach ($products as $product):
+				$i++;
+				//if (($i % 4) == 0) { echo "\n<div class=\"row\">\n\n";}
+			?>
 			
-			<div class="clearfix"></div>
+			<div class="col-md-3 col-sm-6"> <!--style="width:22.5%;" -->
 			
-			<div class="row product">
 			
-				<?php
-					$i = 0;
-					foreach ($products as $product):
-					$i++;
-					//if (($i % 4) == 0) { echo "\n<div class=\"row\">\n\n";}
-				?>
+				<div class="item"> <!--content-product -->
 				
-				<div class="col-md-3 col-sm-6" style="width:23.5%;"  > <!--style="width:22.5%;" -->
+					<div class="displaygroup"><?php echo $product['Product']['displaygroup']; ?></div>
+					<!-- Item image -->
+					<div class="item-image"><!--product-pic-->
+					  <!--<a href="single-item.html"><img src="img/photos/2.png" alt="" class="img-responsive" /></a>-->
 				
-				
-					<div class="item"> <!--content-product -->
-					
-						<div class="displaygroup"><?php echo $product['Product']['displaygroup']; ?></div>
-						<!-- Item image -->
-						<div class="item-image"><!--product-pic-->
-						  <!--<a href="single-item.html"><img src="img/photos/2.png" alt="" class="img-responsive" /></a>-->
-					
-						<?php echo $this->Html->image('products/image/' . $product['Product']['image'], array('class' => 'img-responsive','url' => array('subdomain' => $product['User']['slug'], 'controller' => 'products', 'action' => 'view', 'id' => $product['Product']['id'], 'slug' => $product['Product']['slug']), 'alt' => $product['Product']['name'])); ?>
-							<div class="product-name">
-								<a href="/product/<?php echo ($product['Product']['id'].'-'.$product['Product']['slug']);?>"> <?php echo $this->Text->truncate($product['Product']['name'], 40, array('ellipsis' => '...', 'exact' => 'false')); ?></a>
-							</div>
-							
+					<?php echo $this->Html->image('products/image/' . $product['Product']['image'], array('class' => 'img-responsive','url' => array('subdomain' => $product['User']['slug'], 'controller' => 'products', 'action' => 'view', 'id' => $product['Product']['id'], 'slug' => $product['Product']['slug']), 'alt' => $product['Product']['name'])); ?>
+						<div class="product-name">
+							<a href="/product/<?php echo ($product['Product']['id'].'-'.$product['Product']['slug']);?>"> <?php echo $this->Text->truncate($product['Product']['name'], 40, array('ellipsis' => '...', 'exact' => 'false')); ?></a>
 						</div>
+						
+					</div>
 						
 						<!-- Item details -->
                     	<div class="item-details">
                       		<!-- Name -->
                       		<!-- Use the span tag with the class "ico" and icon link (hot, sale, deal, new) -->
-							<div class="blurb">Something about the product goes here. Not More than...<!--<span class="ico"></span>--></div>
+							<!--<div class="blurb"><?php //echo $this->Text->truncate($product['Product']['description'], 55, array('ellipsis' => '...', 'exact' => 'false')); ?>
+							<!--<span class="ico"></span>-->
+							<!--</div>-->
 							
 							<div class="clearfix"></div>
 							
@@ -104,7 +104,7 @@
 					endforeach;
 				?>
 			
-			</div>
+		
 			
 			
 			
