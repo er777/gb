@@ -27,7 +27,9 @@ class OrdersController extends AppController {
 					'User' => array(
 						'fields' => array(
 							'User.name',
-							'User.username'
+							'User.username',
+							'User.phone',
+							'User.email'
 						)
 					)
 				),
@@ -60,8 +62,9 @@ class OrdersController extends AppController {
 
 ////////////////////////////////////////////////////////////
 
-	public function admin_edit($id = null) {
+public function admin_edit($id = null) {
 		$this->Order->id = $id;
+						
 		if (!$this->Order->exists()) {
 			throw new NotFoundException('Invalid order');
 		}
@@ -75,7 +78,9 @@ class OrdersController extends AppController {
 		} else {
 			$this->request->data = $this->Order->read(null, $id);
 		}
+		
 	}
+
 ////////////////////////////////////////////////////////////
 
 	public function admin_delete($id = null) {

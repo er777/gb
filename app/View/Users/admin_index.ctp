@@ -97,7 +97,7 @@ $(document).ready(function() {
 		<th><?php echo $this->Paginator->sort('name'); ?></th>
 		<th><?php echo $this->Paginator->sort('slug'); ?></th>
 		<th><?php echo $this->Paginator->sort('business_name'); ?></th>
-		<th><?php echo $this->Paginator->sort('email'); ?></th>
+		<th><?php echo $this->Paginator->sort('email_orders'); ?></th>
 		<th><?php echo $this->Paginator->sort('image'); ?></th>
 		<th><?php echo $this->Paginator->sort('address'); ?></th>
 		<th><?php echo $this->Paginator->sort('address2'); ?></th>
@@ -125,7 +125,7 @@ $(document).ready(function() {
 		<td><?php echo h($user['User']['name']); ?></td>
 		<td><?php echo h($user['User']['slug']); ?></td>
 		<td><?php echo h($user['User']['business_name']); ?></td>
-		<td><span class="email" data-value="<?php echo $user['User']['email']; ?>" data-pk="<?php echo $user['User']['id']; ?>"><?php echo h($user['User']['email']); ?></span></td>
+		<td><span class="email" data-value="<?php echo $user['User']['email_orders']; ?>" data-pk="<?php echo $user['User']['id']; ?>"><?php echo h($user['User']['email_orders']); ?></span></td>
 		<td class="constrain"><?php echo $this->Html->image('users/image/' . $user['User']['image']); ?></td>
 		<td><?php echo h($user['User']['address']); ?></td>
 		<td><?php echo h($user['User']['address2']); ?></td>

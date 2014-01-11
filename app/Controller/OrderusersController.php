@@ -89,6 +89,10 @@ class OrderUsersController extends AppController {
 		}
 		$options = array('conditions' => array('OrderUser.' . $this->OrderUser->primaryKey => $id));
 		$this->set('orderUser', $this->OrderUser->find('first', $options));
+
+		$orders = $this->OrderUser->Order->find('list');
+		$users = $this->OrderUser->User->find('list');
+		$this->set(compact('orders', 'users'));
 	}
 
 ////////////////////////////////////////////////////////////

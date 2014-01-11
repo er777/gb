@@ -4,13 +4,15 @@
 		<legend><?php echo __('Admin Edit Order'); ?></legend>
 	<?php
 		echo $this->Form->input('id');
-		echo $this->Form->input('name');
+		echo $this->Form->input('first_name');
+		echo $this->Form->input('last_name');
 		echo $this->Form->input('email');
 		echo $this->Form->input('subtotal');
 		echo $this->Form->input('tax');
 		echo $this->Form->input('shipping');
 		echo $this->Form->input('total');
-		echo $this->Form->input('status');
+		echo $this->Form->input('order_status_id', array('empty' => '--'));
+
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit'));?>

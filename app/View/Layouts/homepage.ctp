@@ -257,8 +257,8 @@
 
 </script>
 
-<script type='text/javascript' src='//easy.myfonts.net/v1/js?sid=136578(font-family=Marydale+Regular)&sid=136579(font-family=Marydale+Bold)&key=TBaQWX9ZsK'></script>
 
+<script type='text/javascript' src='//easy.myfonts.net/v1/js?sid=136578(font-family=Marydale+Regular)&sid=136579(font-family=Marydale+Bold)&key=TBaQWX9ZsK'></script>
 
 <script>
     // Drop Down Hover!
@@ -289,6 +289,11 @@
 	  ga('create', 'UA-40855494-1', 'gourmetworldmarket.com');
 	  ga('send', 'pageview');
 
+// Heat map - Crazy Egg 
+		setTimeout(function(){var a=document.createElement("script");
+		var b=document.getElementsByTagName("script")[0];
+		a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0019/3794.js?"+Math.floor(new Date().getTime()/3600000);
+		a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 
 
 	

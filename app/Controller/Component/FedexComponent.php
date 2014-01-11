@@ -37,11 +37,16 @@ class FedexComponent extends Component {
 				$code = strtolower($rate_reply_detail->getElementsByTagName('ServiceType')->item(0)->nodeValue);
 				$total_net_charge = $rate_reply_detail->getElementsByTagName('RatedShipmentDetails')->item(0)->getElementsByTagName('ShipmentRateDetail')->item(0)->getElementsByTagName('TotalNetCharge')->item(0);
 				$cost = $total_net_charge->getElementsByTagName('Amount')->item(0)->nodeValue;
+				
+				$shipping_residential = (Configure::read('Settings.FEDEX_RESIDENTIAL_FEE'));
+				$total_cost = ($cost + $shipping_residential) ;
 
 				$results[$i] = array(
 					'ServiceCode'	=> $code,
 					'ServiceName'	=> ucwords(str_replace('_', ' ', $code)),
-					'TotalCharges'	=> sprintf('%.2f', $cost),
+					'ServiceResidential' => (Configure::read('Settings.FEDEX_RESIDENTIAL_FEE')),
+					'TotalCharges'	=> sprintf('%.2f', $total_cost)
+					
 				);
 				$i++;
 			}

@@ -9,7 +9,7 @@
 		<th><?php echo $this->Paginator->sort('subtotal');?></th>
 		<th><?php echo $this->Paginator->sort('tax');?></th>
 		<th><?php echo $this->Paginator->sort('shipping');?></th>
-		<th><?php echo $this->Paginator->sort('total');?></th>
+		<th><?php echo $this->Paginator->sort('total', 'Customer Total'); ?></th>
 		<th><?php echo $this->Paginator->sort('created');?></th>
 		<th><?php echo $this->Paginator->sort('modified');?></th>
 		<th class="actions"><?php echo __('Actions');?></th>

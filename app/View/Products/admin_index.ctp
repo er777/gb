@@ -185,6 +185,7 @@ $(document).ready(function() {
 		<th><?php echo $this->Paginator->sort('active'); ?></th>
 		<th><?php echo $this->Paginator->sort('show', 'Come Back');?></th>
 		<th><?php echo $this->Paginator->sort('discontinued'); ?></th>
+		<th><?php echo $this->Paginator->sort('not_showing', 'Showing on Maestro'); ?></th>
 		<th><?php echo $this->Paginator->sort('image'); ?></th>
 		<th><?php echo $this->Paginator->sort('name'); ?></th>
 		<th><?php echo $this->Paginator->sort('slug'); ?></th>
@@ -195,6 +196,8 @@ $(document).ready(function() {
 		<th><?php echo $this->Paginator->sort('length'); ?></th>
 		<th><?php echo $this->Paginator->sort('width'); ?></th>
 		<th><?php echo $this->Paginator->sort('brand_id'); ?></th>
+		<th><?php echo $this->Paginator->sort('price_changed'); ?></th>
+		<th><?php echo $this->Paginator->sort('price_wholesale_after_ud'); ?></th>
 		<th><?php echo $this->Paginator->sort('price_wholesale'); ?></th>
 		<th><?php echo $this->Paginator->sort('markup'); ?></th>
 		<th><?php echo $this->Paginator->sort('price'); ?></th>
@@ -230,6 +233,7 @@ $(document).ready(function() {
 		<td><a href="/admin/products/switch/show/<?php echo $product['Product']['id']; ?>" class="status"><img src="/img/icon_<?php echo $product['Product']['show']; ?>.png" alt="" /></a></td>
 
 		<td><?php echo ($product['Product']['discontinued']); ?></td>
+		<td><a href="/admin/products/switch/active/<?php echo $product['Product']['id']; ?>" class="status"><img src="/img/icon_<?php echo $product['Product']['not_showing']; ?>.png" alt="" /></a></td>
 		<td><?php echo $this->Html->image('products/image/' . $product['Product']['image'], array('class' => 'img100')); ?></td>
 		<td><?php echo ($product['Product']['name']); ?></td>
 		<td><?php echo ($product['Product']['slug']); ?></td>
@@ -242,7 +246,11 @@ $(document).ready(function() {
 		<td><span class="length" data-value="<?php echo $product['Product']['length']; ?>" data-pk="<?php echo $product['Product']['id']; ?>"><?php echo h($product['Product']['length']); ?></span></td>
 		<td><span class="width" data-value="<?php echo $product['Product']['width']; ?>" data-pk="<?php echo $product['Product']['id']; ?>"><?php echo h($product['Product']['width']); ?></span></td>
 		<td><span class="brand" data-value="<?php echo $product['Brand']['id']; ?>" data-pk="<?php echo $product['Product']['id']; ?>"><?php echo h($product['Brand']['name']); ?></span></td>
+		<td><a href="/admin/products/switch/active/<?php echo $product['Product']['id']; ?>" class="status"><img src="/img/icon_<?php echo $product['Product']['price_changed']; ?>.png" alt="" /></a></td>
+
+		<td><span class="price_wholesale_after_ud" data-value="<?php echo $product['Product']['price_wholesale_after_ud']; ?>" data-pk="<?php echo $product['Product']['id']; ?>"><?php echo ($product['Product']['price_wholesale_after_ud']); ?></span></td>
 		<td><span class="price_wholesale" data-value="<?php echo $product['Product']['price_wholesale']; ?>" data-pk="<?php echo $product['Product']['id']; ?>"><?php echo ($product['Product']['price_wholesale']); ?></span></td>
+
 		<td><?php echo ($product['Product']['markup']); ?>%</td>
 		<td><span class="price" data-value="<?php echo $product['Product']['price']; ?>" data-pk="<?php echo $product['Product']['id']; ?>"><?php echo h($product['Product']['price']); ?></span></td>
 		<td><span class="shipping_weight" data-value="<?php echo $product['Product']['shipping_weight']; ?>" data-pk="<?php echo $product['Product']['id']; ?>"><?php echo ($product['Product']['shipping_weight']); ?></span></td>

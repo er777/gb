@@ -217,6 +217,13 @@ function doFormatPhone(A){var B=document.getElementById(A);B.onblur=function(){f
 				
 
 				<hr />
+				<h3>WAREHOUSE</h3>
+				<?php echo $this->Form->input('warehouse_manager'); ?>
+				<?php echo $this->Form->input('warehouse_phone'); ?>
+				<?php echo $this->Form->input('warehouse_ext', array('class' => 'span1','label' =>'Warehouse Extension')); ?>
+				<?php echo $this->Form->input('warehouse_email', array('class' => 'span4')); ?>
+				
+				<hr />
 				<h3>CUSTOMER SERVICE</h3>
 				<?php echo $this->Form->input('customer_service_contact', array('label' =>'Customer Service Name')); ?>
 				<?php echo $this->Form->input('customer_service_phone'); ?>

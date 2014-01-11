@@ -1194,7 +1194,7 @@ class ProductsController extends AppController {
 						'Product.id' => $this->Product->id
 					)
 				));
-				$markup = (($product1['Product']['price'] - $product1['Product']['price_wholesale']) / $product1['Product']['price_wholesale']) * 100;
+				$markup = (($product1['Product']['price'] - $product1['Product']['price_wholesale']) / $product1['Product']['price']) * 100;
 				$this->Product->saveField('markup', $markup);
 
 				$this->Session->setFlash('The product has been saved');
@@ -1295,7 +1295,7 @@ class ProductsController extends AppController {
 						'Product.id' => $this->Product->id
 					)
 				));
-				$markup = (($product1['Product']['price'] - $product1['Product']['price_wholesale']) / $product1['Product']['price_wholesale']) * 100;
+				$markup = (($product1['Product']['price'] - $product1['Product']['price_wholesale']) / $product1['Product']['price']) * 100;
 				$this->Product->saveField('markup', $markup);
 
 				$this->Session->setFlash('The product has been saved');

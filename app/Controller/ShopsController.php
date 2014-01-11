@@ -217,7 +217,7 @@ class ShopsController extends AppController {
 						$totalandtax = $user['subtotal'];
 					}
 					$taxtotal += $tax;
-
+					
 					$this->Session->write('Shop.Users.' . $user['id'] . '.tax', $tax);
 					$this->Session->write('Shop.Users.' . $user['id'] . '.totalandtax', $totalandtax);
 
@@ -233,13 +233,30 @@ class ShopsController extends AppController {
 							$shippingMethod = ucfirst($user['shipping_method']);
 
 							$result = $this->$shippingMethod->getRate($data);
+							
+								$shipping_residential = '';
+								$service_residential = '';
+							
+								if ($residential = 0) {
+							
+									if ($shippingMethod == 'fedex') {
+										$shipping_residential = (Configure::read('Settings.FEDEX_RESIDENTIAL_FEE'));
+									}
+									
+									elseif ($shippingMethod == 'ups') {
+										$shipping_residential = (Configure::read('Settings.UPS_RESIDENTIAL_FEE'));
+									}
 
+								};
+								
 							if(!$result) {
 								$this->Session->setFlash('Unable to rate the shipment');
 								$this->redirect(array('action' => 'address'));
 							}
-
+							
+						
 							$this->Session->write('Shop.Users.' . $user['id'] . '.shipping_service', $result[0]['ServiceName']);
+							$this->Session->write('Shop.Users.' . $user['id'] . '.shipping_residential', $result[0]['ServiceResidential']);
 							$this->Session->write('Shop.Users.' . $user['id'] . '.shipping', $result[0]['TotalCharges']);
 							$this->Session->write('Shop.Users.' . $user['id'] . '.Shippingfees', $result);
 
@@ -281,6 +298,7 @@ class ShopsController extends AppController {
 
 				$shippingtotal = 0;
 				foreach($shop['Users'] as $user) {
+
 					$shippingtotal += $user['Shippingfees'][0]['TotalCharges'];
 				}
 				$shippingtotal = sprintf('%.2f', $shippingtotal);
@@ -342,16 +360,30 @@ class ShopsController extends AppController {
 		}
 
 		if ($this->request->is('post') && isset($this->request->data['Ship'])) {
+			
+			//ER
+					if ($shippingMethod = 'fedex') {
+							$residential = (Configure::read('Settings.FEDEX_RESIDENTIAL_FEE'));
+							//echo($residential_fee);
+						}
+						
+					elseif ($shippingMethod = 'ups') {
+							$residential = (Configure::read('Settings.UPS_RESIDENTIAL_FEE'));
+							//echo($residential_fee);
+						};	
+					
+			//			
 
 			foreach($this->request->data['Ship'] as $key => $value) {
 				$userId = str_replace('rating_', '', $key);
 				if($this->Session->check('Shop.Users.' . $userId . '.shipping_selected')) {
-					$this->Session->write('Shop.Users.' . $userId . '.shipping_selected', $value);
+					$this->Session->write('Shop.Users.' . $userId . '.residential_fee', $value);
 					$this->Session->write('Shop.Users.' . $userId . '.shipping_service', $shop['Users'][$userId]['Shippingfees'][$value]['ServiceName']);
 					$this->Session->write('Shop.Users.' . $userId . '.shipping', $shop['Users'][$userId]['Shippingfees'][$value]['TotalCharges']);
+					$this->Session->write('Shop.Users.' . $userId . '.shipping', $shop['Users'][$userId]['residential_fee'][$value]['TotalCharges']);
 				}
 			}
-
+die;
 			$shop = $this->Session->read('Shop');
 			$shippingtotal = 0;
 

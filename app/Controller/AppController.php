@@ -224,7 +224,7 @@ class AppController extends Controller {
 					'Product.id' => $id
 				)
 			));
-			$markup = (($product['Product']['price'] - $product['Product']['price_wholesale']) / $product['Product']['price_wholesale']) * 100;
+			$markup = (($product['Product']['price'] - $product['Product']['price_wholesale']) / $product['Product']['price']) * 100;
 			$this->$model->saveField('markup', $markup);
 		}
 

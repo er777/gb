@@ -176,3 +176,10 @@ input::-webkit-inner-spin-button {
 .order-user-pic {
 	height:30px;
 }
+
+@media print
+{
+body * { visibility: hidden; }
+#printcontent * { visibility: visible; }
+#printcontent { position: absolute; top: 40px; left: 30px; }
+}
