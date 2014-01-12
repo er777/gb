@@ -260,14 +260,17 @@ li.gb-account a {
 }
 	
 .carousel-control {
-	top: 50%;
+	top: 45%;
 	line-height: 35px;
+	font-size:70px;
 }
 .carousel-control.left {
 	left: -29px;
+	background-image:none;
 }
 .carousel-control.right {
 	right: -29px;
+	background-image:none;
 }
 
 /** FEATURE **/

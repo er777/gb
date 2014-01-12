@@ -53,7 +53,7 @@
 				$i = 0;
 				foreach ($products as $product):
 				$i++;
-				//if (($i % 4) == 0) { echo "\n<div class=\"row\">\n\n";}
+				//if (($i % 15) == 0) { echo "\n<div class=\"row\">\n\n";}
 			?>
 			
 			<div class="col-md-3 col-sm-6"> <!--style="width:22.5%;" -->

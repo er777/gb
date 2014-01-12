@@ -15,8 +15,16 @@
 <!--[if lt IE 9]><link href="css/meganizr-ie.css" rel="stylesheet" type="text/css"><![endif]-->
 <!-- end Meganizr Menu Styles -->
 
-<?php echo $this->Html->css(array('bootstrap.min.css','homepage.css','mega-menu.css','mega-menu-responsive.css')); ?>
+<?php echo $this->Html->css(array('bootstrap.min.css','bootstrap-responsive.min.css','homepage.css','meganizr.css')); ?>
 <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/smoothness/jquery-ui.css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<?php echo $this->Html->script(array('bootstrap.min.js','twitter-bootstrap-hover-dropdown.js','homepage.js','jquery.columnizer.min.js','jquery.bpopup-0.9.3.min.js')); ?>
+<!--'jquery.marquee.min.js' -->
+<?php //echo $this->App->js(); ?>
+<?php //echo $this->fetch('meta'); ?>
+<?php //echo $this->fetch('css'); ?>
+<?php //echo $this->fetch('script'); ?>
 </head>
 
 <body>
@@ -49,8 +57,8 @@
 								</button>
 							</li>
 							<li class="social"><a href="https://www.facebook.com/pages/Gourmet-Basket/603379453015040"><img src="/img/global/fb.png" width="28" height="27" alt="facebook"></a></li>
-							<li class="social"><a href="https://twitter.com/search/users?q=gourmetbasket1"><img src="/img/global/twitter.png" width="28" height="27"></a></li>
-							<li class="social"><a href="http://pinterest.com/gourmetbasket1/"><img src="/img/global/pinterest.png" width="27" height="27" alt="pinterest"></a></li>
+							<li class="social"><a href="https://twitter.com/search/users?q=gourmetbasket1"><img src="/img/global/tw.png" width="28" height="27"></a></li>
+							<li class="social"><a href="http://pinterest.com/gourmetbasket1/"><img src="/img/global/pin.png" width="27" height="27" alt="pinterest"></a></li>
 							<!--<li class="gb-account"><a href="/members/register">BECOME A MEMBER</a></li>--> 
 							<!-- <li class="gb-account"><a href="/members/login">LOG IN</a></li>-->
 						</ul>
@@ -257,8 +265,6 @@
 
 </script>
 
-
-<script type='text/javascript' src='//easy.myfonts.net/v1/js?sid=136578(font-family=Marydale+Regular)&sid=136579(font-family=Marydale+Bold)&key=TBaQWX9ZsK'></script>
 
 <script>
     // Drop Down Hover!

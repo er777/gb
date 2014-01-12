@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title><?php echo $title_for_layout; ?></title>
-<?php echo $this->Html->css(array('bootstrap.css')); ?>
+<?php echo $this->Html->css(array('old-bootstrap/bootstrap.css')); ?>
 <?php echo $this->Html->css(array('admin.css')); ?>
 
 <link rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/smoothness/jquery-ui.css" />

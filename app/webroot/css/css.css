@@ -112,9 +112,7 @@ img.frame {
 	margin: auto;
 	position: relative;
 }
-.container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
-	
-}
+
 .vendor-logo {
 	position:absolute;
 	right:311px;
@@ -227,12 +225,28 @@ a.home{
 	color:#fff;
 }
 
+/** New Navigation
+
+
+
+
+/* Sidebar nav */
+
+#nav > li > a { 
+ border-left: 3px solid #f25758;
+}
+
+/* Sidebar page navigation */
+
+#navi > li > a { 
+ border-left: 3px solid #f25758;
+}
 
 
 
 /* Navigation **/
 
-#main-nav  li a.parent {
+/*#main-nav  li a.parent {
 	font-family: 'PT Sans Narrow';
 	font-size:19px;
 }
@@ -285,7 +299,7 @@ li.mzr-drop>a>b.caret {
 }
 /** Mega Menu **/
 
-.meganizr {
+/**.meganizr {
 }
 .mzr-content {
 	-webkit-border-radius: 14px; /* Android ≤ 1.6, iOS 1-3.2, Safari 3-4 */
@@ -298,7 +312,8 @@ li.mzr-drop>a>b.caret {
 	background-image: -o-linear-gradient(top, #E5F0ED, #ffffff);
 	; /* Opera 11.10-12.00 */
 	background-image: linear-gradient(to bottom, #E5F0ED, #ffffff); /* Chrome 26, Firefox 16+, IE 10+, Opera 12.50+ */
-}
+/*}
+/*
 .meganizr .mzr-drop .mzr-content {
 }
 .mzr-content p.nav-special a {
@@ -321,7 +336,7 @@ ul.meganizr > li > a {
 ul.meganizr > li > a:hover, .mzr-content .wide p a:hover {
 	color: #97c199;
 }
-
+**/
 
 h1.title-description {
 	font-family: Marydale Regular, sans-serif;
@@ -1380,6 +1395,7 @@ h3.cat-list {
 	transform: rotateX(45deg);
 	-webkit-transform: rotateX(45deg); /* Safari and Chrome */
 }
+
 div.col-md-8>div.awning>img {
 	width: 690px;
 	height: 111px;
@@ -2095,26 +2111,8 @@ ul.navList, .navList li, .navList li a:hover {
 	/*height: 300px;*/
 	z-index: 100;
 }
-.navList .listTab li {
-	margin: 0 0 0 0;
-}
-.navList .listTab a, .navList .listTab a:hover {
-	background-image: none;
-	border: none;
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	box-shadow: none;
-	width: 250px;
-}
-.navList .listTab a {
-	padding: 4px 5px 4px 10px;
-}
-.navList li:hover ul ul, .navList li:hover ul ul ul, .navList li:hover ul ul ul ul {
-	display: none;
-}
-.navList li:hover ul, .navList li li:hover ul, .navList li li li:hover ul, .navList li li li li:hover ul {
-	display: block;
-}
+
+
 
 li.in1 a {
 	padding-left:40px;
