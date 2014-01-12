@@ -21,7 +21,7 @@
 						<?php foreach($menuvendors as $menuvendor) : ?>
 						<?php $i++; ?>
 						<li><?php echo $this->Html->link($menuvendor['User']['name'], 'http://' . $menuvendor['User']['slug'] . '.' . Configure::read('Settings.DOMAIN') . '/'); ?></li>
-						<?php if (($i % 10) == 0) { ?>
+						<?php if (($i % 8) == 0) { ?>
 					</ul>
 				</li>
 				<li class="two-column">
@@ -46,29 +46,33 @@
 					<ul>
 						<?php } endforeach; ?>
 					</ul>
-				</div>
+				
 				</li>
 			</ul>
 		</li>
 		
+		
+		
 		<!-- THREE -->
-		<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"> US FOODS <b class="caret"></b> </a>
+		<li class="dropdown mega-menu-2"><a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"> US FOODS <b class="caret"></b> </a>
 			<ul class="dropdown-menu">
 				<li class="two-column">
 					<ul>
 						<?php $i = 0; ?>
 						<?php foreach($menu_ustraditions as $menu_ustradition) : ?>
 						<?php $i++; ?>
-						<li><a href="http://www.<?php echo Configure::read('Settings.DOMAIN') .'/foods/'. $menu_ustradition['Ustradition']['slug']; ?>"><?php echo $menu_ustradition['Ustradition']['name']; ?></a></li>
+						<li><a href="http://www.<?php echo Configure::read('Settings.DOMAIN') .'/foods/us/'. $menu_ustradition['Ustradition']['slug']; ?>"><?php echo $menu_ustradition['Ustradition']['name']; ?></a></li>
 						<?php if (($i % 8) == 0) { ?>
 					</ul>
 					<ul>
 						<?php } endforeach; ?>
 					</ul>
-				</div>
+				
 				</li>
 			</ul>
 		</li>
+		
+		
 		
 	</ul>
 </div>

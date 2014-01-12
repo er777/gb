@@ -56,7 +56,7 @@
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">U.S. FOODS<b class="caret"></b></a>
 					<ul class="dropdown-menu">
 						<li><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/us/far-west ">Far West </a></li>
-							<ul class="dropdown-menu">
+							<!--<ul class="dropdown-menu">
 								<li><a href="#">Login</a></li>
 								<li class="dropdown-submenu">
 									<a tabindex="-1" href="#">More options</a>
@@ -76,7 +76,7 @@
 						<li><a href="#">Register</a></li>
 						<li class="divider"></li>
 						<li><a href="#">Logout</a></li>
-                    </ul>
+                    </ul>-->
 								
 						<li><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/us/northwest">Pacific Northwest</a></li>
 						<li><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/us/mid-west">Plains/ Midwest</a></li>
@@ -91,20 +91,54 @@
 						<li><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/us/louisiana">Louisiana</a></li>
 					</ul>
 					
-				</li><!-- Vendor Menu Ends -->					
+				</li><!-- US Foods Menu Ends -->					
 					
+					
+					
+					 <li class="dropdown" id="intlfoods-menu">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"INTL FOODS<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/us/far-west ">Far West </a></li>
+							<!--<ul class="dropdown-menu">
+								<li><a href="#">Login</a></li>
+								<li class="dropdown-submenu">
+									<a tabindex="-1" href="#">More options</a>
+									<ul class="dropdown-menu">
+										<li><a tabindex="-1" href="#">Second level</a></li>
+										<li class="dropdown-submenu">
+											<a href="#">More..</a>
+											<ul class="dropdown-menu">
+												<li><a href="#">3rd level</a></li>
+												<li><a href="#">3rd level</a></li>
+											</ul>
+										</li>
+								<li><a href="#">Second level</a></li>
+								<li><a href="#">Second level</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Register</a></li>
+						<li class="divider"></li>
+						<li><a href="#">Logout</a></li>
+                    </ul>-->
+								
+						<li><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/us/northwest">Pacific Northwest</a></li>
+						<li><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/us/mid-west">Plains/ Midwest</a></li>
+						<li><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/us/southwest">Southwest</a></li>
+						<li><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/us/southeast">Southeast</a></li>
+						<li><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/us/deep-south">South Central</a></li>
+						<li><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/us/great-lakes">Great Lakes</a></li>
+						<li><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/us/mid-atlantic">Mid-Atlantic</a></li>
+						<li><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/us/new-england">New England</a></li>
+						<li><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/us/amish">Amish</a></li>
+						<li><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/us/native-american">Native American</a></li>
+						<li><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/us/louisiana">Louisiana</a></li>
+					</ul>
+					
+				</li><!-- US Foods Menu Ends -->					
 			
 				   
-                   <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tablets <b class="caret"></b></a>
-                      <ul class="dropdown-menu">
-                        <li><a href="items.html">Samsung</a></li>
-                        <li><a href="items.html">Micromax</a></li>
-                        <li><a href="items.html">Apple</a></li>
-                      </ul>
-                   </li>                                      
-                   <li><a href="support.html">Support</a></li>
-                   <li><a href="contact.html">Contact</a></li>
+                                                         
+                 
                  </ul>
                </nav>
               </div>
