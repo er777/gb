@@ -50,7 +50,13 @@
 		<?php echo $this->Html->link($auxcategory['Category']['name'], array('controller' => 'categories', 'action' => 'view', $auxcategory['Category']['slug'])); ?><br />
 
 	<?php endforeach; ?>
+<?php if(!empty($brands)) : ?>
+<div class="gb-heading red title">Brand Name:</div>
+<?php endif; ?>
+<?php foreach ($brands as $brandnames): ?>
+<?php echo $this->Html->link($brandnames['Brand']['name'], array('controller' => 'categories', 'action' => 'view',$category['Category']['slug'],'brand','brands',$brandnames['Brand']['slug'])); ?><br />
 
+	<?php endforeach; ?>
 
 		<?php //debug($test) ; //$auxcategories1['Product']['auxcategory_1'] ?>
 
@@ -60,7 +66,12 @@
 
 	<div class="category-summary">
     
-    	<div><?php echo $category['Category']['title'] ?></div>
+    	<div><?php 
+    	if(!empty($category['Category']['title']))
+    	{
+    	echo $category['Category']['title'] 
+	}
+    	?></div>
 
 		<div class="small-cat-logo"
 			<?php echo $this->Html->image('categories/image/' . $category['Category']['image'], array('class' => 'category-pic-small')); ?>
@@ -104,7 +115,10 @@
 				<li><?php echo $this->Html->link($subsubcategory['Subsubcategory']['name'], array('controller' => 'categories', 'action' => 'view', $category['Category']['slug'], $subcategory['Subcategory']['slug'], $subsubcategory['Subsubcategory']['slug'])); ?></li>
 				<span class="divider">/</span>
 			<?php endif; ?>
-
+			<?php if(!empty($brandss)) : ?>
+			<li><?php echo $this->Html->link($brandss['Brand']['name'], array('controller' => 'categories', 'action' => 'view', $category['Category']['slug'],'brand','brands',$brandss['Brand']['slug'])); ?></li>
+				<span class="divider">/</span>
+			<?php endif; ?>
 		</ul>
 
 		<h3 class="gb-heading red  tight">
