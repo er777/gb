@@ -182,6 +182,7 @@ class ShopsController extends AppController {
 		}
 
 		if ($this->request->is('post')) {
+			
 			$this->loadModel('Order');
 			$this->Order->set($this->request->data);
 			if($this->Order->validates()) {
@@ -234,17 +235,22 @@ class ShopsController extends AppController {
 
 							$result = $this->$shippingMethod->getRate($data);
 							
-								$shipping_residential = '';
-								$service_residential = '';
+							$shipping_residential = 0;
+							$business = 0;
 							
-								if ($residential = 0) {
 							
+								if (!empty($business)){
+									//echo "here";die;
 									if ($shippingMethod == 'fedex') {
-										$shipping_residential = (Configure::read('Settings.FEDEX_RESIDENTIAL_FEE'));
+										$shipping_business = (Configure::read('Settings.FEDEX_RESIDENTIAL_FEE'));
+										//echo('fedex' .$shipping_residential);
+										//die;
 									}
 									
 									elseif ($shippingMethod == 'ups') {
-										$shipping_residential = (Configure::read('Settings.UPS_RESIDENTIAL_FEE'));
+										$shipping_business = (Configure::read('Settings.UPS_RESIDENTIAL_FEE'));
+										//echo('ups' .$shipping_residential);
+										//die;
 									}
 
 								};
@@ -256,7 +262,7 @@ class ShopsController extends AppController {
 							
 						
 							$this->Session->write('Shop.Users.' . $user['id'] . '.shipping_service', $result[0]['ServiceName']);
-							$this->Session->write('Shop.Users.' . $user['id'] . '.shipping_residential', $result[0]['ServiceResidential']);
+							//$this->Session->write('Shop.Users.' . $user['id'] . '.shipping_residential', $result[0]['ServiceResidential']);
 							$this->Session->write('Shop.Users.' . $user['id'] . '.shipping', $result[0]['TotalCharges']);
 							$this->Session->write('Shop.Users.' . $user['id'] . '.Shippingfees', $result);
 
@@ -361,22 +367,25 @@ class ShopsController extends AppController {
 
 		if ($this->request->is('post') && isset($this->request->data['Ship'])) {
 			
-			//ER
-					if ($shippingMethod = 'fedex') {
-							$residential = (Configure::read('Settings.FEDEX_RESIDENTIAL_FEE'));
-							//echo($residential_fee);
-						}
-						
-					elseif ($shippingMethod = 'ups') {
-							$residential = (Configure::read('Settings.UPS_RESIDENTIAL_FEE'));
-							//echo($residential_fee);
-						};	
-					
-			//			
+			
 
 			foreach($this->request->data['Ship'] as $key => $value) {
 				$userId = str_replace('rating_', '', $key);
 				if($this->Session->check('Shop.Users.' . $userId . '.shipping_selected')) {
+					
+					//ER
+				//	if ($shippingMethod = 'fedex') {
+							//$residential = (Configure::read('Settings.FEDEX_RESIDENTIAL_FEE'));
+							//echo($residential_fee);
+				//		}
+						
+				//	elseif ($shippingMethod = 'ups') {
+							//$residential = (Configure::read('Settings.UPS_RESIDENTIAL_FEE'));
+							//echo($residential_fee);
+				//		};	
+					
+			//			
+					
 					$this->Session->write('Shop.Users.' . $userId . '.residential_fee', $value);
 					$this->Session->write('Shop.Users.' . $userId . '.shipping_service', $shop['Users'][$userId]['Shippingfees'][$value]['ServiceName']);
 					$this->Session->write('Shop.Users.' . $userId . '.shipping', $shop['Users'][$userId]['Shippingfees'][$value]['TotalCharges']);

@@ -56,7 +56,7 @@
 	<br />
     <br />
 
-    <?php echo $this->Form->input('residential', array('type' => 'checkbox', 'label' => 'Is this a Business Address?'));?>
+    <?php echo $this->Form->input('business', array('type' => 'checkbox', 'label' => 'Is this a Business Address?'));?>
     <br />
     <br />
     <?php echo $this->Form->button('<i class="icon-arrow-right icon-white"></i> Continue', array('class' => 'btn btn-primary', 'escape' => false));?>
