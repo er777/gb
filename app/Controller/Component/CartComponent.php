@@ -68,7 +68,7 @@ class CartComponent extends Component {
 
 		}
 
-		if($productmod) {
+		if(isset($productmod)) {
 			$this->product['Product']['productmod_id'] = $productmod['Productmod']['id'];
 			$this->product['Product']['productmod_name'] = $productmod['Productmod']['name'];
 			$this->product['Product']['price'] = $productmod['Productmod']['price'];

@@ -227,6 +227,7 @@ a.home{
 
 .nav-collapse {
 	margin-left: 88px;
+	margin-top:8px;
 }
 .navbar-fixed-top .navbar-inner, .navbar-static-top .navbar-inner {
 	background-color: transparent;
