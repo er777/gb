@@ -1,7 +1,9 @@
 <?php
 App::uses('AppController', 'Controller');
 class ProductsController extends AppController {
-
+	
+	  public $uses = array('Brand','Category','Product','Ustradition');
+  
 ////////////////////////////////////////////////////////////
 
 	public function maestro($key = null) {
@@ -416,6 +418,31 @@ class ProductsController extends AppController {
 		$this->set(compact('title_for_layout'));
 
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 ////////////////////////////////////////////////////////////
 
@@ -705,6 +732,9 @@ class ProductsController extends AppController {
 	// }
 
 ////////////////////////////////////////////////////////////
+
+
+
 
 	public function search() {
 

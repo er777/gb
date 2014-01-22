@@ -147,6 +147,15 @@
 
 
 		</div>
+		
+		<div class="gb-heading">Our Brands: </div>
+		<div class="gb-heading red list" style="font-size:120%;">
+			<?php foreach ($brands as $brandslink): ?>
+			<?php echo $this->Html->link($brandslink['Brand']['name'], array('controller' => 'ustraditions', 'action' => 'view',$fst,'brand',$brandslink['Brand']['slug'])); ?> <br />
+			<?php endforeach; ?>
+		</div>
+		
+		
 
 		<div style="clear:both">
 
