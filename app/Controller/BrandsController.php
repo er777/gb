@@ -5,7 +5,6 @@ class BrandsController extends AppController {
 ////////////////////////////////////////////////////////////
 
 	public function index() {
-
 		$subDomain = $this->_getSubDomain();
 
 		if(!isset($this->params->query['debug'])) {
