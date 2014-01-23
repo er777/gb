@@ -778,7 +778,11 @@ class ProductsController extends AppController {
 		
 		$this->render('index');
 	}
-public function brand() {
+	
+////////////////////////////////////////////////////////////
+	
+	
+	public function brand() {
 		$args = array_unique(func_get_args());
 		$subDomain = $this->_getSubDomain();
 		if($subDomain != 'www') {
@@ -862,7 +866,9 @@ public function brand() {
 				'Product.slug',
 				'Product.image',
 				'Product.price',
+				'Product.active',
 				'Product.displaygroup',
+				
 				//'Brand.name',
 				'User.slug',
 				'User.more',
@@ -870,7 +876,8 @@ public function brand() {
 			),
 			'limit' => 40,
 			'conditions' => array(
-					'Product.brand_id' => $bid
+					'Product.brand_id' => $bid,
+					'Product.active' => 1,
 				),
 			'order' => array(
 				'Product.displaygroup' => 'ASC',
@@ -883,6 +890,7 @@ public function brand() {
 		$this->set(compact('brands'));
 		$this->render('index');
 	}
+	
 ////////////////////////////////////////////////////////////
 
 	// public function subcategory($id) {

@@ -1,3 +1,8 @@
+<?php $url = $this->here;?> 
+
+<p style="font-size:75%">(&nbsp;<?php echo($url); ?>&nbsp;)</p>
+
+
 <div class="row product">
 	<?php
 		$i = 0;

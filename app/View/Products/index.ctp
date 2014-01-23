@@ -159,7 +159,7 @@
         <?php //echo $this->Html->link($brandslink['Brand']['name'], array('controller' => 'products', 'action' => 'category',$fst,'brand',$brandslink['Brand']['slug'])); ?>
         
         <span class="gb-nav"><img src="/img/global/dash-2.png"></span>
-		<a href="/category/<?php echo $fst;?>/brand/<?php echo $brandslink['Brand']['slug'];?>"><?php echo $brandslink['Brand']['name'];?></a>
+		<a href="<?php //echo $fst;?>/brand/<?php echo $brandslink['Brand']['slug'];?>"><?php echo $brandslink['Brand']['name'];?></a>
         
         <?php } else { ?>
          <?php //echo $this->Html->link($brandslink['Brand']['name'], array('controller' => 'products', 'action' => 'brand',$brandslink['Brand']['slug'])); ?>
