@@ -29,14 +29,21 @@
 		<div class="gb-nav-container">
 ||||||| parent of 1c916a0... Fixed index page
 		<?php if(!empty($user)) : ?>
+<<<<<<< HEAD
 		<div class=""> <a href="/"> </a>
 =======
 		<?php if(!empty($user)) : ?>
 		<div class="gb-nav-container">
 >>>>>>> 1c916a0... Fixed index page
+||||||| parent of 1c916a0... Fixed index page
+		<div class=""> <a href="/"> </a>
+=======
+		<div class="gb-nav-container">
+>>>>>>> 1c916a0... Fixed index page
 
 		<?php /*?><?php if(!empty($user)) : ?><?php */?>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 			<div class="vendor-logo">
 				<a href="/">
@@ -44,6 +51,20 @@
 				</a>
 ||||||| parent of 1c916a0... Fixed index page
 			<div class="quote"><?php echo $user['User']['shop_quote']; ?></div>
+||||||| parent of 1c916a0... Fixed index page
+			<div class="quote"><?php echo $user['User']['shop_quote']; ?></div>
+=======
+			<div class="vendor-logo">
+				<a href="/">
+				<?php echo $this->Html->image('users/image/' . $user['User']['image'], array('class' => 'img-polaroid', 'width' =>'226')); ?>
+				</a>
+
+				<div class="name"><?php echo $user['User']['name']; ?></div>
+				<div class="plain"><?php echo $user['User']['city']; ?>, <?php echo $user['User']['state']; ?></div>
+
+				<div class="quote"><?php echo $user['User']['shop_quote']; ?></div>
+			</div>
+>>>>>>> 1c916a0... Fixed index page
 		<?php endif; ?>
 =======
 			<div class="vendor-logo">
@@ -51,6 +72,7 @@
 				<?php echo $this->Html->image('users/image/' . $user['User']['image'], array('class' => 'img-polaroid', 'width' =>'226')); ?>
 				</a>
 
+<<<<<<< HEAD
 				<div class="name"><?php echo $user['User']['name']; ?></div>
 				<div class="plain"><?php echo $user['User']['city']; ?>, <?php echo $user['User']['state']; ?></div>
 
@@ -70,7 +92,16 @@
 =======
 <hr />
 >>>>>>> 1c916a0... Fixed index page
+||||||| parent of 1c916a0... Fixed index page
+	<hr />
+	
+		<a class="gb-nav" href="/">All Our Products</a>
+		<?php if(!empty($category)) : ?><br /><span class="gb-nav"><img src="/img/global/dash-2.png"></span>
+=======
+<hr />
+>>>>>>> 1c916a0... Fixed index page
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 				<div class="quote"><?php echo $user['User']['shop_quote']; ?></div>
 			</div>
@@ -80,7 +111,14 @@
 =======
 			<a class="gb-nav" href="/">All Our Products</a>
 >>>>>>> 1c916a0... Fixed index page
+||||||| parent of 1c916a0... Fixed index page
+			<?php 
+				echo $this->Html->link($category['Category']['name'], array('controller' => 'products', 'action' => 'category', $category['Category']['slug'])); ?>
+=======
+			<a class="gb-nav" href="/">All Our Products</a>
+>>>>>>> 1c916a0... Fixed index page
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <hr />
 ||||||| parent of 1c916a0... Fixed index page
@@ -101,7 +139,19 @@
 =======
 				<?php echo $this->Html->link($category['Category']['name'], array('controller' => 'products', 'action' => 'category', $category['Category']['slug'])); ?>
 >>>>>>> 1c916a0... Fixed index page
+||||||| parent of 1c916a0... Fixed index page
+			<?php $cat_crumb = $category['Category']['name'];?>
 
+
+		<?php endif; ?>
+=======
+
+			<?php if(!empty($category)) : ?><br /><span class="gb-nav"><img src="/img/global/dash-2.png"></span>
+
+				<?php echo $this->Html->link($category['Category']['name'], array('controller' => 'products', 'action' => 'category', $category['Category']['slug'])); ?>
+>>>>>>> 1c916a0... Fixed index page
+
+<<<<<<< HEAD
 <<<<<<< HEAD
 			<?php if(!empty($category)) : ?><br /><span class="gb-nav"><img src="/img/global/dash-2.png"></span>
 ||||||| parent of 1c916a0... Fixed index page
@@ -111,14 +161,27 @@
 =======
 				<?php $cat_crumb = $category['Category']['name']?>
 >>>>>>> 1c916a0... Fixed index page
+||||||| parent of 1c916a0... Fixed index page
+		<?php if(!empty($subcategory) && !empty($category)) : ?>
+		<?php //echo "here";?>
+			<br /><span class="gb-nav"><img src="/img/global/dash-4.png"></span><?php echo $this->Html->link($subcategory['Subcategory']['name'], array('controller' => 'products', 'action' => 'category', $category['Category']['slug'], $subcategory['Subcategory']['slug'])); ?>
+=======
+				<?php $cat_crumb = $category['Category']['name']?>
+>>>>>>> 1c916a0... Fixed index page
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 				<?php echo $this->Html->link($category['Category']['name'], array('controller' => 'products', 'action' => 'category', $category['Category']['slug'])); ?>
 ||||||| parent of 1c916a0... Fixed index page
 			<?php $subcat_crumb = $subcategory['Subcategory']['name']?>
 =======
 >>>>>>> 1c916a0... Fixed index page
+||||||| parent of 1c916a0... Fixed index page
+			<?php $subcat_crumb = $subcategory['Subcategory']['name']?>
+=======
+>>>>>>> 1c916a0... Fixed index page
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 				<?php $cat_crumb = $category['Category']['name']?>
 ||||||| parent of 1c916a0... Fixed index page
@@ -126,7 +189,13 @@
 =======
 			<?php endif; ?>
 >>>>>>> 1c916a0... Fixed index page
+||||||| parent of 1c916a0... Fixed index page
+		<?php endif; ?>
+=======
+			<?php endif; ?>
+>>>>>>> 1c916a0... Fixed index page
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 ||||||| parent of 1c916a0... Fixed index page
 		<?php if(!empty($subsubcategory)) : ?>
@@ -136,7 +205,16 @@
 			<?php if(!empty($subcategory)) : ?>
 				<br /><span class="gb-nav"><img src="/img/global/dash-4.png"></span><?php echo $this->Html->link($subcategory['Subcategory']['name'], array('controller' => 'products', 'action' => 'category', $category['Category']['slug'], $subcategory['Subcategory']['slug'])); ?>
 >>>>>>> 1c916a0... Fixed index page
+||||||| parent of 1c916a0... Fixed index page
+		<?php if(!empty($subsubcategory)) : ?>
+		<?php //echo "here222";?>
+			<br /><span class="gb-nav"><img src="/img/global/dash-7.png"></span><?php echo $this->Html->link($subsubcategory['Subsubcategory']['name'], array('controller' => 'products', 'action' => 'category', $category['Category']['slug'], $subcategory['Subcategory']['slug'], $subsubcategory['Subsubcategory']['slug'])); ?>
+=======
+			<?php if(!empty($subcategory)) : ?>
+				<br /><span class="gb-nav"><img src="/img/global/dash-4.png"></span><?php echo $this->Html->link($subcategory['Subcategory']['name'], array('controller' => 'products', 'action' => 'category', $category['Category']['slug'], $subcategory['Subcategory']['slug'])); ?>
+>>>>>>> 1c916a0... Fixed index page
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 			<?php endif; ?>
 ||||||| parent of 1c916a0... Fixed index page
@@ -154,10 +232,28 @@
 =======
 			<?php endif; ?>
 >>>>>>> 1c916a0... Fixed index page
+||||||| parent of 1c916a0... Fixed index page
+			<?php $subsubcat_crumb = $subsubcategory['Subsubcategory']['name']?>
 
-<<<<<<< HEAD
+		<?php endif; ?>
+		
+=======
 				<?php $subcat_crumb = $subcategory['Subcategory']['name']?>
 
+			<?php endif; ?>
+>>>>>>> 1c916a0... Fixed index page
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+				<?php $subcat_crumb = $subcategory['Subcategory']['name']?>
+||||||| parent of 1c916a0... Fixed index page
+		<div style="clear:both">
+=======
+			<?php if(!empty($subsubcategory)) : ?>
+				<br /><span class="gb-nav"><img src="/img/global/dash-7.png"></span><?php echo $this->Html->link($subsubcategory['Subsubcategory']['name'], array('controller' => 'products', 'action' => 'category', $category['Category']['slug'], $subcategory['Subcategory']['slug'], $subsubcategory['Subsubcategory']['slug'])); ?>
+>>>>>>> 1c916a0... Fixed index page
+
+<<<<<<< HEAD
 			<?php endif; ?>
 ||||||| parent of 1c916a0... Fixed index page
 		<div style="clear:both">
@@ -174,7 +270,13 @@
 =======
 				<?php $subsubcat_crumb = $subsubcategory['Subsubcategory']['name']?>
 >>>>>>> 1c916a0... Fixed index page
+||||||| parent of 1c916a0... Fixed index page
+			<!-- Sub Sub Category Loop -->
+=======
+				<?php $subsubcat_crumb = $subsubcategory['Subsubcategory']['name']?>
+>>>>>>> 1c916a0... Fixed index page
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 				<?php $subsubcat_crumb = $subsubcategory['Subsubcategory']['name']?>
 ||||||| parent of 1c916a0... Fixed index page
@@ -184,9 +286,21 @@
 =======
 			<?php endif; ?>
 >>>>>>> 1c916a0... Fixed index page
+||||||| parent of 1c916a0... Fixed index page
+			<?php if(!empty($subsubcategories)) : ?>
+<?php //echo "here22233";?>
+			<?php foreach ($subsubcategories as $subsubcategory): ?>
+=======
+			<?php endif; ?>
+>>>>>>> 1c916a0... Fixed index page
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 			<?php endif; ?>
+||||||| parent of 1c916a0... Fixed index page
+				<?php if ($subsubcat_crumb !== $subsubcategory['Subsubcategory']['name']) : ?>
+=======
+>>>>>>> 1c916a0... Fixed index page
 ||||||| parent of 1c916a0... Fixed index page
 				<?php if ($subsubcat_crumb !== $subsubcategory['Subsubcategory']['name']) : ?>
 =======
@@ -195,7 +309,13 @@
 			<div style="clear:both">
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 			<div style="clear:both">
+||||||| parent of 1c916a0... Fixed index page
+					<span class="gb-nav"><img src="/img/global/dash-7.png"></span><?php echo $this->Html->link($subsubcategory['Subsubcategory']['name'], array('controller' => 'products', 'action' => 'category', $subsubcategory['Category']['slug'], $subsubcategory['Subcategory']['slug'], $subsubcategory['Subsubcategory']['slug'])); ?><br />
+=======
+				<!-- Sub Sub Category Loop -->
+>>>>>>> 1c916a0... Fixed index page
 ||||||| parent of 1c916a0... Fixed index page
 					<span class="gb-nav"><img src="/img/global/dash-7.png"></span><?php echo $this->Html->link($subsubcategory['Subsubcategory']['name'], array('controller' => 'products', 'action' => 'category', $subsubcategory['Category']['slug'], $subsubcategory['Subcategory']['slug'], $subsubcategory['Subsubcategory']['slug'])); ?><br />
 =======
@@ -203,13 +323,20 @@
 >>>>>>> 1c916a0... Fixed index page
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 				<!-- Sub Sub Category Loop -->
 ||||||| parent of 1c916a0... Fixed index page
 			   <?php endif ; ?>
 =======
 				<?php if(!empty($subsubcategories)) : ?>
 >>>>>>> 1c916a0... Fixed index page
+||||||| parent of 1c916a0... Fixed index page
+			   <?php endif ; ?>
+=======
+				<?php if(!empty($subsubcategories)) : ?>
+>>>>>>> 1c916a0... Fixed index page
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 				<?php if(!empty($subsubcategories)) : ?>
 ||||||| parent of 1c916a0... Fixed index page
@@ -218,23 +345,41 @@
 =======
 				<?php foreach ($subsubcategories as $subsubcategory): ?>
 >>>>>>> 1c916a0... Fixed index page
+||||||| parent of 1c916a0... Fixed index page
+			<?php endforeach; ?>
+		<?php endif; ?>
+=======
+				<?php foreach ($subsubcategories as $subsubcategory): ?>
+>>>>>>> 1c916a0... Fixed index page
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 				<?php foreach ($subsubcategories as $subsubcategory): ?>
 ||||||| parent of 1c916a0... Fixed index page
 =======
 					<?php if ($subsubcat_crumb !== $subsubcategory['Subsubcategory']['name']) : ?>
 >>>>>>> 1c916a0... Fixed index page
+||||||| parent of 1c916a0... Fixed index page
+=======
+					<?php if ($subsubcat_crumb !== $subsubcategory['Subsubcategory']['name']) : ?>
+>>>>>>> 1c916a0... Fixed index page
 
 					<?php if ($subsubcat_crumb !== $subsubcategory['Subsubcategory']['name']) : ?>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 ||||||| parent of 1c916a0... Fixed index page
 			<!-- Sub Category Loop -->
 =======
 						<span class="gb-nav"><img src="/img/global/dash-7.png"></span><?php echo $this->Html->link($subsubcategory['Subsubcategory']['name'], array('controller' => 'products', 'action' => 'category', $subsubcategory['Category']['slug'], $subsubcategory['Subcategory']['slug'], $subsubcategory['Subsubcategory']['slug'])); ?><br />
 >>>>>>> 1c916a0... Fixed index page
+||||||| parent of 1c916a0... Fixed index page
+			<!-- Sub Category Loop -->
+=======
+						<span class="gb-nav"><img src="/img/global/dash-7.png"></span><?php echo $this->Html->link($subsubcategory['Subsubcategory']['name'], array('controller' => 'products', 'action' => 'category', $subsubcategory['Category']['slug'], $subsubcategory['Subcategory']['slug'], $subsubcategory['Subsubcategory']['slug'])); ?><br />
+>>>>>>> 1c916a0... Fixed index page
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 						<span class="gb-nav"><img src="/img/global/dash-7.png"></span><?php echo $this->Html->link($subsubcategory['Subsubcategory']['name'], array('controller' => 'products', 'action' => 'category', $subsubcategory['Category']['slug'], $subsubcategory['Subcategory']['slug'], $subsubcategory['Subsubcategory']['slug'])); ?><br />
 ||||||| parent of 1c916a0... Fixed index page
@@ -247,9 +392,23 @@
 
 <<<<<<< HEAD
 				   <?php endif ; ?>
+||||||| parent of 1c916a0... Fixed index page
+		<?php if(!empty($subcategories)) : ?>
+<?php //echo "here2223344";?>
+			<?php foreach ($subcategories as $subcategory): ?>
+=======
+				   <?php endif ; ?>
+>>>>>>> 1c916a0... Fixed index page
 
+<<<<<<< HEAD
 				<?php endforeach; ?>
 			<?php endif; ?>
+||||||| parent of 1c916a0... Fixed index page
+				<?php //echo 'subcat_crumb:' . ($subcat_crumb)  .  '----subcategory:' . ($subcategory['Subcategory']['name']) .'<br />';?>
+=======
+				<?php endforeach; ?>
+			<?php endif; ?>
+>>>>>>> 1c916a0... Fixed index page
 ||||||| parent of 1c916a0... Fixed index page
 				<?php //echo 'subcat_crumb:' . ($subcat_crumb)  .  '----subcategory:' . ($subcategory['Subcategory']['name']) .'<br />';?>
 =======
@@ -312,6 +471,7 @@
 
 
 			<div style="clear:both">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -412,7 +572,66 @@
 
 				</div>
 >>>>>>> 1c916a0... Fixed index page
+||||||| parent of 1c916a0... Fixed index page
+	
+	
+	
+	
+	
+=======
+
+
+
+
+		</div>
+		
+		<div class="gb-heading">Our Brands: </div>
+		<div class="gb-heading red list" style="font-size:120%;">
+			<?php foreach ($brands as $brandslink): ?>
+			<?php echo $this->Html->link($brandslink['Brand']['name'], array('controller' => 'brands', 'action' => 'view',$fst,'brand',$brandslink['Brand']['slug'])); ?> <br />
+			<?php endforeach; ?>
+		</div>
+		
+		
+
+		<div style="clear:both">
+
+
+
+
+
+		</div>
+<hr />
+
+		<ul class="navList">
+					<li><a class="vendor-css" href="#" id="story">Our Story</a></li>
+
+		</ul>
+
+
+		<!-- Vendor Story -->
+		<div id="story_content" style="display:none;color:#000;width:960px;background-color:#fff;padding:20px;">
+			<span class="b-close btn-gb"><span>X</span></span>
+
+			<div class="row">
+				<div class="span4 left-corner-air">
+					<?php echo $this->Html->image('users/image/' . $user['User']['image'], array('class' =>'frame vendor-article-logo')); ?>
+				</div>
+
+				<div class="span6 quote-air">
+
+						<div class="vendor-special vendor-css">
+							<blockquote>
+								<?php echo $user['User']['shop_quote'] ?>
+
+								<div class="signature"><?php echo $user['User']['shop_signature'] ?></div>
+							</blockquote>
+						</div>
+
+				</div>
+>>>>>>> 1c916a0... Fixed index page
 			</div>
+<<<<<<< HEAD
 
 			<div class="row">
 
@@ -425,9 +644,49 @@
 						</div>
 
 
+||||||| parent of 1c916a0... Fixed index page
+	<hr />
+			<ul class="navList">
+				<li><a class="vendor-css" href="#" id="story">Our Story</a></li>
+			</ul>
+
+			<!-- Vendor Story -->
+			<div id="story_content" style="display:none;color:#000;width:960px;background-color:#fff;padding:20px;">
+				<span class="b-close btn-gb"><span>X</span></span>
+	
+				<div class="row">
+					<div class="col-md-4 left-corner-air">
+						<?php echo $this->Html->image('users/image/' . $user['User']['image'], array('class' =>'frame vendor-article-logo')); ?>
+					</div>
+	
+					<div class="col-md-6 quote-air">
+	
+							<div class="vendor-special vendor-css">
+								<blockquote>
+									<?php echo $user['User']['shop_quote'] ?>
+	
+									<div class="signature"><?php echo $user['User']['shop_signature'] ?></div>
+								</blockquote>
+							</div>
+	
+=======
+
+			<div class="row">
+
+				<div class="span8 vendor-block">
+
+					<div id="vendor-group">
+
+						<div id="vendor-article">
+							<?php echo $user['User']['shop_description'] ?>
+						</div>
+
+
+>>>>>>> 1c916a0... Fixed index page
 					</div>
 
 				</div>
+<<<<<<< HEAD
 
 
 
@@ -454,7 +713,36 @@
 					<div class="attr"><?php echo $user['User']['attr_3']; ?></div>
 					<div class="title"><?php echo $user['User']['pic_title_3']; ?></div>
 					<?php endif ?>
+||||||| parent of 1c916a0... Fixed index page
+	
+				<div class="row">
+	
+					<div class="col-md-8 vendor-block">
+	
+						<div id="vendor-group">
+	
+							<div id="vendor-article">
+								<?php echo $user['User']['shop_description'] ?>
+							</div>
+	
+	
+						</div>
+	
+=======
+
+
+
+		<!-- Vendor Story Pics -->
+				<div class="span4">
+
+					<div class="span4 air">
+					<?php if(!empty($user['User']['image_1'])) : echo $this->Html->image('users/image_1/' . $user['User']['image_1'], array('class' =>'vendor-pic')); ?>
+                    <div class="attr"><?php echo $user['User']['attr_1']; ?></div>
+					<div class="title"><?php echo $user['User']['pic_title_1']; ?></div>
+					<?php endif ?>
+>>>>>>> 1c916a0... Fixed index page
 					</div>
+<<<<<<< HEAD
 
 					<div class="span4 air">
 					<?php if(!empty($user['User']['image_4'])) : echo $this->Html->image('users/image_4/' . $user['User']['image_4'], array('class' =>'vendor-pic')); ?>
@@ -526,7 +814,65 @@
 					<div class="attr"><?php echo $user['User']['attr_5']; ?></div>
 					<div class="title"><?php echo $user['User']['pic_title_5']; ?></div>
     				<?php endif ?>
+||||||| parent of 1c916a0... Fixed index page
+	
+	
+	
+			<!-- Vendor Story Pics -->
+					<div class="col-md-4">
+	
+						<div class="col-md-4 air">
+						<?php if(!empty($user['User']['image_1'])) : echo $this->Html->image('users/image_1/' . $user['User']['image_1'], array('class' =>'vendor-pic')); ?>
+						<div class="attr"><?php echo $user['User']['attr_1']; ?></div>
+						<div class="title"><?php echo $user['User']['pic_title_1']; ?></div>
+						<?php endif ?>
+						</div>
+	
+						<div class="col-md-4 air">
+						<?php if(!empty($user['User']['image_2'])) : echo $this->Html->image('users/image_2/' . $user['User']['image_2'], array('class' =>'vendor-pic')); ?>
+						<div class="attr"><?php echo $user['User']['attr_2']; ?></div>
+						<div class="title"><?php echo $user['User']['pic_title_2']; ?></div>
+						<?php endif ?>
+						</div>
+	
+						<div class="col-md-4 air">
+						<?php if(!empty($user['User']['image_3'])) : echo $this->Html->image('users/image_3/' . $user['User']['image_3'], array('class' =>'vendor-pic')); ?>
+						<div class="attr"><?php echo $user['User']['attr_3']; ?></div>
+						<div class="title"><?php echo $user['User']['pic_title_3']; ?></div>
+						<?php endif ?>
+						</div>
+	
+						<div class="col-md-4 air">
+						<?php if(!empty($user['User']['image_4'])) : echo $this->Html->image('users/image_4/' . $user['User']['image_4'], array('class' =>'vendor-pic')); ?>
+						<div class="attr"><?php echo $user['User']['attr_4']; ?></div>
+						<div class="title"><?php echo $user['User']['pic_title_4']; ?></div>
+						<?php endif ?>
+						</div>
+	
+						<div class="col-md-4 air">
+						<?php if(!empty($user['User']['image_5'])) : echo $this->Html->image('users/image_5/' . $user['User']['image_5'], array('class' =>'vendor-pic'));  ?>
+						<div class="attr"><?php echo $user['User']['attr_5']; ?></div>
+						<div class="title"><?php echo $user['User']['pic_title_5']; ?></div>
+						<?php endif ?>
+						</div>
+	
+						<div class="col-md-4 air">
+						<?php if(!empty($user['User']['image_6'])) : echo $this->Html->image('users/image_6/' . $user['User']['image_6'], array('class' =>'vendor-pic')); ?>
+						<div class="attr"><?php echo $user['User']['attr_6']; ?></div>
+						<div class="title"><?php echo $user['User']['pic_title_6']; ?></div>
+						<?php endif ?>
+						</div>
+	
+=======
+
+					<div class="span4 air">
+					<?php if(!empty($user['User']['image_2'])) : echo $this->Html->image('users/image_2/' . $user['User']['image_2'], array('class' =>'vendor-pic')); ?>
+					<div class="attr"><?php echo $user['User']['attr_2']; ?></div>
+                    <div class="title"><?php echo $user['User']['pic_title_2']; ?></div>
+					<?php endif ?>
+>>>>>>> 1c916a0... Fixed index page
 					</div>
+<<<<<<< HEAD
 
 					<div class="span4 air">
 					<?php if(!empty($user['User']['image_6'])) : echo $this->Html->image('users/image_6/' . $user['User']['image_6'], array('class' =>'vendor-pic')); ?>
@@ -568,21 +914,73 @@
 					</div>
 
 >>>>>>> 1c916a0... Fixed index page
+||||||| parent of 1c916a0... Fixed index page
+	
+=======
+
+					<div class="span4 air">
+					<?php if(!empty($user['User']['image_3'])) : echo $this->Html->image('users/image_3/' . $user['User']['image_3'], array('class' =>'vendor-pic')); ?>
+					<div class="attr"><?php echo $user['User']['attr_3']; ?></div>
+					<div class="title"><?php echo $user['User']['pic_title_3']; ?></div>
+					<?php endif ?>
+					</div>
+
+					<div class="span4 air">
+					<?php if(!empty($user['User']['image_4'])) : echo $this->Html->image('users/image_4/' . $user['User']['image_4'], array('class' =>'vendor-pic')); ?>
+					<div class="attr"><?php echo $user['User']['attr_4']; ?></div>
+					<div class="title"><?php echo $user['User']['pic_title_4']; ?></div>
+					<?php endif ?>
+					</div>
+
+					<div class="span4 air">
+					<?php if(!empty($user['User']['image_5'])) : echo $this->Html->image('users/image_5/' . $user['User']['image_5'], array('class' =>'vendor-pic'));  ?>
+					<div class="attr"><?php echo $user['User']['attr_5']; ?></div>
+					<div class="title"><?php echo $user['User']['pic_title_5']; ?></div>
+    				<?php endif ?>
+					</div>
+
+					<div class="span4 air">
+					<?php if(!empty($user['User']['image_6'])) : echo $this->Html->image('users/image_6/' . $user['User']['image_6'], array('class' =>'vendor-pic')); ?>
+					<div class="attr"><?php echo $user['User']['attr_6']; ?></div>
+					<div class="title"><?php echo $user['User']['pic_title_6']; ?></div>
+    				<?php endif ?>
+					</div>
+
+>>>>>>> 1c916a0... Fixed index page
 				</div>
 
 			</div>
 
+<<<<<<< HEAD
 		</div>
 
 		<ul class="navList">
 			<li><a class="vendor-css" href="/recipes">Our Recipes</a></li>
 		</ul>
+||||||| parent of 1c916a0... Fixed index page
+			<ul class="navList">
+				<li><a class="vendor-css" href="/recipes">Our Recipes</a></li>
+			</ul>
+=======
+		</div>
+>>>>>>> 1c916a0... Fixed index page
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 		<!--<ul class="navList">
 					<li><a href="#vendor-unit">Our Regions</a></li>
 		</ul>-->
+||||||| parent of 1c916a0... Fixed index page
+			<!--<ul class="navList">
+						<li><a href="#vendor-unit">Our Regions</a></li>
+			</ul>-->
+=======
+		<ul class="navList">
+			<li><a class="vendor-css" href="/recipes">Our Recipes</a></li>
+		</ul>
+>>>>>>> 1c916a0... Fixed index page
 
+<<<<<<< HEAD
 		</div>
 ||||||| parent of 1c916a0... Fixed index page
 			</div>
@@ -598,9 +996,33 @@
 			<br />
 
 			<a href="#" id="policies" class="btn btn-gb">SHIPPING & CUSTOMER SERVICE</a>
+||||||| parent of 1c916a0... Fixed index page
+			</div>
+=======
+		<!--<ul class="navList">
+					<li><a href="#vendor-unit">Our Regions</a></li>
+		</ul>-->
+>>>>>>> 1c916a0... Fixed index page
+
+<<<<<<< HEAD
+		<!--<span><img class="hand" src="/img/global/hand.png" width="40px"/></span>-->
+		</div>
+||||||| parent of 1c916a0... Fixed index page
+			<div>
+				<?php $vendor_policy = $user['User']['shipping_policy']; ?>
+				<br />
+=======
+		</div>
+
+		<div>
+			<?php $vendor_policy = $user['User']['shipping_policy']; ?>
+			<br />
+
+			<a href="#" id="policies" class="btn btn-gb">SHIPPING & CUSTOMER SERVICE</a>
 
 		<!--<span><img class="hand" src="/img/global/hand.png" width="40px"/></span>-->
 		</div>
+>>>>>>> 1c916a0... Fixed index page
 ||||||| parent of 1c916a0... Fixed index page
 			<div>
 				<?php $vendor_policy = $user['User']['shipping_policy']; ?>
@@ -744,6 +1166,11 @@
 
 		</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+||||||| parent of 1c916a0... Fixed index page
+	
+=======
 
 ||||||| parent of 1c916a0... Fixed index page
 	
@@ -755,9 +1182,18 @@
 	</div>
 <<<<<<< HEAD
 
+>>>>>>> 1c916a0... Fixed index page
+	</div>
+<<<<<<< HEAD
+
 	</div>
 
 </div>
+||||||| parent of 1c916a0... Fixed index page
+=======
+
+</div>
+>>>>>>> 1c916a0... Fixed index page
 ||||||| parent of 1c916a0... Fixed index page
 =======
 
