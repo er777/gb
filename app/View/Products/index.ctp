@@ -151,7 +151,11 @@
 	<hr />
 	<?php 
 	if(!empty($brands)){?>
-			<a class="gb-nav" href="/">Brands</a><br/>
+	
+				
+				<a class="gb-nav" href="/brands">All Our Brands</a><br/>
+				
+				<div style="overflow-y:scroll;height:300px">				
 			<?php 
 			
 		foreach ($brands as $brandslink): ?>
@@ -159,16 +163,19 @@
 		<?php if(!empty($fst)){ ?>	
         <?php //echo $this->Html->link($brandslink['Brand']['name'], array('controller' => 'products', 'action' => 'category',$fst,'brand',$brandslink['Brand']['slug'])); ?>
         
-        <a href="/category/<?php echo $fst;?>/brand/<?php echo $brandslink['Brand']['slug'];?>"><?php echo $brandslink['Brand']['name'];?></a>
+        <span class="gb-nav"><img src="/img/global/dash-2.png"></span>
+		<a href="/category/<?php echo $fst;?>/brand/<?php echo $brandslink['Brand']['slug'];?>"><?php echo $brandslink['Brand']['name'];?></a>
         
         <?php } else { ?>
          <?php //echo $this->Html->link($brandslink['Brand']['name'], array('controller' => 'products', 'action' => 'brand',$brandslink['Brand']['slug'])); ?>
+		 <span class="gb-nav"><img src="/img/global/dash-2.png"></span>
         <a href="/brand/<?php echo $brandslink['Brand']['slug'];?>"><?php echo $brandslink['Brand']['name'];?></a> 
         <?php } }?>
         <br />
         <?php endforeach; 
 			}
         ?>
+<<<<<<< HEAD
 =======
 	<hr />
 	<?php 
@@ -201,6 +208,12 @@
 		</div>
 		
 >>>>>>> 96b7d11... Add scrolling to brands, products, fix duplications, css
+||||||| parent of 96b7d11... Add scrolling to brands, products, fix duplications, css
+=======
+		
+		</div>
+		
+>>>>>>> 96b7d11... Add scrolling to brands, products, fix duplications, css
 			<div style="clear:both">
 
 
@@ -212,13 +225,6 @@
 
 			<a class="gb-nav" href="/">Brands</a><br />
 ||||||| parent of 96b7d11... Add scrolling to brands, products, fix duplications, css
-		
-		<div class="gb-heading">Our Brands: </div>
-		<div class="gb-heading red list" style="font-size:120%;">
-			<?php foreach ($brands as $brandslink): ?>
-			<?php echo $this->Html->link($brandslink['Brand']['name'], array('controller' => 'brands', 'action' => 'view',$fst,'brand',$brandslink['Brand']['slug'])); ?> <br />
-			<?php endforeach; ?>
-		</div>
 		
 		
 =======
