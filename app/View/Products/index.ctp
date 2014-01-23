@@ -176,6 +176,7 @@
 			}
         ?>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 	<hr />
 	<?php 
@@ -214,6 +215,12 @@
 		</div>
 		
 >>>>>>> 96b7d11... Add scrolling to brands, products, fix duplications, css
+||||||| parent of 96b7d11... Add scrolling to brands, products, fix duplications, css
+=======
+		
+		</div>
+		
+>>>>>>> 96b7d11... Add scrolling to brands, products, fix duplications, css
 			<div style="clear:both">
 
 
@@ -226,9 +233,20 @@
 			<a class="gb-nav" href="/">Brands</a><br />
 ||||||| parent of 96b7d11... Add scrolling to brands, products, fix duplications, css
 		
+<<<<<<< HEAD
 		
 =======
 		
+||||||| parent of 96b7d11... Add scrolling to brands, products, fix duplications, css
+		<div class="gb-heading">Our Brands: </div>
+		<div class="gb-heading red list" style="font-size:120%;">
+			<?php foreach ($brands as $brandslink): ?>
+			<?php echo $this->Html->link($brandslink['Brand']['name'], array('controller' => 'brands', 'action' => 'view',$fst,'brand',$brandslink['Brand']['slug'])); ?> <br />
+			<?php endforeach; ?>
+		</div>
+		
+=======
+>>>>>>> 96b7d11... Add scrolling to brands, products, fix duplications, css
 		
 >>>>>>> 96b7d11... Add scrolling to brands, products, fix duplications, css
 
