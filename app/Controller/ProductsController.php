@@ -3,7 +3,7 @@ App::uses('AppController', 'Controller');
 class ProductsController extends AppController {
 	
 	// Harpreet - thie following code kills brand entry in admin somehow  - do we need it?
-  	//public $uses = array('Brand','Category','Product');
+  	public $uses = array('Brand','Category','Product');
   
 ////////////////////////////////////////////////////////////
 
