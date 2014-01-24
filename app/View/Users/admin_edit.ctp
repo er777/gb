@@ -234,7 +234,8 @@ function doFormatPhone(A){var B=document.getElementById(A);B.onblur=function(){f
 				<?php echo $this->Form->input('shop_description', array('rows' => 20, 'class' => '4span')); ?><br />
 				<?php echo $this->Form->input('shop_quote', array('class' => '4span')); ?>
 				<?php echo $this->Form->input('shop_signature'); ?>
-                <?php echo $this->Form->input('min_purchase', array('label' =>'Minimum Purchase','class' => 'span1')); ?>
+                <?php echo $this->Form->input('min_purchase', array('label' =>'Minimum $ Purchase','class' => 'span1')); ?>
+				<?php echo $this->Form->input('min_items', array('label' =>'Minimum Item Purchase','class' => 'span1')); ?>
                 <?php echo $this->Form->input('mini_shipping_policy', array('label' =>'Shipping Info','class' => 'span2')); ?>
 	
 			</div>
