@@ -3,7 +3,7 @@ App::uses('AppController', 'Controller');
 class ProductsController extends AppController {
 	
 	// Harpreet - thie following code kills brand entry in admin somehow  - do we need it?
-  	public $uses = array('Brand','Category','Product');
+  	public $uses = array('Brand','Category','Product','Ustradition','Tradition');
   
 ////////////////////////////////////////////////////////////
 
@@ -846,7 +846,9 @@ class ProductsController extends AppController {
 			),
 		));
 		$this->set(compact('brands'));
+		
 		/////////////////////
+		
 		$BrandUrl = $this->Brand->find('first', array(
 			'recursive' => -1,
 			'fields' => array(
@@ -896,7 +898,149 @@ class ProductsController extends AppController {
 		$this->render('index');
 	}
 	
+/////////////////////////// End brands
+
+
+
 ////////////////////////////////////////////////////////////
+	
+	
+	public function ustradition() {
+		$args = array_unique(func_get_args());
+		$subDomain = $this->_getSubDomain();
+		if($subDomain != 'www') {
+			$user = $this->Product->User->getBySubdomain($subDomain);
+			$this->set(compact('user'));
+			if(!$user) {
+				die('error');
+			}
+			$usercategories =  $this->Product->find('all', array(
+				'contain' => array('Category'),
+				'fields' => array(
+					'Category.name',
+					'Category.slug'
+				),
+				'conditions' => array(
+					'Product.active' => 1,
+					'Product.show' => 1,
+					'Product.user_id' => $user['User']['id']
+				),
+				'group' => array(
+					'Product.category_id'
+				),
+				'order' => array(
+					'Category.name' => 'ASC'
+				),
+			));
+		} else{
+			$user = array();
+			$usercategories = array();
+		}
+		$this->set(compact('user', 'usercategories'));
+
+		if(!empty($user)) {
+			$conditions[] = array(
+				'Product.active' => 1,
+				'Product.show' => 1,
+				'Product.user_id' => $user['User']['id'],
+				
+			);
+			
+		}
+		
+		$ustraditions = $this->Product->find('all', array(
+			'contain' => array('Brand'),
+			'fields' => array(
+				'Ustradition.*',
+			),
+			'conditions' => array(
+				'Product.active' => 1,
+				'Product.show' => 1,
+				'Product.user_id' => $user['User']['id']
+			),
+			'order' => array(
+				'Ustradition.name' => 'ASC'
+			),
+			'group' => array(
+				'Ustradition.id'
+			),
+		));
+		$this->set(compact('ustraditions'));
+		
+		/////////////////////
+		
+		$UstraditionUrl = $this->Ustradition->find('first', array(
+			'recursive' => -1,
+			'fields' => array(
+				'Ustradition.id',
+				'Ustradition.slug',
+				'Ustradition.name',
+				'Ustradition.summary',
+				'Ustradition.main_image',
+			),
+			'conditions' => array(
+				'Ustradition.slug' => $args[0]
+			)
+		));
+			$ustid = $UstraditionUrl['Ustradition']['id'];
+		
+		$this->paginate = array(
+			'contain' => array('User'),
+			'recursive' => -1,
+			'fields' => array(
+				'Product.id',
+				'Product.name',
+				'Product.slug',
+				'Product.image',
+				'Product.price',
+				'Product.active',
+				'Product.displaygroup',
+				
+				//'Brand.name',
+				'User.slug',
+				'User.more',
+				'User.name',
+			),
+			'limit' => 40,
+			'conditions' => array(
+					'Product.ustradition_id' => $bid,
+					'Product.active' => 1,
+				),
+			'order' => array(
+				'Product.displaygroup' => 'ASC',
+				'Product.name' => 'ASC'
+			),
+			'paramType' => 'querystring',
+		);
+		$products = $this->paginate('Product');
+		$this->set(compact('products'));
+		$this->set(compact('ustraditions'));
+		$this->render('index');
+	}
+	
+/////////////////////////// End ustraditions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	// public function subcategory($id) {
 

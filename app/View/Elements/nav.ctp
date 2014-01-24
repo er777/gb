@@ -106,13 +106,14 @@
 			<li class="mzr-drop"><a class="parent" href="/">SPECIAL DIETS<b class="caret"></b></a>
 				<div class="mzr-content drop-two-columns popover-content">
 					<div class="wide">
-						<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/">All Natural</a></p>
+						<p><a href="/">COMING SOON!</a></p>
+						<!--<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/">All Natural</a></p>
 						<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/">No Preservatives</a></p>
 						<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/">Gluten Free</a></p>
 						<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/">Lactose Free</a></p>
 						<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/">Vegetarian</a></p>
 						<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/">Kosher</a></p>
-						<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/">Halal</a></p>
+						<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/">Halal</a></p>-->
 					</div>
 				</div>
 			</li>
@@ -125,10 +126,10 @@
 				</div>
 			</li>
             
-			<li class="mzr-drop"><a class="parent" href="http://blog.gourmetworldmarket.com">ARTICLES/BLOG<b class="caret"></b></a>
+			<li class="mzr-drop"><a class="parent" href="http://blog.gourmetworldmarket.com">BLOG<b class="caret"></b></a>
 				<div class="mzr-content drop-two-columns popover-content">
 					<div class="wide">
-						<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/articles">Articles/Blog</a></p>
+						<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/articles">Articles</a></p>
 					</div>
 				</div>
 			</li>
