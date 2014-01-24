@@ -279,6 +279,7 @@ class ProductsController extends AppController {
 						'User.image',
 						'User.shipping_policy',
 						'User.mini_shipping_policy',
+						'User.min_items',
 						'User.name',
 						'User.slug'
 					),

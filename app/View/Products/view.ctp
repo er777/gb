@@ -401,6 +401,10 @@ $(document).ready(function() {
 				<?php if(!empty($user['User']['min_purchase'])) : ?>
 				<div class="minimum">Minimum Order from <?php echo $user['User']['name']; ?>: $ <?php echo ($user['User']['min_purchase']); ?></div>
 				<?php endif; ?>
+				
+				<?php if(!empty($user['User']['min_items'])) : ?>
+				<div class="minimum">Minimum number of items: <?php echo ($user['User']['min_items']); ?></div>
+				<?php endif; ?>
 
 				<?php if(!empty($user['User']['mini_shipping_policy'])) : ?>
 				<div class="mini-shipping-policy box-gb "><?php echo ($user['User']['mini_shipping_policy']); ?></div>
