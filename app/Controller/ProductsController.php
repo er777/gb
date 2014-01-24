@@ -1,7 +1,10 @@
 <?php
 App::uses('AppController', 'Controller');
 class ProductsController extends AppController {
-  public $uses = array('Brand','Category','Product');
+	
+	// Harpreet - thie following code kills brand entry in admin somehow  - do we need it?
+  	//public $uses = array('Brand','Category','Product');
+  
 ////////////////////////////////////////////////////////////
 
 	public function maestro($key = null) {
@@ -819,10 +822,12 @@ class ProductsController extends AppController {
 			$conditions[] = array(
 				'Product.active' => 1,
 				'Product.show' => 1,
-				'Product.user_id' => $user['User']['id']
+				'Product.user_id' => $user['User']['id'],
+				
 			);
+			
 		}
-
+		
 		$brands = $this->Product->find('all', array(
 			'contain' => array('Brand'),
 			'fields' => array(
