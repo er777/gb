@@ -1468,3 +1468,7 @@ Stack trace:
 #4 /home/gourmet/public_html/lib/Cake/Cache/Cache.php(151): Cache::_buildEngine('_cake_core_')
 #5 /home/gourmet/public_html/app/Config/core.php(268): Cache::config('_cake_core_', Array)
 #6 /home/gourmet/public_html/lib/Cake/C in /home/gourmet/public_html/lib/Cake/Cache/Engine/FileEngine.php on line 280
+[23-Jan-2014 20:24:34 America/Los_Angeles] PHP Fatal error:  Call to a member function find() on a non-object in /home/gourmet/public_html/app/Controller/ProductsController.php on line 850
+[23-Jan-2014 20:24:44 America/Los_Angeles] PHP Fatal error:  Call to a member function find() on a non-object in /home/gourmet/public_html/app/Controller/ProductsController.php on line 850
+[23-Jan-2014 20:26:25 America/Los_Angeles] PHP Fatal error:  Call to a member function find() on a non-object in /home/gourmet/public_html/app/Controller/ProductsController.php on line 850
+[23-Jan-2014 20:26:29 America/Los_Angeles] PHP Fatal error:  Call to a member function find() on a non-object in /home/gourmet/public_html/app/Controller/ProductsController.php on line 850
