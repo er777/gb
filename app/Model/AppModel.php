@@ -179,7 +179,7 @@ class AppModel extends Model {
 		'Malaysia' => 'Malaysia',
 		'Mali' => 'Mali',
 		'Martinique' => 'Martinique',
-		'Malawi' => 'Malaw',
+		'Malawi' => 'Malawi',
 		'Mauritius' => 'Mauritius',
 		'Mexico' => 'Mexico',
 		'Monaco' => 'Monaco',
