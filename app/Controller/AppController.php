@@ -89,13 +89,14 @@ class AppController extends Controller {
 			
 			
 			$menu_ustraditions = Cache::read('menu_ustraditions');
+			////Following line are commented as these are showing errors "Ustraditions model is not associated with user Model 24 Jan 2014-HSK"///
 			if (!$menu_ustraditions) {
 				$menu_ustraditions = ClassRegistry::init('Ustradition')->find('all', array(
 					'recursive' => -1,
-					'contain' => array(
-						'User',
-						'Ustradition'
-					),
+					//~ 'contain' => array(
+						//~ 'User',
+						//~ 'Ustradition'
+					//~ ),
 					'fields' => array(
 						'Ustradition.id',
 						'Ustradition.name',

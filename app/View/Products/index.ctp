@@ -38,18 +38,18 @@
 	<hr />
 	
 		<a class="gb-nav" href="/">All Our Products</a>
-
-
 		<?php if(!empty($category)) : ?><br /><span class="gb-nav"><img src="/img/global/dash-2.png"></span>
 
-			<?php echo $this->Html->link($category['Category']['name'], array('controller' => 'products', 'action' => 'category', $category['Category']['slug'])); ?>
+			<?php 
+				echo $this->Html->link($category['Category']['name'], array('controller' => 'products', 'action' => 'category', $category['Category']['slug'])); ?>
 
-			<?php $cat_crumb = $category['Category']['name']?>
+			<?php $cat_crumb = $category['Category']['name'];?>
 
 
 		<?php endif; ?>
 
-		<?php if(!empty($subcategory)) : ?>
+		<?php if(!empty($subcategory) && !empty($category)) : ?>
+		<?php //echo "here";?>
 			<br /><span class="gb-nav"><img src="/img/global/dash-4.png"></span><?php echo $this->Html->link($subcategory['Subcategory']['name'], array('controller' => 'products', 'action' => 'category', $category['Category']['slug'], $subcategory['Subcategory']['slug'])); ?>
 
 			<?php $subcat_crumb = $subcategory['Subcategory']['name']?>
@@ -57,19 +57,20 @@
 		<?php endif; ?>
 
 		<?php if(!empty($subsubcategory)) : ?>
+		<?php //echo "here222";?>
 			<br /><span class="gb-nav"><img src="/img/global/dash-7.png"></span><?php echo $this->Html->link($subsubcategory['Subsubcategory']['name'], array('controller' => 'products', 'action' => 'category', $category['Category']['slug'], $subcategory['Subcategory']['slug'], $subsubcategory['Subsubcategory']['slug'])); ?>
 
 			<?php $subsubcat_crumb = $subsubcategory['Subsubcategory']['name']?>
 
 		<?php endif; ?>
-
+		
 
 		<div style="clear:both">
 
 			<!-- Sub Sub Category Loop -->
 
 			<?php if(!empty($subsubcategories)) : ?>
-
+<?php //echo "here22233";?>
 			<?php foreach ($subsubcategories as $subsubcategory): ?>
 
 				<?php if ($subsubcat_crumb !== $subsubcategory['Subsubcategory']['name']) : ?>
@@ -87,7 +88,7 @@
 			<!-- Sub Category Loop -->
 
 		<?php if(!empty($subcategories)) : ?>
-
+<?php //echo "here2223344";?>
 			<?php foreach ($subcategories as $subcategory): ?>
 
 				<?php //echo 'subcat_crumb:' . ($subcat_crumb)  .  '----subcategory:' . ($subcategory['Subcategory']['name']) .'<br />';?>
@@ -111,14 +112,14 @@
 			<!-- Category Loop -->
 
 			<?php if(!empty($usercategories)) : ?>
-
 				<?php foreach ($usercategories as $usercategory): ?>
 				<span class="gb-nav"><img src="/img/global/dash-2.png"></span>
 
 
-				<?php echo $this->Html->link($usercategory['Category']['name'], array('controller' => 'products', 'action' => 'category', $usercategory['Category']['slug'])); ?><br />
-
-				<?php endforeach; ?>
+				<?php //echo $this->Html->link($usercategory['Category']['name'], array('controller' => 'products', 'action' => 'category', $usercategory['Category']['slug']),array('escape' => false)); ?>
+				<a href="/category/<?php echo $usercategory['Category']['slug'];?>"><?php echo $usercategory['Category']['name'];?></a>
+				<br />
+			<?php endforeach; ?>
 
 			<?php endif; ?>
 
@@ -140,7 +141,34 @@
 	
 			</div>
 	<hr />
+	<?php 
+	if(!empty($brands)){?>
+			<a class="gb-nav" href="/">Brands</a><br/>
+			<?php 
+			
+		foreach ($brands as $brandslink): ?>
+		<?php if(!empty($brandslink['Brand']['slug'])){?>
+		<?php if(!empty($fst)){ ?>	
+        <?php //echo $this->Html->link($brandslink['Brand']['name'], array('controller' => 'products', 'action' => 'category',$fst,'brand',$brandslink['Brand']['slug'])); ?>
+        
+        <a href="/category/<?php echo $fst;?>/brand/<?php echo $brandslink['Brand']['slug'];?>"><?php echo $brandslink['Brand']['name'];?></a>
+        
+        <?php } else { ?>
+         <?php //echo $this->Html->link($brandslink['Brand']['name'], array('controller' => 'products', 'action' => 'brand',$brandslink['Brand']['slug'])); ?>
+        <a href="/brand/<?php echo $brandslink['Brand']['slug'];?>"><?php echo $brandslink['Brand']['name'];?></a> 
+        <?php } }?>
+        <br />
+        <?php endforeach; 
+			}
+        ?>
+			<div style="clear:both">
 	
+	
+	
+	
+	
+			</div>
+	<hr />
 			<ul class="navList">
 				<li><a class="vendor-css" href="#" id="story">Our Story</a></li>
 			</ul>
