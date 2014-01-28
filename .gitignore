@@ -12,12 +12,17 @@ app/tmp/logs/error*
 app/tmp/cache/*
 app/tmp/cache/models/*
 app/tmp/cache/persistent/*
+app/tmp/cache/persistent/gb_cake_core_file_map
+app/tmp/cache/persistent/gb_cake_core_object_map
+app/tmp/logs/error.log
+app/webroot/error_log
 app/tmp/cache/views/*
 app/tmp/cache/cake_toolbar*
 app/tmp/cache/cake_menuvendors
 app/tmp/cache/cake_menucategories
 app/tmp/cache/cake_menublocks
 
+app/webroot/blog/wp-admin/error_log
 
 /app/webroot/robots.txt
 /app/webroot/img/global/_notes/gb-title.png.mno
