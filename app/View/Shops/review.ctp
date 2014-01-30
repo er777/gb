@@ -278,7 +278,7 @@
 		else
 		{ echo "0" ; }
 		?></strong> <br />
-		<strong>UPS Resedential Fee: $ <?php 
+		<strong>UPS Resiedential Fee: $ <?php 
 		if(!empty($shop['Order']['ResFee'])){
 		echo $shop['Order']['ResFee']; }
 		else {echo "0";}
