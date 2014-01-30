@@ -155,7 +155,7 @@
 
 
 		</div>
-<hr />
+
 
 		<ul class="navList">
 					<li><a class="vendor-css" href="#" id="story">Our Story</a></li>
