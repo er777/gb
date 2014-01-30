@@ -25,7 +25,6 @@
 
 	<div class="span3" style="width:270px">
 
-		<?php if(!empty($user)) : ?>
 		<div class="gb-nav-container">
 
 		<?php /*?><?php if(!empty($user)) : ?><?php */?>
@@ -40,7 +39,6 @@
 
 				<div class="quote"><?php echo $user['User']['shop_quote']; ?></div>
 			</div>
-		<?php endif; ?>
 
 <hr />
 
@@ -138,16 +136,34 @@
 					endforeach; ?>
 <?php */?>
 			</div>
-	<hr />
+
+
+
+
 
 			<div style="clear:both">
 
 
-		</div>
-		
-		
-		
 
+
+		</div>
+<hr />
+
+			<a class="gb-nav" href="/">Brands</a><br />
+
+
+			<?php if(!empty($brands)) : ?>
+
+					<?php foreach ($brands as $brnd): ?> 
+				
+					<span class="gb-nav"><img src="/img/global/dash-2.png"></span>
+
+
+					<?php echo $this->Html->link($brnd['Brand']['name'], array('controller' => 'products', 'action' => 'brand', $brnd['Brand']['slug'])); ?><br />
+
+					<?php endforeach; ?>
+
+				<?php endif; ?>
 		<div style="clear:both">
 
 
@@ -155,7 +171,7 @@
 
 
 		</div>
-
+<hr />
 
 		<ul class="navList">
 					<li><a class="vendor-css" href="#" id="story">Our Story</a></li>

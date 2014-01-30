@@ -45,17 +45,17 @@
 	<div class="gb-heading red title">Related Categories:</div>
 <?php endif; ?>
 	<!-- Loop through for auxcategory lookup -->
-
 	<?php foreach ($auxcategories as $auxcategory): ?>
 		<?php echo $this->Html->link($auxcategory['Category']['name'], array('controller' => 'categories', 'action' => 'view', $auxcategory['Category']['slug'])); ?><br />
 
 	<?php endforeach; ?>
-	<?php if(!empty($brands)) : ?>
-		<div class="gb-heading red title">Brand Name:</div>
-	<?php endif; ?>
-	
-	<?php foreach ($brands as $brandnames): ?>
-<?php echo $this->Html->link($brandnames['Brand']['name'], array('controller' => 'categories', 'action' => 'view',$category['Category']['slug'],'brand','brands',$brandnames['Brand']['slug'])); ?><br />
+<?php if(!empty($brands)) : ?>
+<div class="gb-heading red title">Brand Name:</div>
+<?php endif; ?>
+<?php 
+
+foreach ($brands as $brandnames): ?>
+<?php echo $this->Html->link($brandnames['Brand']['name'], array('controller' => 'categories', 'action' => 'view',$category['Category']['slug'],'brand',$brandnames['Brand']['slug'])); ?><br />
 
 	<?php endforeach; ?>
 
@@ -70,7 +70,7 @@
     	<div><?php 
     	if(!empty($category['Category']['title']))
     	{
-    	echo $category['Category']['title'] ;
+    	echo $category['Category']['title'];
 	}
     	?></div>
 
@@ -117,7 +117,8 @@
 				<span class="divider">/</span>
 			<?php endif; ?>
 			<?php if(!empty($brandss)) : ?>
-			<li><?php echo $this->Html->link($brandss['Brand']['name'], array('controller' => 'categories', 'action' => 'view', $category['Category']['slug'],'brand','brands',$brandss['Brand']['slug'])); ?></li>
+		
+			<li><?php echo $this->Html->link($brandss['Brand']['name'], array('controller' => 'categories', 'action' => 'view', $category['Category']['slug'],'brand',$brandss['Brand']['slug'])); ?></li>
 				<span class="divider">/</span>
 			<?php endif; ?>
 		</ul>
@@ -125,16 +126,17 @@
 		<h3 class="gb-heading red  tight">
 
 	<?php
-		if(!empty($subsubcategory)) :
+		if(!empty($subsubcategory)) {
 			echo $subsubcategory['Subsubcategory']['name'];
+		}
+		elseif (!empty($subcategory)) 
+		{	echo $subcategory['Subcategory']['name'];}
 
-		elseif (!empty($subcategory)) :
-			echo $subcategory['Subcategory']['name'];
-
-		elseif 	(!empty($category)) :
-			echo $category['Category']['name'];
-
-		endif;
+		elseif 	(!empty($category) && empty($brandss)) 
+			{ echo $category['Category']['name'];}
+		elseif 	(!empty($category) && !empty($brandss)) 
+			{ echo $brandss['Brand']['name'];}
+		//endif;
 
 	?>
 
@@ -210,6 +212,7 @@
 
 
 </div>
+
 
 
 
