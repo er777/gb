@@ -44,7 +44,13 @@
 
 			<a class="gb-nav" href="/">All Our Products</a>
 			
+			<?php if (($user['User']['id']) == 11) { ?>
+			
 			<div style="overflow-y:scroll;height:300px">
+			
+			<?php	};
+			?>
+
 
 
 			<?php if(!empty($category)) : ?><br /><span class="gb-nav"><img src="/img/global/dash-2.png"></span>
@@ -139,9 +145,12 @@
 <?php */?>
 			</div>
 			
+			<?php if (($user['User']['id']) == 11) { ?>
+
 			</div>
 
-
+			<?php	};
+			?>
 
 
 
@@ -153,13 +162,27 @@
 		</div>
 <hr />
 
+			<?php if(!empty($brands)) : ?>
+			
+			<?php 
+			//print_r($brands);
+			//die;
+			?>
+			
 			<a class="gb-nav" href="/">All Our Brands</a><br />
 			
+			<?php if (($user['User']['id']) == 11) { ?>
+					
+					<div style="overflow-y:scroll;height:300px">
+					
+			<?php	};
+			?>
 			
-			<div style="overflow-y:scroll;height:300px">
+	
+			
 
 
-			<?php if(!empty($brands)) : ?>
+			
 
 					<?php foreach ($brands as $brnd): ?> 
 				
@@ -172,8 +195,12 @@
 
 				<?php endif; ?>
 				
-				
+				<?php if (($user['User']['id']) == 11) { ?>
 				</div>
+				<?php	};
+				?>
+
+				
 				
 				
 		<div style="clear:both"></div>
