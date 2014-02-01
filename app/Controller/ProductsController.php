@@ -673,7 +673,8 @@ public function brand() {
 			),
 			'limit' => 40,
 			'conditions' => array(
-					'Product.brand_id' => $bid
+					'Product.brand_id' => $bid,
+					'Product.active' => 1
 				),
 			'order' => array(
 				'Product.displaygroup' => 'ASC',
