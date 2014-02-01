@@ -26,13 +26,24 @@
 			<a style="font-style:italic" href="/articles/excellent-food-advenures/<?php echo $tradition['Tradition']['slug']; ?>">Read more</a>
 
 		</div>
+		
+		<div class="gb-heading">Other Intl Traditions: </div>
+        <div class="gb-heading red list" style="font-size:120%;margin-left:28px">
+        <?php foreach ($traditions as $tradition): ?>
+                <?php echo $this->Html->link($tradition['Tradition']['name'], array('controller' => 'traditions', 'action' => 'view', $tradition['Tradition']['slug'])); ?><br />
+        <?php endforeach; ?>
+        </div>
+
+		
+		
 		<div class="gb-heading">Brands: </div>
-        <div class="gb-heading red list" style="font-size:120%;">
+       
         <?php foreach ($brands as $brandslink): ?>
+		 <span class="gb-nav"><img src="/img/global/dash-2.png"></span>
         <?php echo $this->Html->link($brandslink['Brand']['name'], array('controller' => 'traditions', 'action' => 'view',$fst,'brand',$brandslink['Brand']['slug'])); ?>
          <br />
         <?php endforeach; ?>
-        </div>
+       
 	</div>
 
 	<div class="span8" style="width:690px;margin-left:0px;">
@@ -52,7 +63,7 @@
 
 		<?php echo $this->element('products'); ?>
 
-		<?php echo $this->element('pagination-counter'); ?>
+		<?php // echo $this->element('pagination-counter'); ?>
 
 		<?php echo $this->element('pagination'); ?>
 

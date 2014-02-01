@@ -187,6 +187,9 @@
 					<strong><?php echo $shop['Users'][$key]['name']; ?></strong><br />
 					<?php foreach ($value['Shippingfees'] as $ship): ?>
 						<?php echo $ship['ServiceName']; ?>: $<?php echo $ship['TotalCharges']; ?><br />
+							
+						
+						<br />
 					<?php endforeach; ?>
 
 				<?php endif; ?>
@@ -212,19 +215,7 @@
 	<strong>Discount ($ <?php echo $shop['Order']['discount']; ?>)</strong> <br />
 	<strong>Tax: $ <?php echo $shop['Order']['tax']; ?></strong> <br />
 	<strong>Shipping: $ <?php echo $shop['Order']['shipping']; ?></strong> <br />
-	<strong>Fedex/Ups: $ <?php 
-	if(!empty($shop['Order']['FedexUpsCharges'])){
-	echo $shop['Order']['FedexUpsCharges']; }
-	else { echo "0"; }
-	?></strong> <br />
-	<strong>UPS Resedential: $ <?php 
-	if(!empty($shop['Order']['ResFee'])){
-	echo $shop['Order']['ResFee']; 
-	}else{
-	echo "0";
-	}
-	
-	?></strong> <br />
+	</strong> <br />
 	<strong>Order Total: $ <?php echo $shop['Order']['total']; ?></strong> <br />
 	</p>
 </div>
@@ -272,17 +263,7 @@
 		<strong>Discount ($ <?php echo $shop['Order']['discount']; ?>)</strong> <br />
 		<strong>Tax: $ <?php echo $shop['Order']['tax']; ?></strong> <br />
 		<strong>Shipping: $ <?php echo $shop['Order']['shipping']; ?></strong> <br />
-		<strong>Fedex/Ups: $ <?php 
-		if(!empty($shop['Order']['FedexUpsCharges'])){
-		echo $shop['Order']['FedexUpsCharges']; }
-		else
-		{ echo "0" ; }
-		?></strong> <br />
-		<strong>UPS Resiedential Fee: $ <?php 
-		if(!empty($shop['Order']['ResFee'])){
-		echo $shop['Order']['ResFee']; }
-		else {echo "0";}
-		?></strong> <br />
+		</strong> <br />
 		<strong>Order Total:$ <?php echo $shop['Order']['total']; ?></strong> <br />
 		</p>
 	</div>

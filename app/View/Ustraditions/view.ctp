@@ -17,18 +17,19 @@
         </div>
         
         <div class="gb-heading">Other US Traditions: </div>
-        <div class="gb-heading red list" style="font-size:120%;">
+        <div class="gb-heading red list" style="font-size:120%;margin-left:30px">
         <?php foreach ($ustraditions as $tradition): ?>
                 <?php echo $this->Html->link($tradition['Ustradition']['name'], array('controller' => 'ustraditions', 'action' => 'view', $tradition['Ustradition']['slug'])); ?><br />
         <?php endforeach; ?>
         </div>
          <div class="gb-heading">Brands: </div>
-        <div class="gb-heading red list" style="font-size:120%;">
+        
         <?php foreach ($brands as $brandslink): ?>
+		 <span class="gb-nav"><img src="/img/global/dash-2.png"></span>
         <?php echo $this->Html->link($brandslink['Brand']['name'], array('controller' => 'ustraditions', 'action' => 'view',$fst,'brand',$brandslink['Brand']['slug'])); ?>
          <br />
         <?php endforeach; ?>
-        </div>
+        
     </div>
 
 <div class="span8" style="width:690px;margin-left:0px;">
