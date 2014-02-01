@@ -208,11 +208,24 @@
 
 <div class="span3 offset9 CC">
 	<p style="text-align:right; padding-right:30px;">
-	<strong>Subtotal: $<?php echo $shop['Order']['subtotal']; ?></strong> <br />
-	<strong>Discount ($<?php echo $shop['Order']['discount']; ?>)</strong> <br />
-	<strong>Tax: <?php echo $shop['Order']['tax']; ?></strong> <br />
-	<strong>Shipping: <?php echo $shop['Order']['shipping']; ?></strong> <br />
-	<strong>Order Total: <?php echo $shop['Order']['total']; ?></strong> <br />
+	<strong>Subtotal: $ <?php echo $shop['Order']['subtotal']; ?></strong> <br />
+	<strong>Discount ($ <?php echo $shop['Order']['discount']; ?>)</strong> <br />
+	<strong>Tax: $ <?php echo $shop['Order']['tax']; ?></strong> <br />
+	<strong>Shipping: $ <?php echo $shop['Order']['shipping']; ?></strong> <br />
+	<strong>Fedex/Ups: $ <?php 
+	if(!empty($shop['Order']['FedexUpsCharges'])){
+	echo $shop['Order']['FedexUpsCharges']; }
+	else { echo "0"; }
+	?></strong> <br />
+	<strong>UPS Resedential: $ <?php 
+	if(!empty($shop['Order']['ResFee'])){
+	echo $shop['Order']['ResFee']; 
+	}else{
+	echo "0";
+	}
+	
+	?></strong> <br />
+	<strong>Order Total: $ <?php echo $shop['Order']['total']; ?></strong> <br />
 	</p>
 </div>
 
@@ -252,13 +265,25 @@
 	<!-- <div style="color:red">XXXXX</div> -->
 
 	<?php else: ?>
+	
 	<div class="span3 offset9 pre-cc">
 		<p style="text-align:right; padding-right:30px;">
-		<strong>Subtotal: $<?php echo $shop['Order']['subtotal']; ?></strong> <br />
-		<strong>Discount ($<?php echo $shop['Order']['discount']; ?>)</strong> <br />
-		<strong>Tax: <?php echo $shop['Order']['tax']; ?></strong> <br />
-		<strong>Shipping: <?php echo $shop['Order']['shipping']; ?></strong> <br />
-		<strong>Order Total: <?php echo $shop['Order']['total']; ?></strong> <br />
+		<strong>Subtotal: $ <?php echo $shop['Order']['subtotal']; ?></strong> <br />
+		<strong>Discount ($ <?php echo $shop['Order']['discount']; ?>)</strong> <br />
+		<strong>Tax: $ <?php echo $shop['Order']['tax']; ?></strong> <br />
+		<strong>Shipping: $ <?php echo $shop['Order']['shipping']; ?></strong> <br />
+		<strong>Fedex/Ups: $ <?php 
+		if(!empty($shop['Order']['FedexUpsCharges'])){
+		echo $shop['Order']['FedexUpsCharges']; }
+		else
+		{ echo "0" ; }
+		?></strong> <br />
+		<strong>UPS Resiedential Fee: $ <?php 
+		if(!empty($shop['Order']['ResFee'])){
+		echo $shop['Order']['ResFee']; }
+		else {echo "0";}
+		?></strong> <br />
+		<strong>Order Total:$ <?php echo $shop['Order']['total']; ?></strong> <br />
 		</p>
 	</div>
 

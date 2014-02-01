@@ -5,7 +5,12 @@
 	function getSubDomain() {
 		$url = explode('.', env('HTTP_HOST'));
 		return $url;
+		if($url[0]=="localhost")
+		{
+			$url = "localhost/gourmet";
+			}
 	}
+	
 	$subDomain = getSubDomain();
 
 	if($subDomain[0] != 'www' && isset($subDomain[2])) {
@@ -26,7 +31,7 @@
 	//Router::connect('/subsubcategory/:slug', array('controller' => 'products', 'action' => 'subsubcategory'), array('pass' => array('slug'), 'routeClass' => 'SubdomainRoute'));
 
 	Router::connect('/foods/*', array('controller' => 'categories', 'action' => 'view'), array('pass' => array('slug'), 'routeClass' => 'SubdomainRoute'));
-
+	Router::connect('/us/*', array('controller' => 'ustraditions', 'action' => 'view'), array('pass' => array('slug')));
 	Router::connect('/admin', array('controller' => 'users', 'action' => 'dashboard', 'admin' => true));
 
 	Router::connect('/vendor', array('controller' => 'users', 'action' => 'dashboard', 'vendor' => true));
@@ -34,7 +39,7 @@
 	Router::connect('/cat/*', array('controller' => 'products', 'action' => 'view'));
 
 	Router::connect('/us/:slug', array('controller' => 'ustraditions', 'action' => 'view'), array('pass' => array('slug')));
-
+	Router::connect('/international/*', array('controller' => 'traditions', 'action' => 'view'), array('pass' => array('slug')));
 	Router::connect('/international/:slug', array('controller' => 'traditions', 'action' => 'view'), array('pass' => array('slug')));
 	
 	

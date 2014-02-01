@@ -1,7 +1,7 @@
 <?php
 App::uses('AppController', 'Controller');
 class CategoriesController extends AppController {
-   public $uses = array('Brand','Category');
+ 
 ////////////////////////////////////////////////////////////
 
 	public function index() {
@@ -58,10 +58,47 @@ class CategoriesController extends AppController {
 		));
 		//debug($category);
 		$this->set(compact('category'));
-
+//print_r($category['Category']['slug']);
 		if(empty($category)) {
 			die('invalid category');
 		}
+		$this->loadModel('Product');
+	$BrandLeft = $this->Product->find('all', array(
+			'recursive' => -1,
+			'contain' => array(
+				'User',
+			),
+			'fields' => array(
+				'Product.brand_id'
+			),
+			'conditions' => array(
+				'User.active' => 1,
+				'Product.active' => 1,
+				'Product.category_id' => $category['Category']['id'],
+		),
+	));
+		
+ 
+		$UniquebrndIds = array_unique(Hash::extract($BrandLeft, '{n}.Product.brand_id'));
+		foreach ($UniquebrndIds as $key => $value) {
+					$UniquebrndIds;
+			}
+		$this->loadModel('Brand');
+		$brands = $this->Brand->find('all', array(
+			'recursive' => -1,
+			'fields' => array(
+				'Brand.id',
+				'Brand.slug',
+				'Brand.name',
+			),
+			'conditions' => array(
+				'Brand.id' => $UniquebrndIds
+			),
+			'order' => array(
+				'Brand.name' => 'ASC'
+			)
+		));
+		$this->set(compact('brands'));
 //////////////End Left Pannel Categories////////////////////
 	
 		///////////Sub Categoriese.g. Under Apetizer Left Pannel////////
@@ -94,7 +131,8 @@ class CategoriesController extends AppController {
 	///////////End Sub Categories/////////////
 	
 	////////Fetch Brand Name from Url////////
-	if(!empty($args[3])){
+	if(!empty($args[2])){
+		$this->loadModel('Brand');
 	$BrandUrl = $this->Brand->find('first', array(
 			'recursive' => -1,
 			'fields' => array(
@@ -105,7 +143,7 @@ class CategoriesController extends AppController {
 				'Brand.image',
 			),
 			'conditions' => array(
-				'Brand.slug' => $args[3]
+				'Brand.slug' => $args[2]
 			)
 		));
 		$this->set(compact('BrandUrl'));
@@ -123,7 +161,6 @@ class CategoriesController extends AppController {
 				'Product.auxcategory_3' => $category['Category']['id'],
 			),
 		);
-
 		//$auxcategories = $this->Category->Product->auxcategories();
 		//debug($auxcategories);
 
@@ -185,41 +222,19 @@ class CategoriesController extends AppController {
 ////////////////////////End First Argument Conditions//////////////////////////////////
 
 /////////////////////////////Start Second Argument Condiiton//////////////////////////////////////////
-		if(isset($args[2]) && $args[2]!='brands') {
-			$subsubcategory = $this->Category->Product->find('first', array(
-				'contain' => array(
-					'User',
-					'Subsubcategory'
-				),
-				'fields' => array(
-					'Subsubcategory.*'
-				),
-				'conditions' => array(
-					'User.active' => 1,
-					'Product.active' => 1,
-					'Subsubcategory.subcategory_id' => $subcategory['Subcategory']['id'],
-					'Subsubcategory.slug' => $args[2]
-				)
-			));
-
-			// debug($subsubcategory);
-			$this->set(compact('subsubcategory'));
-			//if(!empty($subsubcategory)) {
-				$productconditions[] = array(
-					'Product.subsubcategory_id' => $subsubcategory['Subsubcategory']['id']
-				);
-			//}
-		}
+		
+		
 ////////////////////////////////////End Second Argument Conditions//////////////////////////////////////////
 
 ////////////////////////////////////Start Third Argument - For Brand///////////////////////////////////////////////////
-if(isset($args[3])) {
+
+if(isset($args['2']) && $args['1']=='brand') {
 			$brandss = $this->Brand->find('first', array(
 			'fields' => array(
 					'Brand.*'
 				),
 				'conditions' => array(
-					'Brand.slug' => $args[3]
+					'Brand.slug' => $args[2]
 				)
 			));
 
@@ -230,7 +245,9 @@ if(isset($args[3])) {
 					'Product.brand_id' =>$BrandUrl['Brand']['id']
 				);
 			//}
+			
 		}
+	
 ///////////////////////////////End Brand Conditions/////////////////////////////////////////////////
 
 ///////////////////////////////Final Query to fetch products///////////////////////////////
@@ -309,25 +326,25 @@ if(isset($args[3])) {
 		// $this->set(compact('article')); 
 		
 	///////////Brands///////////
-		$brndIds = array_unique(Hash::extract($products, '{n}.Product.brand_id'));
-		foreach ($brndIds as $key => $value) {
-					$brndIds;
-			}
-		$brands = $this->Brand->find('all', array(
-			'recursive' => -1,
-			'fields' => array(
-				'Brand.id',
-				'Brand.slug',
-				'Brand.name',
-			),
-			'conditions' => array(
-				'Brand.id' => $brndIds
-			),
-			'order' => array(
-				'Brand.name' => 'ASC'
-			)
-		));
-		$this->set(compact('brands'));
+	//~ $brndIds = array_unique(Hash::extract($products, '{n}.Product.brand_id'));
+		//~ foreach ($brndIds as $key => $value) {
+					//~ $brndIds;
+			//~ }
+		//~ $brands = $this->Brand->find('all', array(
+			//~ 'recursive' => -1,
+			//~ 'fields' => array(
+				//~ 'Brand.id',
+				//~ 'Brand.slug',
+				//~ 'Brand.name',
+			//~ ),
+			//~ 'conditions' => array(
+				//~ 'Brand.id' => $brndIds
+			//~ ),
+			//~ 'order' => array(
+				//~ 'Brand.name' => 'ASC'
+			//~ )
+		//~ ));
+		//~ $this->set(compact('brands'));
 	
 		//////////End Brand Code///////////
 	}

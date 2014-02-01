@@ -1,3 +1,4 @@
+
 <div class="row">
 
     <div class="span3" style="width:270px">
@@ -18,7 +19,14 @@
         <div class="gb-heading">Other US Traditions: </div>
         <div class="gb-heading red list" style="font-size:120%;">
         <?php foreach ($ustraditions as $tradition): ?>
-            <?php echo $this->Html->link($tradition['Ustradition']['name'], array('controller' => 'ustraditions', 'action' => 'view', 'slug' => $tradition['Ustradition']['slug'])); ?><br />
+                <?php echo $this->Html->link($tradition['Ustradition']['name'], array('controller' => 'ustraditions', 'action' => 'view', $tradition['Ustradition']['slug'])); ?><br />
+        <?php endforeach; ?>
+        </div>
+         <div class="gb-heading">Brands: </div>
+        <div class="gb-heading red list" style="font-size:120%;">
+        <?php foreach ($brands as $brandslink): ?>
+        <?php echo $this->Html->link($brandslink['Brand']['name'], array('controller' => 'ustraditions', 'action' => 'view',$fst,'brand',$brandslink['Brand']['slug'])); ?>
+         <br />
         <?php endforeach; ?>
         </div>
     </div>
@@ -47,14 +55,14 @@
             ?>
             
             <div class="span2">
-            
+        
             
                 <div class="content-product">
 				
 					<div class="displaygroup"><?php echo $product['Product']['displaygroup']; ?></div>
                 
                     <div class="product-pic">
-
+  
 
 					<?php echo $this->Html->image('products/image/' . $product['Product']['image'], array('url' => array('subdomain' => $product['User']['slug'], 'controller' => 'products', 'action' => 'view', 'id' => $product['Product']['id'], 'slug' => $product['Product']['slug']), 'alt' => $product['Product']['name'])); ?>
                         <div class="product-name"> <a href="/product/<?php echo ($product['Product']['id'].'-'.$product['Product']['slug']);?>"> <?php echo $this->Text->truncate($product['Product']['name'], 40, array('ellipsis' => '...', 'exact' => 'false')); ?></a>

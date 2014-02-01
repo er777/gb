@@ -1,5 +1,14 @@
-<h2>Brands Index</h2>
+<h2>Our Vendor Brands</h2>
 
+<!--<div class="vendor-logo">
+	<a href="/">
+	<?php //echo $this->Html->image('users/image/' . $user['User']['image'], array('class' => 'img-polaroid', 'width' =>'226')); ?>
+	</a>
+
+	<div class="name"><?php //echo $user['User']['name']; ?></div>
+				
+</div>
+-->
 <div class="row">
 
 	<div class="span3">
