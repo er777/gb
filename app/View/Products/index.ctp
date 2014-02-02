@@ -173,10 +173,9 @@
 			
 			<?php if (($user['User']['id']) == 11) { ?>
 					
-					<div style="overflow-y:scroll;height:300px">
+				<div style="overflow-y:scroll;height:300px">
 					
-			<?php	};
-			?>
+			<?php	}; ?>
 			
 	
 			
@@ -184,27 +183,23 @@
 
 			
 
-					<?php foreach ($brands as $brnd): ?> 
-				
+				<?php foreach ($brands as $brnd): ?> 
+			
 					<span class="gb-nav"><img src="/img/global/dash-2.png"></span>
-
-
 					<?php echo $this->Html->link($brnd['Brand']['name'], array('controller' => 'products', 'action' => 'brand', $brnd['Brand']['slug'])); ?><br />
 
-					<?php endforeach; ?>
+				<?php endforeach; ?>
 
-				<?php endif; ?>
-				
-				<?php if (($user['User']['id']) == 11) { ?>
+			<?php if (($user['User']['id']) == 11) { ?>
 				</div>
-				<?php	};
-				?>
+			<?php	}; ?>
 
-				
+			<?php endif; ?>
+			
 				
 				
 		<div style="clear:both"></div>
-		
+				
 <hr />
 
 		<ul class="navList">
