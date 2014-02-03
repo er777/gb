@@ -53,7 +53,7 @@
 					<?php //foreach($menu_ustraditions as $menu_ustradition) : ?>
 					<!--<li><?php //echo $this->Html->link($menu_ustradition['Ustradition']['name'], array('controller' => 'ustraditions', 'action' => 'view', $menu_ustradition['Ustradition']['slug'])); ?></li>-->
 					<?php //endforeach; ?>
-					<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/us/amish">Amish</a></p>
+					<!--<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/us/amish">Amish</a></p>-->
 					<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/us/deep-south ">Deep South </a></p>
 					<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/us/far-west ">Far West </a></p>
 					<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/us/great-lakes">Great Lakes</a></p>
@@ -106,13 +106,14 @@
 			<li class="mzr-drop"><a class="parent" href="/">SPECIAL DIETS<b class="caret"></b></a>
 				<div class="mzr-content drop-two-columns popover-content">
 					<div class="wide">
-						<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/">All Natural</a></p>
+					<a>Coming soon...</a>
+						<!--<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/">All Natural</a></p>
 						<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/">No Preservatives</a></p>
 						<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/">Gluten Free</a></p>
 						<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/">Lactose Free</a></p>
 						<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/">Vegetarian</a></p>
 						<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/">Kosher</a></p>
-						<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/">Halal</a></p>
+						<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/">Halal</a></p>-->
 					</div>
 				</div>
 			</li>

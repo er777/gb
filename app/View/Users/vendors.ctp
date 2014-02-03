@@ -16,7 +16,7 @@
     </div>
     
     <div class="span8 offset1">
-		<div class="gb-heading vendors"><?php echo $user['User']['shop_quote']; ?></div>
+		<div class="vendors"><?php echo $user['User']['shop_quote']; ?></div>
     </div>
     
     
