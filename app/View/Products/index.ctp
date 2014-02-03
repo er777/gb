@@ -405,16 +405,9 @@
 
 				<!--Logic to show where we are -->
 
-			<?php if(!empty($subsubcat_crumb)) : ?>
-				<?php echo ($subsubcat_crumb); ?>
-
-			<?php elseif (!empty($subcat_crumb)) : ?>
-				<?php echo ($subcat_crumb); ?>
-
-			<?php elseif (!empty($cat_crumb)) : ?>
-				<?php echo ($cat_crumb); ?>
-			<?php endif; ?>
-
+	<?php
+		echo $this->here;
+	?>
 
 			</div>
 			

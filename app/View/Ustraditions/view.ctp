@@ -43,8 +43,14 @@
 				endif;
 			?>
         </div>
+		<div class="section-subheading">
+		<?php
+			echo $this->here;
+		?>
+		</div>
+
         
-        <br />
+       
         
         <div class="row product">
         

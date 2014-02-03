@@ -123,7 +123,7 @@ foreach ($brands as $brandnames): ?>
 			<?php endif; ?>
 		</ul>
 
-		<h3 class="gb-heading red  tight">
+		<h3 class="gb-heading red tight">
 
 	<?php
 		if(!empty($subsubcategory)) {

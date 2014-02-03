@@ -640,7 +640,7 @@ public function brand() {
 		$this->set(compact('brands'));
 		
 		/////////////////////
-			   $this->loadModel('Brand');
+		$this->loadModel('Brand');
 		$BrandUrl = $this->Brand->find('first', array(
 			'recursive' => -1,
 			'fields' => array(

@@ -59,7 +59,12 @@
 
 		</div>
 
-		<br />
+		<div class="section-subheading">
+		<?php
+			echo $this->here;
+		?>
+		</div>
+
 
 		<?php echo $this->element('products'); ?>
 
