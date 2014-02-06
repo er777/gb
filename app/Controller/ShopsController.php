@@ -182,17 +182,6 @@ class ShopsController extends AppController {
 		}
 
 		if ($this->request->is('post')) {
-				
-			$business = $this->request->data['Order']['business'];
-//				if($business == 1 ){
-//					$UPSFee = Configure::read('Settings.UPS_RESIDENTIAL_FEE');
-//					$FedexFee = Configure::read('Settings.FEDEX_RESIDENTIAL_FEE');
-//				}
-//				else
-//				{
-//					$UPSFee = '';
-//					$FedexFee = '';
-//				}
 			$this->loadModel('Order');
 			$this->Order->set($this->request->data);
 			if($this->Order->validates()) {
@@ -228,16 +217,15 @@ class ShopsController extends AppController {
 						$totalandtax = $user['subtotal'];
 					}
 					$taxtotal += $tax;
-					
+
 					$this->Session->write('Shop.Users.' . $user['id'] . '.tax', $tax);
 					$this->Session->write('Shop.Users.' . $user['id'] . '.totalandtax', $totalandtax);
 
 					if($user['flat_shipping'] != 1) {
+
 						if($user["min_shipping_check"] = 1) {
 							$minimumShipping = ($user['min_shipping']);
 						}
-
-						
 
 						$shipping_companies = array('usps', 'ups', 'fedex');
 						if (in_array($user['shipping_method'], $shipping_companies)) {
@@ -245,45 +233,16 @@ class ShopsController extends AppController {
 							$shippingMethod = ucfirst($user['shipping_method']);
 
 							$result = $this->$shippingMethod->getRate($data);
-							
-								$shipping_residential = '0';
 
-														
-								if ($business == 0) {
-																
-									if ($shippingMethod == 'Fedex') {
-										$shipping_residential = (Configure::read('Settings.FEDEX_RESIDENTIAL_FEE'));
-									}
-									
-									elseif ($shippingMethod == 'Ups') {
-										$shipping_residential = (Configure::read('Settings.UPS_RESIDENTIAL_FEE'));
-									}
-
-									//$total_residential = $shipping_residential;
-									//$total_residential_fee = $total_residential + $shipping_residential ;
-
-
-
-								};
-								
-								
-							
 							if(!$result) {
 								$this->Session->setFlash('Unable to rate the shipment');
 								$this->redirect(array('action' => 'address'));
 							}
-							
-							$this->Session->write('Shop.Users.' . $user['id'] . '.shipping_service', $result[0]['ServiceName']);
-							$this->Session->write('Shop.Users.' . $user['id'] . '.shipping_residential', $shipping_residential);
-							
-							//print_r($result);
-						//	die;
-							$this->Session->write('Shop.Users.' . $user['id'] . '.shipping', $result[0]['TotalCharges'] + $shipping_residential);
-							$this->Session->write('Shop.Users.' . $user['id'] . '.Shippingfees', $result);	
-							
-							
 
-							//Here comes Maestro exception
+							$this->Session->write('Shop.Users.' . $user['id'] . '.shipping_service', $result[0]['ServiceName']);
+							$this->Session->write('Shop.Users.' . $user['id'] . '.shipping', $result[0]['TotalCharges']);
+							$this->Session->write('Shop.Users.' . $user['id'] . '.Shippingfees', $result);
+
 						} elseif ($user['id'] == 11) {
 
 							$result = $this->Maestro->getRate($data, $shop);
@@ -319,19 +278,16 @@ class ShopsController extends AppController {
 				}
 
 				$shop = $this->Session->read('Shop');
+
 				$shippingtotal = 0;
 				foreach($shop['Users'] as $user) {
-
-					$shippingtotal += $user['Shippingfees'][0]['TotalCharges'] + $shipping_residential;
+					$shippingtotal += $user['Shippingfees'][0]['TotalCharges'];
 				}
-				
 				$shippingtotal = sprintf('%.2f', $shippingtotal);
 
 				$order['shipping'] = $shippingtotal;
 				$order['tax'] = sprintf('%.2f', $taxtotal);
-				$order['total'] = sprintf('%.2f', $shop['Order']['subtotal'] ) - $shop['Order']['discount'] + $taxtotal + $shippingtotal ;
-				
-				//debug($order);
+				$order['total'] = sprintf('%.2f', $shop['Order']['subtotal'] - $shop['Order']['discount'] + $taxtotal + $shippingtotal);
 
 				$this->Session->write('Shop.Order', $order + $shop['Order']);
 
@@ -378,16 +334,14 @@ class ShopsController extends AppController {
 	public function review() {
 
 		$shop = $this->Session->read('Shop');
-		
 		$total = array();
 		$i = 0;
+
 		if(empty($shop)) {
 			$this->redirect('/');
 		}
-	//print_r($this->request->data);
-	//die;
-		if ($this->request->is('post') && isset($this->request->data['Ship'])) {
 
+		if ($this->request->is('post') && isset($this->request->data['Ship'])) {
 
 			foreach($this->request->data['Ship'] as $key => $value) {
 				$userId = str_replace('rating_', '', $key);
@@ -395,9 +349,6 @@ class ShopsController extends AppController {
 					$this->Session->write('Shop.Users.' . $userId . '.shipping_selected', $value);
 					$this->Session->write('Shop.Users.' . $userId . '.shipping_service', $shop['Users'][$userId]['Shippingfees'][$value]['ServiceName']);
 					$this->Session->write('Shop.Users.' . $userId . '.shipping', $shop['Users'][$userId]['Shippingfees'][$value]['TotalCharges']);
-					$this->Session->write('Shop.Users.' . $userId . '.shipping', $shop['Users'][$userId]['Shippingfees'][$value]['shipping_residential']);
-				
-					
 				}
 			}
 
@@ -406,13 +357,12 @@ class ShopsController extends AppController {
 
 			foreach($shop['Users'] as $user) {
 				$shippingtotal += $user['Shippingfees'][$user['shipping_selected']]['TotalCharges'];
-
 			}
-			
-			$shippingtotal = sprintf('%.2f', $shippingtotal) ;
+			$shippingtotal = sprintf('%.2f', $shippingtotal);
 
 			$order['shipping'] = $shippingtotal;
 			$order['total'] = sprintf('%.2f', $shop['Order']['subtotal'] + $shippingtotal);
+
 			$this->Session->write('Shop.Order', $order + $shop['Order']);
 
 			$this->redirect(array('action' => 'review'));
@@ -423,7 +373,6 @@ class ShopsController extends AppController {
 		$formURL = null;
 
 		if ($this->request->is('post') && isset($this->request->data['Order']['formURL'])) {
-
 			try {
 				// $authorizeNet = $this->AuthorizeNet->charge($shop['Order'], $payment);
 				$formURL = $this->Shop->getFormUrl($shop);
@@ -433,13 +382,13 @@ class ShopsController extends AppController {
 			}
 			$ccform = true;
 
-	
 		}
 
 		if (isset($this->request->query['token-id'])) {
-			
+
 			$gatewayURL = Configure::read('Settings.NMI_gatewayURL');
 			$APIKey = Configure::read('Settings.NMI_APIKey');
+
 			$tokenId = $this->request->query['token-id'];
 			$xmlRequest = new DOMDocument('1.0','UTF-8');
 			$xmlRequest->formatOutput = true;
@@ -475,19 +424,18 @@ class ShopsController extends AppController {
 
 			$this->Order->set($this->request->data);
 			if($this->Order->validates()) {
-			
+
 				// $payment = array(
 				// 	'creditcard_number' => $this->request->data['Order']['creditcard_number'],
 				// 	'creditcard_month' => $this->request->data['Order']['creditcard_month'],
 				// 	'creditcard_year' => $this->request->data['Order']['creditcard_year'],
 				// 	'creditcard_code' => $this->request->data['Order']['creditcard_code'],
 				// );
-				
+
 				$o['OrderItem'] = $shop['OrderItem'];
 
 				$i = 0;
 				foreach($shop['Users'] as $user) {
-				
 					$o['OrderUser'][$i] = $user;
 					$o['OrderUser'][$i]['id'] = null;
 					$o['OrderUser'][$i]['user_id'] = $user['id'];
