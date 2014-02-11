@@ -21,7 +21,7 @@ class MaestroComponent extends Component {
 
 		App::uses('HttpSocket', 'Network/Http');
 		$httpSocket = new HttpSocket();
-		$res = $httpSocket->post(Configure::read('Settings.MAESTRO_API_URL_CARTCHECK'), $xml);
+		$res = $httpSocket->post(Configure::read('Settings.MAESTRO_API_URL'), $xml);
 
 		App::uses('Xml', 'Utility');
 		$response = Xml::toArray(Xml::build($res['body']));

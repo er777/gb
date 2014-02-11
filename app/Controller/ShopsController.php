@@ -246,6 +246,7 @@ class ShopsController extends AppController {
 						} elseif ($user['id'] == 11) {
 
 							$result = $this->Maestro->getRate($data, $shop);
+							//debug($result);
 
 							if(!$result) {
 								$this->Session->setFlash('Unable to rate the shipment');
