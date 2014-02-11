@@ -1,7 +1,6 @@
 <div class="orders form">
 <?php echo $this->Form->create('Order');?>
-	<fieldset>
-		<legend><?php echo __('Admin Edit Order'); ?></legend>
+		<h2>Admin Edit Order</h2>
 	<?php
 		echo $this->Form->input('id');
 		echo $this->Form->input('first_name');
@@ -11,11 +10,12 @@
 		echo $this->Form->input('tax');
 		echo $this->Form->input('shipping');
 		echo $this->Form->input('total');
-		echo $this->Form->input('order_status_id', array('empty' => '--'));
+		echo $this->Form->input('status',array('type'=>'select','options'=>$status));
 
 	?>
 	</fieldset>
-<?php echo $this->Form->end(__('Submit'));?>
+<?php echo $this->Form->button('Submit', array('class' => 'btn')); ?>
+<?php echo $this->Form->end(); ?>
 </div>
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
