@@ -124,9 +124,6 @@ class ShopsController extends AppController {
 			$productmodId = isset($this->request->data['mods']) ? $this->request->data['mods'] : null;
 
 			$product = $this->Cart->add($id, $quantity, $productmodId);
-
-			debug($product);
-			//die;
 		}
 		if(!empty($product)) {
 			$this->Session->setFlash($product['Product']['name'] . ' was added to your shopping cart.', 'flash_success');
@@ -249,8 +246,7 @@ class ShopsController extends AppController {
 						} elseif ($user['id'] == 11) {
 
 							$result = $this->Maestro->getRate($data, $shop);
-							debug($result);
-
+							//debug($result);
 
 							if(!$result) {
 								$this->Session->setFlash('Unable to rate the shipment');

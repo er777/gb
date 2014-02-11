@@ -64,7 +64,7 @@ class OrdersController extends AppController {
 
 public function admin_edit($id = null) {
 		$this->Order->id = $id;
-						
+								
 		if (!$this->Order->exists()) {
 			throw new NotFoundException('Invalid order');
 		}
@@ -78,6 +78,10 @@ public function admin_edit($id = null) {
 		} else {
 			$this->request->data = $this->Order->read(null, $id);
 		}
+		
+		$status = $this->Order->status();
+		$this->set(compact('status'));
+
 		
 	}
 

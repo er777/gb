@@ -180,6 +180,7 @@ class OrderUsersController extends AppController {
 			)
 		));
 		// print_r($orderUser);
+		
 		$this->set(compact('orderUser'));
 
 		$orderItems = ClassRegistry::init('OrderItem')->find('all', array(
@@ -209,6 +210,8 @@ class OrderUsersController extends AppController {
 			$options = array('conditions' => array('OrderUser.id' => $id));
 			$this->request->data = $this->OrderUser->find('first', $options);
 		}
+		
+		$status
 
 	}
 
