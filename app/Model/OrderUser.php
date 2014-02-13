@@ -23,26 +23,26 @@ class OrderUser extends AppModel {
 
 ////////////////////////////////////////////////////////////
 
-	public function status() {
-		$status = array(
-			'Pending' => 'Pending',
-			'Received' => 'Received',
-			'Processing' => 'Processing',
-			'Shipped' => 'Shipped',
-			'Complete' => 'Complete',
-			'Canceled' => 'Canceled',
-			'Denied' => 'Denied',
-			'Canceled Reversal' => 'Canceled Reversal',
-			'Failed' => 'Failed',
-			'Refunded' => 'Refunded',
-			'Reversed' => 'Reversed',
-			'Chargeback' => 'Chargeback',
-			'Expired' => 'Expired',
-			'Processed' => 'Processed',
-			'Voided' => 'Voided'	
-		);
-		return $status;
-	}
+//	public function status() {
+//		$status = array(
+//			'Pending' => 'Pending',
+//			'Received' => 'Received',
+//			'Processing' => 'Processing',
+//			'Shipped' => 'Shipped',
+//			'Complete' => 'Complete',
+//			'Canceled' => 'Canceled',
+//			'Denied' => 'Denied',
+//			'Canceled Reversal' => 'Canceled Reversal',
+//			'Failed' => 'Failed',
+//			'Refunded' => 'Refunded',
+//			'Reversed' => 'Reversed',
+//			'Chargeback' => 'Chargeback',
+//			'Expired' => 'Expired',
+//			'Processed' => 'Processed',
+//			'Voided' => 'Voided'	
+//		);
+//		return $status;
+//	}
 
 
 

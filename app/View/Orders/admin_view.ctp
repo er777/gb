@@ -37,6 +37,7 @@ $(document).ready(function() {
 		<th>Tax</th>
 		<th>Shipping</th>
 		<th>Total</th>
+		<th>Total</th>
 		<th>Created</th>
 		<th>Modified</th>
 	</tr>
@@ -52,6 +53,7 @@ $(document).ready(function() {
 		<td><?php echo h($order['Order']['tax']); ?></td>
 		<td><?php echo h($order['Order']['shipping']); ?></td>
 		<td><?php echo h($order['Order']['total']); ?></td>
+		<td><?php echo h($order['Order']['status']); ?></td>
 		<td><?php echo h($order['Order']['created']); ?></td>
 		<td><?php echo h($order['Order']['modified']); ?></td>
 	</tr>
