@@ -211,7 +211,12 @@ class OrderUsersController extends AppController {
 			$this->request->data = $this->OrderUser->find('first', $options);
 		}
 		
-		$status
+		$this->loadModel('Order');
+			
+		
+		$status = $this->OrderUser->Order->find('list');
+		$this->set(compact('status'));
+		
 
 	}
 
