@@ -253,7 +253,7 @@
 	<br />
 	<?php echo $this->Form->button('<i class="icon-thumbs-up icon-white"></i> Finalize Order', array('class' => 'btn btn-primary', 'ecape' => false)); ?> <?php echo $this->Form->end(); ?>
 
-	<!-- <div style="color:red">XXXXX</div> -->
+<!-- <div style="color:red">XXXXX</div> -->
 
 	<?php else: ?>
 	
