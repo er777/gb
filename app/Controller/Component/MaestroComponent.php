@@ -29,11 +29,11 @@ class MaestroComponent extends Component {
 		 // print_r($response);
 		 // die();
 
-		// debug($response['checkout']['order']['shippingcharge']);
+		 //debug($response['checkout']['order']['shippingcharge']);
 
 		$results[0] = array(
-			'ServiceCode'	=> 'GB Flat Rate',
-			'ServiceName'	=> 'GB Flat Rate',
+			'ServiceCode'	=> 'GBM Flat',
+			'ServiceName'	=> 'GBM Flat',
 			'TotalCharges'	=> sprintf('%.2f', $response['checkout']['order']['shippingcharge']),
 		);
 
