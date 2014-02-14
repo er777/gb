@@ -10,7 +10,8 @@ $(document).ready(function() {
 		url: '/admin/notes/editable',
 		title: 'Priority',
 		placement: 'right',
-		//source: <?php //echo json_encode($priorities); ?>,
+		//source: <?php //echo json_encode($priorities); ?>
+		source: <?php echo json_encode($priorities); ?>
 	});
 });
 </script>
@@ -24,7 +25,7 @@ $(document).ready(function() {
 	<tr>
 		<th><?php echo $this->Paginator->sort('id'); ?></th>
         <th><?php echo $this->Paginator->sort('author'); ?></th>
-        <th><?php echo $this->Paginator->sort('priority'); ?></th>
+        <th><?php echo $this->Paginator->sort('priority');?></th>
 		<th><?php echo $this->Paginator->sort('name'); ?></th>
 		<th><?php echo $this->Paginator->sort('note'); ?></th>
 		<th><?php echo $this->Paginator->sort('active'); ?></th>

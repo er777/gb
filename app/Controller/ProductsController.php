@@ -1294,6 +1294,9 @@ public function brand() {
 			}
 
 			$this->request->data['Product']['weight'] = sprintf('%.1f', $this->request->data['Product']['shipping_weight'] / 16);
+			
+			$product = "";
+			
 
 			if ($this->Product->save($this->request->data)) {
 
@@ -1354,8 +1357,15 @@ public function brand() {
 				'Tradition.name' => 'ASC'
 			)
 		));
+		
+		
+		
+		if ( ! empty($product) )	{
+			
+			$traditionsselected = array_map('intval', explode(',', $product['Product']['traditions']));
 
-		$traditionsselected = array_map('intval', explode(',', $product['Product']['traditions']));
+		}
+		
 
 		$ustraditions = $this->Product->Ustradition->findList();
 

@@ -65,7 +65,7 @@ $(document).ready(function(){
 
 
 
-<h2>Admin Edit Product</h2>
+<h2>Admin Add Product</h2>
 
 <?php echo $this->Form->create('Product'); ?>
 
@@ -186,6 +186,9 @@ $(document).ready(function(){
 
 	<div class="span3 offset1">
     <h3>Traditions</h3>
+	
+		<?php $traditionsselected = ''; ?>
+		
 		<?php echo $this->Form->input('traditions', array('type' => 'select', 'multiple' => 'checkbox', 'options' => $traditions, 'selected' => $traditionsselected, 'label' => 'International Traditions')); ?>
 		<br />
 		<br />
