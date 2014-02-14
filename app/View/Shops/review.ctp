@@ -120,7 +120,7 @@
 		<div class="span1">$<?php echo $shop['Users'][$key]['tax']; ?></div>
 		<div class="span1"><?php echo $shop['Users'][$key]['subtotal']; ?></div>
 		<div class="span1"><?php echo $shop['Users'][$key]['quantity']; ?></div>
-		<div class="span1"> <?php echo $shop['Users'][$key]['weight']; ?> LBS</div>
+		<div class="span1"> <?php echo $shop['Users'][$key]['weight']; ?> OZ</div>
 		<div class="span3"><?php echo $shop['Users'][$key]['shipping_service']; ?></div>
 		<div class="span13"><?php echo $shop['Users'][$key]['shipping']; ?></div>
 		<div class="row">
