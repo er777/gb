@@ -1472,3 +1472,6 @@ Stack trace:
 [23-Jan-2014 20:24:44 America/Los_Angeles] PHP Fatal error:  Call to a member function find() on a non-object in /home/gourmet/public_html/app/Controller/ProductsController.php on line 850
 [23-Jan-2014 20:26:25 America/Los_Angeles] PHP Fatal error:  Call to a member function find() on a non-object in /home/gourmet/public_html/app/Controller/ProductsController.php on line 850
 [23-Jan-2014 20:26:29 America/Los_Angeles] PHP Fatal error:  Call to a member function find() on a non-object in /home/gourmet/public_html/app/Controller/ProductsController.php on line 850
+[14-Feb-2014 16:46:59 America/Los_Angeles] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')' in /home/gourmet/public_html/app/Controller/TraditionsController.php on line 117
+[14-Feb-2014 16:47:12 America/Los_Angeles] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')' in /home/gourmet/public_html/app/Controller/TraditionsController.php on line 117
+[14-Feb-2014 16:47:16 America/Los_Angeles] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')' in /home/gourmet/public_html/app/Controller/TraditionsController.php on line 117
