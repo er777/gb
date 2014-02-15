@@ -164,9 +164,9 @@ class CategoriesController extends AppController {
 		//$auxcategories = $this->Category->Product->auxcategories();
 		//debug($auxcategories);
 
-//////////////////////////End Product Listing Conditions//////////////////////////////
+////////////////////////// End Product Listing Conditions //////////////////////////////
 	
-	/////////////////////////If First Argument exist in URL/////////////////////
+	///////////////////////// If First Argument exists in URL /////////////////////
 		if(isset($args[1]) && $args[1]!='brand') {
 			$subcategory =  $this->Category->Product->find('first', array(
 				'contain' => array(
@@ -276,8 +276,8 @@ if(isset($args['2']) && $args['1']=='brand') {
 			),
 			'conditions' => $productconditions,
 			'order' => array(
-				'Category.name' => 'ASC',
 				'Product.name' => 'ASC',
+				'Category.name' => 'ASC',
 			),
 			'limit' => 20,
 			'paramType' => 'querystring',

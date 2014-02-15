@@ -113,7 +113,7 @@ class TraditionsController extends AppController {
 			'conditions' => $condtions,
 			'limit' => 32,
 			'order' => array(
-				'Product.displaygroup' => 'ASC',
+				'Product.displaygroup' => 'SC',
 				'Product.name' => 'ASC'
 				)
 		);
