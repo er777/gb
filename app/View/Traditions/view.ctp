@@ -27,8 +27,9 @@
 
 		</div>
 		<div class="gb-heading">Brands: </div>
-        <div class="gb-heading" style="font-size:120%;">
+        <div class="gb-nav" style="font-size:120%;">
         <?php foreach ($brands as $brandslink): ?>
+			<img src="/img/global/dash-2.png">
         <?php echo $this->Html->link($brandslink['Brand']['name'], array('controller' => 'traditions', 'action' => 'view',$fst,'brand',$brandslink['Brand']['slug'])); ?>
          <br />
         <?php endforeach; ?>
