@@ -1403,8 +1403,10 @@ public function brand() {
 			if(!isset($this->request->data['Product']['subsubcategory_id'])) {
 				$this->request->data['Product']['subsubcategory_id'] = '';
 			}
+			
+			$preRound = sprintf('%.1f', $this->request->data['Product']['shipping_weight'] / 16);
 
-			$this->request->data['Product']['weight'] = sprintf('%.1f', $this->request->data['Product']['shipping_weight'] / 16);
+			$this->request->data['Product']['weight'] = ceil($preRound);
 
 			if ($this->Product->save($this->request->data)) {
 

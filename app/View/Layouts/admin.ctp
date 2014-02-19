@@ -119,6 +119,7 @@
 							<li><?php echo $this->Html->link('Recipes Categories', array('controller' => 'recipescategories', 'action' => 'index', 'admin' => true)); ?></li>
 							<li><?php echo $this->Html->link('Contents', array('controller' => 'contents', 'action' => 'index', 'admin' => true)); ?></li>
 							<li><?php echo $this->Html->link('Blocks', array('controller' => 'blocks', 'action' => 'index', 'admin' => true)); ?></li>
+							<li><?php echo $this->Html->link('Footer Links', array('controller' => 'details', 'action' => 'index', 'admin' => true)); ?></li>
 							<li><?php echo $this->Html->link('Features', array('controller' => 'features', 'action' => 'index', 'admin' => true)); ?></li>
 							<li><?php echo $this->Html->link('Coupons', array('controller' => 'coupons', 'action' => 'index', 'admin' => true)); ?></li>
 						</ul>
