@@ -1,6 +1,3 @@
-
-
-
 <div id="footer">
 
 	<div class="container">
@@ -14,7 +11,7 @@
 					<div class="span12 footer-links">
 							<a class="first-link" href="/details/view/1">ABOUT</a>
 							<a href="/details/view/3">FAQ</a>
-							<a href="/">TERMS OF USE</a>
+							<a href="/details/view/6/">TERMS OF USE</a>
 							<a href="/details/view/5">PRIVACY POLICY</a>
 							<a href="">BECOME A VENDOR</a>
 							<a href="/details/view/4">CONTACT US</a>

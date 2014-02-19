@@ -410,14 +410,14 @@ $(document).ready(function(){
 
 <?php if(!empty($productmods)): ?>
 
-<table cellpadding="0" cellspacing="0">
+<table cellpadding="5" cellspacing="10">
 	<tr>
 		<th>id</th>
 		<th>product_id</th>
 		<th>sku</th>
 		<th>name</th>
-		<th>change</th>
-		<th>active</th>
+		<th>price</th>
+		
 		<th>created</th>
 		<th>modified</th>
 		<th>action</th>
@@ -428,8 +428,8 @@ $(document).ready(function(){
 		<td><?php echo h($productmod['Productmod']['product_id']); ?></td>
 		<td><?php echo h($productmod['Productmod']['sku']); ?></td>
 		<td><?php echo h($productmod['Productmod']['name']); ?></td>
-		<td><?php echo h($productmod['Productmod']['change']); ?></td>
-		<td><?php echo h($productmod['Productmod']['active']); ?></td>
+		<td><?php echo h($productmod['Productmod']['price']); ?></td>
+		
 		<td><?php echo h($productmod['Productmod']['created']); ?></td>
 		<td><?php echo h($productmod['Productmod']['modified']); ?></td>
 		<td class="actions">

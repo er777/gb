@@ -11,11 +11,15 @@ class UstraditionsController extends AppController {
 	}
 
 ////////////////////////////////////////////////////////////
-public function view() {
+
+	public function view() {
+		
 		$args = array_unique(func_get_args());
-		////Tradition Name///////
+		
+		//// Tradition Name //////
 		$this->set('fst',$args['0']);
-		/////////////////Left Pannel - Other Us Traditions Start ///////////////////////
+		
+		///////////////// Left Panel - Other Us Traditions Start ///////////////////////
 		$ustraditions = $this->Ustradition->find('all', array(
 			'recursive' => -1,
 			'conditions' => array(),
@@ -24,7 +28,7 @@ public function view() {
 			)
 		));
 		$this->set(compact('ustraditions'));
-		//////////////////Other Us Traditions End////////////////////
+		////////////////// Other Us Traditions End ////////////////////
 		
 		$ustradition = $this->Ustradition->find('first', array(
 			'recursive' => -1,
@@ -33,9 +37,10 @@ public function view() {
 			)
 		));
 		if(empty($ustradition)) {
-			die('invalid region');
+			die('Invalid US Region');
 		}
 		$this->set(compact('ustradition'));
+		
 		
 		$ustradition_id = $ustradition['Ustradition']['id'];
 
@@ -62,7 +67,7 @@ public function view() {
 		}
 		else
 		{
-			//////Product SQL for ustraditions only////////////
+		//////////////// Product SQL for ustraditions only////////////////
 			$productconditions =  array(
 				'Product.active' => 1,
 				'User.active' => 1,
@@ -108,8 +113,9 @@ public function view() {
 			'conditions' =>$productconditions,
 			'limit' => 32,
 			'order' => array(
-				'Product.displaygroup' => 'ASC',
-				'Product.name' => 'ASC'
+				'Product.name' => 'ASC',
+				'Product.displaygroup' => 'ASC'
+				
 			)
 		);
 		$products = $this->paginate('Product');
