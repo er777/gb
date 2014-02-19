@@ -31,13 +31,13 @@
 	//Router::connect('/subsubcategory/:slug', array('controller' => 'products', 'action' => 'subsubcategory'), array('pass' => array('slug'), 'routeClass' => 'SubdomainRoute'));
 
 	Router::connect('/foods/*', array('controller' => 'categories', 'action' => 'view'), array('pass' => array('slug'), 'routeClass' => 'SubdomainRoute'));
-	Router::connect('/us/*', array('controller' => 'ustraditions', 'action' => 'view'), array('pass' => array('slug')));
 	Router::connect('/admin', array('controller' => 'users', 'action' => 'dashboard', 'admin' => true));
 
 	Router::connect('/vendor', array('controller' => 'users', 'action' => 'dashboard', 'vendor' => true));
 	
 	Router::connect('/cat/*', array('controller' => 'products', 'action' => 'view'));
 
+	Router::connect('/us/*', array('controller' => 'ustraditions', 'action' => 'view'), array('pass' => array('slug')));
 	Router::connect('/us/:slug', array('controller' => 'ustraditions', 'action' => 'view'), array('pass' => array('slug')));
 	Router::connect('/international/*', array('controller' => 'traditions', 'action' => 'view'), array('pass' => array('slug')));
 	Router::connect('/international/:slug', array('controller' => 'traditions', 'action' => 'view'), array('pass' => array('slug')));

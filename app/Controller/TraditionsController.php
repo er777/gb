@@ -13,8 +13,12 @@ class TraditionsController extends AppController {
 ////////////////////////////////////////////////////////////
 
 	public function view() {
+		
 		$args = array_unique(func_get_args());
+		
+		//// Tradition Name //////
 		$this->set('fst',$args['0']);
+		
 		$tradition = $this->Tradition->find('first', array(
 			'recursive' => -1,
 			'conditions' => array(
@@ -28,9 +32,10 @@ class TraditionsController extends AppController {
 		
 				
 		if(empty($tradition)) {
-			die('invalid tradition');
+			die('Invalid Tradition');
 		}
 		$this->set(compact('tradition'));
+		
 
 		$traditionid = $tradition['Tradition']['id'];
 
@@ -41,6 +46,7 @@ class TraditionsController extends AppController {
 				'Tradition.id',
 				'Tradition.slug',
 				'Tradition.name',
+				'Tradition.awning_image',
 			),
 			'order' => array(
 				'Tradition.name' => 'ASC'
@@ -52,6 +58,7 @@ class TraditionsController extends AppController {
 		$this->loadModel('Product');
 		
 		/////////////////////////////////////////////
+		
 		if(!empty($args['1']) && $args['1']=='brand'){
 			$this->loadModel('Brand');
 			$Brandinfo = $this->Brand->find('first', array(
@@ -61,6 +68,7 @@ class TraditionsController extends AppController {
 				)
 			));
 			$bid = $Brandinfo['Brand']['id'];
+			
 			//////Product SQL for brand and traditions////////////
 			$condtions =  array(
 					'Product.active' => 1,
@@ -174,7 +182,7 @@ class TraditionsController extends AppController {
 			)
 		));
 		$this->set(compact('brands'));
-		////////////////////Left Pannel Brand Name End////////////////
+		//////////////////// Left Panel Brand Name End ////////////////
 	}
 
 ////////////////////////////////////////////////////////////
