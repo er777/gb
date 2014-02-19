@@ -365,7 +365,7 @@ $(document).ready(function() {
 
 
 				<?php //if($product['Product']['user_id'] != 11) : ?>
-					<span class="product-label">Shipping Weight: </span><?php echo $product['Product']['shipping_weight']; ?>&nbsp;lb.<?php //echo $product['Product']['weight_unit']; ?> </span>
+					<span class="product-label">Shipping Weight: </span><?php echo $product['Product']['shipping_weight']; ?>&nbsp;oz.<?php //echo $product['Product']['weight_unit']; ?> </span>
 				<?php //endif; ?>
 				<br />
 				<br />

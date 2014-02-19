@@ -46,8 +46,10 @@ class WeightShell extends Shell {
 
 		foreach ($products as $product) {
 			$this->out(print_r($product));
+			
+			
 
-			$shipping_weight = number_format($product['Product']['weight'] / 16, 2);
+			$shipping_weight = ceil(number_format($product['Product']['weight'] / 16, 2));
 
 			$this->out('new weight (lbs) = ' . $shipping_weight);
 
