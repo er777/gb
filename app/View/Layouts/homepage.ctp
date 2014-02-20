@@ -58,8 +58,8 @@
 								</button>
 							</li>
 							<li class="social"><a href="https://www.facebook.com/pages/Gourmet-Basket/603379453015040"><img src="/img/global/fb.png" width="28" height="27" alt="facebook"></a></li>
-							<li class="social"><a href="https://twitter.com/search/users?q=gourmetbasket1"><img src="/img/global/tw.png" width="28" height="27"></a></li>
-							<li class="social"><a href="http://pinterest.com/gourmetbasket1/"><img src="/img/global/pin.png" width="27" height="27" alt="pinterest"></a></li>
+							<li class="social"><a href="https://twitter.com/gourmetworldmkt"><img src="/img/global/tw.png" width="28" height="27"></a></li>
+							<li class="social"><a href="http://www.pinterest.com/gourmetworldmkt/"><img src="/img/global/pin.png" width="27" height="27" alt="pinterest"></a></li>
 							<!--<li class="gb-account"><a href="/members/register">BECOME A MEMBER</a></li>--> 
 							<!-- <li class="gb-account"><a href="/members/login">LOG IN</a></li>-->
 						</ul>
