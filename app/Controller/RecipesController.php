@@ -94,7 +94,7 @@ class RecipesController extends AppController {
 			),
 			'conditions' => array(
 				'Recipe.active' => 1,
-				'User.active' => 1,
+				//'User.active' => 1,
 				'User.slug >' => ''
 			),
 			'group' => array(
