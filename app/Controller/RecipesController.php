@@ -432,7 +432,7 @@ public function admin_index() {
 
 		$users = $this->Recipe->User->find('list', array(
 			'conditions' => array(
-				'User.show' => 1,
+				//'User.show' => 1,
 				'User.level' => 'vendor',
 			),
 
