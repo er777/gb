@@ -1475,3 +1475,7 @@ Stack trace:
 [14-Feb-2014 16:46:59 America/Los_Angeles] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')' in /home/gourmet/public_html/app/Controller/TraditionsController.php on line 117
 [14-Feb-2014 16:47:12 America/Los_Angeles] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')' in /home/gourmet/public_html/app/Controller/TraditionsController.php on line 117
 [14-Feb-2014 16:47:16 America/Los_Angeles] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')' in /home/gourmet/public_html/app/Controller/TraditionsController.php on line 117
+[26-Feb-2014 16:07:12 America/Los_Angeles] PHP Warning:  Model "Ustradition" is not associated with model "User" in /home/gourmet/public_html/lib/Cake/Model/Behavior/ContainableBehavior.php on line 344
+[26-Feb-2014 16:07:12 America/Los_Angeles] PHP Warning:  Model "Ustradition" is not associated with model "Ustradition" in /home/gourmet/public_html/lib/Cake/Model/Behavior/ContainableBehavior.php on line 344
+[26-Feb-2014 18:31:04 America/Los_Angeles] PHP Warning:  Model "Ustradition" is not associated with model "User" in /home/gourmet/public_html/lib/Cake/Model/Behavior/ContainableBehavior.php on line 344
+[26-Feb-2014 18:31:04 America/Los_Angeles] PHP Warning:  Model "Ustradition" is not associated with model "Ustradition" in /home/gourmet/public_html/lib/Cake/Model/Behavior/ContainableBehavior.php on line 344
