@@ -73,7 +73,7 @@ class RecipesController extends AppController {
 			),
 			'conditions' => array(
 				'Recipe.active' => 1,
-				'User.active' => 1,
+				//'User.active' => 1,
 			),
 			'group' => array(
 				'Recipe.recipescategory_id',
@@ -135,8 +135,8 @@ class RecipesController extends AppController {
 			}
 
 			$conditions[] = array(
-				'User.slug' => $this->params['named']['vendor'],
-				'User.active' => 1,
+				'User.slug' => $this->params['named']['vendor']
+				//'User.active' => 1,
 				);
 
 			$vendor_selected = $this->params['named']['vendor'];
@@ -157,7 +157,7 @@ class RecipesController extends AppController {
 				'Recipescategory.name',
 			),
 			'conditions' => array(
-				'User.active' => 1,
+				//'User.active' => 1,
 				$conditions
 			),
 			'order' => array(
