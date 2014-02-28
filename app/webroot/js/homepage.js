@@ -15,9 +15,9 @@ $(document).ready(function(){
 	
 	
 	// Carousel Bootstrap	
-	$('.carousel').carousel({
-  		interval: 6000,
-		pause:'hover'
-	})
+	//$('.carousel').carousel({
+	//	interval: 6000,
+	//	pause:'hover'
+	//})
 
 });

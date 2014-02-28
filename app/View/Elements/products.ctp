@@ -42,7 +42,16 @@
 							<!-- Price -->
 							 <div class="price pull-left"><?php echo $product['Product']['price']; ?></div>
 							 <!-- Add to cart -->
-							 <div class="button pull-right"><a href="#">Add to Cart</a></div>
+                             
+                             	<?php echo $this->Form->create(NULL, array('url' => array('controller' => 'shops', 'action' => 'add'))); ?>
+
+								<?php echo $this->Form->input('id', array('type' => 'hidden', 'value' => $product['Product']['id'])); ?>
+
+								<?php echo $this->Form->button('<i class="icon-shopping-cart icon-white"></i> Add to Cart', array('class' => 'button pull-right', 'escape' => false));?>
+
+								<?php echo $this->Form->end();?>
+
+
 									
 							<!--<div class="price"></div>-->
 						

@@ -9,7 +9,8 @@
 <link href='http://fonts.googleapis.com/css?family=Rosario:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Oregano:400,400italic' rel='stylesheet' type='text/css'>
 <!--<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>-->
-<?php echo $this->Html->css(array('bootstrap.min.css','css.css','mega-menu.css','mega-menu-responsive.css','cakephp_tag_cloud.css')); ?>
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+<?php echo $this->Html->css(array('css.css','mega-menu.css','mega-menu-responsive.css','cakephp_tag_cloud.css')); ?>
 
 <!-- CSS -->
 
@@ -20,7 +21,7 @@
 }
 .bkgnd-gb {
  <?php echo $user['User']['awning_css'];
-?>  opacity: 0.2;
+?> opacity: 0.2;
 Android 2.1+, Chrome 4+, Firefox 2+, IE 9+, iOS 3.2+, Opera 9+, Safari 3.1+
 }
 <?php endif;
@@ -28,16 +29,15 @@ Android 2.1+, Chrome 4+, Firefox 2+, IE 9+, iOS 3.2+, Opera 9+, Safari 3.1+
 </style>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
-<?php echo $this->Html->script(array('bootstrap.min.js','twitter-bootstrap-hover-dropdown.js','js.js','jquery.columnizer.min.js','jquery.bpopup-0.9.3.min.js','jquery.easing.1.3.js','jquery.cj-object-scaler.min.js')); ?>
+<?php echo $this->Html->script(array('bootstrap.min.js','twitter-bootstrap-hover-dropdown.js','js.js','jquery.bpopup-0.9.3.min.js','jquery.easing.1.3.js','jquery.cj-object-scaler.min.js')); ?>
 <?php //echo $this->Html->css('bootstrap.less?','stylesheet/less') ?>
 <?php echo $this->App->js(); ?><?php echo $this->fetch('meta'); ?><?php echo $this->fetch('css'); ?><?php echo $this->fetch('script'); ?>
 <script type="text/javascript" src="/t/track.php?id=gourmet"></script>
-
 </head>
 <body class="sun">
-	<div id="page" role="main">
-		<div id="fb-root"></div>
-		<!--<script>
+<header>
+<div id="fb-root"></div>
+<!--<script>
 				(function(d, s, id) {
 					var js, fjs = d.getElementsByTagName(s)[0];
 					if (d.getElementById(id)) return;
@@ -46,52 +46,50 @@ Android 2.1+, Chrome 4+, Firefox 2+, IE 9+, iOS 3.2+, Opera 9+, Safari 3.1+
 					fjs.parentNode.insertBefore(js, fjs);
 				}(document, 'script', 'facebook-jssdk'));
 				</script>-->
-		<div id="header-background">
-			<div class="container">
-				<div id="header-top"> <a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>">
-					<div class="basket"><img src="/img/global/gwm-oval.png"  alt="gourmet basket"></div>
-					</a>
-					<div id="account">
-						<div class="search"> 
-							<!-- Search Box --> 
-							<?php echo $this->Form->create('Product', array('type' => 'GET', 'class' => 'navbar-form', 'url' => array('controller' => 'products', 'action' => 'search'))); ?> <?php echo $this->Form->input('search', array('label' => false, 'div' => false, 'autocomplete' => 'on')); ?>
-							<?php //echo $this->Form->button('<i class="icon-search icon-white"></i> Search', array('div' => false, 'class' => 'btn btn-gb', 'escape' => false)); ?>
-							<?php echo $this->Form->end(); ?> </div>
-						<ul class="gb-horiz-account">
-							<li class="cart">
-								<button class="cart" type="submit">
-								<a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/shops/cart"></i><img src="/img/global/cart.png" width="40" height="29" alt="cart"></a>
-								</button>
-							</li>
-							<li class="social"><a href="https://www.facebook.com/pages/Gourmet-Basket/603379453015040"><img src="/img/global/fb.png" width="28" height="27" alt="facebook"></a></li>
-							<li class="social"><a href="https://twitter.com/search/users?q=gourmetbasket1"><img src="/img/global/tw.png" width="28" height="27" alt="twitter">></a></li>
-							<li class="social"><a href="http://pinterest.com/gourmetbasket1/"><img src="/img/global/pin.png" width="27" height="27" alt="pinterest"></a></li>
-							<!--<li class="gb-account"><a href="/members/register">BECOME A MEMBER</a></li>--> 
-							<!-- <li class="gb-account"><a href="/members/login">LOG IN</a></li>-->
-						</ul>
-					</div>
-				</div>
-				
-			<div id="header-nav">
+
+<div class="page container">
+   <div class="row"> 
+      <!-- Search -->
+      <div class="col-md-5 col-md-offset-7"> 
+         <!-- Search form -->
+         <div class="search"> 
+            <!-- Search Box --> 
+            <?php echo $this->Form->create('Product', array('type' => 'GET', 'class' => 'navbar-form', 'url' => array('controller' => 'products', 'action' => 'search'))); ?> <?php echo $this->Form->input('search', array('label' => false, 'div' => false, 'autocomplete' => 'on')); ?>
+            <?php //echo $this->Form->button('<i class="icon-search icon-white"></i> Search', array('div' => false, 'class' => 'btn btn-gb', 'escape' => false)); ?>
+            <?php echo $this->Form->end(); ?> </div>
+         <ul class="gb-horiz-account">
+            <li class="cart">
+               <button class="cart" type="submit">
+               <a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/shops/cart"></i><img src="/img/global/cart.png" width="40" height="29" alt="cart"></a>
+               </button>
+            </li>
+            <li class="social"><a href="https://www.facebook.com/pages/Gourmet-Basket/603379453015040"><img src="/img/global/fb.png" width="28" height="27" alt="facebook"></a></li>
+            <li class="social"><a href="https://twitter.com/gourmetworldmkt"><img src="/img/global/tw.png" width="28" height="27"></a></li>
+            <li class="social"><a href="http://www.pinterest.com/gourmetworldmkt/"><img src="/img/global/pin.png" width="27" height="27" alt="pinterest"></a></li>
+            <!--<li class="gb-account"><a href="/members/register">BECOME A MEMBER</a></li>--> 
+            <!-- <li class="gb-account"><a href="/members/login">LOG IN</a></li>-->
+         </ul>
+      </div>
+   </div>
+</div>
+
+<!--<div id="header-nav">
 				<div id="nav-wrapper"> 
 					<!-- Include Nav element --> 
-					<?php echo $this->element('nav-new'); ?> </div>
-			</div>
-			
-			<div class="container wrapper">
-				<div id="dialog-info">
-				<?php echo $this->Session->flash(); ?>
-				</div>
-				<!-- CONTENT -->
-				<?php echo $this->fetch('content'); ?> </div>
-			</div>
-			
-		</div>
-		
-		</div>
-			<?php echo $this->element('footer'); ?>
-		</div>
-	</div>
+<?php echo $this->element('nav-responsive-works'); ?>
+
+
+<div class="page container">
+   <div id="dialog-info"> <?php echo $this->Session->flash(); ?> </div>
+   <!-- CONTENT --> 
+   <?php echo $this->fetch('content'); ?>
+   </div>
+</div>
+
+</div>
+<?php echo $this->element('footer'); ?>
+</div>
+</div>
 <!-- end outer wrapper --> 
 
 <br />
@@ -99,9 +97,8 @@ Android 2.1+, Chrome 4+, Firefox 2+, IE 9+, iOS 3.2+, Opera 9+, Safari 3.1+
 <?php echo $this->element('sqldump'); ?> <br />
 <br />
 
-<!-- IE8 Compatibility -->
-<script src ="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script>
-
+<!-- IE8 Compatibility --> 
+<script src ="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script> 
 <script>
 	// Drop Down Hover!
 	$(document).ready(function() {
@@ -111,11 +108,6 @@ Android 2.1+, Chrome 4+, Firefox 2+, IE 9+, iOS 3.2+, Opera 9+, Safari 3.1+
 	//Select Customize
 	//$('.selectpicker').selectpicker();
 
-	 //Columnizer
-	$(function(){
-		$('.wide').columnize({width:250});
-		//$('.thin').columnize({width:200});
-	});
 
 	// Pop Up
 

@@ -1,3 +1,5 @@
+
+
 /*
  Responsive Mega Menu v1.4
  
@@ -528,3 +530,82 @@ li.with-gallery li.full-width { display: block; margin: 0; width: auto; }
 .dropdown-menu a.btn-primary[disabled] { color: #fff !important; background-color: #0044cc !important; *background-color: #003bb3; }
 
 }
+
+
+
+
+
+
+	/ GWM Specific **/*
+	/** navigation **/
+
+.navbar-gwm {
+	background-color: #393768;
+	border-color: #080808;}
+
+.navbar-gwm .navbar-toggle .icon-bar {
+	background-color: #FFF;
+}
+
+.navbar-inverse {
+   background-color: #393767;
+   border-color:#393767;
+   border-radius:0px;
+
+}
+
+.navbar {
+	margin-bottom:0;
+	height:60px;
+}
+
+.navbar li {
+	padding-top:8px;
+}
+
+a.navbar-brand img {
+	margin-top:-36px;
+}
+
+.navbar .container {
+	position:relative;
+	z-index:1000;
+}
+
+.dropdown-menu.pull-right {
+	
+}
+
+/* Navigation **/
+
+#main-nav  li a.parent {
+	font-family: 'PT Sans Narrow';
+	font-size:19px;
+}
+
+#nav-wrapper {
+	height: 49px;
+	width: 100%;
+	padding-left: 15%;
+}
+.wide {
+}
+
+
+hr.thin.tight {
+	margin: 5px 0;
+	border: 0;
+	border-top: 1px solid #3f9179;
+	border-bottom: none;
+	
+}
+
+.container.navigation {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+#main-nav {
+	font-size:15px;
+}
+
