@@ -24,19 +24,119 @@
 <div class="row">
 
 	<!--Sidebar -->
-	<div class="col-md-3 col-sm-3 hidden-xs">	
+	<div class="col-md-3 col-sm-3 hidden-xs">
+    
+    	<div id="left-sidebar">  
 
-		<?php if(!empty($user)) : ?>
-		<div class=""> <a href="/"> </a>
-
-			<div class="name"><?php echo $user['User']['name']; ?></div>
-			<div class="plain"><?php echo $user['User']['city']; ?>, <?php echo $user['User']['state']; ?></div>
-
-			<div class="quote"><?php echo $user['User']['shop_quote']; ?></div>
-		<?php endif; ?>
-
+		   <?php if(!empty($user)) : ?>
+           <div class=""> <a href="/"> </a>
+   
+               <H1 class="vendor-title"><?php echo $user['User']['name']; ?></div>
+               <div class="white"><?php echo $user['User']['city']; ?>, <?php echo $user['User']['state']; ?></div>
+   
+              
+           <?php endif; ?>
+   
+       <hr />
+       
+           <a class="gb-nav" href="/">All Our Products</a>
+   
+   
+           <?php if(!empty($category)) : ?><br /><span class="gb-nav"><img src="/img/global/dash-2.png"></span>
+   
+               <?php echo $this->Html->link($category['Category']['name'], array('controller' => 'products', 'action' => 'category', $category['Category']['slug'])); ?>
+   
+               <?php $cat_crumb = $category['Category']['name']?>
+   
+   
+           <?php endif; ?>
+   
+           <?php if(!empty($subcategory)) : ?>
+               <br /><span class="gb-nav"><img src="/img/global/dash-4.png"></span><?php echo $this->Html->link($subcategory['Subcategory']['name'], array('controller' => 'products', 'action' => 'category', $category['Category']['slug'], $subcategory['Subcategory']['slug'])); ?>
+   
+               <?php $subcat_crumb = $subcategory['Subcategory']['name']?>
+   
+           <?php endif; ?>
+   
+           <?php if(!empty($subsubcategory)) : ?>
+               <br /><span class="gb-nav"><img src="/img/global/dash-7.png"></span><?php echo $this->Html->link($subsubcategory['Subsubcategory']['name'], array('controller' => 'products', 'action' => 'category', $category['Category']['slug'], $subcategory['Subcategory']['slug'], $subsubcategory['Subsubcategory']['slug'])); ?>
+   
+               <?php $subsubcat_crumb = $subsubcategory['Subsubcategory']['name']?>
+   
+           <?php endif; ?>
+   
+   
+           <div style="clear:both">
+   
+               <!-- Sub Sub Category Loop -->
+   
+               <?php if(!empty($subsubcategories)) : ?>
+   
+               <?php foreach ($subsubcategories as $subsubcategory): ?>
+   
+                   <?php if ($subsubcat_crumb !== $subsubcategory['Subsubcategory']['name']) : ?>
+   
+   
+                       <span class="gb-nav"><img src="/img/global/dash-7.png"></span><?php echo $this->Html->link($subsubcategory['Subsubcategory']['name'], array('controller' => 'products', 'action' => 'category', $subsubcategory['Category']['slug'], $subsubcategory['Subcategory']['slug'], $subsubcategory['Subsubcategory']['slug'])); ?><br />
+   
+                  <?php endif ; ?>
+   
+               <?php endforeach; ?>
+           <?php endif; ?>
+   
+   
+   
+               <!-- Sub Category Loop -->
+   
+           <?php if(!empty($subcategories)) : ?>
+   
+               <?php foreach ($subcategories as $subcategory): ?>
+   
+                   <?php //echo 'subcat_crumb:' . ($subcat_crumb)  .  '----subcategory:' . ($subcategory['Subcategory']['name']) .'<br />';?>
+   
+                       <?php //if(!empty($subcat_crumb)) : ?>
+                           <?php if ($subcat_crumb !== $subcategory['Subcategory']['name']) : ?>
+                       <?php //endif; ?>
+   
+                           <span class="gb-nav"><img src="/img/global/dash-4.png"></span><?php echo $this->Html->link($subcategory['Subcategory']['name'], array('controller' => 'products', 'action' => 'category', $category['Category']['slug'], $subcategory['Subcategory']['slug'])); ?><br />
+   
+                       <?php //if(!empty($subcat_crumb)) : ?>
+                           <?php endif; ?>
+                       <?php //endif; ?>
+   
+   
+               <?php endforeach; ?>
+   
+           <?php endif; ?>
+   
+   
+               <!-- Category Loop -->
+   
+               <?php if(!empty($usercategories)) : ?>
+   
+                   <?php foreach ($usercategories as $usercategory): ?>
+                   <span class="gb-nav"><img src="/img/global/dash-2.png"></span>
+   
+   
+                   <?php echo $this->Html->link($usercategory['Category']['name'], array('controller' => 'products', 'action' => 'category', $usercategory['Category']['slug'])); ?><br />
+   
+                   <?php endforeach; ?>
+   
+               <?php endif; ?>
+   
+               <?php /*?><?php
+                   $count = 1;
+                   foreach ($brands as $brand):
+                       echo $product['Brands']['name'];
+                       echo($count) . '<br />';
+                       $count++;
+                   endforeach; ?>
+       <?php */?>
+                   </div>
+       
 	<hr />
 	
+<<<<<<< HEAD
 		<a class="gb-nav" href="/">All Our Products</a>
 		<?php if(!empty($category)) : ?><br /><span class="gb-nav"><img src="/img/global/dash-2.png"></span>
 
@@ -172,6 +272,121 @@
 			<ul class="navList">
 				<li><a class="vendor-css" href="#" id="story">Our Story</a></li>
 			</ul>
+||||||| merged common ancestors
+		<a class="gb-nav" href="/">All Our Products</a>
+
+
+		<?php if(!empty($category)) : ?><br /><span class="gb-nav"><img src="/img/global/dash-2.png"></span>
+
+			<?php echo $this->Html->link($category['Category']['name'], array('controller' => 'products', 'action' => 'category', $category['Category']['slug'])); ?>
+
+			<?php $cat_crumb = $category['Category']['name']?>
+
+
+		<?php endif; ?>
+
+		<?php if(!empty($subcategory)) : ?>
+			<br /><span class="gb-nav"><img src="/img/global/dash-4.png"></span><?php echo $this->Html->link($subcategory['Subcategory']['name'], array('controller' => 'products', 'action' => 'category', $category['Category']['slug'], $subcategory['Subcategory']['slug'])); ?>
+
+			<?php $subcat_crumb = $subcategory['Subcategory']['name']?>
+
+		<?php endif; ?>
+
+		<?php if(!empty($subsubcategory)) : ?>
+			<br /><span class="gb-nav"><img src="/img/global/dash-7.png"></span><?php echo $this->Html->link($subsubcategory['Subsubcategory']['name'], array('controller' => 'products', 'action' => 'category', $category['Category']['slug'], $subcategory['Subcategory']['slug'], $subsubcategory['Subsubcategory']['slug'])); ?>
+
+			<?php $subsubcat_crumb = $subsubcategory['Subsubcategory']['name']?>
+
+		<?php endif; ?>
+
+
+		<div style="clear:both">
+
+			<!-- Sub Sub Category Loop -->
+
+			<?php if(!empty($subsubcategories)) : ?>
+
+			<?php foreach ($subsubcategories as $subsubcategory): ?>
+
+				<?php if ($subsubcat_crumb !== $subsubcategory['Subsubcategory']['name']) : ?>
+
+
+					<span class="gb-nav"><img src="/img/global/dash-7.png"></span><?php echo $this->Html->link($subsubcategory['Subsubcategory']['name'], array('controller' => 'products', 'action' => 'category', $subsubcategory['Category']['slug'], $subsubcategory['Subcategory']['slug'], $subsubcategory['Subsubcategory']['slug'])); ?><br />
+
+			   <?php endif ; ?>
+
+			<?php endforeach; ?>
+		<?php endif; ?>
+
+
+
+			<!-- Sub Category Loop -->
+
+		<?php if(!empty($subcategories)) : ?>
+
+			<?php foreach ($subcategories as $subcategory): ?>
+
+				<?php //echo 'subcat_crumb:' . ($subcat_crumb)  .  '----subcategory:' . ($subcategory['Subcategory']['name']) .'<br />';?>
+
+					<?php //if(!empty($subcat_crumb)) : ?>
+						<?php if ($subcat_crumb !== $subcategory['Subcategory']['name']) : ?>
+					<?php //endif; ?>
+
+						<span class="gb-nav"><img src="/img/global/dash-4.png"></span><?php echo $this->Html->link($subcategory['Subcategory']['name'], array('controller' => 'products', 'action' => 'category', $category['Category']['slug'], $subcategory['Subcategory']['slug'])); ?><br />
+
+					<?php //if(!empty($subcat_crumb)) : ?>
+						<?php endif; ?>
+					<?php //endif; ?>
+
+
+			<?php endforeach; ?>
+
+		<?php endif; ?>
+
+
+			<!-- Category Loop -->
+
+			<?php if(!empty($usercategories)) : ?>
+
+				<?php foreach ($usercategories as $usercategory): ?>
+				<span class="gb-nav"><img src="/img/global/dash-2.png"></span>
+
+
+				<?php echo $this->Html->link($usercategory['Category']['name'], array('controller' => 'products', 'action' => 'category', $usercategory['Category']['slug'])); ?><br />
+
+				<?php endforeach; ?>
+
+			<?php endif; ?>
+
+			<?php /*?><?php
+				$count = 1;
+				foreach ($brands as $brand):
+					echo $product['Brands']['name'];
+					echo($count) . '<br />';
+					$count++;
+				endforeach; ?>
+	<?php */?>
+				</div>
+	
+			<div style="clear:both">
+	
+	
+	
+	
+	
+			</div>
+	<hr />
+	
+			<ul class="navList">
+				<li><a class="vendor-css" href="#" id="story">Our Story</a></li>
+			</ul>
+=======
+    
+ 	 
+    
+			<a class="btn btn-gb" href="#" id="story">Our Story</a>
+			
+>>>>>>> a87e7384cedb5dc74f9aeae746774f7367f4294c
 
 			<!-- Vendor Story -->
 			<div id="story_content" style="display:none;color:#000;width:960px;background-color:#fff;padding:20px;">
@@ -210,6 +425,7 @@
 	
 					</div>
 	
+    		</div>
 	
 	
 			<!-- Vendor Story Pics -->
@@ -261,11 +477,11 @@
 	
 				</div>
 	
-			</div>
+			
 
-			<ul class="navList">
-				<li><a class="vendor-css" href="/recipes">Our Recipes</a></li>
-			</ul>
+			<div class="btn btn-gb">
+				<a class="vendor-css" href="/recipes">Our Recipes</a>
+			</div>
 
 			<!--<ul class="navList">
 						<li><a href="#vendor-unit">Our Regions</a></li>
