@@ -47,7 +47,7 @@
 
 								<?php echo $this->Form->input('id', array('type' => 'hidden', 'value' => $product['Product']['id'])); ?>
 
-								<?php echo $this->Form->button('<i class="icon-shopping-cart icon-white"></i> Add to Cart', array('class' => 'button pull-right', 'escape' => false));?>
+								<?php echo $this->Form->button('<i class="icon-shopping-cart icon-white"></i> Add to Cart', array('class' => 'button vendor-css pull-right', 'escape' => false));?>
 
 								<?php echo $this->Form->end();?>
 
