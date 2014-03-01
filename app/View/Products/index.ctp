@@ -26,16 +26,21 @@
 	<!--Sidebar -->
 	<div class="col-md-3 col-sm-3 hidden-xs">
     
-    	<div id="left-sidebar">  
-
-		   <?php if(!empty($user)) : ?>
-           <div class=""> <a href="/"> </a>
+       <div id="sidebar-title" class="vendor-css">
    
-               <H1 class="vendor-title"><?php echo $user['User']['name']; ?></div>
+              <?php if(!empty($user)) : ?>
+             <a href="/"> 
+   
+               <h1 class="vendor-title"><?php echo $user['User']['name']; ?></h1></a>
                <div class="white"><?php echo $user['User']['city']; ?>, <?php echo $user['User']['state']; ?></div>
    
               
            <?php endif; ?>
+       </div>
+ 
+    	<div id="left-sidebar">   
+        
+        	
    
        <hr />
        
@@ -550,7 +555,7 @@
 	
 				<img id="awning1" src="/img/users/awning/default.png" />
 	
-				<div id="awning-text-wrapper">
+				<div class="row" id="awning-text-wrapper">
 	
 					<div id="awning-text"><?php echo $user['User']['shop_quote']; ?></div>
 	
