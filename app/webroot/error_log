@@ -1479,3 +1479,20 @@ Stack trace:
 [26-Feb-2014 16:07:12 America/Los_Angeles] PHP Warning:  Model "Ustradition" is not associated with model "Ustradition" in /home/gourmet/public_html/lib/Cake/Model/Behavior/ContainableBehavior.php on line 344
 [26-Feb-2014 18:31:04 America/Los_Angeles] PHP Warning:  Model "Ustradition" is not associated with model "User" in /home/gourmet/public_html/lib/Cake/Model/Behavior/ContainableBehavior.php on line 344
 [26-Feb-2014 18:31:04 America/Los_Angeles] PHP Warning:  Model "Ustradition" is not associated with model "Ustradition" in /home/gourmet/public_html/lib/Cake/Model/Behavior/ContainableBehavior.php on line 344
+[01-Mar-2014 02:02:58 America/Los_Angeles] PHP Fatal error:  [CakeException] Unknown status code
+#0 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(215): CakeResponse->statusCode(2)
+#1 [internal function]: ExceptionRenderer->error400(Object(SocketException))
+#2 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(178): call_user_func_array(Array, Array)
+#3 /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php(122): ExceptionRenderer->render()
+#4 [internal function]: ErrorHandler::handleException(Object(SocketException))
+#5 {main} in /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php on line 131
+[01-Mar-2014 02:02:58 America/Los_Angeles] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/gourmet/public_html/lib/Cake/Network/CakeResponse.php:534) in /home/gourmet/public_html/lib/Cake/Network/CakeResponse.php on line 444
+[01-Mar-2014 11:43:20 America/Los_Angeles] PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'SplFileObject::__construct(/home/gourmet/public_html/app/tmp/cache/persistent/gb_cake_core_cake_dev_eng) [<a href='splfileobject.--construct'>splfileobject.--construct</a>]: failed to open stream: No such file or directory' in /home/gourmet/public_html/lib/Cake/Cache/Engine/FileEngine.php:280
+Stack trace:
+#0 /home/gourmet/public_html/lib/Cake/Cache/Engine/FileEngine.php(280): SplFileObject->__construct('/home/gourmet/p...', 'r')
+#1 /home/gourmet/public_html/lib/Cake/Cache/Engine/FileEngine.php(237): FileEngine->_clearDirectory('/home/gourmet/p...', 1393703000, 1393702940)
+#2 /home/gourmet/public_html/lib/Cake/Cache/Engine/FileEngine.php(102): FileEngine->clear(true)
+#3 /home/gourmet/public_html/lib/Cake/Cache/Cache.php(184): FileEngine->gc()
+#4 /home/gourmet/public_html/lib/Cake/Cache/Cache.php(151): Cache::_buildEngine('_cake_core_')
+#5 /home/gourmet/public_html/app/Config/core.php(268): Cache::config('_cake_core_', Array)
+#6 /home/gourmet/public_html/lib/C in /home/gourmet/public_html/lib/Cake/Cache/Engine/FileEngine.php on line 280
