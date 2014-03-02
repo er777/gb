@@ -167,6 +167,12 @@
 							</div>
 	
 					</div>
+                    
+                    
+                    
+                    
+                    
+                    
 				</div>
 	
 				<div class="row">
@@ -183,49 +189,48 @@
 						</div>
 	
 					</div>
-	
-    		</div>
-	
-	
+                    
+                    
+                    
 			<!-- Vendor Story Pics -->
 					<div class="col-md-4">
 	
-						<div class="col-md-4 air">
+						<div class="air">
 						<?php if(!empty($user['User']['image_1'])) : echo $this->Html->image('users/image_1/' . $user['User']['image_1'], array('class' =>'vendor-pic')); ?>
 						<div class="attr"><?php echo $user['User']['attr_1']; ?></div>
 						<div class="title"><?php echo $user['User']['pic_title_1']; ?></div>
 						<?php endif ?>
 						</div>
 	
-						<div class="col-md-4 air">
+						<div class="air">
 						<?php if(!empty($user['User']['image_2'])) : echo $this->Html->image('users/image_2/' . $user['User']['image_2'], array('class' =>'vendor-pic')); ?>
 						<div class="attr"><?php echo $user['User']['attr_2']; ?></div>
 						<div class="title"><?php echo $user['User']['pic_title_2']; ?></div>
 						<?php endif ?>
 						</div>
 	
-						<div class="col-md-4 air">
+						<div class="air">
 						<?php if(!empty($user['User']['image_3'])) : echo $this->Html->image('users/image_3/' . $user['User']['image_3'], array('class' =>'vendor-pic')); ?>
 						<div class="attr"><?php echo $user['User']['attr_3']; ?></div>
 						<div class="title"><?php echo $user['User']['pic_title_3']; ?></div>
 						<?php endif ?>
 						</div>
 	
-						<div class="col-md-4 air">
+						<div class="air">
 						<?php if(!empty($user['User']['image_4'])) : echo $this->Html->image('users/image_4/' . $user['User']['image_4'], array('class' =>'vendor-pic')); ?>
 						<div class="attr"><?php echo $user['User']['attr_4']; ?></div>
 						<div class="title"><?php echo $user['User']['pic_title_4']; ?></div>
 						<?php endif ?>
 						</div>
 	
-						<div class="col-md-4 air">
+						<div class="air">
 						<?php if(!empty($user['User']['image_5'])) : echo $this->Html->image('users/image_5/' . $user['User']['image_5'], array('class' =>'vendor-pic'));  ?>
 						<div class="attr"><?php echo $user['User']['attr_5']; ?></div>
 						<div class="title"><?php echo $user['User']['pic_title_5']; ?></div>
 						<?php endif ?>
 						</div>
 	
-						<div class="col-md-4 air">
+						<div class="air">
 						<?php if(!empty($user['User']['image_6'])) : echo $this->Html->image('users/image_6/' . $user['User']['image_6'], array('class' =>'vendor-pic')); ?>
 						<div class="attr"><?php echo $user['User']['attr_6']; ?></div>
 						<div class="title"><?php echo $user['User']['pic_title_6']; ?></div>
@@ -233,6 +238,16 @@
 						</div>
 	
 					</div>
+                    
+                    
+                    
+                    
+                    
+                    
+	
+    			</div>
+	
+	
 	
 				</div>
 	
@@ -260,7 +275,8 @@
 			<div id="policy_content">
 			<div class="policy-heading ">Customer Satisfaction, Shipping and Return Policy</div>
 			 <hr />
-				<div class="pad"><?php echo ($vendor_policy); ?>
+				<div class="pad">
+				<?php echo ($vendor_policy); ?>
 				</div>
 			</div>
 			<br />
