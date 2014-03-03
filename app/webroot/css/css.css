@@ -90,7 +90,7 @@ hr {
 }
 
 .small {
-	font-size:15px;
+	font-size:13px;
 }
 
 .red {
@@ -649,6 +649,36 @@ ul.meganizr .brands .wide {
 	box-shadow: inset 0px 0px 1px #888;
 }
 
+
+/** Recipe Item **/
+
+.item-recipe {
+   min-height: 185px;
+   max-height: 300px;
+  
+   margin: 10px auto;
+   padding: 10px 10px;
+   border: 1px solid #e4e4e4;
+   box-shadow: inset 0px 0px 1px #cecece;
+   -webkit-transition: box-shadow 1s ease;
+   -moz-transition: box-shadow 1s ease;
+   -o-transition: box-shadow 1s ease;
+   transition: box-shadow 1s ease;
+}
+
+.item-recipe .item-recipe-image img{
+	padding: 5px 0px;
+	height: auto;
+	width: 95px;
+	display: block;
+	margin: 0 auto;
+}
+
+
+
+
+
+
 div.blurb {
 	font-size:11px;
 	text-align:left;
@@ -665,7 +695,8 @@ div.blurb p {
 	margin-bottom:5px;
 }
 
-div.product-name, div.product-name p, div.product-name a {
+div.product-name, div.product-name p, div.product-name a,
+div.recipe-name, div.recipe-name p, div.recipe-name a {
 	font-size:13px;
 	line-height: 14px;
 	padding: 0px;
@@ -2151,6 +2182,9 @@ hr.recipe-divider {
 }
 .recipe-name {
 	color: #3f9179;
+	position:absolute;
+	bottom:25px;
+	width:80%;
 }
 .recipe-description {
 	font-weight: bold;
