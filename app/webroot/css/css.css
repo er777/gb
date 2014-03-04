@@ -92,8 +92,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	font-size: 200%;
+	font-size: 150%;
 }
+
+h2 {
+	font-size: 120%;
+}
+
+h3 {
+	font-size: 100%;
+}
+
+
+
 h4 {
 	
 }
@@ -914,7 +925,8 @@ span.description p {
 	cursor: pointer;
 }
 .popover {
-	width: 500px;
+	width: 500px!important;
+	max-width: 500px!important;
 }
 .popover-title {
 	display: none;
@@ -1006,6 +1018,8 @@ img.brand {
 
 .purchase-block .product-price form#ProductViewForm button.btn {
 	font-size:12px;
+	margin-top: 6px;
+	margin-left: 22px;
 	
 }
 

@@ -45,6 +45,15 @@
        <hr />
        
            <a class="gb-nav" href="/">All Our Products</a>
+           
+           <?php if (($user['User']['id']) == 11) { ?>
+			
+			<div style="overflow-y:scroll;height:300px">
+			
+			<?php	};
+			?>
+
+
    
    
            <?php if(!empty($category)) : ?><br /><span class="gb-nav"><img src="/img/global/dash-2.png"></span>
@@ -137,6 +146,8 @@
                        $count++;
                    endforeach; ?>
        <?php */?>
+                   </div>
+                   
                    </div>
        
 	<hr />
