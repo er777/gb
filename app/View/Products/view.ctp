@@ -65,12 +65,11 @@ $(document).ready(function() {
          
          <h3>FOOD TYPES</h3>
          
-            <?php if (($user['User']['id']) == 11) { ?>
+            <?php if (($user['User']['id']) == 11) : ?>
 			
 			<div style="overflow-y:scroll;height:300px">
 			
-			<?php	};
-			?>
+			<?php endif ; ?>
 
 
 
@@ -131,7 +130,17 @@ $(document).ready(function() {
                        $count++;
                    endforeach; ?>
        <?php */?>
-         </div>
+       
+     
+            <?php if (($user['User']['id']) == 11) : ?>
+			
+			</div>
+			
+			<?php endif ; ?>
+       
+
+       
+         
          </div>
          
          <h3>RELATED FOODS</h3>
