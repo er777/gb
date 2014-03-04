@@ -46,12 +46,11 @@
        
            <a class="gb-nav" href="/">All Our Products</a>
            
-           <?php if (($user['User']['id']) == 11) { ?>
+			<?php if (($user['User']['id']) == 11) : ?>
 			
 			<div style="overflow-y:scroll;height:300px">
 			
-			<?php	};
-			?>
+			<?php endif; ?>
 
 
    
@@ -146,9 +145,21 @@
                        $count++;
                    endforeach; ?>
        <?php */?>
+                  
+
+
+			<?php if (($user['User']['id']) == 11) : ?>
+			
+			</div>
+			
+			<?php endif; ?>
+                  
+                  
+                  
+                  
                    </div>
                    
-                   </div>
+                  
        
 	<hr />
 	
