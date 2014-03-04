@@ -18,9 +18,8 @@
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
 							
-					
-								
-					<li class="dropdown mega-menu-4 transition"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-home icon-white"></i> VENDORS<b class="caret"></b></a>
+					<li class="dropdown mega-menu-4 transition">
+                    	<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-home icon-white"></i> VENDORS<b class="caret"></b></a>
 						<ul class="dropdown-menu">
 								
 							<li class="two-column start">
@@ -44,22 +43,23 @@
 					
 							
 					<li class="dropdown mega-menu-4 transition">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-briefcase icon-white"></i>FOOD TYPES<b class="caret"></b></a>
+						<a href="/categories" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-briefcase icon-white"></i>FOOD TYPES<b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							
-							<li class="two-column">
-								<ul>
-										
-									<?php $i = 0; ?>
+							<li class="two-column start">
+								<ul><li>
+									<?php
+                                    $i = 0; ?>
 									<?php foreach($menucategories as $menucategory) : ?>
 									<?php $i++; ?>
 									<li><a href="http://www.<?php echo Configure::read('Settings.DOMAIN') .'/foods/'. $menucategory['Category']['slug']; ?>"><?php echo $menucategory['Category']['name']; ?></a></li>
 
-									
-									<?php if (($i % 8) == 0) { ?>
-								</ul>
-								<ul class="span2 unstyled">
-								<?php } endforeach; ?>
+									<?php
+                                    if (($i % 15) == 0) { echo "</ul>\n</li>\n<li class=\"two-column loop\">\n<ul>\n";	}
+									endforeach; ?>
+                                    <li><a href="http://www.<?php echo Configure::read('Settings.DOMAIN') . '/categories/'; ?>">Stop by our "Pantry"</a>
+                                    	
+                                    </li>
 								</ul>
 							</li>
 						</ul>

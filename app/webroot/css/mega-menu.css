@@ -609,3 +609,6 @@ hr.thin.tight {
 	font-size:15px;
 }
 
+.navbar .dropdown li {
+	padding-top:2px;
+}
