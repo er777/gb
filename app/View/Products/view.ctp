@@ -64,6 +64,16 @@ $(document).ready(function() {
       <div id="left-sidebar">
          
          <h3>FOOD TYPES</h3>
+         
+            <?php if (($user['User']['id']) == 11) { ?>
+			
+			<div style="overflow-y:scroll;height:300px">
+			
+			<?php	};
+			?>
+
+
+
          <?php if(!empty($category)) : ?>
          <br />
          <span class="gb-nav"><img src="/img/global/dash-2.png"></span> <?php echo $this->Html->link($category['Category']['name'], array('controller' => 'products', 'action' => 'category', $category['Category']['slug'])); ?>
@@ -122,6 +132,15 @@ $(document).ready(function() {
                    endforeach; ?>
        <?php */?>
          </div>
+         </div>
+         
+         <h3>RELATED FOODS</h3>
+		  <?php foreach ($auxcategories as $auxcategory): ?>
+	  <span class="gb-nav"><img src="/img/global/dash-2.png"></span> <?php echo $this->Html->link($auxcategory['Category']['name'], array('controller' => 'categories', 'action' => 'view', $auxcategory['Category']['slug'])); ?><br />
+		  <?php endforeach; ?>
+          
+
+
          <hr />
          <a class="btn btn-gb" href="#" id="story">Our Story</a> 
          
@@ -223,9 +242,7 @@ $(document).ready(function() {
 				}
 				</style>
          <img id="awning1" src="/img/users/awning/default.png" />
-         <div class="row" id="awning-text-wrapper">
-            <div id="awning-text"><?php echo $user['User']['shop_quote']; ?></div>
-         </div>
+        
       </div>
       
       <div class="row">
@@ -246,7 +263,7 @@ $(document).ready(function() {
          
          
  <div class="row products">
-			 <div class="col-md-6 col-sm-6">
+			 <div class="col-md-5 col-sm-5">
 				<div id="slider" class="flexslider">
 				<ul class="slides">
 					  <?php if(!empty($product['Product']['image'])) : ?>
