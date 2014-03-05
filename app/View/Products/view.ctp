@@ -149,6 +149,47 @@ $(document).ready(function() {
 		  <?php endforeach; ?>
           
 
+			<?php if(!empty($brands)) : ?>
+			
+			<?php 
+			//print_r($brands);
+			//die;
+			?>
+			
+			<a class="gb-nav" href="/">All Our Brands</a><br />
+			
+			<?php if (($user['User']['id']) == 11) { ?>
+					
+				<div style="overflow-y:scroll;height:300px">
+					
+			<?php	}; ?>
+			
+	
+			
+
+
+			
+
+				<?php foreach ($brands as $brnd): ?> 
+			
+					<span class="gb-nav"><img src="/img/global/dash-2.png"></span>
+					<?php echo $this->Html->link($brnd['Brand']['name'], array('controller' => 'products', 'action' => 'brand', $brnd['Brand']['slug'])); ?><br />
+
+				<?php endforeach; ?>
+
+			<?php if (($user['User']['id']) == 11) { ?>
+				</div>
+			<?php	}; ?>
+
+			<?php endif; ?>
+			
+				
+				
+		<div style="clear:both"></div>
+
+
+
+
 
          <hr />
          <a class="btn btn-gb" href="#" id="story">Our Story</a> 
@@ -250,7 +291,7 @@ $(document).ready(function() {
 					<?php echo $user['User']['awning_css']; ?>
 				}
 				</style>
-         <img id="awning1" src="/img/users/awning/default.png" />
+         <img id="awning1" src="/img/users/awning/half-world-40.png" />
         
       </div>
       
