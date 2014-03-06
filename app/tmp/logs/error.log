@@ -56290,3 +56290,34 @@ App::_checkFatalError() - CORE/Cake/Core/App.php, line 931
 App::shutdown() - CORE/Cake/Core/App.php, line 904
 [main] - [internal], line ??
 
+2014-03-06 01:12:34 Error: [MissingControllerException] Controller class ProductsController could not be found.
+Exception Attributes: array (
+  'class' => 'ProductsController',
+  'plugin' => NULL,
+)
+Request URL: /product/10791-herring-fillets-in-mustard-sauce-7-05oz
+Stack Trace:
+#0 /home/gogo/public_html/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-06 01:14:15 Error: [NotFoundException] Not Found
+Request URL: /recipes/index/edit-profile.html/page:8
+Stack Trace:
+#0 /home/gogo/public_html/lib/Cake/Controller/Controller.php(1079): PaginatorComponent->paginate(NULL, Array, Array)
+#1 /home/gogo/public_html/app/Controller/RecipesController.php(56): Controller->paginate()
+#2 [internal function]: RecipesController->index('edit-profile.ht...')
+#3 /home/gogo/public_html/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(RecipesController), Array)
+#4 /home/gogo/public_html/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#5 /home/gogo/public_html/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(RecipesController), Object(CakeRequest), Object(CakeResponse))
+#6 /home/gogo/public_html/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2014-03-06 01:14:36 Error: [NotFoundException] Not Found
+Request URL: /products/category/checkout.html?page=101
+Stack Trace:
+#0 /home/gogo/public_html/lib/Cake/Controller/Controller.php(1079): PaginatorComponent->paginate('Product', Array, Array)
+#1 /home/gogo/public_html/app/Controller/ProductsController.php(576): Controller->paginate('Product')
+#2 [internal function]: ProductsController->category('checkout.html')
+#3 /home/gogo/public_html/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ProductsController), Array)
+#4 /home/gogo/public_html/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#5 /home/gogo/public_html/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#6 /home/gogo/public_html/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
