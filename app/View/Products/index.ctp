@@ -162,27 +162,21 @@
                   
        
 	<hr />
-	
-    
-			<?php if(!empty($brands)) : ?>
-			
 			<?php 
 			//print_r($brands);
 			//die;
 			?>
+    
+			<?php if(!empty($brands)) : ?>
+			
+		
 
-			<?php if (($user['User']['id']) == 11) { ?>
 
 			<a class="gb-nav" href="/">All Our Brands</a><br />
 			
 					
-				<div style="overflow-y:scroll;height:300px">
+				<div style="overflow-y:scroll;height:150px">
 					
-			
-	
-			
-
-
 			
 
 				<?php foreach ($brands as $brnd): ?> 
@@ -192,12 +186,9 @@
 
 				<?php endforeach; ?>
 
-			<?php if (($user['User']['id']) == 11) { ?>
 				</div>
                 
-			<?php	}; ?>
                 
-			<?php	}; ?>
 
 			<?php endif; ?>
 			
@@ -206,7 +197,7 @@
 		<div style="clear:both"></div>
     
     
-    
+    <hr />
     
  	 
     

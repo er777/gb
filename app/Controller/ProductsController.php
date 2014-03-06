@@ -151,6 +151,7 @@ class ProductsController extends AppController {
 			'contain' => array('Brand'),
 			'fields' => array(
 				'Brand.name',
+				'Brand.slug'
 			),
 			'conditions' => array(
 				'Product.active' => 1,
