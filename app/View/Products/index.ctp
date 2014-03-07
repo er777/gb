@@ -169,9 +169,10 @@
 			//die;
 			?>
 			
+           <?php if (($user['User']['id']) == 11) { ?>
+
 			<a class="gb-nav" href="/">All Our Brands</a><br />
 			
-			<?php if (($user['User']['id']) == 11) { ?>
 					
 				<div style="overflow-y:scroll;height:300px">
 					
