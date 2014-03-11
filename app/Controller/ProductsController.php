@@ -1293,7 +1293,7 @@ public function brand() {
 				$this->request->data['Product']['subsubcategory_id'] = '';
 			}
 
-			$this->request->data['Product']['weight'] = sprintf('%.1f', $this->request->data['Product']['shipping_weight'] / 16);
+			$this->request->data['Product']['weight'] = sprintf('%.1f', $this->request->data['Product']['shipping_weight_oz'] / 16);
 			
 			$product = "";
 			
@@ -1404,7 +1404,7 @@ public function brand() {
 				$this->request->data['Product']['subsubcategory_id'] = '';
 			}
 			
-			$preRound = sprintf('%.1f', $this->request->data['Product']['shipping_weight'] / 16);
+			$preRound = sprintf('%.1f', $this->request->data['Product']['shipping_weight_oz'] / 16);
 
 			$this->request->data['Product']['weight'] = ceil($preRound);
 

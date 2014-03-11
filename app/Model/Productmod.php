@@ -23,7 +23,7 @@ class Productmod extends AppModel {
 				'Productmod.product_id' => $id
 			),
 			'order' => array(
-				'Productmod.sku' => 'ASC',
+				'Productmod.position' => 'ASC',
 				'Productmod.name' => 'ASC',
 			),
 		));

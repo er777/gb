@@ -253,7 +253,7 @@ $(document).ready(function(){
 		<?php //echo $this->Form->input('measurement');?>
 		<?php //echo $this->Form->input('weight_unit');?>
 		<?php //echo $this->Form->input('weight', array('class' => 'span1'));?>
-		<?php echo $this->Form->input('shipping_weight', array('class' => 'span1'));?>
+		<?php echo $this->Form->input('shipping_weight_oz', array('class' => 'span1'));?>
 		<?php //echo $this->Form->input('volume', array('class' => 'span1'));?>
 		<?php //echo $this->Form->input('volume_unit', array('class' => 'span1'));?>
 		<?php //echo $this->Form->input('dimension_unit', array('class' => 'span1'));?>
@@ -268,7 +268,9 @@ $(document).ready(function(){
                 '1' => 'Mid',
                 '2' => 'Early',
                 '3' => 'Late',
-            ))); ?>
+            	)
+			)
+		); ?>
 
 		<?php echo $this->Form->input('seasonal_stock_date', array('id' => 'monthpicker', 'label' => false,'class' => 'mceNoEditor')); ?>
         <?php echo $this->Form->input('seasonal_stock_note', array('rows' => 5, 'class' => '4span ckeditor')); ?>
@@ -418,8 +420,7 @@ $(document).ready(function(){
 		<th>name</th>
 		<th>price</th>
 		
-		<th>created</th>
-		<th>modified</th>
+		<th>positiion</th>
 		<th>action</th>
 	</tr>
 	<?php foreach ($productmods as $productmod): ?>
@@ -428,10 +429,12 @@ $(document).ready(function(){
 		<td><?php echo h($productmod['Productmod']['product_id']); ?></td>
 		<td><?php echo h($productmod['Productmod']['sku']); ?></td>
 		<td><?php echo h($productmod['Productmod']['name']); ?></td>
-		<td><?php echo h($productmod['Productmod']['price']); ?></td>
+		<td><?php echo h($productmod['Productmod']['price']); ?></td>		
+		<td><?php echo h($productmod['Productmod']['position']); ?></td>
+        
+        
+        
 		
-		<td><?php echo h($productmod['Productmod']['created']); ?></td>
-		<td><?php echo h($productmod['Productmod']['modified']); ?></td>
 		<td class="actions">
 			<?php echo $this->Html->link('View', array('controller' => 'productmods', 'action' => 'view', $productmod['Productmod']['id'])); ?>
 			<?php echo $this->Html->link('Edit', array('controller' => 'productmods', 'action' => 'edit', $productmod['Productmod']['id'])); ?>
