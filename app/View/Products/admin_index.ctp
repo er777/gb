@@ -96,9 +96,9 @@ $(document).ready(function() {
 		placement: 'left',
 	});
 
-	$('.shipping_weight').editable({
+	$('.shipping_weight_oz').editable({
 		type: 'text',
-		name: 'shipping_weight',
+		name: 'shipping_weight_oz',
 		url: '/admin/products/editable',
 		title: 'Shipping Weight',
 		placement: 'left',
@@ -206,7 +206,7 @@ $(document).ready(function() {
 		<th><?php echo $this->Paginator->sort('generic_description'); ?></th>
 		<th><?php echo $this->Paginator->sort('serving_suggestions'); ?></th>
 <?php */?>
-		<th><?php echo $this->Paginator->sort('shipping_weight'); ?></th>
+		<th><?php echo $this->Paginator->sort('shipping_weight_oz'); ?></th>
 	</tr>
 	<?php foreach ($products as $product): ?>
 	<tr>
