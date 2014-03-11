@@ -1658,3 +1658,9 @@ div.sharedaddy .sd-content {
 #ie8 .entry-content {
 	overflow: hidden;
 }
+
+/** ER Adjustments **/
+header#branding {
+	padding:30px;
+	background: url("http://blog.gourmetworldmarket.com/wp-content/uploads/2014/03/bkgnd-square-brn-40.png") repeat;
+}
