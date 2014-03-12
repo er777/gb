@@ -165,7 +165,7 @@ class ProductsController extends AppController {
 				'Brand.id'
 			),
 		));
-		// print_r($brands);
+		// debug($brands);
 		$this->set(compact('brands'));
 
 
@@ -1185,7 +1185,7 @@ class ProductsController extends AppController {
 				$this->request->data['Product']['subsubcategory_id'] = '';
 			}
 
-			$this->request->data['Product']['weight'] = sprintf('%.1f', $this->request->data['Product']['shipping_weight'] / 16);
+			$this->request->data['Product']['weight'] = sprintf('%.1f', $this->request->data['Product']['shipping_weight_oz'] / 16);
 
 			if ($this->Product->save($this->request->data)) {
 
@@ -1286,7 +1286,7 @@ class ProductsController extends AppController {
 				$this->request->data['Product']['subsubcategory_id'] = '';
 			}
 
-			$this->request->data['Product']['weight'] = sprintf('%.1f', $this->request->data['Product']['shipping_weight'] / 16);
+			$this->request->data['Product']['weight'] = sprintf('%.1f', $this->request->data['Product']['shipping_weight_oz'] / 16);
 
 			if ($this->Product->save($this->request->data)) {
 

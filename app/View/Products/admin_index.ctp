@@ -96,9 +96,9 @@ $(document).ready(function() {
 		placement: 'left',
 	});
 
-	$('.shipping_weight').editable({
+	$('.shipping_weight_oz').editable({
 		type: 'text',
-		name: 'shipping_weight',
+		name: 'shipping_weight_oz',
 		url: '/admin/products/editable',
 		title: 'Shipping Weight',
 		placement: 'left',
@@ -205,7 +205,7 @@ $(document).ready(function() {
 		<th><?php echo $this->Paginator->sort('generic_description'); ?></th>
 		<th><?php echo $this->Paginator->sort('serving_suggestions'); ?></th>
 <?php */?>
-		<th><?php echo $this->Paginator->sort('shipping_weight'); ?></th>
+		<th><?php echo $this->Paginator->sort('shipping_weight_oz'); ?></th>
 	</tr>
 	<?php foreach ($products as $product): ?>
 	<tr>
@@ -253,7 +253,7 @@ $(document).ready(function() {
 
 		<td><?php echo ($product['Product']['markup']); ?>%</td>
 		<td><span class="price" data-value="<?php echo $product['Product']['price']; ?>" data-pk="<?php echo $product['Product']['id']; ?>"><?php echo h($product['Product']['price']); ?></span></td>
-		<td><span class="shipping_weight" data-value="<?php echo $product['Product']['shipping_weight']; ?>" data-pk="<?php echo $product['Product']['id']; ?>"><?php echo ($product['Product']['shipping_weight']); ?></span></td>
+		<td><span class="shipping_weight_oz" data-value="<?php echo $product['Product']['shipping_weight_oz']; ?>" data-pk="<?php echo $product['Product']['id']; ?>"><?php echo ($product['Product']['shipping_weight_oz']); ?></span></td>
 	</tr>
 	<?php endforeach; ?>
 </table>
