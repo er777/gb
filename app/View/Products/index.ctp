@@ -163,9 +163,22 @@
        
 	<hr />
 			<?php 
-			//print_r($brands);
+			//debug($brands);
 			//die;
 			?>
+            
+            
+            <?php
+          //  debug ($brands['Brand'][3])
+            ?>
+            
+            <?php if(isset($brands['brand'][1]))
+        {
+        //Code here
+		?><h1>fff</h2> <?php
+        }
+           ?> 
+            
     
 			<?php if(!empty($brands)) : ?>
 			

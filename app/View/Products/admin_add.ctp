@@ -237,7 +237,7 @@ $(document).ready(function(){
 		<?php //echo $this->Form->input('measurement');?>
 		<?php //echo $this->Form->input('weight_unit');?>
 		<?php //echo $this->Form->input('weight', array('class' => 'span1'));?>
-		<?php echo $this->Form->input('shipping_weight', array('class' => 'span1'));?>
+		<?php echo $this->Form->input('shipping_weight_oz', array('class' => 'span1'));?>
 		<?php //echo $this->Form->input('volume', array('class' => 'span1'));?>
 		<?php //echo $this->Form->input('volume_unit', array('class' => 'span1'));?>
 		<?php //echo $this->Form->input('dimension_unit', array('class' => 'span1'));?>

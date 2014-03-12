@@ -29,7 +29,7 @@
 		<th><?php echo $this->Paginator->sort('ustradition_id'); ?></th>
 		<th><?php echo $this->Paginator->sort('weight_unit'); ?></th>
 		<th><?php echo $this->Paginator->sort('weight'); ?></th>
-		<th><?php echo $this->Paginator->sort('shipping_weight'); ?></th>
+		<th><?php echo $this->Paginator->sort('shipping_weight_oz'); ?></th>
 		<th><?php echo $this->Paginator->sort('country'); ?></th>
 		<th><?php echo $this->Paginator->sort('active'); ?></th>
 	</tr>
@@ -66,7 +66,7 @@
 		<td><span class="ustradition" data-value="<?php echo $product['Ustradition']['id']; ?>" data-pk="<?php echo $product['Product']['id']; ?>"><?php echo h($product['Ustradition']['name']); ?></span></td>
 		<td><span class="weight_unit" data-value="<?php echo $product['Product']['weight_unit']; ?>" data-pk="<?php echo $product['Product']['id']; ?>"><?php echo h($product['Product']['weight_unit']); ?></span></td>
 		<td><span class="weight" data-value="<?php echo $product['Product']['weight']; ?>" data-pk="<?php echo $product['Product']['id']; ?>"><?php echo h($product['Product']['weight']); ?></span></td>
-		<td><span class="shipping_weight" data-value="<?php echo $product['Product']['shipping_weight']; ?>" data-pk="<?php echo $product['Product']['id']; ?>"><?php echo h($product['Product']['shipping_weight']); ?></span></td>
+		<td><span class="shipping_weight_oz" data-value="<?php echo $product['Product']['shipping_weight_oz']; ?>" data-pk="<?php echo $product['Product']['id']; ?>"><?php echo h($product['Product']['shipping_weight_oz']); ?></span></td>
 		<td><span class="country" data-value="<?php echo $product['Product']['country']; ?>" data-pk="<?php echo $product['Product']['id']; ?>"><?php echo h($product['Product']['country']); ?></span></td>
 		<td><img src="/img/icon_<?php echo $product['Product']['active']; ?>.png" alt="" /></td>
 	</tr>

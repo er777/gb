@@ -24,7 +24,7 @@ class AppModel extends Model {
 			'Packaged Domestic' => 'Packaged Domestic',
 			'Packaged Imported' => 'Packaged Imported',
 			'Farm Grown Domestic' => 'Farm Grown Domestic',
-			'Farm Grown Imported' => 'Farm Grown Imported',
+			'Farm/Estate Grown Imported' => 'Farm/Estate Grown Imported',
 			'Packaged Gourmet Domestic' => 'Packaged Gourmet Domestic',
 			'Packaged Gourmet Imported' => 'Packaged Gourmet Imported',
 		);

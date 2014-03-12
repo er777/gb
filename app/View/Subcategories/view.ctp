@@ -175,7 +175,7 @@
 			<td><?php echo $product['measurement']; ?></td>
 			<td><?php echo $product['weight_unit']; ?></td>
 			<td><?php echo $product['weight']; ?></td>
-			<td><?php echo $product['shipping_weight']; ?></td>
+			<td><?php echo $product['shipping_weight_oz']; ?></td>
 			<td><?php echo $product['volume']; ?></td>
 			<td><?php echo $product['volume_unit']; ?></td>
 			<td><?php echo $product['dimension_unit']; ?></td>
