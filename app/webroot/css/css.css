@@ -707,11 +707,15 @@ ul.meganizr .brands .wide {
 .item-recipe .item-recipe-image img{
 	padding: 5px 0px;
 	height: auto;
-	width: 95px;
+	max-height: 125px;
+	width: 130px;
 	display: block;
 	margin: 0 auto;
 }
 
+.item-recipe .item-recipe-details {
+	margin-top:23px;
+}
 
 
 

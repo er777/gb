@@ -164,7 +164,7 @@ class RecipesController extends AppController {
 				'Recipescategory.name' => 'ASC',
 				'Recipe.name' => 'ASC'
 			),
-			'limit' => 20
+			'limit' => 24
 		);
 		$recipes = $this->paginate();
 		$this->set(compact('recipes'));
