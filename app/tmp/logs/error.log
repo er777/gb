@@ -56321,3 +56321,68 @@ Stack Trace:
 #5 /home/gogo/public_html/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
 #6 /home/gogo/public_html/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #7 {main}
+2014-03-13 02:43:40 Error: [NotFoundException] Not Found
+Request URL: /products/category/confirmation.html?page=6
+Stack Trace:
+#0 /home/gogo/public_html/lib/Cake/Controller/Controller.php(1079): PaginatorComponent->paginate('Product', Array, Array)
+#1 /home/gogo/public_html/app/Controller/ProductsController.php(576): Controller->paginate('Product')
+#2 [internal function]: ProductsController->category('confirmation.ht...')
+#3 /home/gogo/public_html/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ProductsController), Array)
+#4 /home/gogo/public_html/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#5 /home/gogo/public_html/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ProductsController), Object(CakeRequest), Object(CakeResponse))
+#6 /home/gogo/public_html/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2014-03-13 02:50:29 Error: [MissingControllerException] Controller class TController could not be found.
+Exception Attributes: array (
+  'class' => 'TController',
+  'plugin' => NULL,
+)
+Request URL: /t/track.php
+Stack Trace:
+#0 /home/gogo/public_html/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-13 02:50:29 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/traditions/awning_image/british-isles-ireland.png
+Stack Trace:
+#0 /home/gogo/public_html/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-13 02:50:31 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/traditions/awning_image/british-isles-ireland.png
+Stack Trace:
+#0 /home/gogo/public_html/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-13 02:53:10 Error: [MissingControllerException] Controller class TController could not be found.
+Exception Attributes: array (
+  'class' => 'TController',
+  'plugin' => NULL,
+)
+Request URL: /t/track.php
+Stack Trace:
+#0 /home/gogo/public_html/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-13 02:53:10 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /img/traditions/awning_image/british-isles-ireland.png
+Stack Trace:
+#0 /home/gogo/public_html/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-03-13 02:54:47 Error: [MissingControllerException] Controller class TController could not be found.
+Exception Attributes: array (
+  'class' => 'TController',
+  'plugin' => NULL,
+)
+Request URL: /t/track.php
+Stack Trace:
+#0 /home/gogo/public_html/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
