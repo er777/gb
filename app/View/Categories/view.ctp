@@ -1,6 +1,6 @@
 <div class="row">
 
-	<div class="span3" style="width:240px;">
+	<div class="col-md-3  col-sm-3">
 
 	<h3 class="gb-heading uppercase category"><?php echo $category['Category']['name'] ?>
 
@@ -83,7 +83,7 @@
 
 	</div>
 
-	<div class="span9">
+	<div class="col-md-9  col-sm-9">
 
 		<ul class="breadcrumb categories">
 
@@ -127,57 +127,14 @@
 
 		<div class="cat-product-block">
 
-			<div class="row">
-
-				<?php
-					$i = 0;
-					foreach ($products as $product):
-					$i++;
-				?>
-
-				<div class="span2">
-
-					<div class="content-product">
-
-						<div class="product-pic">
-
-							<?php echo $this->Html->image('products/image/' . $product['Product']['image'], array('url' => array('subdomain' => $product['User']['slug'], 'controller' => 'products', 'action' => 'view', 'id' => $product['Product']['id'], 'slug' => $product['Product']['slug']), 'alt' => $product['Product']['name'])); ?>
-
-							<div class="product-name">
-								<a href="/product/<?php echo ($product['Product']['id'].'-'.$product['Product']['slug']);?>">
-									<?php echo $this->Text->truncate($product['Product']['name'], 40, array('ellipsis' => '...', 'exact' => 'false')); ?>
-								</a>
-							</div>
-
-						</div>
-
-						<div class="price">$<?php echo $product['Product']['price']; ?></div>
-
-						<div class="brand">
-						<?php echo $this->Html->link($product['User']['name'], array('subdomain' => $product['User']['slug'], 'controller' => 'products', 'action' => 'index')); ?>
-						<?php //echo $product['Product']['auxcategory_1'] ; ?>
-
-						</div>
-
-					</div>
-
-				</div>
-
-				<?php if (($i % 4) == 0) : ?>
-
-			</div>
+				<?php $product = 0 ?>
+	
+				<!-- Include Products element -->
+				<?php echo $this->element('products'); ?>
 		</div>
 
 
-		<div class="cat-product-block">
-
-			<div class="row">
-
-				<?php endif; ?>
-				<?php endforeach; ?>
-
-			</div>
-		</div>
+		
 
 
 	<div class="row">
