@@ -70,41 +70,41 @@
 						<ul class="dropdown-menu">
 							<li class="two-column">
 								<ul><h4>US REGIONS</h4>
-									<!--<li><a href="http://www.gourmetworldmarket.com/us/amish">Amish</a></li> -->
-									<li><a href="http://www.gourmetworldmarket.com/us/deep-south ">Deep South </a></li>
-									<li><a href="http://www.gourmetworldmarket.com/us/far-west ">Far West </a></li>
-									<li><a href="http://www.gourmetworldmarket.com/us/great-lakes">Great Lakes</a></li>
-									<li><a href="http://www.gourmetworldmarket.com/us/hawaii">Hawaii</a></li>
-									<li><a href="http://www.gourmetworldmarket.com/us/louisiana">Louisiana</a></li>
-									<li><a href="http://www.gourmetworldmarket.com/us/mid-atlantic">Mid-Atlantic</a></li>
-                                    <li><a href="http://www.gourmetworldmarket.com/us/mid-west">Midwest and Plains </a></li>
-									<li><a href="http://www.gourmetworldmarket.com/us/native-american">Native American</a></li>
-									<li><a href="http://www.gourmetworldmarket.com/us/new-england">New England</a></li>
-									<li><a href="http://www.gourmetworldmarket.com/us/northwest">Pacific Northwest</a></li>
-									<li><a href="http://www.gourmetworldmarket.com/us/southeast">Southeast</a></li>
-									<li><a href="http://www.gourmetworldmarket.com/us/southwest">Southwest</a></li>
+									<!--<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/us/amish">Amish</a></li> -->
+									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/us/deep-south ">Deep South </a></li>
+									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/us/far-west ">Far West </a></li>
+									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/us/great-lakes">Great Lakes</a></li>
+									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/us/hawaii">Hawaii</a></li>
+									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/us/louisiana">Louisiana</a></li>
+									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/us/mid-atlantic">Mid-Atlantic</a></li>
+                                    <li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/us/mid-west">Midwest and Plains </a></li>
+									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/us/native-american">Native American</a></li>
+									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/us/new-england">New England</a></li>
+									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/us/northwest">Pacific Northwest</a></li>
+									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/us/southeast">Southeast</a></li>
+									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/us/southwest">Southwest</a></li>
 								</ul>
 							</li>
 							<li class="two-column">
 								<ul><h4>INTERNATIONAL REGIONS</h4>
-                                <li><a href="http://www.gourmetworldmarket.com/international/africa">Africa </a></li>
-								<li><a href="http://www.gourmetworldmarket.com/international/british-isles">British Isles &amp; Ireland</a></li>
-								<li><a href="http://www.gourmetworldmarket.com/international/china">China and Taiwan</a></li>
-								<li><a href="http://www.gourmetworldmarket.com/international/central-america">Central America</a></li>
-								<li><a href="http://www.gourmetworldmarket.com/international/eastern-europe">Eastern and Central Europe</a></li>
-								<li><a href="http://www.gourmetworldmarket.com/international/japan">Japan</a></li>
-								<li><a href="http://www.gourmetworldmarket.com/international/korea">Korea</a></li>
-								<li><a href="http://www.gourmetworldmarket.com/international/mediterranean">Mediterranean Europe</a></li>
-								<li><a href="http://www.gourmetworldmarket.com/international/mexico">Mexico</a></li>
-                                <li><a href="http://www.gourmetworldmarket.com/international/middle-east">Middle East</a></li>
-								<li><a href="http://www.gourmetworldmarket.com/international/north-america">North America / Canada</a></li>
-								<li><a href="http://www.gourmetworldmarket.com/international/oceania">Oceania</a></li>
-								<li><a href="http://www.gourmetworldmarket.com/international/scandinavia">Scandinavia</a></li>
-								<li><a href="http://www.gourmetworldmarket.com/international/southeast-asia">Southeast Asia</a></li>
-								<li><a href="http://www.gourmetworldmarket.com/international/south-america">South America</a></li>
-								<li><a href="http://www.gourmetworldmarket.com/international/south-asia">South Asia</a></li>
-								<li><a href="http://www.gourmetworldmarket.com/international/the-caribbean">The Caribbean</a></li>
-								<li><a href="http://www.gourmetworldmarket.com/international/western-europe">Western Europe</a></li>
+                                <li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/africa">Africa </a></li>
+								<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/british-isles">British Isles &amp; Ireland</a></li>
+								<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/china">China and Taiwan</a></li>
+								<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/central-america">Central America</a></li>
+								<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/eastern-europe">Eastern and Central Europe</a></li>
+								<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/japan">Japan</a></li>
+								<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/korea">Korea</a></li>
+								<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/mediterranean">Mediterranean Europe</a></li>
+								<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/mexico">Mexico</a></li>
+                                <li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/middle-east">Middle East</a></li>
+								<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/north-america">North America / Canada</a></li>
+								<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/oceania">Oceania</a></li>
+								<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/scandinavia">Scandinavia</a></li>
+								<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/southeast-asia">Southeast Asia</a></li>
+								<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/south-america">South America</a></li>
+								<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/south-asia">South Asia</a></li>
+								<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/the-caribbean">The Caribbean</a></li>
+								<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/western-europe">Western Europe</a></li>
 
 
 									

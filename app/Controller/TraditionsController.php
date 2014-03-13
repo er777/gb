@@ -12,24 +12,30 @@ class TraditionsController extends AppController {
 
 ////////////////////////////////////////////////////////////
 
-	public function view($slug = null) {
-
+	public function view() {
+		
+		$args = array_unique(func_get_args());
+		
+		//// Tradition Name //////
+		$this->set('fst',$args['0']);
+		
 		$tradition = $this->Tradition->find('first', array(
 			'recursive' => -1,
 			'conditions' => array(
-				'Tradition.slug' => $slug
+				'Tradition.slug' => $args['0']
 			)
-		));
-		
+		));	
+	
 		$countries_list1 = explode(',', $tradition['Tradition']['countries_list']);
 		$countries_list = array_map('trim', $countries_list1);
 		$this->set(compact('countries_list'));
 		
 				
 		if(empty($tradition)) {
-			die('invalid tradition');
+			die('Invalid Tradition');
 		}
 		$this->set(compact('tradition'));
+		
 
 		$traditionid = $tradition['Tradition']['id'];
 
@@ -40,6 +46,7 @@ class TraditionsController extends AppController {
 				'Tradition.id',
 				'Tradition.slug',
 				'Tradition.name',
+				'Tradition.awning_image',
 			),
 			'order' => array(
 				'Tradition.name' => 'ASC'
@@ -49,7 +56,34 @@ class TraditionsController extends AppController {
 		$this->set(compact('traditions'));
 
 		$this->loadModel('Product');
-
+		
+		/////////////////////////////////////////////
+		
+		if(!empty($args['1']) && $args['1']=='brand'){
+			$this->loadModel('Brand');
+			$Brandinfo = $this->Brand->find('first', array(
+				'recursive' => -1,
+				'conditions' => array(
+					'Brand.slug' => $args['2']
+				)
+			));
+			$bid = $Brandinfo['Brand']['id'];
+			
+			//////Product SQL for brand and traditions////////////
+			$condtions =  array(
+					'Product.active' => 1,
+				'User.active' => 1,
+				'Product.brand_id' => $bid,
+				"FIND_IN_SET('$traditionid', traditions)"
+				);
+		}
+		else{
+			$condtions =  array(
+				'Product.active' => 1,
+				'User.active' => 1,
+				"FIND_IN_SET('$traditionid', traditions)"
+			);
+		}
 		$this->paginate = array(
 			'joins' => array(
 				array(
@@ -84,22 +118,71 @@ class TraditionsController extends AppController {
 				'User.name',
 				'User.active',
 			),
-			'conditions' => array(
-				'Product.active' => 1,
-				'User.active' => 1,
-				"FIND_IN_SET('$traditionid', traditions)"
-			),
+			'conditions' => $condtions,
 			'limit' => 32,
 			'order' => array(
-				'Product.displaygroup' => 'ASC',
-				'Product.name' => 'ASC'
+				'Product.name' => 'ASC',
+				'Product.displaygroup' => 'ASC'
 				)
 		);
 
 
 		$products = $this->paginate('Product');
 		$this->set(compact('products'));
-
+	/////////////////////Left Pannel Brand Names Start ///////////////////////////
+		$ProductsForBrand = $this->Product->find('all', array(
+			'recursive' => -1,
+				'joins' => array(
+				array(
+					'table' => 'users',
+					'type' => 'RIGHT',
+					'alias' => 'User',
+					'conditions' => array('User.id = Product.user_id AND User.level = "vendor"')
+				),
+				array(
+					'table' => 'categories',
+					'type' => 'RIGHT',
+					'alias' => 'categories',
+					'conditions' => array('categories.id = Product.category_id')
+				),
+				array(
+					'table' => 'subcategories',
+					'type' => 'RIGHT',
+					'alias' => 'subcategories',
+					'conditions' => array('subcategories.id = Product.subcategory_id')
+				)
+			),
+			'fields' => array(
+				'Product.brand_id'
+			),
+			'conditions' => array(
+				'Product.active' => 1,
+				'User.active' => 1,
+				"FIND_IN_SET('$traditionid', traditions)"
+			),
+	));
+		
+ $UniquebrndIds = array_unique(Hash::extract($ProductsForBrand, '{n}.Product.brand_id'));
+		foreach ($UniquebrndIds as $key => $value) {
+					$UniquebrndIds;
+			}
+		$this->loadModel('Brand');
+		$brands = $this->Brand->find('all', array(
+			'recursive' => -1,
+			'fields' => array(
+				'Brand.id',
+				'Brand.slug',
+				'Brand.name',
+			),
+			'conditions' => array(
+				'Brand.id' => $UniquebrndIds
+			),
+			'order' => array(
+				'Brand.name' => 'ASC'
+			)
+		));
+		$this->set(compact('brands'));
+		//////////////////// Left Panel Brand Name End ////////////////
 	}
 
 ////////////////////////////////////////////////////////////

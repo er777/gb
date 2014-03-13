@@ -21,7 +21,7 @@ class UstraditionsController extends AppController {
 			)
 		));
 		if(empty($ustradition)) {
-			die('invalid region');
+			die('Invalid US Region');
 		}
 		$this->set(compact('ustradition'));
 
