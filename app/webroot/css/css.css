@@ -166,10 +166,9 @@ img.frame {
 }
 
 .vendor-logo {
-	position:absolute;
-	right:36%;
-	top:10px;
-	z-index:100;
+	
+	margin-top:20px;
+	
 }
 
 .vendor-logo img {
@@ -691,7 +690,7 @@ ul.meganizr .brands .wide {
 /** Recipe Item **/
 
 .item-recipe {
-   min-height: 220px;
+   min-height: 200px;
    max-height: 300px;
   
    margin: 10px auto;
@@ -707,7 +706,7 @@ ul.meganizr .brands .wide {
 .item-recipe .item-recipe-image img{
 	padding: 5px 0px;
 	height: auto;
-	max-height: 125px;
+	max-height: 105px;
 	width: 130px;
 	display: block;
 	margin: 0 auto;
@@ -1503,10 +1502,10 @@ img.tradition, img.vendor-pic {
 img.recipe-pic {
 	border: solid #CCC 2px;
 	padding: 5px;
-	-webkit-box-shadow: 0px 0px 5px #F1F1F1;
-	-moz-box-shadow: 0px 0px 5px #F1F1F1;
-	box-shadow: 0px 0px 5px #F1F1F1;
-	min-width:220px;
+	-webkit-box-shadow: 0px 0px 5px #cccccc;
+	-moz-box-shadow: 0px 0px 5px #cccccc;
+	box-shadow: 0px 0px 5px #cccccc;
+	max-width:220px;
 }
 img.recipe-pic  {
 	
