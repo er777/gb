@@ -1505,7 +1505,7 @@ img.recipe-pic {
 	-webkit-box-shadow: 0px 0px 5px #cccccc;
 	-moz-box-shadow: 0px 0px 5px #cccccc;
 	box-shadow: 0px 0px 5px #cccccc;
-	max-width:220px;
+	max-width:310px;
 }
 img.recipe-pic  {
 	
@@ -2296,7 +2296,7 @@ img.article-pic.index {
 	font-size:9px;
 	font-style:italic;
 	height:12px;
-	max-width: 273px;
+	max-width: 220px;
 }
 .photo-attr span {
 	float:right;
