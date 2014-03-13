@@ -12,16 +12,26 @@ $(document).ready(function() {
 });
 </script>
 
-<div class="row">
-	<div class="span3">
+
+
+<!-- Items -->
+
+<div class="items">
+   <div class="container">
+   
+      <div class="row">
+         <div class="col-md-12">
+        	<h3>Recipe Categories</h3>
+         	<?php echo $this->Form->input('recipescategories', array('class' => 'selectpicker inline','data-style'=>'btn-primary','options' => $recipescategories, 'label' => false,'empty' => array('all' => 'All Recipes'), 'default' => $recipescategory_selected)); ?>
+         
+         
+         	<h3>Recipe Vendors</h3>
+         	<?php echo $this->Form->input('vendors', array('label' => false,'options' => $vendors, 'empty' => array('all' => 'All Vendors'), 'default' => $vendor_selected)); ?>
+         </div>
+       </div>
+   
  
-    <div class="gb-heading dropdown-air">Recipe Categories</div>
-		<?php echo $this->Form->input('recipescategories', array('class' => 'selectpicker','data-style'=>'btn-primary','options' => $recipescategories, 'label' => false,'empty' => array('all' => 'All Recipes'), 'default' => $recipescategory_selected)); ?>
-	</div>
-	<div class="span3">
-    <div class="gb-heading dropdown-air">Recipe Vendors</div>
-		<?php echo $this->Form->input('vendors', array('label' => false,'options' => $vendors, 'empty' => array('all' => 'All Vendors'), 'default' => $vendor_selected)); ?>
-	</div>
+   
 </div>
 
 
@@ -47,32 +57,35 @@ $(document).ready(function() {
 
 
 
-<div class="row" style="margin-left:25px">
+<div class="row">
 
 	<?php
 	$i = 0;
 	foreach ($recipes as $recipe):
-		$i++;
-		if (($i % 4) == 0) { echo "\n<div class=\"row\">\n\n";}
+		
 	?>
-        <div class="span3" style="margin-left:10px;">
+        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
         
-            <div class="content-recipe">
-    
-               
+            <div class="item-recipe">
+            
+            	<div class="item-recipe-image">
                 
 				<?php echo '<a href="http://' . $recipe['User']['slug'] . '.' . Configure::read('Settings.DOMAIN') . '/recipe/' . $recipe['Recipe']['slug'] . '">'; ?>
-					<div class="small"><?php echo $recipe['Recipescategory']['name']; ?>
-					</div>
+					<span class="small"><?php echo $recipe['Recipescategory']['name']; ?></span>
                     
-                    <div class="content-img">
-                        <?php echo $this->Html->image('/img/recipes/image_1/' . $recipe['Recipe']['image_1'] , array('width' => 200, 'height' => 200, 'alt' => $recipe['Recipe']['name'], 'class' => 'img-polaroid')); ?>
+                    
+                        <?php echo $this->Html->image('/img/recipes/image_1/' . $recipe['Recipe']['image_1'] , array('width' => 200, 'height' => 200, 'alt' => $recipe['Recipe']['name'], )); ?>
                     
                     
 						<?php /*?><?php echo $this->Html->image('products/image/' . $product['Product']['image'], array('url' => array('subdomain' => $product['User']['slug'], 'controller' => 'products', 'action' => 'view', 'id' => $product['Product']['id'], 'slug' => $product['Product']['slug']), 'alt' => $product['Product']['name'], 'class' => 'img-polaroid img180')); ?><?php */?>
                     
-                        <div class="recipe-name">
-                            <?php echo $recipe['Recipe']['name']; ?>
+                        <div class="item-details">
+                        
+                         <!-- Name -->
+            <!-- Use the span tag with the class "ico" and icon link (hot, sale, deal, new) -->
+            <h5><?php echo $recipe['Recipe']['name']; ?></a><!--<span class="ico"><img src="img/hot.png" alt="" /></span>--></h5>
+            
+            <div class="clearfix"></div>
                         
                         
                             <?php /*?><!--<a href="/product/<?php echo ($product['Product']['id'].'-'.$product['Product']['slug']);?>"> <?php echo $this->Text->truncate($product['Product']['name'], 40, array('ellipsis' => '...', 'exact' => 'false')); ?>
@@ -89,7 +102,7 @@ $(document).ready(function() {
         </div>
         
 	<?php
-	if (($i % 4) == 0) { echo "\n</div>\n\n";}
+	
 	endforeach;
 	?>
 </div>
