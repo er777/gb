@@ -2,6 +2,7 @@
 .profile
 .bash_profile
 dwsync.xml
+.htaccess
 app/Config/database.php
 app/Config/settings.php
 app/Config/core.php
