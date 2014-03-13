@@ -79,7 +79,7 @@ Shopping Cart is empty
 					</td>
 
 					<!-- Product Subtotal-->
-					<td><?php echo $item['Product']['price']; ?>
+					<td><?php echo $item['subtotal']; ?>
 					</td>
 					
 					<!-- Remove-->

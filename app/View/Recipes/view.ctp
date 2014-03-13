@@ -12,6 +12,8 @@
             <h3 class="gb-heading center"> <?php echo $user['User']['name']; ?></h3>
             <div class="section-subheading">Our Recipes</div>
             <hr class="recipe-divider" />
+            
+            <div style="height:500px;overflow-y:scroll">
             <?php
 			
 			foreach($recipelist as $recipekey)
@@ -23,6 +25,8 @@
 				echo "</div>";
 			}
 			?>
+            
+            </div>
          </div>
          <div class="col-md-5 col-sm-5">
             <h2 class="gb-heading recipes-heading"><?php echo $recipe['Recipe']['name']; ?></h2>

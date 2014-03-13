@@ -166,9 +166,10 @@ img.frame {
 }
 
 .vendor-logo {
-	
-	margin-top:20px;
-	
+	position:absolute;
+	right:36%;
+	top:10px;
+	z-index:100;
 }
 
 .vendor-logo img {
@@ -1443,6 +1444,7 @@ div.col-md-8>div.awning>img {
 .category-summary, .tradition-summary, #subcat-menu, #left-sidebar {
 	position: relative;
 	margin-bottom: 30px;
+	margin-top: 45px;
 	/*margin-left: 182px;*/
 	border: #3f4b52 1px solid;
 	color: #3a3a3a;
