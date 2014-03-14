@@ -254,7 +254,7 @@ $(document).ready(function() {
 
 		<td><?php echo ($product['Product']['markup']); ?>%</td>
 		<td><span class="price" data-value="<?php echo $product['Product']['price']; ?>" data-pk="<?php echo $product['Product']['id']; ?>"><?php echo h($product['Product']['price']); ?></span></td>
-		<td><span class="shipping_weight" data-value="<?php echo $product['Product']['shipping_weight']; ?>" data-pk="<?php echo $product['Product']['id']; ?>"><?php echo ($product['Product']['shipping_weight']); ?></span></td>
+		<td><span class="shipping_weight_oz" data-value="<?php echo $product['Product']['shipping_weight_oz']; ?>" data-pk="<?php echo $product['Product']['id']; ?>"><?php echo ($product['Product']['shipping_weight_oz']); ?></span></td>
 	</tr>
 	<?php endforeach; ?>
 </table>

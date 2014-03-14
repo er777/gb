@@ -7,7 +7,7 @@
 		echo $this->Form->input('product_id');
 		echo $this->Form->input('sku');
 		echo $this->Form->input('active', array('type' => 'checkbox' ));
-		echo $this->Form->input('position', array('type' => 'select', 'empty' => 'Choose','options' => array(
+		echo $this->Form->input('position', array('type' => 'select', 'empty' => '--','options' => array(
                 '1' => 'First',
                 '2' => 'Second',
                 '3' => 'Third',
