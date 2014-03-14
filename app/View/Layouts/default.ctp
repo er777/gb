@@ -29,7 +29,7 @@ Android 2.1+, Chrome 4+, Firefox 2+, IE 9+, iOS 3.2+, Opera 9+, Safari 3.1+
 </style>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
-<?php echo $this->Html->script(array('bootstrap.min.js','twitter-bootstrap-hover-dropdown.js','js.js','jquery.bpopup-0.9.3.min.js','jquery.easing.1.3.js','jquery.cj-object-scaler.min.js')); ?>
+<?php echo $this->Html->script(array('bootstrap.min.js','twitter-bootstrap-hover-dropdown.js','js.js')); ?>
 <?php //echo $this->Html->css('bootstrap.less?','stylesheet/less') ?>
 <?php echo $this->App->js(); ?><?php echo $this->fetch('meta'); ?><?php echo $this->fetch('css'); ?><?php echo $this->fetch('script'); ?>
 <script type="text/javascript" src="/t/track.php?id=gourmet"></script>

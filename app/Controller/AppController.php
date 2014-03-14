@@ -14,11 +14,11 @@ class AppController extends Controller {
 
 ////////////////////////////////////////////////////////////
 
-  	public $helpers = array(
-	    'Form' => array(
-	        'className' => 'BootstrapForm'
-  	  	)
-	);
+  	//public $helpers = array(
+//	    'Form' => array(
+//	        'className' => 'BootstrapForm'
+//  	  	)
+//	);
 
 ////////////////////////////////////////////////////////////
 
