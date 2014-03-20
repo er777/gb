@@ -9,6 +9,19 @@
 
 		<div class="content-product">
 			<div class="displaygroup"><?php echo $product['Product']['displaygroup']; ?></div>
+			
+			
+			<?php if (($product['Product']['new']) == 1) : ?>
+				<div class="new">
+					<?php echo $this->Html->image('global/new-icon.png', array(
+						'height' => '40',
+						'width' => '40',
+						));
+					?>
+				</div>
+				<? endif; ?>
+	
+			
 			<div class="product-pic">
 				<?php echo $this->Html->image('products/image/' . $product['Product']['image'], array('class' =>'show','url' => array('subdomain' => $product['User']['slug'], 'controller' => 'products', 'action' => 'view', 'id' => $product['Product']['id'], 'slug' => $product['Product']['slug']), 'alt' => $product['Product']['name'])); ?>
 				<div class="product-name">

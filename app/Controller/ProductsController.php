@@ -181,6 +181,7 @@ class ProductsController extends AppController {
 				'Product.image',
 				'Product.price',
 				'Product.displaygroup',
+				'Product.new',
 				'User.slug',
 				'User.more',
 				'User.name',
