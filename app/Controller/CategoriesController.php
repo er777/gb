@@ -265,6 +265,7 @@ if(isset($args['2']) && $args['1']=='brand') {
 				'Product.price',
 				'Product.brand_id',
 				'Product.displaygroup',
+				'Product.new',
 				'Product.category_id',
 				'Product.auxcategory_1',
 				'Product.auxcategory_2',
