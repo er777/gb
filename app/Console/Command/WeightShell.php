@@ -36,7 +36,7 @@ class WeightShell extends Shell {
 				'Product.name',
 				'Product.weight_unit',
 				'Product.weight',
-				'Product.shipping_weight',
+				'Product.shipping_weight_oz',
 			),
 			'conditions' => array(
 				'Product.weight_unit' => 'oz',
@@ -49,14 +49,14 @@ class WeightShell extends Shell {
 			
 			
 
-			$shipping_weight = ceil(number_format($product['Product']['weight'] / 16, 2));
+			$shipping_weight = ceil(number_format($product['Product']['shipping_weight_oz'] / 16, 2));
 
 			$this->out('new weight (lbs) = ' . $shipping_weight);
 
 			$this->out("\n\n=================\n\n");
 
 			$d['Product']['id'] = $product['Product']['id'];
-			$d['Product']['shipping_weight'] = $shipping_weight;
+			$d['Product']['shipping_weight_oz'] = $shipping_weight;
 			$this->Product->save($d, false);
 
 		}
