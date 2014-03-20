@@ -37,6 +37,7 @@
 			),
 		));
 		echo $this->Form->input('active', array('type' => 'checkbox', 'label' => 'Active'));
+		echo $this->Form->input('new', array('type' => 'checkbox'));
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

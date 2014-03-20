@@ -228,7 +228,8 @@
 	<br />
 
 	<form action="<?php echo $formURL;?>" method="POST">
-	<div id="ccbox"> Credit Card Type. </div>
+    
+	<div id="ccbox"></div>
 	<?php //echo $this->Form->input('billing-cc-number', array('class' => 'span2 ccinput', 'maxLength' => 16, 'autocomplete' => 'off')); ?>
 	Credit Card Number<br />
 	<input type="text" name="billing-cc-number" value="">

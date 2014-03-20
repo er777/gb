@@ -252,8 +252,16 @@ li.gb-account a {
 	/*width: 100%;*/ }
 	
 .carousel-inner .item  img {
-	width:105%;	
+	/*width:105%;	*/
+	
 }
+
+.carousel-inner .item  .new  {
+	position:absolute;
+	top:0;
+	right:0;
+}
+
 	
 .carousel-control {
 	top: 50%;

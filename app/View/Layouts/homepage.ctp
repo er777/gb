@@ -106,6 +106,21 @@
 								<h1><?php echo $this->Html->link($content['Content']['name'], $content['Content']['link']); ?></h1>
 								<?php echo $content['Content']['body']; ?> <br />
 							</div>
+							<?php if (($content['Content']['new']) == 1) : ?>
+							<div class="new">
+								<?php echo $this->Html->image('global/new-icon.png', array(
+									'height' => '100',
+									'width' => '100',
+									));
+								?>
+							</div>
+							<? endif; ?>
+							
+							
+							
+							
+							
+							
 						</div>
 						<?php endif ; ?>
 						<?php $active = ''; ?>
