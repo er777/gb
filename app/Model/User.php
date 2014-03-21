@@ -101,6 +101,7 @@ class User extends AppModel {
 				'User.city',
 				'User.state',
 				'User.slug',
+				'User.more',
 				'User.shop_quote',
 				'User.min_purchase',
 				'User.min_items',
