@@ -418,9 +418,8 @@
 
 			<!-- Include Products element -->
 			<?php echo $this->element('products'); ?>
-
-
-            <?php $more = ($product['User']['more']); ?>
+			
+            <?php $more = ($user['User']['more']); ?>
 
             <?php if($more == 1) : ?>
 			<div class="more btn-gb">More products to come!</div>
