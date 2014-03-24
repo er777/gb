@@ -39,10 +39,10 @@
 	<div class="col-md-9 col-sm-9">
 		<!-- Banner -->
 		<div class="awning">
-			<?php if (($tradition['Tradition']['awning_image'])) :
-					echo $this->Html->image('/img/traditions/awning_image/'. $tradition['Tradition']['awning_image']);
+			<?php if (($tradition['Tradition']['banner'])) :
+					echo $this->Html->image('/img/traditions/banner/'. $tradition['Tradition']['banner']);
 				else :
-					echo ' <img src="/img/traditions/awning_image/default.jpg" /> ';
+					echo ' <img src="/img/traditions/banner/default.png" /> ';
 				endif;
 			?>
 

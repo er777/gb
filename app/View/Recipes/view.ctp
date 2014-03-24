@@ -13,7 +13,7 @@
             <div class="section-subheading">Our Recipes</div>
             <hr class="recipe-divider" />
             
-            <div style="height:500px;overflow-y:scroll">
+            <div style="height:500px;overflow-y:scroll;padding-right:5px;">
             <?php
 			
 			foreach($recipelist as $recipekey)

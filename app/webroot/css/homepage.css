@@ -34,6 +34,9 @@
 }
 
 
+
+
+
 body {
 	background:url(../img/homepage/backgrounds/globe.jpg) center top no-repeat;
 	font-family: 'Rosario', Helvetica, Arial, sans-serif;
@@ -49,23 +52,6 @@ body {
 p {
 	font: normal inherit 400 1em/1.5 'Rosario', Helvetica, Arial, sans-serif;
 }
-
-h1, h2, h3, h4, h5 {
-	
-	color: #282a22;
-	font-weight: normal;
-}
-
-h2 {
-	font-size: 19px;
-	line-height:21px;
-}
-
-h3 {
-	font-size: 17px;
-	line-height: 22px;
-}
-
 
 
 #lower .row-fluid {
@@ -291,8 +277,8 @@ li.gb-account a {
 	display:inline-block;
 	float:left;
 	margin-right:5px;
-	width:21.05%;
-	height:21.05%;
+	width:22.1%;
+	height:22.1%;
 	border:#999 thin solid;
 	position:relative;
 	padding:3px;

@@ -2,31 +2,34 @@
 	<div class="row">
 	
 	<!--Sidebar -->
-		<div class="col-md-3 col-sm-3 hidden-xs">
+		<div class="col-md-3 col-sm-3 hidden-xs left-sidebar" id="sidebar-title">
 			
 			<!--<div style="margin-bottom:20px;margin-top:30px;">
 				<img style="width:235px" src="/img/us-traditions/labels/<?php //echo ($ustradition['Ustradition']['logo_image']); ?>" />
 			</div>-->
 			
-			
-			
 			<div id="subcat-menu">
 				<div class="region-title">			
-					<div>U.S. REGIONS:</div>
+					U.S. REGIONS:
 					<h4><?php echo $ustradition['Ustradition']['name']; ?></h4>
 				</div>
-			
-				<div class="summary"> <?php echo $ustradition['Ustradition']['summary']; ?> </div>
-				<a style="font-style:italic" href="/articles/excellent-food-advenures/<?php echo $ustradition['Ustradition']['slug']; ?>">Read more</a>
+			<div id="sidebar-content">
+					<div class="summary"> <?php echo $ustradition['Ustradition']['summary']; ?> </div>
+					<a style="font-style:italic" href="/articles/excellent-food-advenures/<?php echo $ustradition['Ustradition']['slug']; ?>">Read more</a>
+					
 				
+				
+				
+					<div class="nav-style-heading large">Other US Traditions</div>
+					<div class="list">
+					<?php foreach ($ustraditions as $tradition): ?> -
+						<?php echo $this->Html->link($tradition['Ustradition']['name'], array('controller' => 'ustraditions', 'action' => 'view', 'slug' => $tradition['Ustradition']['slug'])); ?><br />
+					<?php endforeach; ?>
+					</div>
+					
+				</div>
 			</div>
 			
-			<div class="nav-style-heading large">Other US Traditions</div>
-			<div class="list">
-			<?php foreach ($ustraditions as $tradition): ?> -
-				<?php echo $this->Html->link($tradition['Ustradition']['name'], array('controller' => 'ustraditions', 'action' => 'view', 'slug' => $tradition['Ustradition']['slug'])); ?><br />
-			<?php endforeach; ?>
-			</div>
 		</div>
 	
 	<!-- Main Content -->
@@ -34,10 +37,10 @@
 		<!-- Banner -->
 		<div class="awning"> 
 		   
-			<?php if (($ustradition['Ustradition']['awning_image'])) :
-					echo $this->Html->image('/img/us-traditions/awning_image/'. $ustradition['Ustradition']['awning_image']);
+			<?php if (($ustradition['Ustradition']['banner'])) :
+					echo $this->Html->image('/img/us-traditions/banner/'. $ustradition['Ustradition']['banner']);
 				else :
-					echo ' <img src="/img/us-traditions/awning_image/far-west.jpg" /> ';
+					echo ' <img src="/img/us-traditions/banner/default.png" /> ';
 				endif;
 			?>
 		</div>

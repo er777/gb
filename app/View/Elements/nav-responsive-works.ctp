@@ -122,7 +122,7 @@
 							<ul>
                              	<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/recipes/all"><i class="icon-briefcase icon-white"></i>ALL RECIPES</a></li>
                                 <li><a href="/recipes"><i class="icon-briefcase icon-white"></i>RECIPES</a></li>
-                                <li><a href="/articles"> <i class="icon-briefcase icon-white"></i>ARTICLES</a></li>
+                                <!--<li><a href="/articles"> <i class="icon-briefcase icon-white"></i>ARTICLES</a></li>-->
                                 <li><a href="http://www.blog.<?php echo Configure::read('Settings.DOMAIN'); ?>">BLOG</a></li>
 						<!--<li><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/">All Natural</a></p>
 						<li><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/">No Preservatives</a></li>
