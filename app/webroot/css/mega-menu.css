@@ -547,9 +547,10 @@ li.with-gallery li.full-width { display: block; margin: 0; width: auto; }
 }
 
 .navbar-inverse {
-   background-color: #393767;
-   border-color:#393767;
-   border-radius:0px;
+	background-image:none;
+	background-color: #393767;
+	border-color:#393767;
+	border-radius:0px;
 
 }
 

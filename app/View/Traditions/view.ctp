@@ -1,7 +1,7 @@
 <div class="row">
 
 	<!--Sidebar -->
-		<div class="col-md-3 col-sm-3 hidden-xs">
+		<div class="col-md-3 col-sm-3 hidden-xs regions">
 
 		<?php /*?><div style="height:38px;">
 			<ul class="navList gb-">

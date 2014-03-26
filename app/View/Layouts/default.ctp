@@ -17,13 +17,12 @@
 
 <style type="text/css">
 <?php if(isset($user['User']['awning_css'])) : ?> .btn-gb {
- <?php echo $user['User']['awning_css'];
+<?php echo $user['User']['awning_css'];
 ?>
 }
 .bkgnd-gb {
- <?php echo $user['User']['awning_css'];
+<?php echo $user['User']['awning_css'];
 ?> opacity: 0.2;
-Android 2.1+, Chrome 4+, Firefox 2+, IE 9+, iOS 3.2+, Opera 9+, Safari 3.1+
 }
 <?php endif;
 ?>
@@ -33,11 +32,17 @@ Android 2.1+, Chrome 4+, Firefox 2+, IE 9+, iOS 3.2+, Opera 9+, Safari 3.1+
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
 <?php echo $this->Html->script(array('twitter-bootstrap-hover-dropdown.js','js.js','jquery.bpopup-0.9.3.min.js','jquery.easing.1.3.js','jquery.cj-object-scaler.min.js')); ?>
 <?php //echo $this->Html->css('bootstrap.less?','stylesheet/less') ?>
-<?php echo $this->App->js(); ?><?php echo $this->fetch('meta'); ?><?php echo $this->fetch('css'); ?><?php echo $this->fetch('script'); ?>
+<?php echo $this->App->js(); ?>
+<?php echo $this->fetch('meta'); ?>
+<?php //echo $this->fetch('css'); ?>
+<?php echo $this->fetch('script'); ?>
 <script type="text/javascript" src="/t/track.php?id=gourmet"></script>
 </head>
 <body class="sun">
-<header>
+
+<!-- Include Header element --> 
+<?php echo $this->element('header'); ?>
+
 <div id="fb-root"></div>
 <!--<script>
 				(function(d, s, id) {
@@ -49,35 +54,7 @@ Android 2.1+, Chrome 4+, Firefox 2+, IE 9+, iOS 3.2+, Opera 9+, Safari 3.1+
 				}(document, 'script', 'facebook-jssdk'));
 				</script>-->
 
-<div class="page container">
-   <div class="row"> 
-      <!-- Search -->
-      <div class="col-md-5 col-md-offset-7"> 
-         <!-- Search form -->
-         <div class="search"> 
-            <!-- Search Box --> 
-            <?php echo $this->Form->create('Product', array('type' => 'GET', 'class' => 'navbar-form', 'url' => array('controller' => 'products', 'action' => 'search'))); ?> <?php echo $this->Form->input('search', array('label' => false, 'div' => false, 'autocomplete' => 'on')); ?>
-            <?php //echo $this->Form->button('<i class="icon-search icon-white"></i> Search', array('div' => false, 'class' => 'btn btn-gb', 'escape' => false)); ?>
-            <?php echo $this->Form->end(); ?> </div>
-         <ul class="gb-horiz-account">
-            <li class="cart">
-               <button class="cart" type="submit">
-               <a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/shops/cart"></i><img src="/img/global/cart.png" width="40" height="29" alt="cart"></a>
-               </button>
-            </li>
-            <li class="social"><a href="https://www.facebook.com/pages/Gourmet-Basket/603379453015040"><img src="/img/global/fb.png" width="28" height="27" alt="facebook"></a></li>
-            <li class="social"><a href="https://twitter.com/gourmetworldmkt"><img src="/img/global/tw.png" width="28" height="27"></a></li>
-            <li class="social"><a href="http://www.pinterest.com/gourmetworldmkt/"><img src="/img/global/pin.png" width="27" height="27" alt="pinterest"></a></li>
-            <!--<li class="gb-account"><a href="/members/register">BECOME A MEMBER</a></li>--> 
-            <!-- <li class="gb-account"><a href="/members/login">LOG IN</a></li>-->
-         </ul>
-      </div>
-   </div>
-</div>
-
-<!--<div id="header-nav">
-				<div id="nav-wrapper"> 
-					<!-- Include Nav element --> 
+<!-- Include Nav element --> 
 <?php echo $this->element('nav-responsive-works'); ?>
 
 

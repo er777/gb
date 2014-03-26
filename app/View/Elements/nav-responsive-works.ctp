@@ -87,41 +87,49 @@
 							</li>
 							<li class="two-column">
 								<ul><h4>INTERNATIONAL REGIONS</h4>
-                                <li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/africa">Africa </a></li>
-								<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/british-isles">British Isles &amp; Ireland</a></li>
-								<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/china">China and Taiwan</a></li>
-								<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/central-america">Central America</a></li>
-								<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/eastern-europe">Eastern and Central Europe</a></li>
-								<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/japan">Japan</a></li>
-								<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/korea">Korea</a></li>
-								<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/mediterranean">Mediterranean Europe</a></li>
-								<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/mexico">Mexico</a></li>
-                                <li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/middle-east">Middle East</a></li>
-								<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/north-america">North America / Canada</a></li>
-								<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/oceania">Oceania</a></li>
-								<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/scandinavia">Scandinavia</a></li>
-								<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/southeast-asia">Southeast Asia</a></li>
-								<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/south-america">South America</a></li>
-								<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/south-asia">South Asia</a></li>
-								<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/the-caribbean">The Caribbean</a></li>
-								<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/western-europe">Western Europe</a></li>
-
-
-									
+									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/africa">Africa </a></li>
+									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/british-isles">British Isles &amp; Ireland</a></li>
+									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/china">China and Taiwan</a></li>
+									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/central-america">Central America</a></li>
+									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/eastern-europe">Eastern and Central Europe</a></li>
+									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/japan">Japan</a></li>
+									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/korea">Korea</a></li>
+									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/mediterranean">Mediterranean Europe</a></li>
+									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/mexico">Mexico</a></li>
+									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/middle-east">Middle East</a></li>
+									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/north-america">North America / Canada</a></li>
+									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/oceania">Oceania</a></li>
+									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/scandinavia">Scandinavia</a></li>
+									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/southeast-asia">Southeast Asia</a></li>
+									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/south-america">South America</a></li>
+									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/south-asia">South Asia</a></li>
+									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/the-caribbean">The Caribbean</a></li>
+									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/western-europe">Western Europe</a></li>
 								</ul>
 							</li>
-					</ul>
-				</li>		
+						</ul>
+					</li>	
 				
-							
+
+				<li class="dropdown mega-menu-1 transition">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-briefcase icon-white"></i>RECIPES<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li class="one-column">
+							<ul>
+								<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/recipes/all">ALL RECIPES</a></li>
+                                <li><a href="/recipes"><i class="icon-briefcase icon-white"></i>RECIPES</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>	
+
+						
 				
 				<li class="dropdown mega-menu-1 transition">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-briefcase icon-white"></i>EXPLORE!<b class="caret"></b></a>
 					<ul class="dropdown-menu">
 						<li class="one-column">
 							<ul>
-                             	<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/recipes/all"><i class="icon-briefcase icon-white"></i>ALL RECIPES</a></li>
-                                <li><a href="/recipes"><i class="icon-briefcase icon-white"></i>RECIPES</a></li>
                                 <!--<li><a href="/articles"> <i class="icon-briefcase icon-white"></i>ARTICLES</a></li>-->
                                 <li><a href="http://www.blog.<?php echo Configure::read('Settings.DOMAIN'); ?>">BLOG</a></li>
 						<!--<li><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/">All Natural</a></p>
