@@ -33,17 +33,9 @@ class RecipesController extends AppController {
 				'Recipe.name',
 				'Recipe.slug',
 				'Recipe.image_1',
-				'Recipe.image_2',
-				'Recipe.image_3',
-				'Recipe.attr_1',
-				'Recipe.attr_2',
-				'Recipe.attr_3',
-				'Recipe.created',
 				'User.name',
 				'User.slug',
 				'Recipescategory.name',
-				'Tradition.name',
-				'Ustradition.name',
 			),
 			'conditions' => array(
 				$conditions
@@ -312,6 +304,11 @@ class RecipesController extends AppController {
 		$this->loadModel('User');
 		$user = $this->User->find('first', array(
 			'recursive' => -1,
+			'fields' => array(
+				'User.slug',
+				'User.name',
+				'User.image'
+			),
 			'conditions' => array(
 				'User.slug' => $subDomain,
 			)

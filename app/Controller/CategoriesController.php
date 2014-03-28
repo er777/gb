@@ -198,6 +198,7 @@ class CategoriesController extends AppController {
 				'Product.brand_id',
 				'Product.displaygroup',
 				'Product.category_id',
+				'Product.new',
 				'Product.auxcategory_1',
 				'Product.auxcategory_2',
 				'Product.auxcategory_3',

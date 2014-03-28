@@ -8,17 +8,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Rosario:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Oregano:400,400italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Oregano:400,400italic' rel='stylesheet' type='text/css'>-->
 <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
 
 
--->
+
 
 
 <!-- Stylesheets -->
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
 
-<?php echo $this->Html->css(array('homepage.css','mega-menu.css','mega-menu-responsive.css')); ?> 
+<?php echo $this->Html->css(array('master.css','mega-menu.css','mega-menu-responsive.css')); ?> 
 
 
 <!--/,'mega-menu.css','mega-menu-responsive.css','prettyPhoto.css' -->
@@ -56,7 +56,7 @@
 
 <div class="page container">
 
-	<div id="gb-title"> 
+	<div id="gwm-title"> 
         <!--<div class="issue gb-heading">July - August 2013</div>-->
         <h1 class="title-description center">A fresh way to shop for, learn about, prepare and enjoy foods of the world.</h1>
         <p class=" center">Our slogan “Become a World Class Foodie” reflects our committment to help cooks of all kinds, from Moms to chefs, 
@@ -66,9 +66,10 @@
     <div class="container feature-wrapper">
 
 			<div id="upper">
+			<div>TODAY'S FEATURED VENDORS</div>
 				<div id="myCarousel" class="carousel slide">
 					<div class="carousel-inner">
-						<div>TODAY'S FEATURED VENDORS</div>
+						
 						<?php $active = 'active'; ?>
 						<?php foreach($contents as $content) : ?>
 						<?php if (($content['Content']['active']) == 1) : ?>
@@ -77,6 +78,15 @@
 								<p><?php echo $this->Html->link($content['Content']['name'], $content['Content']['link']); ?></p>
 								<?php echo $content['Content']['body']; ?> <br />
 							</div>
+							<?php if (($content['Content']['new']) == 1) : ?>
+							<div class="new">
+								<?php echo $this->Html->image('global/new-icon.png', array(
+									'height' => '100',
+									'width' => '100',
+									));
+								?>
+							</div>
+							<? endif; ?>
 						</div>
 						<?php endif ; ?>
 						<?php $active = ''; ?>

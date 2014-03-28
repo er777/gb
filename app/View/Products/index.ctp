@@ -376,6 +376,8 @@
 	
 		<!-- Main Content -->
 	<div class="col-md-9 col-sm-9">
+		<div class="row">
+	
 		<!-- Banner -->
 		<div class="awning">
 			<div class="vendor-logo">
@@ -400,8 +402,7 @@
 					<div id="awning-text"><?php echo $user['User']['shop_quote']; ?></div>
 	
 				</div>
-	
-			<div class="top-product-block">
+			</div>	
 	
 			
 				<div class="section-subheading vendor-category">
@@ -443,8 +444,10 @@
 					</div>
 				</div>
 	
-			</div>
+			
 	
+	
+		
 		</div>
 	
 		</div>

@@ -2,7 +2,7 @@
 App::uses('AppController', 'Controller');
 class ProductsController extends AppController {
 
-/////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
 
 	public function maestro($key = null) {
 
@@ -150,8 +150,7 @@ class ProductsController extends AppController {
 		$brands = $this->Product->find('all', array(
 			'contain' => array('Brand'),
 			'fields' => array(
-				'Brand.name',
-				'Brand.slug',
+				'Brand.*',
 			),
 			'conditions' => array(
 				'Product.active' => 1,
@@ -165,7 +164,7 @@ class ProductsController extends AppController {
 				'Brand.id'
 			),
 		));
-		// debug($brands);
+		// print_r($brands);
 		$this->set(compact('brands'));
 
 
@@ -182,6 +181,7 @@ class ProductsController extends AppController {
 				'Product.image',
 				'Product.price',
 				'Product.displaygroup',
+				'Product.new',
 				'User.slug',
 				'User.more',
 				'User.name',
@@ -579,6 +579,115 @@ class ProductsController extends AppController {
 		$this->render('index');
 	}
 
+public function brand() {
+
+		$args = array_unique(func_get_args());
+		$subDomain = $this->_getSubDomain();
+		if($subDomain != 'www') {
+			$user = $this->Product->User->getBySubdomain($subDomain);
+			$this->set(compact('user'));
+			if(!$user) {
+				die('error');
+			}
+			$usercategories =  $this->Product->find('all', array(
+				'contain' => array('Category'),
+				'fields' => array(
+					'Category.name',
+					'Category.slug'
+				),
+				'conditions' => array(
+					'Product.active' => 1,
+					'Product.show' => 1,
+					'Product.user_id' => $user['User']['id']
+				),
+				'group' => array(
+					'Product.category_id'
+				),
+				'order' => array(
+					'Category.name' => 'ASC'
+				),
+			));
+		} else{
+			$user = array();
+			$usercategories = array();
+		}
+		$this->set(compact('user', 'usercategories'));
+
+		if(!empty($user)) {
+			$conditions[] = array(
+				'Product.active' => 1,
+				'Product.show' => 1,
+				'Product.user_id' => $user['User']['id']
+			);
+		}
+
+		$brands = $this->Product->find('all', array(
+			'contain' => array('Brand'),
+			'fields' => array(
+				'Brand.*',
+			),
+			'conditions' => array(
+				'Product.active' => 1,
+				'Product.show' => 1,
+				'Product.user_id' => $user['User']['id']
+			),
+			'order' => array(
+				'Brand.name' => 'ASC'
+			),
+			'group' => array(
+				'Brand.id'
+			),
+		));
+		$this->set(compact('brands'));
+		
+		/////////////////////
+		$this->loadModel('Brand');
+		$BrandUrl = $this->Brand->find('first', array(
+			'recursive' => -1,
+			'fields' => array(
+				'Brand.id',
+				'Brand.slug',
+				'Brand.name',
+				'Brand.summary',
+				'Brand.image',
+			),
+			'conditions' => array(
+				'Brand.slug' => $args[0]
+			)
+		));
+			$bid = $BrandUrl['Brand']['id'];
+		
+		$this->paginate = array(
+			'contain' => array('User'),
+			'recursive' => -1,
+			'fields' => array(
+				'Product.id',
+				'Product.name',
+				'Product.slug',
+				'Product.image',
+				'Product.price',
+				'Product.displaygroup',
+				//'Brand.name',
+				'User.slug',
+				'User.more',
+				'User.name',
+			),
+			'limit' => 40,
+			'conditions' => array(
+					'Product.brand_id' => $bid,
+					'Product.active' => 1
+				),
+			'order' => array(
+				'Product.displaygroup' => 'ASC',
+				'Product.name' => 'ASC'
+			),
+			'paramType' => 'querystring',
+		);
+		$products = $this->paginate('Product');
+		$this->set(compact('products'));
+		$this->set(compact('brands'));
+		$this->render('index');
+	}
 ////////////////////////////////////////////////////////////
 
 	// public function subcategory($id) {
@@ -1186,6 +1295,9 @@ class ProductsController extends AppController {
 			}
 
 			$this->request->data['Product']['weight'] = sprintf('%.1f', $this->request->data['Product']['shipping_weight_oz'] / 16);
+			
+			$product = "";
+			
 
 			if ($this->Product->save($this->request->data)) {
 
@@ -1195,7 +1307,7 @@ class ProductsController extends AppController {
 						'Product.id' => $this->Product->id
 					)
 				));
-				$markup = (($product1['Product']['price'] - $product1['Product']['price_wholesale']) / $product1['Product']['price_wholesale']) * 100;
+				$markup = (($product1['Product']['price'] - $product1['Product']['price_wholesale']) / $product1['Product']['price']) * 100;
 				$this->Product->saveField('markup', $markup);
 
 				$this->Session->setFlash('The product has been saved');
@@ -1246,8 +1358,15 @@ class ProductsController extends AppController {
 				'Tradition.name' => 'ASC'
 			)
 		));
+		
+		
+		
+		if ( ! empty($product) )	{
+			
+			$traditionsselected = array_map('intval', explode(',', $product['Product']['traditions']));
 
-		$traditionsselected = array_map('intval', explode(',', $product['Product']['traditions']));
+		}
+		
 
 		$ustraditions = $this->Product->Ustradition->findList();
 
@@ -1285,8 +1404,10 @@ class ProductsController extends AppController {
 			if(!isset($this->request->data['Product']['subsubcategory_id'])) {
 				$this->request->data['Product']['subsubcategory_id'] = '';
 			}
+			
+			$preRound = sprintf('%.1f', $this->request->data['Product']['shipping_weight_oz'] / 16);
 
-			$this->request->data['Product']['weight'] = sprintf('%.1f', $this->request->data['Product']['shipping_weight_oz'] / 16);
+			$this->request->data['Product']['weight'] = ceil($preRound);
 
 			if ($this->Product->save($this->request->data)) {
 
@@ -1296,7 +1417,7 @@ class ProductsController extends AppController {
 						'Product.id' => $this->Product->id
 					)
 				));
-				$markup = (($product1['Product']['price'] - $product1['Product']['price_wholesale']) / $product1['Product']['price_wholesale']) * 100;
+				$markup = (($product1['Product']['price'] - $product1['Product']['price_wholesale']) / $product1['Product']['price']) * 100;
 				$this->Product->saveField('markup', $markup);
 
 				$this->Session->setFlash('The product has been saved');

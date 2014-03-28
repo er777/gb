@@ -17,6 +17,8 @@
 			
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
+				
+					<li><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>">HOME</a>
 							
 					<li class="dropdown mega-menu-4 transition">
                     	<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-home icon-white"></i> VENDORS<b class="caret"></b></a>
@@ -155,3 +157,5 @@
 
 						
 	</div><!-- /.navbar .navbar-inverse -->
+	
+	<!-- End of Nav Include -->

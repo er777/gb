@@ -13,13 +13,25 @@
 				<div class="item"> <!--content-product -->
 				
 					<div class="displaygroup"><?php echo $product['Product']['displaygroup']; ?></div>
+					
+					<?php if (($product['Product']['new']) == 1) : ?>
+						<div class="new">
+							<?php echo $this->Html->image('global/new-icon.png', array(
+								'height' => '40',
+								'width' => '40',
+								));
+							?>
+						</div>
+					<? endif; ?>
+					
+					
 					<!-- Item image -->
 					<div class="item-image"><!--product-pic-->
 					  <!--<a href="single-item.html"><img src="img/photos/2.png" alt="" class="img-responsive" /></a>-->
 				
 					<?php echo $this->Html->image('products/image/' . $product['Product']['image'], array('class' => 'img-responsive','url' => array('subdomain' => $product['User']['slug'], 'controller' => 'products', 'action' => 'view', 'id' => $product['Product']['id'], 'slug' => $product['Product']['slug']), 'alt' => $product['Product']['name'])); ?>
 						<div class="product-name">
-							<a href="/product/<?php echo ($product['Product']['id'].'-'.$product['Product']['slug']);?>"> <?php echo $this->Text->truncate($product['Product']['name'], 40, array('ellipsis' => '...', 'exact' => 'false')); ?></a>
+							<a href="/product/<?php echo ($product['Product']['id'].'-'.$product['Product']['slug']);?>"> <?php echo $this->Text->truncate($product['Product']['name'], 47, array('ellipsis' => '...', 'exact' => 'false')); ?></a>
 						</div>
 						
 					</div>

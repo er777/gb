@@ -31,8 +31,17 @@
 		</div>
 		
 	</div>
+   
 
 </div>
 
-<?php echo $this->element('sql_dump');?>
 
+	<div class="container">
+
+		<div class="row">
+
+
+ <?php echo $this->element('sql_dump');?>
+
+</div>
+</div>

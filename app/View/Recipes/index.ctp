@@ -21,7 +21,9 @@
 <div class="row product" > 
    
    <!-- Include Recipes element --> 
-   <?php echo $this->element('recipes'); ?> </div>
+   <?php echo $this->element('recipes'); ?>
+   
+</div>
    
 <br />
 <br />

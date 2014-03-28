@@ -10,8 +10,8 @@
 <link href='http://fonts.googleapis.com/css?family=Oregano:400,400italic' rel='stylesheet' type='text/css'>
 <!--<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>-->
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
-<?php echo $this->Html->css(array('css.css','mega-menu.css','mega-menu-responsive.css','cakephp_tag_cloud.css')); ?>
+
+<?php echo $this->Html->css(array('css.css','master.css','mega-menu.css','mega-menu-responsive.css','cakephp_tag_cloud.css')); ?>
 
 <!-- CSS -->
 
@@ -43,7 +43,7 @@
 <!-- Include Header element --> 
 <?php echo $this->element('header'); ?>
 
-<div id="fb-root"></div>
+<!--<div id="fb-root"></div>-->
 <!--<script>
 				(function(d, s, id) {
 					var js, fjs = d.getElementsByTagName(s)[0];

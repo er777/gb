@@ -79,11 +79,11 @@ $(document).ready(function() {
                     
 						<?php /*?><?php echo $this->Html->image('products/image/' . $product['Product']['image'], array('url' => array('subdomain' => $product['User']['slug'], 'controller' => 'products', 'action' => 'view', 'id' => $product['Product']['id'], 'slug' => $product['Product']['slug']), 'alt' => $product['Product']['name'], 'class' => 'img-polaroid img180')); ?><?php */?>
                     
-                        <div class="item-details">
+                        <div class="item-recipe-details">
                         
                          <!-- Name -->
             <!-- Use the span tag with the class "ico" and icon link (hot, sale, deal, new) -->
-            <h5><?php echo $recipe['Recipe']['name']; ?></a><!--<span class="ico"><img src="img/hot.png" alt="" /></span>--></h5>
+            <?php echo $recipe['Recipe']['name']; ?></a><!--<span class="ico"><img src="img/hot.png" alt="" /></span>-->
             
             <div class="clearfix"></div>
                         
