@@ -10,7 +10,7 @@
     <h3 class="gb-heading center">
     <?php echo $user['User']['name']; ?></h3>
     
-    <div class="section-subheading">Our Recipes</div>
+    <div class="section-subheading" style="height:400px;overflow:scroll">Our Recipes</div>
     
     <hr class="recipe-divider" />
  
