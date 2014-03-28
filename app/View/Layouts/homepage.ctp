@@ -118,7 +118,7 @@
 						?>
 					<div class="feature-product-name"> 
 						<!--<a href="/product/<?php //echo ($product['Product']['id'].'-'.$product['Product']['slug']);?>">--> 
-						<?php echo $this->Text->truncate($gift_product['Product']['name'], 36, array('ellipsis' => '...', 'exact' => 'false')); ?> </a> </div>
+						<?php echo $this->Text->truncate($gift_product['Product']['name'], 32, array('ellipsis' => '...', 'exact' => 'false')); ?> </a> </div>
 					<div class="feature-price">$<?php echo $gift_product['Product']['price']; ?></div>
 					<?php $i++; ?>
 				</div>
@@ -148,7 +148,7 @@
 						?>
 					<div class="feature-product-name"> 
 						<!--<a href="/product/<?php //echo ($product['Product']['id'].'-'.$product['Product']['slug']);?>">--> 
-						<?php echo $this->Text->truncate($us_product['Product']['name'], 36, array('ellipsis' => '...', 'exact' => 'false')); ?> </a> </div>
+						<?php echo $this->Text->truncate($us_product['Product']['name'], 32, array('ellipsis' => '...', 'exact' => 'false')); ?> </a> </div>
 					<div class="feature-price">$<?php echo $us_product['Product']['price']; ?></div>
 					<?php $i++; ?>
 				</div>
@@ -178,7 +178,7 @@
 						?>
 					<div class="feature-product-name"> 
 						<!--<a href="/product/<?php //echo ($product['Product']['id'].'-'.$product['Product']['slug']);?>">--> 
-						<?php echo $this->Text->truncate($intl_product['Product']['name'], 36, array('ellipsis' => '...', 'exact' => 'false')); ?> </a> </div>
+						<?php echo $this->Text->truncate($intl_product['Product']['name'], 32, array('ellipsis' => '...', 'exact' => 'false')); ?> </a> </div>
 					<div class="feature-price">$<?php echo $intl_product['Product']['price']; ?></div>
 					<?php $i++; ?>
 				</div>

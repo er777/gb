@@ -251,7 +251,7 @@ span.special.nolink {
 	margin: 10px auto;
 	max-height: 270px;
 	max-width: 250px;
-	min-height: 250px;
+	min-height: 242px;
 	padding: 10px 10px;
 	transition: box-shadow 1s ease;
  }
@@ -362,7 +362,7 @@ div.recipe-name, div.recipe-name p, div.recipe-name a {
  
 div.price {
 	color: #7F131F;
-	font-size: 14px;
+	font-size: 11px;
 	margin-right: 10px;
 	position: relative;
 	text-align: right;
@@ -497,8 +497,8 @@ span.description {font-size: 11px;}
 	font-weight: 600;
  }
  
-.img-polaroid {
-	max-width: 120%;
+.img-border {
+	border:#EFEFEF 1px solid;
 	padding: 5px;
  }
  
@@ -978,7 +978,7 @@ h3.cat-list {
  }
  
 .awning img {
-	width: 98.1%;
+	
 } 
 
 #awning-logo {
@@ -1055,6 +1055,16 @@ h3.cat-list {
 	text-align: left;
  }
  
+ 
+#left-sidebar {
+	border: #cccccc 1px solid;
+	padding: 8px;
+}
+
+	#left-sidebar a {
+		font-size:12px;
+	}
+ 
 #sidebar-title {
 	-moz-border-radius-topleft: 7px;
 	-moz-border-radius-topright: 7px;
@@ -1071,6 +1081,23 @@ h3.cat-list {
 	height: 600px;
 	overflow-y: scroll;
  }
+
+
+.btn-gb {
+	font-size: 13px; 
+ }
+ 
+.gb-nav {
+	font-family:PT Sans, sans-serif;
+	
+}
+   #left-sidebar a.gb-nav { 
+		font-size:16px;
+		margin-bottom:5px;
+		display:block;
+		color:#39332b;
+   }
+
  
 .left-sidebar {
 	background: url(../img/global/region-title-bkgnd.png) top left no-repeat;
@@ -1214,7 +1241,7 @@ blockquote {
  
 .vendor-sidebar-pics img {
 	margin-bottom: 20px;
-	width: 260px;
+	width: 100%;
  }
  
 /** Product Image Viewer **/
@@ -2481,4 +2508,7 @@ form .checkbox {display: inline;}
  
 .cc {margin-bottom: 30px;}
  
- 
+
+
+
+

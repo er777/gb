@@ -40,11 +40,9 @@
  
     	<div id="left-sidebar">   
         
-        	
-   
-       <hr />
+
        
-           <a class="gb-nav" href="/">All Our Products</a>
+           <a class="gb-nav" href="/">ALL OUR PRODUCTS</a>
            
 			<?php if (($user['User']['id']) == 11) : ?>
 			
@@ -175,18 +173,16 @@
             <?php if(isset($brands['brand'][1]))
         {
         //Code here
-		?><h1>fff</h2> <?php
+		?><?php
         }
            ?> 
             
     
-			<?php if(!empty($brands)) : ?>
-			
-		
+			<?php if (($user['User']['id']) == 11) : ?>
 
 
-			<a class="gb-nav" href="/">All Our Brands</a><br />
-			
+
+			<a class="gb-nav" href="/">All Our Brands</a>			
 					
 				<div style="overflow-y:scroll;height:150px">
 					
@@ -201,7 +197,7 @@
 
 				</div>
                 
-                
+                <hr />
 
 			<?php endif; ?>
 			
@@ -210,7 +206,7 @@
 		<div style="clear:both"></div>
     
     
-    <hr />
+
     
  	 
     
@@ -357,11 +353,11 @@
 			<div class="vendor-sidebar-pics">
 
 				<?php if(!empty($user['User']['image_1'])) :
-							echo $this->Html->image('users/image_1/' . $user['User']['image_1'], array('class' => 'img-polaroid'));
+							echo $this->Html->image('users/image_1/' . $user['User']['image_1'], array('class' => 'img-border'));
 						endif ?>
 
 				<?php if(!empty($user['User']['image_2'])) :
-							echo $this->Html->image('users/image_2/' . $user['User']['image_2'], array('class' => 'img-polaroid'));
+							echo $this->Html->image('users/image_2/' . $user['User']['image_2'], array('class' => 'img-border'));
 						endif ?>
 	
 	

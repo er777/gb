@@ -112,8 +112,8 @@ hr {
 .container.wrapper {}
  
 img {
-	border: 0px !important;
-	outline: 0 !important;
+	/*border: 0px !important;
+	outline: 0 !important;*/
 }
 
 .clearfix {clear: both;}
@@ -137,9 +137,21 @@ ul.gb-horiz-account {
 	
 }
 
-li.social, li.search, li.cart {
+li.social, li.search {
 	display:inline;
 	margin-left:3px;
+}
+
+li.cart {
+	display:inline;
+	margin-left: 0px;
+	margin-top:10px;
+}
+
+button.cart, li.cart img {
+	border:none!important;
+	background-color:transparent;
+	
 }
 
 #ProductSearch {
@@ -163,8 +175,15 @@ li.gb-account {
 		font-weight: bold;
 	 }
  
-
-
+/*button.cart {
+   background: url(../img/global/cart.png) no-repeat bottom;
+   background-color: rgba(0, 0, 0, 0);
+   width: 40px;
+   height: 29px;
+   cursor: pointer;
+   border: none;
+}
+*/
 
 
 
@@ -328,11 +347,11 @@ h1.title-description {
 .feature-price {
 	position: absolute;
 	top: 0px;
-	right: -4px;
+	right: -1px;
 	width: 50px;
 	height: 50px;
-	padding-left: 14px;
-	padding-top: 5px;
+	padding-left: 10px;
+	padding-top: 7px;
 	font-size: 11px;
 	font-weight: 700;
 	background: url(../img/global/price-triangle.png) no-repeat;
