@@ -542,8 +542,18 @@ h1.title-description {
 
 
 
+/** PRODUCTS **/
+.card {
+	background-color:#393767;
+	padding-top:5px;
+	padding-bottom:5px;
+	margin-bottom:3px;
+}
 
-
+	.card a {
+		color:#fff;
+		clear:none;
+	}
 
 
 

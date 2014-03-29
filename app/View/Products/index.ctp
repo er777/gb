@@ -15,6 +15,16 @@
 	}
 </style>
 
+<script>
+	$('#story_content').bPopup({
+            modalClose: false,
+            opacity: 0.6,
+            positionStyle: 'fixed' //'fixed' or 'absolute'
+        });
+                </script>
+
+
+
 <?php
 	$cat_crumb ="";
 	$subcat_crumb ="";
@@ -214,15 +224,15 @@
 			
 
 			<!-- Vendor Story -->
-			<div id="story_content" style="display:none;color:#000;width:960px;background-color:#fff;padding:20px;">
+			<div id="story_content" style="display:none;color:#000;width:80%;background-color:#fff;padding:20px;">
 				<span class="b-close btn-gb"><span>X</span></span>
 	
 				<div class="row">
-					<div class="col-md-4 left-corner-air">
+					<div class="col-md-4 col-sm-4 left-corner-air">
 						<?php echo $this->Html->image('users/image/' . $user['User']['image'], array('class' =>'frame vendor-article-logo')); ?>
 					</div>
 	
-					<div class="col-md-6 quote-air">
+					<div class="col-md-6 col-sm-6 quote-air">
 	
 							<div class="vendor-special vendor-css">
 								<blockquote>
@@ -243,7 +253,7 @@
 	
 				<div class="row">
 	
-					<div class="col-md-8 vendor-block">
+					<div class="col-md-8 col-sm-8 vendor-block">
 	
 						<div id="vendor-group">
 	

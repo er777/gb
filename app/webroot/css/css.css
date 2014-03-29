@@ -1184,7 +1184,7 @@ img.vendor-article-logo {width: 280px;}
 	padding-top: 20px;
 	position: relative;
 	text-align: left;
-	width: 500px;
+	max-width:90%
  }
  
 .quote-air {
