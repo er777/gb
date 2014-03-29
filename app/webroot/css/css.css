@@ -25,19 +25,22 @@ img.frame {
  }
  
  .vendor-logo.view {
-	 right: 31%;
+	 right: 40%;
  }
  
  
 	.vendor-logo img {
 		border: 5px solid #DBD4C9;
-		height: 78px;
+		
 	 }
 	 
-	 .vendor-logo.view img {
-		width:64%;
-		height:64%;
+	 .vendor-logo.view {
+		width:140px;		
 	 }
+	 .vendor-logo.view  img {
+		width:100%; 
+	 }
+	 
  
 	.vendor-logo .name {
 		font-size: 21px;
