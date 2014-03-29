@@ -24,9 +24,19 @@ img.frame {
 	z-index: 100;
  }
  
+ .vendor-logo.view {
+	 right: 31%;
+ }
+ 
+ 
 	.vendor-logo img {
 		border: 5px solid #DBD4C9;
 		height: 78px;
+	 }
+	 
+	 .vendor-logo.view img {
+		width:64%;
+		height:64%;
 	 }
  
 	.vendor-logo .name {
@@ -71,6 +81,13 @@ img.frame {
 			color: #000;
 			font-weight: bold;
 		 }
+		 
+		 
+.breadcrumbs {
+	margin-left:0px;
+	margin-right:0px;
+}
+		 
  
 /**Category Breadcrumbs **/
 .categories {background: #649d78;}
@@ -355,6 +372,7 @@ div.product-name, div.product-name p, div.product-name a,
  
 div.recipe-name, div.recipe-name p, div.recipe-name a {
 	font-size: 11px;
+	font-weight:bold;
 	line-height: 14px;
 	margin: 0px;
 	padding: 0px;
@@ -978,6 +996,14 @@ h3.cat-list {
 	margin-left:15px;
 	position: relative;
  }
+ 
+.awning.view {
+	margin-left:0px;
+}
+
+.awning.view #awning1 {
+	width:100%;
+}
  
 .awning img {
 	

@@ -564,6 +564,7 @@ class ProductsController extends AppController {
 				'Product.new',
 				//'Brand.name',
 				'User.slug',
+				'User.name',
 				'User.more',
 			),
 			'limit' => 40,
