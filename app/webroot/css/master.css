@@ -543,15 +543,22 @@ h1.title-description {
 
 
 /** PRODUCTS **/
+
+.upper-item {
+	padding:10px;
+	height:165px;
+}
+
 .card {
-	background-color:#393767;
-	padding-top:5px;
-	padding-bottom:5px;
-	margin-bottom:3px;
+	background-color:#eae7e2;
+	padding: 5px 7px 5px 7px;
+	height:57px;
+	position:relative;
+	
 }
 
 	.card a {
-		color:#fff;
+		color:#349279;
 		clear:none;
 	}
 
