@@ -1007,9 +1007,11 @@ h3.cat-list {
 	width:100%;
 }
  
-.awning img {
-	
-} 
+.awning.tradition img,
+ .awning.us-tradition img {
+	position: relative;
+	width: 98.1%;
+}
 
 #awning-logo {
 	left: 232px;

@@ -35,7 +35,7 @@
 	<!-- Main Content -->
 	<div class="col-md-9 col-sm-9">
 		<!-- Banner -->
-		<div class="awning"> 
+		<div class="awning us-tradition"> 
 		   
 			<?php if (($ustradition['Ustradition']['banner'])) :
 					echo $this->Html->image('/img/us-traditions/banner/'. $ustradition['Ustradition']['banner']);
@@ -46,7 +46,7 @@
 		</div>
 		
 		<!-- Breadcrumb -->
-		<ul class="breadcrumb"></ul>
+		<!--<ul class="breadcrumb"></ul>-->
 		
 		<div class="clearfix"></div>
 		
