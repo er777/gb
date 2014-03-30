@@ -18,6 +18,11 @@ class RecipesController extends AppController {
 		$this->loadModel('User');
 		$user = $this->User->find('first', array(
 			'recursive' => -1,
+			'fields' => array(
+				'User.name',
+				'User.slug',
+				'User.image',
+			),
 			'conditions' => array(
 				'User.slug' => $subDomain,
 			)
@@ -61,7 +66,10 @@ class RecipesController extends AppController {
 			),
 			'fields' => array(
 				'Recipescategory.slug',
-				'Recipescategory.name'
+				'Recipescategory.name',
+				'User.name',
+				'User.slug',
+				
 			),
 			'conditions' => array(
 				'Recipe.active' => 1,
@@ -156,7 +164,7 @@ class RecipesController extends AppController {
 				'Recipescategory.name' => 'ASC',
 				'Recipe.name' => 'ASC'
 			),
-			'limit' => 20
+			'limit' => 24
 		);
 		$recipes = $this->paginate();
 		$this->set(compact('recipes'));

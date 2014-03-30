@@ -2,13 +2,13 @@
 
    <div class="span3">
 		<span class="vendor-logo">
-			<a href="/"> <?php echo $this->Html->image('users/image/' . $user['User']['image'], array('class' => 'img-polaroid','width' =>'210px')); ?></a>
+			<a href="/"> <?php echo $this->Html->image('users/image/' . $user['User']['image'], array('width' =>'210px')); ?></a>
         </span>
 	</div>
 </div>
 
 <div class="row" style="margin-top:25px">
-   <div class="span6">
+   <div class="col-md-6">
       <h2 class="gb-heading">
       <?php echo $user['User']['name']; ?> Recipes
       </h3>

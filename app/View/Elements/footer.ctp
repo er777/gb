@@ -7,11 +7,11 @@
 
 		<div class="row">
 
-			<div class="span12">
+			<div class="col-md-12">
 	
 				<div class="row">
 	
-					<div class="span12 footer-links">
+					<div class="footer-links">
 							<a class="first-link" href="/details/view/1">ABOUT</a>
 							<a href="/details/view/3">FAQ</a>
 							<a href="/">TERMS OF USE</a>
