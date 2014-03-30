@@ -57,54 +57,13 @@ $(document).ready(function() {
 
 
 
-<div class="row">
+<div class="row product">
 
-	<?php
-	$i = 0;
-	foreach ($recipes as $recipe):
-		
-	?>
-        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
-        
-            <div class="item-recipe">
-            
-            	<div class="item-recipe-image">
-                
-				<?php echo '<a href="http://' . $recipe['User']['slug'] . '.' . Configure::read('Settings.DOMAIN') . '/recipe/' . $recipe['Recipe']['slug'] . '">'; ?>
-					<span class="small"><?php echo $recipe['Recipescategory']['name']; ?></span>
-                    
-                    
-                        <?php echo $this->Html->image('/img/recipes/image_1/' . $recipe['Recipe']['image_1'] , array('width' => 200, 'height' => 200, 'alt' => $recipe['Recipe']['name'], )); ?>
-                    
-                    
-						<?php /*?><?php echo $this->Html->image('products/image/' . $product['Product']['image'], array('url' => array('subdomain' => $product['User']['slug'], 'controller' => 'products', 'action' => 'view', 'id' => $product['Product']['id'], 'slug' => $product['Product']['slug']), 'alt' => $product['Product']['name'], 'class' => 'img-polaroid img180')); ?><?php */?>
-                    
-                        <div class="item-recipe-details">
-                        
-                         <!-- Name -->
-            <!-- Use the span tag with the class "ico" and icon link (hot, sale, deal, new) -->
-            <?php echo $recipe['Recipe']['name']; ?></a><!--<span class="ico"><img src="img/hot.png" alt="" /></span>-->
-            
-            <div class="clearfix"></div>
-                        
-                        
-                            <?php /*?><!--<a href="/product/<?php echo ($product['Product']['id'].'-'.$product['Product']['slug']);?>"> <?php echo $this->Text->truncate($product['Product']['name'], 40, array('ellipsis' => '...', 'exact' => 'false')); ?>
-                            </a>--><?php */?>
-                        </div>
-                        
-                    </div>
-                    
-                   </a> 
-                
-                  
-            </div>
+	   <!-- Include Recipes element --> 
+   <?php echo $this->element('recipes'); ?>
+
     
-        </div>
-        
-	<?php
-	
-	endforeach;
-	?>
+    
 </div>
 
 <br />

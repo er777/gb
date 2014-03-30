@@ -33,7 +33,9 @@
 
 
 body {
-	background: url(../img/global/sun.jpg) center top no-repeat;
+	background-image: url(../img/global/sun.jpg);
+	background-position:center top;
+	background-repeat:no-repeat;
 	background-color: #f7f1e5;
 	border-top: none;
 	color: #444;
@@ -105,7 +107,7 @@ hr {
  
 .center {text-align: center;}
  
-.small {font-size: 13px;}
+.small {font-size: 11px;}
  
 .red {color: #c00;}
  
@@ -549,12 +551,15 @@ h1.title-description {
 	height:165px;
 }
 
-.card {
+.card, .recipe-card {
 	background-color:#eae7e2;
-	padding: 5px 7px 5px 7px;
-	height:57px;
+	
 	position:relative;
 	
+}
+.card {	
+	height:57px;
+	padding: 5px 7px 5px 7px;
 }
 
 	.card a {
@@ -564,6 +569,18 @@ h1.title-description {
 
 
 
+.recipe-card {
+	height:43px;
+	padding: 5px 10px 5px 10px;
+}
+
+
+
+/** RECIPES **/
+
+.item-recipe-image {
+	height:115px;
+	}
 
 
 /* Footer */
