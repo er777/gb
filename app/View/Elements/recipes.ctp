@@ -1,4 +1,3 @@
-
 <?php
 	$i = 0;
 	foreach ($recipes as $recipe):

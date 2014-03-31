@@ -9,16 +9,16 @@
 <!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Rosario:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Oregano:400,400italic' rel='stylesheet' type='text/css'>-->
+
+<link href='http://fonts.googleapis.com/css?family=Rosario:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
-
-
-
 
 
 <!-- Stylesheets -->
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
 
-<?php echo $this->Html->css(array('master.css','mega-menu.css','mega-menu-responsive.css')); ?> 
+<?php echo $this->Html->css(array('master.css','mega-menu.css','mega-menu-responsive.css')); ?>  <!-- 'bootstrap-responsive.min.css', -->
 
 
 <!--/,'mega-menu.css','mega-menu-responsive.css','prettyPhoto.css' -->
@@ -33,6 +33,12 @@
 <!--[if lt IE 9]>
   <script src="js/html5shim.js"></script>
   <![endif]-->
+  
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
+
+<?php echo $this->Html->script(array('bootstrap.min.js','twitter-bootstrap-hover-dropdown.js','homepage.js','jquery.bpopup-0.9.3.min.js')); ?>
+
 
 <!--'jquery.marquee.min.js' -->
 <?php //echo $this->App->js(); ?>
@@ -63,6 +69,17 @@
             novices to professionals and young to old, expand their tastes, techniques and pantries to enjoy the delicious bounties <a href="#" id="welcome">(more) ...</a></p>
 	</div>
     
+    <div id="welcome_content"> <span class="b-close btn-gb"><span>X</span></span>
+        <h2 style="text-align:center;font-size:25px">The Marketplace to Explore and Experience Global Cuisines and Cultures</h2>
+        <hr />
+        <div style="text-align:center;position:relative">
+            <div id="welcome-bkngd"> <img src="/img/homepage/markets.png" width="704" height="657">
+        </div>
+            <?php echo $welcome['Content']['body']; ?>
+        </div>
+    </div>
+
+
     <div class="container feature-wrapper">
 
 			<div id="upper">
@@ -227,82 +244,44 @@
 
 
 <?php echo $this->element('footer'); ?>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
+
 <?php echo $this->Html->script(array('bootstrap.min.js')); ?> <!-- ,'homepage.js','jquery.bpopup-0.9.3.min.js','twitter-bootstrap-hover-dropdown.js','fitvid.js' --> 
 <!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
 --> 
-<!--'jquery.marquee.min.js' -->
-<?php //echo $this->App->js(); ?>
-<?php //echo $this->fetch('meta'); ?>
-<?php //echo $this->fetch('css'); ?>
-<?php //echo $this->fetch('script'); ?>
+
+
+
 <script>
-
-
-// Ticker
-
-/**
- * Example of starting a plugin with options.
- * I am just passing all the default options
- * so you can just start the plugin using $('.marquee').marquee();
-*/
-	//$('.marquee').marquee({
-		//speed in milliseconds of the marquee
-	//	speed: 8000,
-		//gap in pixels between the tickers
-	//	gap: 50,
-		//gap in pixels between the tickers
-	//	delayBeforeStart: 0,
-		//'left' or 'right'
-	//	direction: 'left'
-	//});
-	
-
-//$("ul#ticker01").liScroll({travelocity: 0.10});
-
-</script> 
-<script>
-	
-	
-	$(document).ready(function() {
+    
+    $(document).ready(function() {
 		
-	// Drop Down Hover!	
-		
-	//  $('.js-activated').dropdownHover(true);
-	  
-	  //Columnizer
-	   // $(function(){
-	   // $('.wide').columnize({width:250});
-		//$('.thin').columnize({width:200});
-   // });
-	
-	 // Welcome
-	 $(function() {
-	 
-		$('#welcome').on('click', function(e) {
-			e.preventDefault();
-			$('#welcome_content').bPopup();
-	});
+	// Drop Down Hover!
+	//$('.js-activated').dropdownHover(true);
+      
+     
+	// Welcome
+	$(function() {
+     
+        $('#welcome').on('click', function(e) {
+            e.preventDefault();
+            $('#welcome_content').bPopup();
+    });
 });	
 
 		// Google Analytics
-	  //(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-//	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-//	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-//	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-//	
-//	  ga('create', 'UA-40855494-1', 'gourmetworldmarket.com');
-//	  ga('send', 'pageview');
 
-// Heat map - Crazy Egg 
-		//setTimeout(function(){var a=document.createElement("script");
-//		var b=document.getElementsByTagName("script")[0];
-//		a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0019/3794.js?"+Math.floor(new Date().getTime()/3600000);
-//		a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+  ga('create', 'UA-43074664-1', 'gourmetworldmarket.com');
+  ga('send', 'pageview');
 
 	
 });
+
 </script>
+
 </body>
 </html>

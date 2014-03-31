@@ -1,4 +1,4 @@
-	 <?php //if (($description == 'unloaded') && ($serv == 'unloaded') && ($recipes == 'unloaded') &&  ($recipes == 'unloaded') && ($nutrition == 'loaded')) :
+<?php //if (($description == 'unloaded') && ($serv == 'unloaded') && ($recipes == 'unloaded') &&  ($recipes == 'unloaded') && ($nutrition == 'loaded')) :
 										//$value3 = 'active';
 									//endif; ?>
 	 <?php //if ( !empty($nuts) //&& $product['Product']['vitamin_a_p'] !== ''

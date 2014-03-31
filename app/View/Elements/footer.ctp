@@ -23,7 +23,8 @@
 	
 				</div>
 	
-				<!--<span style="font-size:11px" >&copy; <?php echo date('Y'); ?> <?php echo env('HTTP_HOST'); ?></span>-->
+				<!--<span style="font-size:11px" >&copy;
+<?php echo date('Y'); ?> <?php echo env('HTTP_HOST'); ?></span>-->
 	
 			</div>
 
@@ -41,7 +42,7 @@
 		<div class="row">
 
 
- <?php echo $this->element('sql_dump');?>
+<?php echo $this->element('sql_dump');?>
 
 </div>
 </div>

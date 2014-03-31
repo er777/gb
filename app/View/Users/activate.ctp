@@ -1,1 +1,1 @@
- <?php echo $this->element('activate', array(), array('plugin' => 'SignMeUp')); ?>
+<?php echo $this->element('activate', array(), array('plugin' => 'SignMeUp')); ?>

@@ -55,5 +55,3 @@ $(document).ready(function() {
 <?php echo $this->element('pagination-counter'); ?>
 
 <?php echo $this->element('pagination'); ?>
-
-

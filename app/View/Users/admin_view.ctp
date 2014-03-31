@@ -460,7 +460,3 @@
         'file' => $user['User']['image_6'],
     )); ?>
 <?php endif; ?>
- 
-
-
-
