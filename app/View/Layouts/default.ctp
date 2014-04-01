@@ -11,7 +11,7 @@
 <!--<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>-->
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
 
-<?php echo $this->Html->css(array('css.css','master.css','mega-menu.css','mega-menu-responsive.css','cakephp_tag_cloud.css')); ?>
+<?php echo $this->Html->css(array('css.css','master.css','responsive.css','mega-menu.css','mega-menu-responsive.css','cakephp_tag_cloud.css')); ?>
 
 <!-- CSS -->
 

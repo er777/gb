@@ -1,13 +1,14 @@
 <!-- Global File -->
 <header>
+
+			
        <div class="page container masthead">
 	   
-	    
-       
-           <div class="row">
-		   
+	           
+			<div class="row">
+           
                <!-- Search -->
-               <div class="col-md-3 col-md-offset-6 search"> 
+               <div class="col-lg-md-3 col-md-3 col-sm-md-3 col-xs-md-3 col-md-offset-6 search"> 
                    
                <!-- Search Box --> 
 <?php echo $this->Form->create('Product', array('type' => 'GET', 'class' => 'navbar-form', 'url' => array('controller' => 'products', 'action' => 'search'))); ?> <?php echo $this->Form->input('search', array('label' => false, 'div' => false, 'autocomplete' => 'on')); ?>
@@ -19,7 +20,7 @@
                
                <!-- Other -->
                <div class="col-md-3 header-tools"> 
-                   <ul class="gb-horiz-account">
+                   <ul class="gwm-horiz-account">
                        <li class="cart">
                            <button class="cart" type="submit">
                            <a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/shops/cart"></i><img src="/img/global/cart.png" width="40" height="29" alt="cart"></a>
@@ -28,8 +29,8 @@
                        <li class="social"><a href="https://www.facebook.com/pages/Gourmet-Basket/603379453015040"><img src="/img/global/fb.png" width="28" height="27" alt="facebook"></a></li>
                        <li class="social"><a href="https://twitter.com/search/users?q=gourmetbasket1"><img src="/img/global/tw.png" width="28" height="27"></a></li>
                        <li class="social"><a href="http://pinterest.com/gourmetbasket1/"><img src="/img/global/pin.png" width="27" height="27" alt="pinterest"></a></li>
-                       <!--<li class="gb-account"><a href="/members/register">BECOME A MEMBER</a></li>--> 
-                       <!-- <li class="gb-account"><a href="/members/login">LOG IN</a></li>-->
+                       <!--<li class="gwm-account"><a href="/members/register">BECOME A MEMBER</a></li>--> 
+                       <!-- <li class="gwm-account"><a href="/members/login">LOG IN</a></li>-->
                    </ul>
                    
                    <!--<div class="hlinks">-->

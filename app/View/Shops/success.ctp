@@ -19,7 +19,7 @@ h2 {
 <p>We look forward to seeing you again soon.</p>
 <br />
 
-<img src="/img/users/logos/GB-logo-final-100.png" width="125" height="100" />
+<img src="/img/users/logos/gwm-logo-final-100.png" width="125" height="100" />
 <br />
 
 

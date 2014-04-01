@@ -1,7 +1,7 @@
 <?php echo $this->set('title_for_layout', 'Order Review'); ?><?php echo $this->Html->script(array('shops_review.js'), array('inline' => false)); ?>
 
 <div class="row" style="margin-top:20px">
-	<h1 class="gb-heading cart">Order Review</h1>
+	<h1 class="gwm-heading cart">Order Review</h1>
 	<div class="col-md-4 earth20"> <span class="bold">Name: </span><?php echo $shop['Order']['first_name'];?>&nbsp;<?php echo $shop['Order']['last_name'];?><br />
 		<span class="bold">Email: </span><?php echo $shop['Order']['email'];?><br />
 		<span class="bold">Phone: </span><?php echo $shop['Order']['phone'];?><br />
@@ -118,7 +118,7 @@
 				<br />
 				<?php echo $this->Form->create('Ship'); ?>
 				<?php foreach ($shop['Users'] as $key => $value): ?>
-				<div class="col-md-3 gb-ship">
+				<div class="col-md-3 gwm-ship">
 					<?php if(count($value['Shippingfees']) > 1): ?>
 					<strong><?php echo $shop['Users'][$key]['name']; ?></strong>
 					<?php $optionship = array(); ?>

@@ -34,7 +34,7 @@
 <div class="row">
 
 	<!--Sidebar -->
-	<div class="col-md-3 col-sm-3 hidden-xs">
+	<div class="col-md-3 col-sm-3" >
     
        <div id="sidebar-title" class="vendor-css">
    
@@ -52,7 +52,7 @@
         
 
        
-           <a class="gb-nav" href="/">ALL OUR PRODUCTS</a>
+           <a class="gwm-nav" href="/">ALL OUR PRODUCTS</a>
            
 			<?php if (($user['User']['id']) == 11) : ?>
 			
@@ -63,7 +63,7 @@
 
    
    
-           <?php if(!empty($category)) : ?><br /><span class="gb-nav"><img src="/img/global/dash-2.png"></span>
+           <?php if(!empty($category)) : ?><br /><span class="gwm-nav"><img src="/img/global/dash-2.png"></span>
    
                <?php echo $this->Html->link($category['Category']['name'], array('controller' => 'products', 'action' => 'category', $category['Category']['slug'])); ?>
    
@@ -73,14 +73,14 @@
            <?php endif; ?>
    
            <?php if(!empty($subcategory)) : ?>
-               <br /><span class="gb-nav"><img src="/img/global/dash-4.png"></span><?php echo $this->Html->link($subcategory['Subcategory']['name'], array('controller' => 'products', 'action' => 'category', $category['Category']['slug'], $subcategory['Subcategory']['slug'])); ?>
+               <br /><span class="gwm-nav"><img src="/img/global/dash-4.png"></span><?php echo $this->Html->link($subcategory['Subcategory']['name'], array('controller' => 'products', 'action' => 'category', $category['Category']['slug'], $subcategory['Subcategory']['slug'])); ?>
    
                <?php $subcat_crumb = $subcategory['Subcategory']['name']?>
    
            <?php endif; ?>
    
            <?php if(!empty($subsubcategory)) : ?>
-               <br /><span class="gb-nav"><img src="/img/global/dash-7.png"></span><?php echo $this->Html->link($subsubcategory['Subsubcategory']['name'], array('controller' => 'products', 'action' => 'category', $category['Category']['slug'], $subcategory['Subcategory']['slug'], $subsubcategory['Subsubcategory']['slug'])); ?>
+               <br /><span class="gwm-nav"><img src="/img/global/dash-7.png"></span><?php echo $this->Html->link($subsubcategory['Subsubcategory']['name'], array('controller' => 'products', 'action' => 'category', $category['Category']['slug'], $subcategory['Subcategory']['slug'], $subsubcategory['Subsubcategory']['slug'])); ?>
    
                <?php $subsubcat_crumb = $subsubcategory['Subsubcategory']['name']?>
    
@@ -98,7 +98,7 @@
                    <?php if ($subsubcat_crumb !== $subsubcategory['Subsubcategory']['name']) : ?>
    
    
-                       <span class="gb-nav"><img src="/img/global/dash-7.png"></span><?php echo $this->Html->link($subsubcategory['Subsubcategory']['name'], array('controller' => 'products', 'action' => 'category', $subsubcategory['Category']['slug'], $subsubcategory['Subcategory']['slug'], $subsubcategory['Subsubcategory']['slug'])); ?><br />
+                       <span class="gwm-nav"><img src="/img/global/dash-7.png"></span><?php echo $this->Html->link($subsubcategory['Subsubcategory']['name'], array('controller' => 'products', 'action' => 'category', $subsubcategory['Category']['slug'], $subsubcategory['Subcategory']['slug'], $subsubcategory['Subsubcategory']['slug'])); ?><br />
    
                   <?php endif ; ?>
    
@@ -119,7 +119,7 @@
                            <?php if ($subcat_crumb !== $subcategory['Subcategory']['name']) : ?>
                        <?php //endif; ?>
    
-                           <span class="gb-nav"><img src="/img/global/dash-4.png"></span><?php echo $this->Html->link($subcategory['Subcategory']['name'], array('controller' => 'products', 'action' => 'category', $category['Category']['slug'], $subcategory['Subcategory']['slug'])); ?><br />
+                           <span class="gwm-nav"><img src="/img/global/dash-4.png"></span><?php echo $this->Html->link($subcategory['Subcategory']['name'], array('controller' => 'products', 'action' => 'category', $category['Category']['slug'], $subcategory['Subcategory']['slug'])); ?><br />
    
                        <?php //if(!empty($subcat_crumb)) : ?>
                            <?php endif; ?>
@@ -136,7 +136,7 @@
                <?php if(!empty($usercategories)) : ?>
    
                    <?php foreach ($usercategories as $usercategory): ?>
-                   <span class="gb-nav"><img src="/img/global/dash-2.png"></span>
+                   <span class="gwm-nav"><img src="/img/global/dash-2.png"></span>
    
    
                    <?php echo $this->Html->link($usercategory['Category']['name'], array('controller' => 'products', 'action' => 'category', $usercategory['Category']['slug'])); ?><br />
@@ -192,7 +192,7 @@
 
 
 
-			<a class="gb-nav" href="/">All Our Brands</a>			
+			<a class="gwm-nav" href="/">All Our Brands</a>			
 					
 				<div style="overflow-y:scroll;height:150px">
 					
@@ -200,7 +200,7 @@
 
 				<?php foreach ($brands as $brnd): ?> 
 			
-					<span class="gb-nav"><img src="/img/global/dash-2.png"></span>
+					<span class="gwm-nav"><img src="/img/global/dash-2.png"></span>
 					<?php echo $this->Html->link($brnd['Brand']['name'], array('controller' => 'products', 'action' => 'brand', $brnd['Brand']['slug'])); ?><br />
 
 				<?php endforeach; ?>

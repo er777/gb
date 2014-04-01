@@ -1,6 +1,6 @@
 
 
- <h2 class="gb-heading">Our Vendors</h2>
+ <h2 class="gwm-heading">Our Vendors</h2>
  <?php foreach($users as $user) : ?>
 
 <div class="row">
@@ -16,7 +16,7 @@
     </div>
     
     <div class="span8 offset1">
-		<div class="gb-heading vendors"><?php echo $user['User']['shop_quote']; ?></div>
+		<div class="gwm-heading vendors"><?php echo $user['User']['shop_quote']; ?></div>
     </div>
     
     

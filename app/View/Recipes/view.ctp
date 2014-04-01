@@ -9,7 +9,7 @@
          
             <div class="vendor-logo"> <a href="/"> <?php echo $this->Html->image('users/image/' . $user['User']['image'], array('width' =>'210px')); ?> </a> </div>
             
-            <h3 class="gb-heading center"> <?php echo $user['User']['name']; ?></h3>
+            <h3 class="gwm-heading center"> <?php echo $user['User']['name']; ?></h3>
             <div class="section-subheading">Our Recipes</div>
             <hr class="recipe-divider" />
             
@@ -29,7 +29,7 @@
             </div>
          </div>
          <div class="col-md-5 col-sm-5">
-            <h2 class="gb-heading recipes-heading"><?php echo $recipe['Recipe']['name']; ?></h2>
+            <h2 class="gwm-heading recipes-heading"><?php echo $recipe['Recipe']['name']; ?></h2>
             <hr class="recipe-divider" />
             <? //echo $recipe['Recipe']['slug']?>
             <p><?php echo $recipe['Recipe']['description']; ?> </p>

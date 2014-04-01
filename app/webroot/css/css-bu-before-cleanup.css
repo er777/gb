@@ -295,7 +295,7 @@ h1.vendor-title {
 	margin-top:33px;
 	width:38%;
 }
-ul.gb-horiz-account {
+ul.gwm-horiz-account {
 	list-style:none;
 	font-size: 70%;
 	font-family: Verdana, Geneva, sans-serif;
@@ -319,16 +319,16 @@ input[type="text"]#ProductSearch {
 	background-color:#dcded7;
 }
 
-li.gb-account {
+li.gwm-account {
 	display: inline;
 	padding-left: 15px;
 	list-style-image: none;
 }
-li.gb-account a {
+li.gwm-account a {
 	color: #d64c32; /*text-decoration: none;*/
 	font-weight: bold;
 }
-.col-md-4.gb-box-front {
+.col-md-4.gwm-box-front {
 	border: #C00 thin solid;
 	background-color: #444444;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f7f1e5)); /* Chrome, Safari 4+ */
@@ -686,15 +686,15 @@ div.price {
 	font-weight:bold;
 }
 
-.gb {
+.gwm {
 	margin-left: 0px;
 }
-.col-md-2.gb {
+.col-md-2.gwm {
 /*margin-left:0px;
 	margin-right:25px;
 	height:180px;	*/
 }
-.col-md-2.gb {
+.col-md-2.gwm {
 	margin-right: 0px;
 	margin-left: 25px;
 	width: 150px;
@@ -2216,8 +2216,8 @@ div.article-pic-container a.btn btn-inverse {
 	margin-bottom: 30px;
 }
 
-.article-tabs .tab-pane h4.gb-heading,
-div.tab-content article-tabs>div>h4.gb-heading{
+.article-tabs .tab-pane h4.gwm-heading,
+div.tab-content article-tabs>div>h4.gwm-heading{
 	margin-bottom: 20px;
 }
 
@@ -2341,7 +2341,7 @@ img.article-landing-pic {
 	-moz-box-shadow: 0px 0px 5px #F1F1F1;
 	box-shadow: 0px 0px 5px #F1F1F1;
 }
-.gb-heading.article {
+.gwm-heading.article {
 	color: #C00;
 	font-size: 120%;
 }
@@ -2473,7 +2473,7 @@ display:none;
 .loading {
 	background: url('loader.gif') center center no-repeat;
 }
-#story_content .gb-heading, #policy_content .gb-heading, #welcome_content .gb-heading, #vendor-article span.gb-heading {
+#story_content .gwm-heading, #policy_content .gwm-heading, #welcome_content .gwm-heading, #vendor-article span.gwm-heading {
 	margin-top: 20px;
 	color: #3F9179;
 	letter-spacing: 1px;
@@ -2486,53 +2486,53 @@ hr.article-divide {
 	margin-bottom:10px;
 }
 
-.gb-heading {
+.gwm-heading {
 	color: #3F9179;
 	letter-spacing: 1px;
 	font-size: 21px;
 	font-family: 'Oregano', cursive;
 }
-.gb-heading.red, .gb-heading.red a {
+.gwm-heading.red, .gwm-heading.red a {
 	color: #c00;
 }
 
-.gb-heading.red.title {
+.gwm-heading.red.title {
 	margin-top:10px;
 	margin-bottom:10px;
 	color: #c00;
 	font-size: 20px;
 }
 
-.gb-heading.list {
+.gwm-heading.list {
 	margin-bottom:4px;
 }
-h2.gb-heading {
+h2.gwm-heading {
 	color: #3F9179;
 	font-size: 28px;
 	font-family: 'Oregano', cursive;
 }
 
-h2.gb-heading.recipes-heading {
+h2.gwm-heading.recipes-heading {
 	margin-top:0px;
 }
 
-h2.gb-heading hr {
+h2.gwm-heading hr {
 	margin: 0px;
 }
 
-.gb-heading.dark {
+.gwm-heading.dark {
 	margin-left:40px;
 	color:#3a3a3a;
 }
 
-.gb-heading.red.tight {
+.gwm-heading.red.tight {
 	margin-top:0px;
 	margin-bottom:0px;
 	margin-left:40px;
 	color:#C00;
 }
 
-.gb-heading.vendors {
+.gwm-heading.vendors {
 	color:#3a3a3a;
 	font-size:19px;
 }
@@ -2588,7 +2588,7 @@ h2.gb-heading hr {
 	line-height:25px;
 }
 
-.gb-nav {
+.gwm-nav {
 	margin-top: 0px;
 	margin-bottom: 0px;
 	color: #C00;
@@ -2597,11 +2597,11 @@ h2.gb-heading hr {
 	font-family: 'Oregano', cursive;
 }
 
-a.gb-nav  {
+a.gwm-nav  {
 	text-decoration:underline;
 }
 
-.gb-nav-container hr {
+.gwm-nav-container hr {
 	margin: 12px 0;
 }
 
@@ -2625,14 +2625,14 @@ a.gb-nav  {
 	cursor:default;	
 }
 
-.gb-heading.uppercase {
+.gwm-heading.uppercase {
 	margin-bottom:15px;
 	vertical-align:top;
 	text-transform:uppercase;
 	line-height:24px;
 }
 
-h3.gb-heading.uppercase.category {
+h3.gwm-heading.uppercase.category {
 	margin-bottom:0px;
 }
 
@@ -2641,7 +2641,7 @@ hr.category {
 	margin-bottom:10px;
 }
 
-.gb-heading.category a {
+.gwm-heading.category a {
 	color:#c00;
 }
 
@@ -2730,7 +2730,7 @@ hr.category {
 	margin:0px;
 }
 
-div.gb-heading>div#populate-overlay-1>p>a,
+div.gwm-heading>div#populate-overlay-1>p>a,
 .art-list p a
  {
 	color:#c00;
@@ -2739,7 +2739,7 @@ div.gb-heading>div#populate-overlay-1>p>a,
 
 /** SHOPPING CART **/
 
-#shopping-cart  h1.gb-heading.cart {
+#shopping-cart  h1.gwm-heading.cart {
 	margin-top:0px;
 	padding-top:0px;
 }
@@ -2754,7 +2754,7 @@ div.gb-heading>div#populate-overlay-1>p>a,
 	max-height:35px;
 }
 
-.span3.gb-ship {
+.span3.gwm-ship {
 	float:left;
 
 	width: 200px;
@@ -2764,7 +2764,7 @@ div.gb-heading>div#populate-overlay-1>p>a,
 	margin-top:20px;
 }
 
-.gb-ship label {
+.gwm-ship label {
 	font-size:12px;
 }
 
@@ -2856,7 +2856,7 @@ hr.thin.tight {
 	
 }
 
-.gb-green {
+.gwm-green {
 	color:#3f9179;
 	font-weight:bold;
 }

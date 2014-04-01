@@ -121,7 +121,7 @@ ul {
  }
  
 hr {
-	border-bottom: 1px solid #FFF;
+	
 	border-top: 1px solid #CCC;
 	margin: 20px 0;
  }
@@ -143,17 +143,36 @@ img {
  
 .input.checkbox {padding-left: 5px;}
 
+.gwm-nav {
+	font-family: PT Sans, sans-serif;
+	font-size:16px;
+	font-weight:bold;
+	text-transform:uppercase;
+	padding-top:5px;
+	padding-bottom:5px;
+}
 
+#left-sidebar .gwm-nav a {
+	font-size:16px;
+}
 
 /** HEADER **/*
 
 .header-tools { margin-top:25px;}
 
+.hidden-logo {
+	display:none;
+}
+
+	.hidden-logo img {
+		height:70px;
+	}
+
 .search {
 	margin-top:31px;
 }
 
-ul.gb-horiz-account {
+ul.gwm-horiz-account {
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 70%;
 	list-style:none;
@@ -187,13 +206,13 @@ input[type="text"]#ProductSearch {
 	border-radius: 10px;
  }
  
-li.gb-account {
+li.gwm-account {
 	display: inline;
 	list-style-image: none;
 	padding-left: 15px;
  }
  
-	li.gb-account a {
+	li.gwm-account a {
 		color: #d64c32; /*text-decoration: none;*/
 		font-weight: bold;
 	 }
@@ -273,14 +292,25 @@ h1.title-description {
 	padding-top:20px;
 	width: 300px;
 }
+
 .carousel-caption p {
 	font-size: 175%;
 	font-family: 'Marydale Regular', san-serif;
 }
+
 .carousel-caption p a {
 	color: #fff;
 }
 
+
+.carousel-caption .vendor-name {
+	
+}
+
+.carousel-caption .vendor-info {
+	font-family: Open Sans, sans-serif;
+	font-size: 94%;
+}
 
 .carousel-inner {
 	max-width:94.8%;
@@ -299,6 +329,8 @@ h1.title-description {
 	top: 45%;
 	line-height: 35px;
 	font-size:70px;
+	color:#393767;
+
 }
 	.carousel-control.left {
 		left: -72px;
@@ -328,6 +360,8 @@ h1.title-description {
 	position:relative;
 	padding:3px;
 }
+
+
 
 .feature-recipe {
 	display:inline-block;
@@ -394,88 +428,6 @@ h1.title-description {
 
 
 
-
-
-/** RESPONSIVE - for Feature **/
-
-@media (min-width: 1200px) {
-  .col-md-12, .container {
-    	width: 1100px;
-  }
-  
-  .container.feature-block {
-		padding-left:2.5%;
-	}
-}
-
-
-
-@media (max-width: 1199px) {
-	.feature {
-		width:17.8%;
-	}
-	
-	.feature-product-name {
-		height: 34px;
-	}
-	
-	.container.feature-block {
-		padding-left:2.5%;
-	}
-}
-
-@media (max-width: 979px) {
-	
-	.feature {
-		width:17%;
-	}
-	
-	.container.feature-block {
-		padding-left:3.5%;
-	}
-
-
-	.feature-wrapper {
-		max-width:850px;
-	}
-
-	.feature {
-		width:17%;
-		height:10em;
-	}
-	
-	.feature-product-name {
-		width: 97%;
-		height: 52px;
-	}
-	
-	.carousel-title {
-		font-size:92%!important;
-	}
-
-
-}
-
-
-@media (max-width: 480px) {
-	
-	.feature {
-		width: 20.0%;
-		
-	}	
-	.feature-product-name {
-		width: 97%;
-		height: 84px;
-	}
-	
-	.feature-recipe-name {
-		width: 97%;
-		height: 26px;
-	}
-	.carousel-title {
-		font-size:45%;
-	}
-}
 
 
 
@@ -599,7 +551,7 @@ h1.title-description {
 
 
 .recipe-card {
-	height:43px;
+	height:54px;
 	padding: 5px 10px 5px 10px;
 }
 
@@ -645,44 +597,6 @@ h1.title-description {
 	padding-right:0px;
 }
 
-
-	
-@media (max-width: 480px){
-
-}
-		
-@media (max-width: 767px) { /**ER test **/
-	
-	.feature {
-		width: 20.0%;
-		
-	}	
-	.feature-product-name {
-		width: 97%;
-		height: 84px;
-	}
-	
-	.feature-recipe-name {
-		width: 97%;
-		height: 26px;
-	}
-	.carousel-title {
-		font-size:45%;
-	}
-
-	#account {
-		display:none;
-	}
-	
-}
-
-
-@media (max-width: 991px) {
-	.carousel-caption {
-		
-	}
-
-}
 
 
 

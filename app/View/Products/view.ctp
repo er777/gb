@@ -75,17 +75,17 @@ $(document).ready(function() {
 
          <?php if(!empty($category)) : ?>
          <br />
-         <span class="gb-nav"><img src="/img/global/dash-2.png"></span> <?php echo $this->Html->link($category['Category']['name'], array('controller' => 'products', 'action' => 'category', $category['Category']['slug'])); ?>
+         <span class="gwm-nav"><img src="/img/global/dash-2.png"></span> <?php echo $this->Html->link($category['Category']['name'], array('controller' => 'products', 'action' => 'category', $category['Category']['slug'])); ?>
          <?php $cat_crumb = $category['Category']['name']?>
          <?php endif; ?>
          <?php if(!empty($subcategory)) : ?>
          <br />
-         <span class="gb-nav"><img src="/img/global/dash-4.png"></span><?php echo $this->Html->link($subcategory['Subcategory']['name'], array('controller' => 'products', 'action' => 'category', $category['Category']['slug'], $subcategory['Subcategory']['slug'])); ?>
+         <span class="gwm-nav"><img src="/img/global/dash-4.png"></span><?php echo $this->Html->link($subcategory['Subcategory']['name'], array('controller' => 'products', 'action' => 'category', $category['Category']['slug'], $subcategory['Subcategory']['slug'])); ?>
          <?php $subcat_crumb = $subcategory['Subcategory']['name']?>
          <?php endif; ?>
          <?php if(!empty($subsubcategory)) : ?>
          <br />
-         <span class="gb-nav"><img src="/img/global/dash-7.png"></span><?php echo $this->Html->link($subsubcategory['Subsubcategory']['name'], array('controller' => 'products', 'action' => 'category', $category['Category']['slug'], $subcategory['Subcategory']['slug'], $subsubcategory['Subsubcategory']['slug'])); ?>
+         <span class="gwm-nav"><img src="/img/global/dash-7.png"></span><?php echo $this->Html->link($subsubcategory['Subsubcategory']['name'], array('controller' => 'products', 'action' => 'category', $category['Category']['slug'], $subcategory['Subcategory']['slug'], $subsubcategory['Subsubcategory']['slug'])); ?>
          <?php $subsubcat_crumb = $subsubcategory['Subsubcategory']['name']?>
          <?php endif; ?>
          <div style="clear:both"> 
@@ -95,7 +95,7 @@ $(document).ready(function() {
             <?php if(!empty($subsubcategories)) : ?>
             <?php foreach ($subsubcategories as $subsubcategory): ?>
             <?php if ($subsubcat_crumb !== $subsubcategory['Subsubcategory']['name']) : ?>
-            <span class="gb-nav"><img src="/img/global/dash-7.png"></span><?php echo $this->Html->link($subsubcategory['Subsubcategory']['name'], array('controller' => 'products', 'action' => 'category', $subsubcategory['Category']['slug'], $subsubcategory['Subcategory']['slug'], $subsubcategory['Subsubcategory']['slug'])); ?><br />
+            <span class="gwm-nav"><img src="/img/global/dash-7.png"></span><?php echo $this->Html->link($subsubcategory['Subsubcategory']['name'], array('controller' => 'products', 'action' => 'category', $subsubcategory['Category']['slug'], $subsubcategory['Subcategory']['slug'], $subsubcategory['Subsubcategory']['slug'])); ?><br />
             <?php endif ; ?>
             <?php endforeach; ?>
             <?php endif; ?>
@@ -108,7 +108,7 @@ $(document).ready(function() {
             <?php //if(!empty($subcat_crumb)) : ?>
             <?php if ($subcat_crumb !== $subcategory['Subcategory']['name']) : ?>
             <?php //endif; ?>
-            <span class="gb-nav"><img src="/img/global/dash-4.png"></span><?php echo $this->Html->link($subcategory['Subcategory']['name'], array('controller' => 'products', 'action' => 'category', $category['Category']['slug'], $subcategory['Subcategory']['slug'])); ?><br />
+            <span class="gwm-nav"><img src="/img/global/dash-4.png"></span><?php echo $this->Html->link($subcategory['Subcategory']['name'], array('controller' => 'products', 'action' => 'category', $category['Category']['slug'], $subcategory['Subcategory']['slug'])); ?><br />
             <?php //if(!empty($subcat_crumb)) : ?>
             <?php endif; ?>
             <?php //endif; ?>
@@ -119,7 +119,7 @@ $(document).ready(function() {
             
             <?php if(!empty($usercategories)) : ?>
             <?php foreach ($usercategories as $usercategory): ?>
-            <span class="gb-nav"><img src="/img/global/dash-2.png"></span> <?php echo $this->Html->link($usercategory['Category']['name'], array('controller' => 'products', 'action' => 'category', $usercategory['Category']['slug'])); ?><br />
+            <span class="gwm-nav"><img src="/img/global/dash-2.png"></span> <?php echo $this->Html->link($usercategory['Category']['name'], array('controller' => 'products', 'action' => 'category', $usercategory['Category']['slug'])); ?><br />
             <?php endforeach; ?>
             <?php endif; ?>
             <?php /*?><?php
@@ -145,7 +145,7 @@ $(document).ready(function() {
          
          <h3>RELATED FOODS</h3>
 		  <?php foreach ($auxcategories as $auxcategory): ?>
-	  <span class="gb-nav"><img src="/img/global/dash-2.png"></span> <?php echo $this->Html->link($auxcategory['Category']['name'], array('controller' => 'categories', 'action' => 'view', $auxcategory['Category']['slug'])); ?><br />
+	  <span class="gwm-nav"><img src="/img/global/dash-2.png"></span> <?php echo $this->Html->link($auxcategory['Category']['name'], array('controller' => 'categories', 'action' => 'view', $auxcategory['Category']['slug'])); ?><br />
 		  <?php endforeach; ?>
           
 
@@ -158,7 +158,7 @@ $(document).ready(function() {
 			
             <?php if (($user['User']['id']) == 11) { ?>
             
-			<a class="gb-nav" href="/">All Our Brands</a><br />
+			<a class="gwm-nav" href="/">All Our Brands</a><br />
 			
 					
 				<div style="overflow-y:scroll;height:300px">
@@ -172,7 +172,7 @@ $(document).ready(function() {
 
 				<?php foreach ($brands as $brnd): ?> 
 			
-					<span class="gb-nav"><img src="/img/global/dash-2.png"></span>
+					<span class="gwm-nav"><img src="/img/global/dash-2.png"></span>
 					<?php echo $this->Html->link($brnd['Brand']['name'], array('controller' => 'products', 'action' => 'brand', $brnd['Brand']['slug'])); ?><br />
 
 				<?php endforeach; ?>
@@ -529,17 +529,17 @@ $(document).ready(function() {
 				<br />
 
 				<?php if(!empty($product['Product']['country'])) : ?>
-					Origin:&nbsp;<span class="gb-green"><?php echo $product['Product']['country']; ?></span>
+					Origin:&nbsp;<span class="gwm-green"><?php echo $product['Product']['country']; ?></span>
 				<?php endif; ?>
 				<br />
                 
                 <?php if(!empty($product['Ustradition']['name'])) : ?>
-					Food tradition:&nbsp;<span class="gb-green"><?php echo $product['Ustradition']['name']; ?></span>
+					Food tradition:&nbsp;<span class="gwm-green"><?php echo $product['Ustradition']['name']; ?></span>
 				<?php endif; ?>
 				<br />
 
 				<?php if(!empty($product['Product']['country_manufacture'])) : ?>
-				Comes from:&nbsp;<span class="gb-green"><?php echo $product['Product']['country_manufacture']; ?></span>
+				Comes from:&nbsp;<span class="gwm-green"><?php echo $product['Product']['country_manufacture']; ?></span>
 				<?php endif; ?>
 				<br />
 

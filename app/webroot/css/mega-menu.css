@@ -41,7 +41,7 @@
 /* Fonts */
 
 	/* Header */
-	.nav, .nav-title span { font-family: 'PT Sans', sans-serif; font-size:16px;}
+	.nav, .nav-title span { font-family: 'PT Sans', sans-serif; font-size:16px; background-color:#393767;}
 	.nav-title span { font-weight: normal; }
 
 	/* Header */
@@ -58,7 +58,7 @@
 	
 	.nav > li > a, .navbar-brand { padding: 10px 15px; }
 	
-	.navbar { padding: 0; min-height: inherit; z-index: auto !important; }
+	.navbar { background-color:#39C; padding: 0; min-height: inherit; z-index: auto !important; }
 	.navbar .container { padding: 0 10px; }
 	
 	.navbar-collapse { padding: 0; }
@@ -594,6 +594,10 @@ a.navbar-brand img {
 	padding-left: 15%;
 }
 
+.navbar-inverse .navbar-collapse{
+	background-color: #393767;
+}
+
 .wide {
 }
 
@@ -624,6 +628,7 @@ hr.thin.tight {
 	background-color:#C1CF82;
 	padding:4px;
 }
+
 
 
 /* 1 Menus */

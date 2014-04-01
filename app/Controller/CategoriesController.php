@@ -49,6 +49,7 @@ class CategoriesController extends AppController {
 				'Category.slug',
 				'Category.name',
 				'Category.quote',
+				'Category.quote_attr',
 				'Category.summary',
 				'Category.image',
 			),

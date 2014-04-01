@@ -52,9 +52,9 @@
         </div>
         
         <div id="account">
-            <ul class="gb-horiz-account">
-                <li class="gb-account"><a href="/members/register">BECOME A MEMBER</a></li>
-                <li class="gb-account"><a href="/members/login">LOG IN</a></li>
+            <ul class="gwm-horiz-account">
+                <li class="gwm-account"><a href="/members/register">BECOME A MEMBER</a></li>
+                <li class="gwm-account"><a href="/members/login">LOG IN</a></li>
             </ul>
         </div>
         

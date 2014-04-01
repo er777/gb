@@ -18,7 +18,7 @@
 <!-- Stylesheets -->
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
 
-<?php echo $this->Html->css(array('master.css','mega-menu.css','mega-menu-responsive.css')); ?>  <!-- 'bootstrap-responsive.min.css', -->
+<?php echo $this->Html->css(array('master.css','responsive.css','mega-menu.css','mega-menu-responsive.css')); ?>  <!-- 'bootstrap-responsive.min.css', -->
 
 
 <!--/,'mega-menu.css','mega-menu-responsive.css','prettyPhoto.css' -->
@@ -63,7 +63,7 @@
 <div class="page container">
 
 	<div id="gwm-title"> 
-        <!--<div class="issue gb-heading">July - August 2013</div>-->
+        <!--<div class="issue gwm-heading">July - August 2013</div>-->
         <h1 class="title-description center">A fresh way to shop for, learn about, prepare and enjoy foods of the world.</h1>
         <p class=" center">Our slogan “Become a World Class Foodie” reflects our committment to help cooks of all kinds, from Moms to chefs, 
             novices to professionals and young to old, expand their tastes, techniques and pantries to enjoy the delicious bounties <a href="#" id="welcome">(more) ...</a></p>
@@ -92,8 +92,8 @@
 						<?php if (($content['Content']['active']) == 1) : ?>
 						<div class="item <?php echo $active; ?>"> <a href="<?php echo ($content['Content']['link']); ?>"> <?php echo $this->Html->image('homepage/sliders/' . $content['Content']['image']); ?> </a>
 							<div class="carousel-caption">
-								<p><?php echo $this->Html->link($content['Content']['name'], $content['Content']['link']); ?></p>
-								<?php echo $content['Content']['body']; ?> <br />
+								<p class="vendor-name"><?php echo $this->Html->link($content['Content']['name'], $content['Content']['link']); ?></p>
+								<p class="vendor-info"><?php echo $content['Content']['body']; ?></p><br />
 							</div>
 							<?php if (($content['Content']['new']) == 1) : ?>
 							<div class="new">

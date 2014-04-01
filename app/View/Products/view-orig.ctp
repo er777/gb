@@ -32,9 +32,9 @@ $(document).ready(function() {
 			 <div class="quote"><?php echo $user['User']['shop_quote']; ?></div>
 		  </div>
 		  <?php //if(!empty($usercategories)) : ?>
-		  Go to: <a class="gb-nav" href="/">All Our Products</a> <br />
+		  Go to: <a class="gwm-nav" href="/">All Our Products</a> <br />
 		  <br />
-		  <p class="gb-nav small">
+		  <p class="gwm-nav small">
 			 <?php if(!empty($product['Category']['name'])) : ?>
 		  </p>
 		  <?php echo $this->Html->link($product['Category']['name'], array('controller' => 'products', 'action' => 'category', 'slug' => $product['Category']['slug'])); ?>
@@ -65,7 +65,7 @@ $(document).ready(function() {
 			 </div>
 		  </div>
 		  <div class="row products">
-			 <div class="span4 gb-col2">
+			 <div class="span4 gwm-col2">
 				<div id="slider" class="flexslider">
 				<ul class="slides">
 					  <?php if(!empty($product['Product']['image'])) : ?>
@@ -371,17 +371,17 @@ $(document).ready(function() {
 				<br />
 
 				<?php if(!empty($product['Product']['country'])) : ?>
-					Origin:&nbsp;<span class="gb-green"><?php echo $product['Product']['country']; ?></span>
+					Origin:&nbsp;<span class="gwm-green"><?php echo $product['Product']['country']; ?></span>
 				<?php endif; ?>
 				<br />
                 
                 <?php if(!empty($product['Ustradition']['name'])) : ?>
-					Food tradition:&nbsp;<span class="gb-green"><?php echo $product['Ustradition']['name']; ?></span>
+					Food tradition:&nbsp;<span class="gwm-green"><?php echo $product['Ustradition']['name']; ?></span>
 				<?php endif; ?>
 				<br />
 
 				<?php if(!empty($product['Product']['country_manufacture'])) : ?>
-				Comes from:&nbsp;<span class="gb-green"><?php echo $product['Product']['country_manufacture']; ?></span>
+				Comes from:&nbsp;<span class="gwm-green"><?php echo $product['Product']['country_manufacture']; ?></span>
 				<?php endif; ?>
 				<br />
 

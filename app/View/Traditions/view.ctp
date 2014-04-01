@@ -4,7 +4,7 @@
 		<div class="col-md-3 col-sm-3 hidden-xs regions">
 
 		<?php /*?><div style="height:38px;">
-			<ul class="navList gb-">
+			<ul class="navList gwm-">
 				<li><a href="#">About Each Region</a>
 					<!-- This is the sub nav -->
 					<ul class="listTab">
@@ -19,13 +19,13 @@
 <?php */?>
 
            <div class="tradition-summary">
-           <span class="gb-nav"><?php echo h($tradition['Tradition']['name']); ?>: </span>
+           <span class="gwm-nav"><?php echo h($tradition['Tradition']['name']); ?>: </span>
                <?php echo ($tradition['Tradition']['summary']); ?>
                <a style="font-style:italic" href="/articles/excellent-food-advenures/<?php echo $tradition['Tradition']['slug']; ?>">Read more</a>
    
            </div>
-           <div class="gb-heading">Brands: </div>
-           <div class="gb-nav" style="font-size:120%;">
+           <div class="gwm-heading">Brands: </div>
+           <div class="gwm-nav" style="font-size:120%;">
            <?php foreach ($brands as $brandslink): ?>
                <img src="/img/global/dash-2.png">
            <?php echo $this->Html->link($brandslink['Brand']['name'], array('controller' => 'traditions', 'action' => 'view',$fst,'brand',$brandslink['Brand']['slug'])); ?>

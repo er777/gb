@@ -9,7 +9,7 @@
 
 <div class="row" style="margin-top:25px">
    <div class="col-md-6">
-      <h2 class="gb-heading">
+      <h2 class="gwm-heading">
       <?php echo $user['User']['name']; ?> Recipes
       </h3>
    </div>

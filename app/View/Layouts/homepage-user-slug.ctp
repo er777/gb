@@ -88,14 +88,14 @@
 								<?php echo $this->Form->end(); ?>
 							
 					</span>
-					<ul class="gb-horiz-account">
+					<ul class="gwm-horiz-account">
 						
 						<li class="cart"><button class="btn btn-global cart" type="submit"> <a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/shops/cart"><i class="icon-shopping-cart icon-white"></i></a></button></li>
 						<li class="social"><a href="https://www.facebook.com/pages/Gourmet-Basket/603379453015040"><img src="/img/global/fb.png" width="28" height="27" alt="facebook"></a></li>
 						<li class="social"><a href="https://twitter.com/search/users?q=gourmetbasket1"><img src="/img/global/twitter.png" width="28" height="27"></a></li>
 						<li class="social"><a href="http://pinterest.com/gourmetbasket1/"><img src="/img/global/pinterest.png" width="27" height="27" alt="pinterest"></a></li>
-						<!--<li class="gb-account"><a href="/members/register">BECOME A MEMBER</a></li>--> 
-						<!-- <li class="gb-account"><a href="/members/login">LOG IN</a></li>-->
+						<!--<li class="gwm-account"><a href="/members/register">BECOME A MEMBER</a></li>--> 
+						<!-- <li class="gwm-account"><a href="/members/login">LOG IN</a></li>-->
 					</ul>
 				</div>
 				
@@ -108,8 +108,8 @@
 				</div>
 			</div>
 			
-			<div id="gb-title"> 
-				<!--<div class="issue gb-heading">July - August 2013</div>-->
+			<div id="gwm-title"> 
+				<!--<div class="issue gwm-heading">July - August 2013</div>-->
 				<h1 class="title-description center">A fresh way to shop for, learn about, prepare and enjoy foods of the world.</h1>
 				<p class=" center">Our slogan “Become a World Class Foodie” reflects our committment to help cooks of all kinds, from Moms to chefs, 
 novices to professionals and young to old, expand their tastes, techniques and pantries to enjoy the delicious bounties <a href="#" id="welcome">(more) ...</a></p>
