@@ -6,10 +6,10 @@
          
          <!-- Sidebar -->
          <div class="col-md-3 col-sm-3 hidden-xs">
-         
-            <div class="vendor-logo"> <a href="/"> <?php echo $this->Html->image('users/image/' . $user['User']['image'], array('width' =>'210px')); ?> </a> </div>
+         	 <h3 class="gwm-heading center"> <?php echo $user['User']['name']; ?></h3>
+            <div class="logo"> <a href="/"> <?php echo $this->Html->image('users/image/' . $user['User']['image'], array('height' =>'100px')); ?> </a> </div>
             
-            <h3 class="gwm-heading center"> <?php echo $user['User']['name']; ?></h3>
+           
             <div class="section-subheading">Our Recipes</div>
             <hr class="recipe-divider" />
             
