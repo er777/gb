@@ -41,7 +41,7 @@
 /* Fonts */
 
 	/* Header */
-	.nav, .nav-title span { font-family: 'PT Sans', sans-serif; font-size:16px; background-color:#393767;}
+	.nav, .nav-title span { font-family: 'PT Sans', sans-serif; font-size:16px; }
 	.nav-title span { font-weight: normal; }
 
 	/* Header */
@@ -634,3 +634,15 @@ hr.thin.tight {
 /* 1 Menus */
 .mega-menu-1 ul.dropdown-menu { width: 163px; }
 .mega-menu-1 ul ul { list-style: none; margin: 0 0 5px;  padding: 10px; float: left; width: 100%; }
+
+
+/** Navigtion Background **/
+.nav  {
+background-color:#393767;
+}
+
+/** Tabs **/*
+
+.nav.tabs  {
+background-color:transparent;
+}

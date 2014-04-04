@@ -88,14 +88,14 @@ h1.vendor-title {
 }
 
 h1.category-title {
-	font-family: Marydale Regular, sans-serif;
-	font-weight:bold;
+	font-family: Marydale Bold, sans-serif;
 	text-transform:uppercase;
 	font-size: 21px;
 	margin-bottom: 5px;
-	margin-top: 10px;
+	margin-top: 5px;
 	padding-bottom: 0px;
 	position: relative;
+	text-align:center;
 }
 
 h1.category-title a {
@@ -103,7 +103,8 @@ h1.category-title a {
 }
 
 #sidebar-title.category {
-	background-color:#eae7e2;
+	height:65px;
+	background-color:#f3f4d8;
 	border-bottom:none!important;
 	border: #CCC 1px solid;
 }
@@ -115,6 +116,20 @@ h1.category-title a {
 .quote-author {
 	text-align:right;
 }
+
+
+
+
+
+
+
+
+/** REGIONS **/
+
+#sidebar-title.region {
+	background-color:#516bac;
+}
+
 
 
 
@@ -526,7 +541,7 @@ div.price {
  
 h2.product-name {
 	color: #3F9179;
-	font-family: 'Oregano', cursive;
+	font-family: 'Rosario', sans-serif;
 	font-size: 21px;
 	line-height: 25px;
 }
@@ -944,7 +959,7 @@ body.categories .content {
  
 h3.cat-title {
 	color: #3F9179;
-	font-family: 'Oregano', cursive;
+	font-family: 'Rosario', sans-serif;
 	font-size: 19px;
 	letter-spacing: 1px;
 	line-height: 21px;
@@ -959,7 +974,7 @@ h3.cat-list {
  
 .well-stocked-pantry {
 	color: #c00;
-	font-family: 'Oregano', cursive;
+	font-family: 'Rosario', sans-serif;
 	font-size: 30px;
 	letter-spacing: 1px;
 	margin-bottom: 25px;
@@ -1005,6 +1020,9 @@ h3.cat-list {
 	position: relative;
 	width: 133px;
 }
+
+
+
  
 /** Category Summary **/
 .summary {
@@ -1016,10 +1034,13 @@ h3.cat-list {
 	.summary p {font-size: 12px;}
  
 .list {}
+
+
  
 /** Awning **/
 .awning {
 	margin-top: 20px;
+	margin-bottom: 20px;
 	margin-left:15px;
 	position: relative;
 }
@@ -1106,17 +1127,22 @@ h3.cat-list {
 	width: 590px;
 }
  
-.category-summary, .tradition-summary, #subcat-menu, #left-sidebar {
+.category-summary, .tradition-summary {
 	color: #3a3a3a; /*margin-left: 182px;*/
-	background-color:#ebe7e2;
+	background-color:#f3f4d8;
 	position: relative;
 	text-align: left;
 	border:#72A53A 1px solid;
 	border-radius:9px;
 	padding:15px;
-	margin-top:15px;
+	margin-top:20px;
 	
 }
+
+.category-summary {
+	
+}
+
 
 .category-summary p, .tradition-summary p {
 	line-height:21px;
@@ -1124,7 +1150,8 @@ h3.cat-list {
 
 #left-sidebar {
 	border: #cccccc 1px solid;
-	padding: 8px;
+	padding: 15px;
+	padding-top:5px;
 }
 
 	#left-sidebar a {
@@ -1166,7 +1193,6 @@ h3.cat-list {
 
  
 .left-sidebar {
-	background: url(../img/global/region-title-bkgnd.png) top left no-repeat;
 	margin-top: 50px;
 }
  
@@ -1176,7 +1202,7 @@ h3.cat-list {
 }
  
 #subcat-menu h4 {
-	font-family: Marydale Regular, sans-serif;
+	font-family: Marydale Bold, sans-serif;
 	text-transform: uppercase;
 }
  
@@ -1189,7 +1215,12 @@ h3.cat-list {
 }
  
 .small-cat-logo {float: right;}
- 
+
+
+.regions {
+	margin-top:30px;
+}
+
 .tradition-images {
 	float: left;
 	margin-bottom: 20px;
@@ -1239,7 +1270,7 @@ img.vendor-article-logo {width: 280px;}
 	background-repeat: repeat;
 	border-radius: 15px;
 	color: #032177;
-	font-family: 'Oregano', cursive;
+	font-family: 'Rosario', sans-serif;
 	letter-spacing: 1px;
 	margin-bottom: 15px;
 	margin-left: 0px;
@@ -1763,8 +1794,20 @@ table {
 
  
 .byline {font-size: 12px;}
+
+
+
  
 /** Recipes **/
+
+#sidebar-title.recipe {
+   height: 65px;
+   background-color: #F3F4D8;
+   border-bottom: none!important;
+   border: #CCC 1px solid;
+}
+
+
 .recipescontainer {
 	background: #FFFFFF;
 	color: #444;
@@ -1777,7 +1820,7 @@ table {
 	margin: 5px;
 	padding: 5px;
 	vertical-align: top;
-	width: 160px;
+	
 }
  
 	.recipes img {
@@ -1916,7 +1959,7 @@ img.article-pic {
  
 .pic-title {
 	clear: both;
-	font-family: 'Oregano', cursive;
+	font-family: 'Rosario', sans-serif;
 	font-size: 17px;
 	margin-bottom: 6px;
 }
@@ -2142,7 +2185,7 @@ div.attr {
  
 #story_content .gwm-heading, #policy_content .gwm-heading, #welcome_content .gwm-heading, #vendor-article span.gwm-heading {
 	color: #3F9179;
-	font-family: 'Oregano', cursive;
+	font-family: 'Rosario', sans-serif;
 	font-size: 24px;
 	letter-spacing: 1px;
 	margin-top: 20px;
@@ -2155,7 +2198,7 @@ hr.article-divide {
  
 .gwm-heading {
 	color: #3F9179;
-	font-family: 'Oregano', cursive;
+	font-family: 'Rosario', sans-serif;
 	font-size: 21px;
 	letter-spacing: 1px;
 }
@@ -2173,7 +2216,7 @@ hr.article-divide {
  
 h2.gwm-heading {
 	color: #3F9179;
-	font-family: 'Oregano', cursive;
+	font-family: 'Rosario', sans-serif;
 	font-size: 28px;
 }
  
@@ -2200,7 +2243,7 @@ h2.gwm-heading {
  
 .section-heading {
 	color: #3F9179;
-	font-family: 'Oregano', cursive;
+	font-family: 'Rosario', sans-serif;
 	font-size: 20px;
 	letter-spacing: 0px;
 	margin-top: 20px;
@@ -2210,7 +2253,7 @@ h2.gwm-heading {
  
 .section-subheading {
 	color: #C00;
-	font-family: 'Oregano', cursive;
+	font-family: 'Rosario', sans-serif;
 	font-size: 18px;
 	letter-spacing: 1px;
 	margin-bottom: 10px;
@@ -2219,7 +2262,7 @@ h2.gwm-heading {
  
 .source-title {
 	color: #fff;
-	font-family: 'Oregano', cursive;
+	font-family: 'Rosario', sans-serif;
 	font-size: 19px;
 }
  
@@ -2294,6 +2337,12 @@ hr.category {
 	background-image: linear-gradient(to bottom, #ffffff, #f7f1e5); /* Chrome 26, Firefox 16+, IE 10+, Opera 12.50+ */
 	border-radius: 12px; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
 	box-shadow: 0px 0px 8px 0px #ffffff; /* Chrome 6+, Firefox 4+, IE 9+, iOS 5+, Opera 10.50+ */
+	
+}
+
+
+#story_content {
+	width:1000px;
 }
  
 #policy_content {display: none;}
@@ -2302,7 +2351,7 @@ hr.category {
  
 	#policy_content  .policy-heading {
 		color: #C00;
-		font-family: 'Oregano', cursive;
+		font-family: 'Rosario', sans-serif;
 		font-size: 24px;
 		letter-spacing: 1px;
 		margin-bottom: 10px;
@@ -2456,9 +2505,11 @@ hr.thin.tight {
 	top: -29px;
 	width: 200px;
 }
- 
-/** Mod SELECTOR **/
-#productmods {}
- 
-select.modselector {}
- 
+
+
+/** Select Styling **/
+
+select#vendors {
+   height: 30px;
+   line-height: 30px;
+}

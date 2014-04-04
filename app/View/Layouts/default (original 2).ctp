@@ -99,7 +99,6 @@
 	// Encapsulation
 	// $ is assigned to jQuery
 	(function($) {
-		
 		 // Policies
 		$(function() {
 			// Binding a click event
@@ -111,7 +110,6 @@
 				$('#policy_content').bPopup();
 			});
 		});
-		
 		 // Story
 		 $(function() {
 			$('#story').on('click', function(e) {

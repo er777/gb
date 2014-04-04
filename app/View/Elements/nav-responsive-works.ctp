@@ -67,46 +67,30 @@
 						</ul>
 					</li>			
 										
-					<li class="dropdown mega-menu-4 transition">
+					<li class="dropdown mega-menu-3 transition">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-briefcase icon-white"></i>REGIONS<b class="caret"></b></a>
 						<ul class="dropdown-menu">
-							<li class="two-column">
+							<li class="one-column">
 								<ul><h4>US REGIONS</h4>
-									<!--<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/us/amish">Amish</a></li> -->
-									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/us/deep-south ">Deep South </a></li>
-									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/us/far-west ">Far West </a></li>
-									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/us/great-lakes">Great Lakes</a></li>
-									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/us/hawaii">Hawaii</a></li>
-									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/us/louisiana">Louisiana</a></li>
-									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/us/mid-atlantic">Mid-Atlantic</a></li>
-                                    <li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/us/mid-west">Midwest and Plains </a></li>
-									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/us/native-american">Native American</a></li>
-									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/us/new-england">New England</a></li>
-									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/us/northwest">Pacific Northwest</a></li>
-									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/us/southeast">Southeast</a></li>
-									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/us/southwest">Southwest</a></li>
+                                	<?php
+                                    $i = 0; ?>
+									<?php foreach($menu_ustraditions as $menu_ustradition) : ?>
+									<?php $i++; ?>
+                                    
+                                    <li><a href="http://<?php echo Configure::read('Settings.DOMAIN') .'/us/'. $menu_ustradition['Ustradition']['slug']; ?>"><?php echo $menu_ustradition['Ustradition']['name']; ?></a></li>
+                                    
+                                    <?php endforeach; ?>
+									
 								</ul>
 							</li>
 							<li class="two-column">
 								<ul><h4>INTERNATIONAL REGIONS</h4>
-									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/africa">Africa </a></li>
-									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/british-isles">British Isles &amp; Ireland</a></li>
-									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/china">China and Taiwan</a></li>
-									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/central-america">Central America</a></li>
-									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/eastern-europe">Eastern and Central Europe</a></li>
-									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/japan">Japan</a></li>
-									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/korea">Korea</a></li>
-									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/mediterranean">Mediterranean Europe</a></li>
-									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/mexico">Mexico</a></li>
-									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/middle-east">Middle East</a></li>
-									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/north-america">North America / Canada</a></li>
-									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/oceania">Oceania</a></li>
-									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/scandinavia">Scandinavia</a></li>
-									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/southeast-asia">Southeast Asia</a></li>
-									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/south-america">South America</a></li>
-									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/south-asia">South Asia</a></li>
-									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/the-caribbean">The Caribbean</a></li>
-									<li><a href="http://<?php echo Configure::read('Settings.DOMAIN'); ?>/international/western-europe">Western Europe</a></li>
+                                	<?php
+                                    $i = 0; ?>
+									<?php foreach($menu_traditions as $menu_tradition) : ?>
+									<?php $i++; ?>
+                                    <li><a href="http://<?php echo Configure::read('Settings.DOMAIN') .'/international/'. $menu_tradition['Tradition']['slug']; ?>"><?php echo $menu_tradition['Tradition']['name']; ?></a></li>
+                                    <?php endforeach; ?>
 								</ul>
 							</li>
 						</ul>

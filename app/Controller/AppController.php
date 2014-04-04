@@ -86,7 +86,7 @@ class AppController extends Controller {
 			}
 			$this->set(compact('menucategories'));
 			
-
+ 
 			$menuvendors = Cache::read('menuvendors');
 			if (!$menuvendors) {
 				$menuvendors = ClassRegistry::init('User')->getVendors();
@@ -108,6 +108,10 @@ class AppController extends Controller {
 						'Ustradition.id',
 						'Ustradition.name',
 						'Ustradition.slug',
+						'Ustradition.active',
+					),
+					'conditions' => array(
+						'Ustradition.active' => 1,
 					),
 					
 					'order' => array(
@@ -124,7 +128,7 @@ class AppController extends Controller {
 				Cache::write('menu_ustraditions', $menu_ustraditions);
 			}
 			$this->set(compact('menu_ustraditions'));
-			
+			//debug($menu_ustraditions);
 			
 			//Traditions
 				$menu_traditions = Cache::read('menu_traditions');
@@ -139,8 +143,12 @@ class AppController extends Controller {
 						'Tradition.id',
 						'Tradition.name',
 						'Tradition.slug',
+						'Tradition.active',
 					),
-					
+					'conditions' => array(
+						'Tradition.active' => 1,
+					),
+
 					'order' => array(
 						'Tradition.name' => 'ASC'
 					),
@@ -155,6 +163,8 @@ class AppController extends Controller {
 				Cache::write('menu_traditions', $menu_traditions);
 			}
 			$this->set(compact('menu_traditions'));
+			
+			
 			
 
 			// Settings for menuBlocks on LearnMore navigation
