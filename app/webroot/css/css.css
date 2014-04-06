@@ -2108,6 +2108,11 @@ div.attr {
 .bold {font-weight: bold;}
  
 /** Bootstrap Edit **/
+
+.dropdown-menu {
+	z-index:1000;
+}
+
 .dropdown-menu li {
 	padding-left: 0px;
 	padding-right: 15px;
