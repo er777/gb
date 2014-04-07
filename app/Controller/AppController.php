@@ -101,8 +101,8 @@ class AppController extends Controller {
 				$menu_ustraditions = ClassRegistry::init('Ustradition')->find('all', array(
 					'recursive' => -1,
 					'contain' => array(
-						'User',
-						'Ustradition'
+						//'User',
+						//'Ustradition'
 					),
 					'fields' => array(
 						'Ustradition.id',
@@ -136,8 +136,8 @@ class AppController extends Controller {
 				$menu_traditions = ClassRegistry::init('Tradition')->find('all', array(
 					'recursive' => -1,
 					'contain' => array(
-						'User',
-						'Tradition'
+						//'User',
+						//'Tradition'
 					),
 					'fields' => array(
 						'Tradition.id',
@@ -217,7 +217,22 @@ class AppController extends Controller {
 			'redirect' => true,
 			'requirePrompt' => true
 		);
+		
+		
+			// https redirect
+	 
+		   if (in_array($this->params['action'], $this->secureActions) 
+			   && !isset($_SERVER['HTTPS'])) {
+				   $this->forceSSL();
+		   }
 	}
+	
+////////////////////////////////////////////////////////////
+	  
+		 public function forceSSL() {
+			   $this->redirect('https://' . $_SERVER['SERVER_NAME'] . $this->here);
+	   }
+		   
 
 ////////////////////////////////////////////////////////////
 
@@ -342,5 +357,13 @@ class AppController extends Controller {
 	}
 
 ////////////////////////////////////////////////////////////
+
+	
+	protected $secureActions = array(
+		   'review',
+		   'checkout'
+	   );
+
+
 
 }

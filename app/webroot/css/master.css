@@ -263,7 +263,7 @@ h1.title-description {
 /** CAROUSEL **/
 
 #myCarousel {
-	z-index:100;
+	z-index:10;
 }
 
 .carousel {
