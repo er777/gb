@@ -239,16 +239,24 @@
 						<li><a href="#vendor-unit">Our Regions</a></li>
 			</ul>-->
 
-			</div>
 
-			<div>
+
+
+
+
+
+
+
+			
+
+			
 				<?php $vendor_policy = $user['User']['shipping_policy']; ?>
-				<br />
+			<br />
 
-				<a href="#" id="policies" class="btn btn-gb">SHIPPING & CUSTOMER SERVICE</a>
-
+				<a href="#" id="policies" class="btn btn-gb">Shipping/Cust Service</a>
+<div>
 			</div>
-
+</div>
 			<!-- Element to pop up -->
 			<div id="policy_content">
 			<div class="policy-heading ">Customer Satisfaction, Shipping and Return Policy</div>
@@ -278,8 +286,6 @@
 			</div>
 	
 </div>
-
-
 	
 	
 		<!-- Main Content -->

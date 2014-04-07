@@ -6,9 +6,11 @@
 	   
 	           
 			<div class="row">
-           
+            
+            <img src="/img/global/gwm-oval-100.png"  alt="gourmet world market" class=" hidden-logo ">
                <!-- Search -->
                <div class="col-lg-md-3 col-md-3 col-sm-md-3 col-xs-md-3 col-md-offset-6 search"> 
+               
                    
                <!-- Search Box --> 
 <?php echo $this->Form->create('Product', array('type' => 'GET', 'class' => 'navbar-form', 'url' => array('controller' => 'products', 'action' => 'search'))); ?> <?php echo $this->Form->input('search', array('label' => false, 'div' => false, 'autocomplete' => 'on')); ?>
@@ -21,6 +23,7 @@
                <!-- Other -->
                <div class="col-md-3 header-tools"> 
                    <ul class="gwm-horiz-account">
+                    	
                        <li class="cart">
                            <button class="cart" type="submit">
                            <a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/shops/cart"></i><img src="/img/global/cart.png" width="40" height="29" alt="cart"></a>
