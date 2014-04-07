@@ -9,7 +9,7 @@
 				<span class="icon-bar"></span>
 				</button>
 				<a class="navbar-brand" href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>" title="responsive Mega Menu">
-                <img src="/img/global/gwm-oval.png"  alt="gourmet basket" width="100%">
+                <img src="/img/global/gwm-oval.png"  alt="gourmet basket" class="img-responsive">
                 <!--<strong>GWM</strong>-->
                 
                 </a>

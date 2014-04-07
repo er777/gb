@@ -161,10 +161,13 @@ img {
 
 .hidden-logo {
 	display:none;
+	position:absolute;
+	top:13px;
+	left:30px;
 }
 
 	.hidden-logo img {
-		height:70px;
+		
 	}
 
 .search {

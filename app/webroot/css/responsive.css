@@ -9,14 +9,19 @@
 		padding-left: 2.5%;
 	   
    }
+   
+   	.hidden-logo {
+		display:none;
+	}
+
 
 }
 
 
 
 /* 1 - Large desktop  **/
-@media (min-width: 980px) and (max-width: 1199px) {
-	
+@media (min-width: 992px) and (max-width: 1199px) {
+
 	
 	/** FEATURES **/
 	.feature {
@@ -40,14 +45,15 @@
 }
 
 /* 2 - Portrait tablet to landscape and desktop **/
-@media (min-width: 768px) and (max-width: 979px) {
+@media (min-width: 768px) and (max-width: 991px) {
+	
 	a.navbar-brand img {
 		display:none;
 	}
-	
+
+	/**Show small logo **/
 	.hidden-logo {
-		display:inline;
-		height:70px;
+		display:block;
 	}
 	
 	
@@ -113,6 +119,14 @@
 		display:none;
 	}
 	
+	/**Show small logo **/
+	.small-logo {
+		display:block;
+		height:70px;
+	}
+	
+
+	
 	.carousel-caption {
 		width:33%;
 		font-size:70%;
@@ -145,6 +159,14 @@
 	}
 		.search {
 		display:none;
+	}
+	
+	.vendor-logo.view {
+	  right: 38%;
+	}
+	
+	.vendor-logo.view img {
+		width: 75%;
 	}
 	
 	ul.nav li a {
