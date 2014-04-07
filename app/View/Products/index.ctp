@@ -289,7 +289,7 @@
 		<!-- Banner -->
 		<div class="awning">
 			<div class="vendor-logo">
-				<?php echo $this->Html->image('users/image/' . $user['User']['image'], array( 'width' =>'226px')); ?>
+				<?php echo $this->Html->image('users/image/' . $user['User']['image'], array( 'width' =>'100%','class='=>'img-responsive')); ?>
 			</div>
 				<!--<div id="div1">
 					<div id="div2">
