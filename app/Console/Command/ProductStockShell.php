@@ -31,11 +31,14 @@ class ProductStockShell extends Shell {
 
 			sleep(1);
 
-			$response = $httpSocket->get('https://www.maestrolico.com/api/checkstockstatus.asp?distributorid=' . Configure::read('Settings.MAESTRO_DISTRIBUTOR_ID') . '&productid=' . $product['Product']['vendor_sku']);
+			$gwmrequest = 'https://www.maestrolico.com/api/checkstockstatus.asp?distributorid=' . Configure::read('Settings.MAESTRO_DISTRIBUTOR_ID') . '&productid=' . $product['Product']['vendor_sku'];
+
 			// echo '<br /><hr><br />';
 			// echo $product['Product']['name'] . ' - ' . $product['Product']['vendor_sku'];
 			// echo '<br /><br />';
 			//debug($response['body']);
+			
+			$response = @file_get_contents($gwmrequest);
 
 			$update = explode('|', $response['body']);
 

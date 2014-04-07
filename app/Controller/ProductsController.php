@@ -372,6 +372,8 @@ class ProductsController extends AppController {
 
 				$gbrequest = 'https://www.maestrolico.com/api/checkstockstatus.asp?distributorid=' . Configure::read('Settings.MAESTRO_DISTRIBUTOR_ID') . '&productid=' . $product['Product']['vendor_sku'];
 
+
+
 				$response = @file_get_contents($gbrequest);
 				// echo '<br />';
 				// echo '<pre>';
