@@ -3,7 +3,7 @@
 /* Large desktop  **/
 @media (min-width: 1200px) {
 	.col-md-12, .container {
-		width: 1100px;
+		
 	}
    .container.feature-block {
 		padding-left: 2.5%;

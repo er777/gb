@@ -1,13 +1,13 @@
 <!-- Items -->
 
 <div class="items">
-   <div class="container">
+  
       <div class="row"> 
          
          <!-- Sidebar -->
-         <div class="col-md-3 col-sm-3 hidden-xs">
+         <div class="col-md-3 col-sm-3">
          	 <h3 class="gwm-heading center"> <?php echo $user['User']['name']; ?></h3>
-            <div class="logo"> <a href="/"> <?php echo $this->Html->image('users/image/' . $user['User']['image'], array('height' =>'100px')); ?> </a> </div>
+            <div class="logo"> <a href="/"> <?php echo $this->Html->image('users/image/' . $user['User']['image'], array('height' =>'100px','class' => 'img-responsive')); ?> </a> </div>
             
            
             <div class="section-subheading">Our Recipes</div>
@@ -54,14 +54,14 @@
          
          <div class="col-md-4 col-sm-4 recipe-pic-block">
          
-         <img class="recipe-pic" src="/img/recipes/image_1/<?php echo $recipe['Recipe']['image_1']?>"  />
+         <img class="recipe-pic img-responsive" src="/img/recipes/image_1/<?php echo $recipe['Recipe']['image_1']?>"  />
             <?php if(!empty($recipe['Recipe']['attr_1'])) : ?>
             <div class="photo-attr"> <span><?php echo $recipe['Recipe']['attr_1']?></span> </div>
             <?php endif ; ?>
             <br />
             <br />
             <?php if(!empty($recipe['Recipe']['image_2'])) : ?>
-            <img class="recipe-pic border" src="/img/recipes/image_2/<?php echo $recipe['Recipe']['image_2'] ?>" />
+            <img class="recipe-pic img-responsive border" src="/img/recipes/image_2/<?php echo $recipe['Recipe']['image_2'] ?>" />
             <?php if(!empty($recipe['Recipe']['attr_2'])) : ?>
             <div class="photo-attr"> <span><?php echo $recipe['Recipe']['attr_2']?></span> </div>
             <?php endif ; ?>
@@ -69,21 +69,21 @@
             <br />
             <br />
             <?php if(!empty($recipe['Recipe']['image_3'])) : ?>
-            <img class="recipe-pic border" src="/img/recipes/image_3/<?php echo $recipe['Recipe']['image_3'] ?>" />
+            <img class="recipe-pic img-responsive border" src="/img/recipes/image_3/<?php echo $recipe['Recipe']['image_3'] ?>" />
             <?php if(!empty($recipe['Recipe']['attr_3'])) : ?>
             <div class="photo-attr"> <span><?php echo $recipe['Recipe']['attr_3']?></span> </div>
             <?php endif ; ?>
             <?php endif ; ?>
             <br />
             <?php if(!empty($recipe['Recipe']['image_4'])) : ?>
-            <img class="recipe-pic border" src="/img/recipes/image_4/<?php echo $recipe['Recipe']['image_4'] ?>" />
+            <img class="recipe-pic img-responsive border" src="/img/recipes/image_4/<?php echo $recipe['Recipe']['image_4'] ?>" />
             <?php if(!empty($recipe['Recipe']['attr_4'])) : ?>
             <div class="photo-attr"> <span><?php echo $recipe['Recipe']['attr_4']?></span> </div>
             <?php endif ; ?>
             <?php endif ; ?>
             <br />
             <?php if(!empty($recipe['Recipe']['image_5'])) : ?>
-            <img class="recipe-pic border" src="/img/recipes/image_5/<?php echo $recipe['Recipe']['image_5'] ?>" />
+            <img class="recipe-pic img-responsive border" src="/img/recipes/image_5/<?php echo $recipe['Recipe']['image_5'] ?>" />
             <?php if(!empty($recipe['Recipe']['attr_5'])) : ?>
             <div class="photo-attr"> <span><?php echo $recipe['Recipe']['attr_5']?></span> </div>
             <?php endif ; ?>
@@ -91,5 +91,5 @@
             <br />
          </div>
       </div>
-   </div>
+
 </div>

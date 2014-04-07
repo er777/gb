@@ -86,9 +86,8 @@ body .page.container {
 	-webkit-box-shadow: 0 0 10px #000;
 	background: url(../img/global/page-bkgnd-tile.png) repeat;
 	box-shadow: 0 0 10px #000;
-	margin: auto;
-	padding-left: 30px;
-	padding-right: 30px;
+	padding-left:30px;
+	padding-right:30px;
 	position: relative;
  }
  
@@ -262,6 +261,10 @@ h1.title-description {
 
 
 /** CAROUSEL **/
+
+#myCarousel {
+	z-index:100;
+}
 
 .carousel {
 	margin-bottom: 20px;
