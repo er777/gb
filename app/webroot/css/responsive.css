@@ -115,6 +115,12 @@
 	
 	body .container { width: auto; }
 	
+	
+	.header-tools, .search {
+		float:right;
+	}
+	
+	
 	#awning-text {
 		display:none;
 	}
@@ -124,12 +130,11 @@
 	}
 	
 	/**Show small logo **/
-	.small-logo {
+	.hidden-logo {
 		display:block;
-		height:70px;
+		
 	}
 	
-
 	
 	.carousel-caption {
 		width:33%;
