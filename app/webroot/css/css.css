@@ -1153,6 +1153,8 @@ h3.cat-list {
 	border: #cccccc 1px solid;
 	padding: 15px;
 	padding-top:5px;
+	position:relative;
+	z-index:1000;
 }
 
 	#left-sidebar a {
