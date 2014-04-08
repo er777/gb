@@ -360,34 +360,15 @@ class ProductsController extends AppController {
 		// $this->set('productmods', $productmods['productmods']);
 		// $this->set('deviation_json', $productmods['deviation_json']);
 
-		// Stock check
-
 		if ($product['Product']['user_id'] == 11) {
 			$days_ago_1 = date('Y-m-d H:i:s', strtotime('-3 days'));
 			if($product['Product']['stock_updated'] < $days_ago_1) {
-
-				// echo '<br />';
-				// echo "Stock updating...";
-				// echo '<br />';
-
+				App::uses('HttpSocket', 'Network/Http');
+				$httpSocket = new HttpSocket();
 				$gbrequest = 'https://www.maestrolico.com/api/checkstockstatus.asp?distributorid=' . Configure::read('Settings.MAESTRO_DISTRIBUTOR_ID') . '&productid=' . $product['Product']['vendor_sku'];
-
-				$response = @file_get_contents($gbrequest);
-				// echo '<br />';
-				// echo '<pre>';
-				// print_r($response);
-				// echo '</pre>';
-				// echo '<br />';
-
-				$res = explode('|', $response);
-
-				// echo '<br />';
-				// echo '<pre>';
-				// print_r($res);
-				// echo '</pre>';
-				// echo '<br />';
-				// die('stock end..');
-
+				// echo $gbrequest;
+				$response = $httpSocket->get($gbrequest);
+				$res = explode('|', $response['body']);
 				$this->Product->updateAll(
 					array(
 						'Product.stock' => $res[1],
@@ -398,7 +379,6 @@ class ProductsController extends AppController {
 				$product['Product']['stock'] = $res[1];
 			}
 		}
-
 
 		// if $product['Product']['stock_updated'] > 1 day
 		// check stock from maestro
@@ -659,7 +639,7 @@ public function brand() {
 			),
 		));
 		$this->set(compact('brands'));
-
+		
 		/////////////////////
 		$this->loadModel('Brand');
 		$BrandUrl = $this->Brand->find('first', array(
@@ -676,7 +656,7 @@ public function brand() {
 			)
 		));
 			$bid = $BrandUrl['Brand']['id'];
-
+		
 		$this->paginate = array(
 			'contain' => array('User'),
 			'recursive' => -1,
@@ -1315,9 +1295,9 @@ public function brand() {
 			}
 
 			$this->request->data['Product']['weight'] = sprintf('%.1f', $this->request->data['Product']['shipping_weight_oz'] / 16);
-
+			
 			$product = "";
-
+			
 
 			if ($this->Product->save($this->request->data)) {
 
@@ -1378,15 +1358,15 @@ public function brand() {
 				'Tradition.name' => 'ASC'
 			)
 		));
-
-
-
+		
+		
+		
 		if ( ! empty($product) )	{
-
+			
 			$traditionsselected = array_map('intval', explode(',', $product['Product']['traditions']));
 
 		}
-
+		
 
 		$ustraditions = $this->Product->Ustradition->findList();
 
@@ -1424,7 +1404,7 @@ public function brand() {
 			if(!isset($this->request->data['Product']['subsubcategory_id'])) {
 				$this->request->data['Product']['subsubcategory_id'] = '';
 			}
-
+			
 			$preRound = sprintf('%.1f', $this->request->data['Product']['shipping_weight_oz'] / 16);
 
 			$this->request->data['Product']['weight'] = ceil($preRound);
