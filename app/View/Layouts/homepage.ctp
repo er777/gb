@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="description" content='A fresh way to shop for, learn about, prepare and enjoy foods of the world.'>
 <title><?php echo $title_for_layout; ?></title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Rosario:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Oregano:400,400italic' rel='stylesheet' type='text/css'>-->
@@ -21,23 +21,16 @@
 <?php echo $this->Html->css(array('master.css','responsive.css','mega-menu.css','mega-menu-responsive.css')); ?>  <!-- 'bootstrap-responsive.min.css', -->
 
 
-<!--/,'mega-menu.css','mega-menu-responsive.css','prettyPhoto.css' -->
-<!--<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/smoothness/jquery-ui.css" />
--->
-
 <!-- <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"> -->
 
 <!-- JS -->
 
-<!-- HTML5 Support for IE -->
-<!--[if lt IE 9]>
-  <script src="js/html5shim.js"></script>
-  <![endif]-->
-  
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
 
-<?php echo $this->Html->script(array('bootstrap.min.js','twitter-bootstrap-hover-dropdown.js','homepage.js','jquery.bpopup-0.9.3.min.js')); ?>
+<?php echo $this->Html->script(array('twitter-bootstrap-hover-dropdown.js','homepage.js','jquery.bpopup-0.9.3.min.js')); ?>
 
 
 <!--'jquery.marquee.min.js' -->
@@ -245,7 +238,7 @@
 
 <?php echo $this->element('footer'); ?>
 
-<?php echo $this->Html->script(array('bootstrap.min.js')); ?> <!-- ,'homepage.js','jquery.bpopup-0.9.3.min.js','twitter-bootstrap-hover-dropdown.js','fitvid.js' --> 
+<!-- ,'homepage.js','jquery.bpopup-0.9.3.min.js','twitter-bootstrap-hover-dropdown.js','fitvid.js' --> 
 <!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
 --> 
 
