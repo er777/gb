@@ -27,8 +27,8 @@ h1.vendor-title {
 
 .vendor-logo {
 	position: absolute;
-	width:20%;
-	right: 36%;
+	width:25%;
+	right: 38%;
 	top: 10px;
 	z-index: 100;
 }
@@ -672,7 +672,7 @@ img.brand {
  
 .purchase-block .product-price form#ProductViewForm button.btn {
 	font-size: 12px;
-	margin-left: 22px;
+	margin-left: 10px;
 	margin-top: 6px;
 }
  

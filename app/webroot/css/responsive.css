@@ -2,9 +2,7 @@
 
 /* Large desktop  **/
 @media (min-width: 1200px) {
-	.col-md-12, .container {
-		
-	}
+	
    .container.feature-block {
 		padding-left: 2.5%;
 	   
@@ -115,6 +113,12 @@
 	
 	body .container { width: auto; }
 	
+	
+	.header-tools, .search {
+		float:right;
+	}
+	
+	
 	#awning-text {
 		display:none;
 	}
@@ -124,12 +128,11 @@
 	}
 	
 	/**Show small logo **/
-	.small-logo {
+	.hidden-logo {
 		display:block;
-		height:70px;
+		
 	}
 	
-
 	
 	.carousel-caption {
 		width:33%;

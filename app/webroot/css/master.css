@@ -71,17 +71,6 @@ body.home {
 }
  
  
-body.home .page.container {
-	margin: auto;
-	-webkit-box-shadow: 0 0 10px #000;
-	box-shadow: 0 0 10px #000;
-	position: relative;
-	background: url(../img/global/page-bkgnd-tile.png) repeat;
-	padding-left: 0px;
-	padding-right: 0px;
-}
-
-
  
 body .page.container {
 	-webkit-box-shadow: 0 0 10px #000;

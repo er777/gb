@@ -417,7 +417,7 @@ $(document).ready(function() {
 						<?php if($product['Product']['stock'] > 0 || $product['Product']['user_id'] != 11): ?>Qty:
 							<?php echo $this->Form->input('quantity', array('div' => false, 'class' => 'numeric span1', 'label' => false, 'size' => 2, 'maxlength' => 2, 'value' => 1)); ?>
 							<?php echo $this->Form->button('<i class="icon-shopping-cart icon-white"></i> Add to Cart',
-								array('class' => 'btn btn-inverse', 'escape' => false));?>
+								array('class' => 'btn btn-gb', 'escape' => false));?>
 						<?php else: ?>
 						<?php echo '<span class="btn btn-warning"><i class="icon-exclamation-sign icon-white"></i>Out of Stock</span>';?>
 						<?php endif; ?>
@@ -507,9 +507,9 @@ $(document).ready(function() {
 				</div>
 			 </div>
 
-		  
-			 <div class="span9"> <br />
-				<div>
+		  <div class="row">
+			 <div class="col-md-12"> <br />
+				
 				<?php if(!empty($attributes)) : ?>
 					<?php foreach($attributes as $akey => $avalue): ?>
 						<div class="attr-icon-set">
@@ -521,7 +521,7 @@ $(document).ready(function() {
 				<br />
 				<br />
 				<br />
-
+			
 				<?php if(!empty($related_products)) : ?>
 					<h2>PAIRINGS & RELATED PRODUCTS</h2>
 					<div id="carousel-image-and-text" class="touchcarousel grey-blue">
@@ -533,15 +533,27 @@ $(document).ready(function() {
 					</div>
 				<?php endif; ?>
 				
-
-				<img src="http://www.positivessl.com/images-new/PossitiveSSL_tl_trans.gif" alt="SSL Cerficate" title="SSL Certificate" border="0" style="float:right; padding:20px;"/>
-				<hr />
-				<div class="disclaimer"> Disclaimer: Every effort has been made to ensure the data presented on this page is accurate. It is provided to you for reference only. We assume no liability for inaccuracies,  typographical errors, misinformation, or omission stated or implied or packaging changes. Warning: Please read the actual package before consuming its contents.</div>
-				<br />
+		</div>
+				
+				
+                
+             <div class="row">
+             	<div class="col-md-10">
+                 <hr />
                 </div>
-
+             
+            
+                <div class="col-md-10 disclaimer">   
+                
+				Disclaimer: Every effort has been made to ensure the data presented on this page is accurate. It is provided to you for reference only. We assume no liability for inaccuracies,  typographical errors, misinformation, or omission stated or implied or packaging changes. Warning: Please read the actual package before consuming its contents.</div>
+				
+                
+                 <div class="col-md-2"> 
+                <img src="http://www.positivessl.com/images-new/PossitiveSSL_tl_trans.gif" alt="SSL Cerficate" title="SSL Certificate" border="0" style="padding-bottom:15px;"/>
+				</div>
+                </div>
 			 </div>
-		  </div>
+		  
 	</div>        
          
          
