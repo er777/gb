@@ -24,16 +24,18 @@ $(document).ready(function() {
 	 
 	<div id="left-sidebar">
     
-    <?php echo $this->Html->image('users/image/' . $user['User']['image'], array( 'width' =>'100%')); ?>
-            <h1 class="category-title"><?php echo $user['User']['name']; ?></h1>
-    
-    <h3>Recipe Categories</h3>
+     <h3>Recipe Categories</h3>
       <?php /*?><?php foreach ($recipescategories as $recipescategory): ?> -  
                 
            
                 <?php echo $this->Html->link($recipescategory['Recipescategory']['name'], array('controller' => 'recipes', 'action' => 'all', 'slug' => $recipescategory['Recipescategory']['slug'])); ?><br />
                  <?php endforeach; ?><?php */?>
       <?php echo $this->Form->input('recipescategories', array('class' => 'form-control','data-style'=>'btn-primary','options' => $recipescategories, 'label' => false,'empty' => array('all' => 'All Recipes'), 'default' => $recipescategory_selected)); ?>
+    
+    <?php echo $this->Html->image('users/image/' . $user['User']['image'], array( 'width' =>'100%')); ?>
+            <h1 class="category-title"><?php echo $user['User']['name']; ?></h1>
+    
+   
       <h3>Recipe Vendors</h3>
       <?php echo $this->Form->input('vendors', array('label' => false,'options' => $vendors, 'empty' => array('all' => 'All Vendors'), 'default' => $vendor_selected)); ?> 
 
