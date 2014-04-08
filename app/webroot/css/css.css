@@ -2352,7 +2352,7 @@ hr.category {
 	width:1000px;
 }
  
-#policy_content {display: none;}
+#policy_content {display: none;visibility:invisible;}
  
 	#policy_content hr {margin-bottom: 0px;}
  
