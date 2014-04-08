@@ -212,14 +212,8 @@
 
 			<?php endif; ?>
 			
-				
-				
 		<div style="clear:both"></div>
     
-    
-
-    
- 	 
     
 			<a class="btn btn-gb" href="#" id="story">Our Story</a>
 			
@@ -228,25 +222,20 @@
    <!-- Include Vendor Story element --> 
 	<?php echo $this->element('vendor-story'); ?>
    
-	
 			
-
-			<div class="btn btn-gb">
-				<a class="vendor-css" href="/recipes">Our Recipes</a>
-			</div>
+			<a class="btn btn-gb" href="/recipes">Our Recipes</a>
+            
+            <br />
+		
 
 			<!--<ul class="navList">
 						<li><a href="#vendor-unit">Our Regions</a></li>
 			</ul>-->
 
-
-			
-
-			
 				<?php $vendor_policy = $user['User']['shipping_policy']; ?>
 			<br />
 
-				<a href="#" id="policies" class="btn btn-gb">Shipping/Cust Service</a>
+				<a class="btn btn-gb" href="#" id="policies" >Shipping/Customer Service</a>
 <div>
 			</div>
 </div>

@@ -819,10 +819,13 @@ html[xmlns] .slides {display: block;}
 		opacity: 1;
 	 }
  
-@media screen and (max-width: 860px) {.flex-direction-nav .flex-prev}
+@media screen and (max-width: 860px) {
+	.flex-direction-nav .flex-prev,
+	
  
 .flex-direction-nav .flex-next {
 	opacity: 1;
 	right: 0;
  }
-
+ 
+ }
