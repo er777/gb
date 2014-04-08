@@ -7,7 +7,7 @@
 				//if (($i % 4) == 0) { echo "\n<div class=\"row\">\n\n";}
 			?>
 			
-			<div class="col-md-3 col-sm-6"> <!--style="width:22.5%;" -->
+			<div class="col-md-3 col-sm-3 col-xs-6"> <!--style="width:22.5%;" -->
 			
 			
 				<div class="item"> <!--content-product -->
