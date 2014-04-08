@@ -33,7 +33,7 @@ $(document).ready(function() {
            
                 <?php echo $this->Html->link($recipescategory['Recipescategory']['name'], array('controller' => 'recipes', 'action' => 'all', 'slug' => $recipescategory['Recipescategory']['slug'])); ?><br />
                  <?php endforeach; ?><?php */?>
-      <?php echo $this->Form->input('recipescategories', array('class' => 'selectpicker form-control inline','data-style'=>'btn-primary','options' => $recipescategories, 'label' => false,'empty' => array('all' => 'All Recipes'), 'default' => $recipescategory_selected)); ?>
+      <?php echo $this->Form->input('recipescategories', array('class' => 'form-control','data-style'=>'btn-primary','options' => $recipescategories, 'label' => false,'empty' => array('all' => 'All Recipes'), 'default' => $recipescategory_selected)); ?>
       <h3>Recipe Vendors</h3>
       <?php echo $this->Form->input('vendors', array('label' => false,'options' => $vendors, 'empty' => array('all' => 'All Vendors'), 'default' => $vendor_selected)); ?> 
 
