@@ -206,7 +206,7 @@
 			?>
 				<!--- One product -->
 				<div class="feature-recipe">
-					<a href="http://<?php echo $featurerecipe_object['User']['slug'] ; ?>.gourmetworldmarket.com/recipe/<?php echo $featurerecipe_object['Recipe']['slug'] ; ?>">
+					<a href="http://<?php echo $featurerecipe_object['User']['slug'] ; ?>.<?php echo Configure::read('Settings.DOMAIN'); ?>/recipe/<?php echo $featurerecipe_object['Recipe']['slug'] ; ?>">
 						<?php echo $this->Html->image('recipes/image_1/' . $featurerecipe_object['Recipe']['image_1']); ?></a>
 					<div class="feature-recipe-name"> 
 						<!--<a href="/product/<?php //echo ($product['Product']['id'].'-'.$product['Product']['slug']);?>">--> 

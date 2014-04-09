@@ -1,19 +1,17 @@
-<!-- Items -->
 
-<div class="items">
   
       <div class="row"> 
          
          <!-- Sidebar -->
          <div class="col-md-3 col-sm-3">
-         	 <h3 class="gwm-heading center"> <?php echo $user['User']['name']; ?></h3>
-            <div class="logo"> <a href="/"> <?php echo $this->Html->image('users/image/' . $user['User']['image'], array('height' =>'100px','class' => 'img-responsive')); ?> </a> </div>
+         	<!-- <h3 class="gwm-heading center"> <?php echo $user['User']['name']; ?></h3>-->
+            <div class="logo recipe"> <a href="/"> <?php echo $this->Html->image('users/image/' . $user['User']['image'], array('height' =>'100px','class' => 'img-responsive')); ?> </a> </div>
             
            
             <div class="section-subheading">Our Recipes</div>
             <hr class="recipe-divider" />
             
-            <div style="height:500px;overflow-y:scroll;padding-right:5px;">
+            <div class="recipe-scroll">
             <?php
 			
 			foreach($recipelist as $recipekey)
@@ -28,6 +26,7 @@
             
             </div>
          </div>
+         
          <div class="col-md-5 col-sm-5">
             <h2 class="gwm-heading recipes-heading"><?php echo $recipe['Recipe']['name']; ?></h2>
             <hr class="recipe-divider" />
@@ -91,5 +90,3 @@
             <br />
          </div>
       </div>
-
-</div>

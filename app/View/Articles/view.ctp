@@ -1,8 +1,3 @@
-<script>
-	$(document).ready(function() {
-		$('.article').columnize({ columns: 2 });
-	});
-</script>
 
 <h1><?php echo $article['Article']['name']; ?></h1>
 
@@ -47,27 +42,27 @@
 
 
 <?php if(!empty($article['Article']['image_2'])) : ?>
-	<?php echo $this->Html->image('articles/image_2/' .$article['Article']['image_2']); ?>
+	<?php echo $this->Html->image('articles/image_2/' .$article['Article']['image_2'], array('class' => 'img-responsive')); ?>
 <?php endif ; ?>
 <br />
 <br />
 <?php if(!empty($article['Article']['image_3'])) : ?>
-	<?php echo $this->Html->image('articles/image_3/' .$article['Article']['image_3']); ?>
+	<?php echo $this->Html->image('articles/image_3/' .$article['Article']['image_3'], array('class' => 'img-responsive')); ?>
 <?php endif ; ?>
 <br />
 <br />
 <?php if(!empty($article['Article']['image_4'])) : ?>
-	<?php echo $this->Html->image('articles/image_4/' .$article['Article']['image_4']); ?>
+	<?php echo $this->Html->image('articles/image_4/' .$article['Article']['image_4'], array('class' => 'img-responsive')); ?>
 <?php endif ; ?>
 <br />
 <br />
 <?php if(!empty($article['Article']['image_5'])) : ?>
-	<?php echo $this->Html->image('articles/image_5/' .$article['Article']['image_5']); ?>
+	<?php echo $this->Html->image('articles/image_5/' .$article['Article']['image_5'], array('class' => 'img-responsive')); ?>
 <?php endif ; ?>
 <br />
 <br />
 <?php if(!empty($article['Article']['image_6'])) : ?>
-	<?php echo $this->Html->image('articles/image_6/' .$article['Article']['image_6']); ?>
+	<?php echo $this->Html->image('articles/image_6/' .$article['Article']['image_6'], array('class' => 'img-responsive')); ?>
 <?php endif ; ?>
 
 </div>

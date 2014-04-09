@@ -1,18 +1,18 @@
-$(document).ready(function(){
+jQuery(document).ready(function(){
 
-	$('#OrderSameaddress').click(function(){
-		if($('#OrderSameaddress').attr('checked')) {
-			$('#OrderShippingAddress').val($('#OrderBillingAddress').val());
-			$('#OrderShippingAddress2').val($('#OrderBillingAddress2').val());
-			$('#OrderShippingCity').val($('#OrderBillingCity').val());
-			$('#OrderShippingState').val($('#OrderBillingState').val());
-			$('#OrderShippingZip').val($('#OrderBillingZip').val());
+	jQuery('#OrderSameaddress').click(function(){
+		if(jQuery('#OrderSameaddress').attr('checked')) {
+			jQuery('#OrderShippingAddress').val(jQuery('#OrderBillingAddress').val());
+			jQuery('#OrderShippingAddress2').val(jQuery('#OrderBillingAddress2').val());
+			jQuery('#OrderShippingCity').val(jQuery('#OrderBillingCity').val());
+			jQuery('#OrderShippingState').val(jQuery('#OrderBillingState').val());
+			jQuery('#OrderShippingZip').val(jQuery('#OrderBillingZip').val());
 		} else {
-			$("#OrderShippingAddress").val('');
-			$('#OrderShippingAddress2').val('');
-			$('#OrderShippingCity').val('');
-			$('#OrderShippingState').val('');
-			$('#OrderShippingZip').val('');
+			jQuery("#OrderShippingAddress").val('');
+			jQuery('#OrderShippingAddress2').val('');
+			jQuery('#OrderShippingCity').val('');
+			jQuery('#OrderShippingState').val('');
+			jQuery('#OrderShippingZip').val('');
 		}
 	});
 

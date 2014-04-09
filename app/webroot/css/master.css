@@ -79,6 +79,7 @@ body .page.container {
 	padding-left:30px;
 	padding-right:30px;
 	position: relative;
+	
  }
  
 
@@ -128,8 +129,29 @@ img {
 	outline: 0 !important;*/
 }
 
+.search-result {
+	display: block;
+	height: auto;
+	max-height:100px;
+	margin-bottom:20px;
+}
+
+.search-result-frame {
+	margin-bottom:15px;
+
+}
+
+.search-result-frame .wrap {
+	border:#CCC thin solid;
+	padding:10px;
+}
+
 .clearfix {clear: both;}
- 
+
+.air {
+	height:25px;
+}
+
 .input.checkbox {padding-left: 5px;}
 
 .gwm-nav {
@@ -819,10 +841,13 @@ html[xmlns] .slides {display: block;}
 		opacity: 1;
 	 }
  
-@media screen and (max-width: 860px) {.flex-direction-nav .flex-prev}
+@media screen and (max-width: 860px) {
+	.flex-direction-nav .flex-prev,
+	
  
 .flex-direction-nav .flex-next {
 	opacity: 1;
 	right: 0;
  }
-
+ 
+ }
