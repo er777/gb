@@ -221,17 +221,17 @@ class AppController extends Controller {
 		
 			// https redirect
 	 
-		   if (in_array($this->params['action'], $this->secureActions) 
-			   && !isset($_SERVER['HTTPS'])) {
-				   $this->forceSSL();
-		   }
+		  // if (in_array($this->params['action'], $this->secureActions) 
+//			   && !isset($_SERVER['HTTPS'])) {
+//				   $this->forceSSL();
+//		   }
 	}
 	
 ////////////////////////////////////////////////////////////
 	  
-		 public function forceSSL() {
-			   $this->redirect('https://' . $_SERVER['SERVER_NAME'] . $this->here);
-	   }
+		// public function forceSSL() {
+//			   $this->redirect('https://' . $_SERVER['SERVER_NAME'] . $this->here);
+//	   }
 		   
 
 ////////////////////////////////////////////////////////////
