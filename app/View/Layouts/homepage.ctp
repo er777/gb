@@ -76,7 +76,7 @@
     <div class="container feature-wrapper">
 
 			<div id="upper">
-			<div>TODAY'S FEATURED VENDORS</div>
+			<div><h3>TODAY'S FEATURED VENDORS</h3></div>
 				<div id="myCarousel" class="carousel slide">
 					<div class="carousel-inner">
 						
