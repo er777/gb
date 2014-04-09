@@ -60,6 +60,9 @@
 
 
 <div class="page container">
+
+<div class="air"></div>
+
    <div id="dialog-info"> <?php echo $this->Session->flash(); ?> </div>
    <!-- CONTENT --> 
    <?php echo $this->fetch('content'); ?>

@@ -162,7 +162,7 @@ h1.category-title a {
  
 .breadcrumb.categories {margin: 0px;
    background: #6ca744;
-   margin-top:20px;
+  
 }
  
 	.breadcrumb.categories li {text-shadow: none;}
@@ -958,11 +958,10 @@ body.categories .content {
 }
  
 #pantry-container-2 {
-	background: #dcab5f url(../img/global/category-bkgnd.png) repeat-y;
+	background: #dcab5f url(../img/global/pantry-bg.jpg) repeat;
 	border-radius: 3px;
-	border: #3a3a3a 15px solid;
-	padding-bottom: 25px;
-	padding-top: 25px;
+	border: #3a3a3a 3px solid;
+	padding:30px;
 }
  
 h3.cat-title {
@@ -982,7 +981,7 @@ h3.cat-list {
  
 .well-stocked-pantry {
 	color: #c00;
-	font-family: 'Rosario', sans-serif;
+	font-family: 'Marydale Bold', sans-serif;
 	font-size: 30px;
 	letter-spacing: 1px;
 	margin-bottom: 25px;
@@ -993,7 +992,25 @@ h3.cat-list {
 	background-color: transparent;
 	border: none;
 	padding: 0px;
-	width: 127px;
+
+}
+
+.upper-item.pantry {
+	height:125px;
+}
+
+.card.pantry {
+	height:40px;
+	text-align:center;
+}
+
+img.img-responsive.category {
+	height:auto;
+}
+
+
+.upper-item.pantry {
+	background-color:#fff;
 }
  
 .col-md-2.pantry {
@@ -1014,7 +1031,7 @@ h3.cat-list {
  
 .row.pantry-row {
 	margin-bottom: 15px;
-	margin-left: 10px;
+	
 }
  
 .category-product {
@@ -1022,11 +1039,9 @@ h3.cat-list {
 	-webkit-box-shadow: 0px 0px 9px #3a3a3a; /*border:#3a3a3a 1px solid;*/
 	background-image: url(../img/global/category-product.png);
 	box-shadow: 0px 0px 9px #3a3a3a;
-	float: left;
 	height: 165px;
-	margin-left: 16px;
 	position: relative;
-	width: 133px;
+	
 }
 
 
@@ -1047,7 +1062,6 @@ h3.cat-list {
  
 /** Awning **/
 .awning {
-	margin-top: 20px;
 	margin-bottom: 20px;
 	margin-left:15px;
 	position: relative;
@@ -1161,7 +1175,7 @@ h3.cat-list {
 	padding: 15px;
 	padding-top:5px;
 	position:relative;
-	z-index:1000;
+	z-index:100;
 }
 
 	#left-sidebar a {
@@ -1176,7 +1190,7 @@ h3.cat-list {
 	border-top-left-radius: 7px;
 	border-top-right-radius: 7px;
 	border: #3f4b52 1px solid;
-	margin-top: 45px;
+	margin-top: 25px;
 	padding: 10px 10px 10px 15px;
 }
  
@@ -2456,7 +2470,7 @@ div.gwm-heading>div#populate-overlay-1>p>a,
 }
  
 /**jQuery  UI Search **/
-.ui-menu {z-index: 500!important;}
+.ui-menu {z-index: 1000!important;background-color:#fff;}
  
 /**Special Boxes **/
 .special.box {

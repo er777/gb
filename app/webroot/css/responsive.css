@@ -20,6 +20,10 @@
 /* 1 - Large desktop  **/
 @media (min-width: 992px) and (max-width: 1199px) {
 
+
+	.navbar-nav {
+		float: right;
+	}
 	
 	/** FEATURES **/
 	.feature {
@@ -58,14 +62,10 @@
 	
 	
 	
-	.header-tools {
-		float:right;
+	.header-tools, .search {
+		display:none;
 	}
 	
-	.search {
-		float:right;
-	}
-
 	
 	.container.feature-block {
 		padding-left:3.5%;
@@ -115,7 +115,7 @@
 	
 	
 	.header-tools, .search {
-		float:right;
+		display:none;
 	}
 	
 	
@@ -161,10 +161,17 @@
 
 /* 4 - Landscape phones and down **/
 @media (max-width: 480px) {
-		a.navbar-brand img {
+		/**Show small logo **/
+	.hidden-logo {
+		display:block;
+		
+	}
+	
+
+	a.navbar-brand img {
 		display:none;
 	}
-		.search {
+	.header-tools, .search {
 		display:none;
 	}
 	

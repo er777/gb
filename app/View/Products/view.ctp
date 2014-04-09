@@ -196,17 +196,14 @@ $(document).ready(function() {
    
 
       
-         <div class="btn btn-gb"> <a class="vendor-css" href="/recipes">Our Recipes</a> </div>
+        <a class="btn btn-gb" href="/recipes">Our Recipes</a>
          
-         <!--<ul class="navList">
-						<li><a href="#vendor-unit">Our Regions</a></li>
-			</ul>--> 
+         
+         <?php $vendor_policy = $user['User']['shipping_policy']; ?>
+        <a href="#" id="policies" class="btn btn-gb">Shipping/Cust Service</a>
          
       </div>
-      <div>
-         <?php $vendor_policy = $user['User']['shipping_policy']; ?>
-         <br />
-         <a href="#" id="policies" class="btn btn-gb">SHIPPING & CUSTOMER SERVICE</a> </div>
+
       
       <!-- Element to pop up -->
       <div id="policy_content">

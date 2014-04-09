@@ -1,6 +1,4 @@
-<!-- Items -->
 
-<div class="items">
   
       <div class="row"> 
          
@@ -28,7 +26,7 @@
             
             </div>
          </div>
-         <hr />
+         
          <div class="col-md-5 col-sm-5">
             <h2 class="gwm-heading recipes-heading"><?php echo $recipe['Recipe']['name']; ?></h2>
             <hr class="recipe-divider" />
@@ -92,5 +90,3 @@
             <br />
          </div>
       </div>
-
-</div>

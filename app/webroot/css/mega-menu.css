@@ -583,6 +583,11 @@ a.navbar-brand img {
 
 /* Navigation **/
 
+.navbar-nav {
+		/**float: right;
+		margin-right:66px; **/
+	}
+
 #main-nav  li a.parent {
 	font-family: 'PT Sans Narrow';
 	font-size:19px;
@@ -597,6 +602,7 @@ a.navbar-brand img {
 .navbar-inverse .navbar-collapse{
 	background-color: #393767;
 }
+
 
 .wide {
 }

@@ -18,9 +18,7 @@
 
 <script>
 	$('#story_content').bPopup({
-            modalClose: false,
-            opacity: 0.6,
-            positionStyle: 'fixed' //'fixed' or 'absolute'
+         
         });
                 </script>
 
