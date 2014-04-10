@@ -1180,6 +1180,11 @@ img.img-responsive.category {
 
 	#left-sidebar a {
 		font-size:12px;
+		
+	}
+	
+	#left-sidebar a#policies {
+		margin-top:10px;
 	}
  
 #sidebar-title {
