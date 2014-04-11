@@ -7182,3 +7182,27 @@
 #4 [internal function]: ErrorHandler::handleException(Object(SocketException))
 #5 {main} in /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php on line 131
 [11-Apr-2014 15:00:12 America/Los_Angeles] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/gourmet/public_html/lib/Cake/Network/CakeResponse.php:534) in /home/gourmet/public_html/lib/Cake/Network/CakeResponse.php on line 444
+[11-Apr-2014 15:27:35 America/Los_Angeles] PHP Fatal error:  [CakeException] Unknown status code
+#0 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(215): CakeResponse->statusCode(2)
+#1 [internal function]: ExceptionRenderer->error400(Object(SocketException))
+#2 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(178): call_user_func_array(Array, Array)
+#3 /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php(122): ExceptionRenderer->render()
+#4 [internal function]: ErrorHandler::handleException(Object(SocketException))
+#5 {main} in /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php on line 131
+[11-Apr-2014 15:27:35 America/Los_Angeles] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/gourmet/public_html/lib/Cake/Network/CakeResponse.php:534) in /home/gourmet/public_html/lib/Cake/Network/CakeResponse.php on line 444
+[11-Apr-2014 15:28:35 America/Los_Angeles] PHP Fatal error:  [CakeException] Unknown status code
+#0 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(215): CakeResponse->statusCode(2)
+#1 [internal function]: ExceptionRenderer->error400(Object(SocketException))
+#2 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(178): call_user_func_array(Array, Array)
+#3 /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php(122): ExceptionRenderer->render()
+#4 [internal function]: ErrorHandler::handleException(Object(SocketException))
+#5 {main} in /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php on line 131
+[11-Apr-2014 15:28:35 America/Los_Angeles] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/gourmet/public_html/lib/Cake/Network/CakeResponse.php:534) in /home/gourmet/public_html/lib/Cake/Network/CakeResponse.php on line 444
+[11-Apr-2014 15:30:10 America/Los_Angeles] PHP Fatal error:  [CakeException] Unknown status code
+#0 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(215): CakeResponse->statusCode(2)
+#1 [internal function]: ExceptionRenderer->error400(Object(SocketException))
+#2 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(178): call_user_func_array(Array, Array)
+#3 /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php(122): ExceptionRenderer->render()
+#4 [internal function]: ErrorHandler::handleException(Object(SocketException))
+#5 {main} in /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php on line 131
+[11-Apr-2014 15:30:10 America/Los_Angeles] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/gourmet/public_html/lib/Cake/Network/CakeResponse.php:534) in /home/gourmet/public_html/lib/Cake/Network/CakeResponse.php on line 444
