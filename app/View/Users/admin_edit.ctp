@@ -216,6 +216,7 @@ function doFormatPhone(A){var B=document.getElementById(A);B.onblur=function(){f
 				<?php echo $this->Form->input('warehouse_phone'); ?>
 				<?php echo $this->Form->input('warehouse_ext', array('class' => 'span1','label' =>'Warehouse Extension')); ?>
 				<?php echo $this->Form->input('warehouse_email', array('class' => 'span4')); ?>
+				<?php echo $this->Form->input('warehouse_zip'); ?>
 				
 				<hr />
 				<h3>CUSTOMER SERVICE</h3>
