@@ -33,3 +33,80 @@
 #4 [internal function]: ErrorHandler::handleException(Object(SocketException))
 #5 {main} in /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php on line 131
 [12-Apr-2014 08:31:41 America/Los_Angeles] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/gourmet/public_html/lib/Cake/Network/CakeResponse.php:534) in /home/gourmet/public_html/lib/Cake/Network/CakeResponse.php on line 444
+[15-Apr-2014 19:50:41 America/Los_Angeles] PHP Fatal error:  [CakeException] Unknown status code
+#0 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(215): CakeResponse->statusCode(2)
+#1 [internal function]: ExceptionRenderer->error400(Object(SocketException))
+#2 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(178): call_user_func_array(Array, Array)
+#3 /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php(122): ExceptionRenderer->render()
+#4 [internal function]: ErrorHandler::handleException(Object(SocketException))
+#5 {main} in /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php on line 131
+[15-Apr-2014 19:50:48 America/Los_Angeles] PHP Fatal error:  [CakeException] Unknown status code
+#0 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(215): CakeResponse->statusCode(2)
+#1 [internal function]: ExceptionRenderer->error400(Object(SocketException))
+#2 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(178): call_user_func_array(Array, Array)
+#3 /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php(122): ExceptionRenderer->render()
+#4 [internal function]: ErrorHandler::handleException(Object(SocketException))
+#5 {main} in /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php on line 131
+[15-Apr-2014 19:51:41 America/Los_Angeles] PHP Fatal error:  [CakeException] Unknown status code
+#0 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(215): CakeResponse->statusCode(2)
+#1 [internal function]: ExceptionRenderer->error400(Object(SocketException))
+#2 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(178): call_user_func_array(Array, Array)
+#3 /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php(122): ExceptionRenderer->render()
+#4 [internal function]: ErrorHandler::handleException(Object(SocketException))
+#5 {main} in /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php on line 131
+[15-Apr-2014 19:51:45 America/Los_Angeles] PHP Fatal error:  [CakeException] Unknown status code
+#0 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(215): CakeResponse->statusCode(2)
+#1 [internal function]: ExceptionRenderer->error400(Object(SocketException))
+#2 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(178): call_user_func_array(Array, Array)
+#3 /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php(122): ExceptionRenderer->render()
+#4 [internal function]: ErrorHandler::handleException(Object(SocketException))
+#5 {main} in /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php on line 131
+[16-Apr-2014 02:26:06 America/Los_Angeles] PHP Fatal error:  [CakeException] Unknown status code
+#0 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(215): CakeResponse->statusCode(2)
+#1 [internal function]: ExceptionRenderer->error400(Object(SocketException))
+#2 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(178): call_user_func_array(Array, Array)
+#3 /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php(122): ExceptionRenderer->render()
+#4 [internal function]: ErrorHandler::handleException(Object(SocketException))
+#5 {main} in /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php on line 131
+[16-Apr-2014 02:26:17 America/Los_Angeles] PHP Fatal error:  [CakeException] Unknown status code
+#0 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(215): CakeResponse->statusCode(2)
+#1 [internal function]: ExceptionRenderer->error400(Object(SocketException))
+#2 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(178): call_user_func_array(Array, Array)
+#3 /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php(122): ExceptionRenderer->render()
+#4 [internal function]: ErrorHandler::handleException(Object(SocketException))
+#5 {main} in /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php on line 131
+[16-Apr-2014 02:28:44 America/Los_Angeles] PHP Fatal error:  [CakeException] Unknown status code
+#0 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(215): CakeResponse->statusCode(2)
+#1 [internal function]: ExceptionRenderer->error400(Object(SocketException))
+#2 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(178): call_user_func_array(Array, Array)
+#3 /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php(122): ExceptionRenderer->render()
+#4 [internal function]: ErrorHandler::handleException(Object(SocketException))
+#5 {main} in /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php on line 131
+[16-Apr-2014 20:33:51 America/Los_Angeles] PHP Fatal error:  [CakeException] Unknown status code
+#0 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(215): CakeResponse->statusCode(2)
+#1 [internal function]: ExceptionRenderer->error400(Object(SocketException))
+#2 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(178): call_user_func_array(Array, Array)
+#3 /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php(122): ExceptionRenderer->render()
+#4 [internal function]: ErrorHandler::handleException(Object(SocketException))
+#5 {main} in /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php on line 131
+[17-Apr-2014 13:00:10 America/Los_Angeles] PHP Fatal error:  [CakeException] Unknown status code
+#0 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(215): CakeResponse->statusCode(2)
+#1 [internal function]: ExceptionRenderer->error400(Object(SocketException))
+#2 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(178): call_user_func_array(Array, Array)
+#3 /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php(122): ExceptionRenderer->render()
+#4 [internal function]: ErrorHandler::handleException(Object(SocketException))
+#5 {main} in /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php on line 131
+[17-Apr-2014 13:22:50 America/Los_Angeles] PHP Fatal error:  [CakeException] Unknown status code
+#0 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(215): CakeResponse->statusCode(2)
+#1 [internal function]: ExceptionRenderer->error400(Object(SocketException))
+#2 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(178): call_user_func_array(Array, Array)
+#3 /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php(122): ExceptionRenderer->render()
+#4 [internal function]: ErrorHandler::handleException(Object(SocketException))
+#5 {main} in /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php on line 131
+[17-Apr-2014 13:26:58 America/Los_Angeles] PHP Fatal error:  [CakeException] Unknown status code
+#0 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(215): CakeResponse->statusCode(2)
+#1 [internal function]: ExceptionRenderer->error400(Object(SocketException))
+#2 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(178): call_user_func_array(Array, Array)
+#3 /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php(122): ExceptionRenderer->render()
+#4 [internal function]: ErrorHandler::handleException(Object(SocketException))
+#5 {main} in /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php on line 131
