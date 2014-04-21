@@ -19,10 +19,24 @@
 			<li class="mzr-drop"> <a class="parent" href="#" ><span style="color:#a53043;text-shadow:1px 1px #000"></span>VENDORS<b class="caret"></b></a>
 				<div class="mzr-content drop-three-columns popover-content">
 					<div class="wide">
+					<p>ARTISINAL VENDORS</p>
 					<?php foreach($menuvendors as $menuvendor) : ?>
 					<p><?php echo $this->Html->link($menuvendor['User']['name'], 'http://' . $menuvendor['User']['slug'] . '.' . Configure::read('Settings.DOMAIN') . '/'); ?></p>
 					<?php endforeach; ?>
+					
+					<p>-------------------</p>
+					<p>SUPERMARKET VENDORS</p>
+					
+					<?php foreach($menu_marketvendors as $menu_marketvendor) : 
+					?>
+					<p><?php echo $this->Html->link($menu_marketvendor['User']['name'], 'http://' . $menu_marketvendor['User']['slug'] . '.' . Configure::read('Settings.DOMAIN') . '/'); ?></p>
+					<?php endforeach; ?>
+					
+					
+					<p>-------------------</p>
+					
 					<span class="special"><a href="/users/vendors">Full Vendor List</a></span>
+
 					</div>
 				</div>
 			</li>

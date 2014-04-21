@@ -32,6 +32,20 @@
 									if (($i % 15) == 0) { echo "</ul>\n</li>\n<li class=\"two-column loop\">\n<ul>\n";	}
 									endforeach;
 								?>
+								
+								
+								<li>XXXXXXXXXXXXX</li>
+									<?php
+									foreach($menu_marketvendors as $menu_marketvendor) : 
+									?>
+									
+									
+									<li>xxxx<?php echo $this->Html->link($menu_marketvendor['User']['name'], 'http://' . $menu_marketvendor['User']['slug'] . '.' . Configure::read('Settings.DOMAIN') . '/'); ?></li>
+									<?php endforeach; ?>
+								
+								
+								
+								
 								</ul>
 							</li>
 								
