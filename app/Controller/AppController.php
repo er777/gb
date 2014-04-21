@@ -81,12 +81,47 @@ class AppController extends Controller {
 
 			$menuvendors = Cache::read('menuvendors');
 			if (!$menuvendors) {
-				$menuvendors = ClassRegistry::init('User')->getVendors();
-				Cache::set(array('duration' => '+10 minutes'));
+				$menuvendors = ClassRegistry::init('User')->find('all',array(				
+					'conditions' => array(
+						'User.active' => 1,
+						'User.vendor_type' => 1,
+					)	,
+					'fields' => array(
+						'User.name',
+						'User.slug'
+					),
+					'order' => array(
+						'User.name' => 'ASC'
+					),					
+				));
+				
+				Cache::set(array('duration' => '+5 minutes'));
 				Cache::write('menuvendors', $menuvendors);
 			}
 			$this->set(compact('menuvendors'));
 			
+			
+			$menu_marketvendors = Cache::read('menu_marketvendors');
+			if (!$menu_marketvendors) {
+				$menu_marketvendors = ClassRegistry::init('User')->find('all',array(				
+					'conditions' => array(
+						'User.active' => 1,
+						'User.vendor_type' => 2,
+					)	,
+					'fields' => array(
+						'User.name',
+						'User.slug'
+					),
+					'order' => array(
+						'User.name' => 'ASC'
+					),					
+				));
+				
+				Cache::set(array('duration' => '+5 minutes'));
+				Cache::write('menu_marketvendors', $menu_marketvendors);
+			}
+			$this->set(compact('menu_marketvendors'));
+						
 			
 			$menu_ustraditions = Cache::read('menu_ustraditions');
 			if (!$menu_ustraditions) {
