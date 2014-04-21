@@ -51,6 +51,7 @@ function doFormatPhone(A){var B=document.getElementById(A);B.onblur=function(){f
 	
 			<div class="span4">
 				<?php echo $this->Form->input('level', array('label' => 'User Level' , 'options' => array( 'admin' => 'Admin','vendor' => 'Vendor'))); ?>
+				<?php echo $this->Form->input('vendor_type', array('label' => 'Vendor Type' ,'empty' => '--', 'options' => array('1' => 'Regular', '2' => 'Super Market', ))); ?>
 				<?php echo $this->Form->input('username'); ?>
 				<?php echo $this->Form->input('name', array('label' => 'Shoppe Name')); ?>
 				<?php echo $this->Form->input('slug', array('label' => 'Domain Prefix <br />do NOT use hyphens here - only one word, no spaces')); ?>
@@ -98,17 +99,9 @@ function doFormatPhone(A){var B=document.getElementById(A);B.onblur=function(){f
 				<?php echo $this->Form->input('contact_alt_email', array('label' => 'Alternate Contact eMail', 'class' => 'span4')); ?>
 	
 			
-                
-                
-                
-                
+
 	
 			</div>
-            
-            
-            
-            
-            
             
             
 			<div class="span4">
