@@ -4,6 +4,8 @@
 
 <h1>Shopping Cart</h1>
 
+Remember: The more you purchase from this shop, the lower the freight cost per item.
+
 <?php if(empty($shop['OrderItem'])) : ?>
 
 Shopping Cart is empty
