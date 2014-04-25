@@ -290,6 +290,8 @@ $(document).ready(function() {
 					<span class="product-label">Shipping Weight: </span><?php echo $product['Product']['shipping_weight_oz']; ?>&nbsp;oz.<?php //echo $product['Product']['weight_unit']; ?> </span>
 				<?php //endif; ?>
 				<br />
+				
+				<div class="btn-gb" style="padding:7px">Remember: The more you purchase from this shop, the lower the freight cost per item.</div>
 				<br />
 
 				<?php if(!empty($product['Product']['country'])) : ?>
