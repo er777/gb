@@ -142,7 +142,7 @@ letter-spacing: 0.5px; }
 .dropdown-menu li > a:hover,
 .dropdown-menu li > p a:hover,
 .dropdown-menu li > a:focus,
-.dropdown-submenu:hover > a { color: #0066cc; text-decoration: none; background: none; 
+.dropdown-submenu:hover > a { color: #fff; text-decoration: none; background: none; 
   background-image: none;
   background-image: none;
   background-image: none;
@@ -589,8 +589,13 @@ a.navbar-brand img {
 	}
 
 #main-nav  li a.parent {
-	font-family: 'PT Sans Narrow';
-	font-size:19px;
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-size:25px;
+}
+
+ul.nav li.dropdown>a {
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-size:25px;
 }
 
 #nav-wrapper {
@@ -611,7 +616,7 @@ a.navbar-brand img {
 hr.thin.tight {
 	margin: 5px 0;
 	border: 0;
-	border-top: 1px solid #3f9179;
+	border-top: 1px solid #393b2e;
 	border-bottom: none;
 	
 }

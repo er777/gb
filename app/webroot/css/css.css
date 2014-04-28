@@ -432,7 +432,6 @@ div.recipe-name, div.recipe-name p, div.recipe-name a {
 }
  
 div.price {
-	color: #7F131F;
 	font-size: 11px;
 	margin-right: 10px;
 	position: absolute;
@@ -546,7 +545,7 @@ div.price {
 .cart-pic img {height: 50px;}
  
 h2.product-name {
-	color: #3F9179;
+	color: #393b2e;
 	font-family: 'Rosario', sans-serif;
 	font-size: 21px;
 	line-height: 25px;
@@ -965,7 +964,7 @@ body.categories .content {
 }
  
 h3.cat-title {
-	color: #3F9179;
+	color: #393b2e;
 	font-family: 'Rosario', sans-serif;
 	font-size: 19px;
 	letter-spacing: 1px;
@@ -1104,7 +1103,7 @@ img.img-responsive.category {
 }
  
 #awning-text {
-	color: #fff;
+	
 	font-size: 13px;
 	font-style: italic;
 	text-align: center;
@@ -1198,7 +1197,15 @@ img.img-responsive.category {
 	margin-top: 25px;
 	padding: 10px 10px 10px 15px;
 }
- 
+
+.vendor-sidebar-title {
+	background-color:#b5b2ca;
+	-moz-box-shadow: inset 0 0 4px 3px #7d7f94;
+	-webkit-box-shadow: inset 0 0 4px 3px #7d7f94;
+	box-shadow: inset 0 0 4px 3px #7d7f94;
+	
+}
+
 #sidebar-content {
 	height: 600px;
 	overflow-y: scroll;
@@ -1219,6 +1226,11 @@ img.img-responsive.category {
 		display:block;
 		color:#39332b;
   }
+  
+a.btn-gwm {
+	background-color:#393767;
+	color:#fff;
+}
 
  
 .left-sidebar {
@@ -1807,11 +1819,11 @@ table {
  
 /** Articles **/
 .article-nav {
-	color: #3F9179;
-	font-family: Oregano, cursive;
+	color: #393b2e;
+	font-family: Marydale Bold, sans-serif;
 	font-size: 110%;
 }
- 
+
 .content h1 {padding-top: 20px;}
  
 
@@ -1916,13 +1928,13 @@ hr.recipe-divider {
 	}
  
 .recipe-title {
-	color: #3f9179;
-	font-family: Oregano, cursive;
+	color: #393b2e;
+	font-family: Marydale Bold, sans-serif;
 }
  
 .recipe-name {
 
-	color: #3f9179;
+	color: #393b2e;
 	
 }
  
@@ -1940,7 +1952,7 @@ hr.recipe-divider {
 .article-title {}
  
 .article-name {
-	color: #3f9179;
+	color: #393b2e;
 	font-family: Rosario, sans-serif;
 }
  
@@ -2095,7 +2107,7 @@ img.article-landing-pic {
 }
  
 .prefix {
-	color: #3f9179;
+	color: #393b2e;
 	font-size: 12px;
 	font-weight: bold;
 }
@@ -2188,7 +2200,7 @@ div.attr {
 }
  
 .b-close.btn-gwm {
-	background-color: #3f9179;
+	background-color: #393b2e;
 	border-radius: 12px;
 	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
 	box-shadow: none;
@@ -2210,7 +2222,7 @@ div.attr {
 .loading {background: url('loader.gif') center center no-repeat;}
  
 #story_content .gwm-heading, #policy_content .gwm-heading, #welcome_content .gwm-heading, #vendor-article span.gwm-heading {
-	color: #3F9179;
+	color: #393b2e;
 	font-family: 'Rosario', sans-serif;
 	font-size: 24px;
 	letter-spacing: 1px;
@@ -2223,7 +2235,7 @@ hr.article-divide {
 }
  
 .gwm-heading {
-	color: #3F9179;
+	color: #393b2e;
 	font-family: 'Rosario', sans-serif;
 	font-size: 21px;
 	letter-spacing: 1px;
@@ -2241,7 +2253,7 @@ hr.article-divide {
 	.gwm-heading.list {margin-bottom: 4px;}
  
 h2.gwm-heading {
-	color: #3F9179;
+	color: #393b2e;
 	font-family: 'Rosario', sans-serif;
 	font-size: 28px;
 }
@@ -2268,7 +2280,7 @@ h2.gwm-heading {
 }
  
 .section-heading {
-	color: #3F9179;
+	color: #393b2e;
 	font-family: 'Rosario', sans-serif;
 	font-size: 20px;
 	letter-spacing: 0px;
@@ -2483,7 +2495,7 @@ div.gwm-heading>div#populate-overlay-1>p>a,
 	-webkit-border-radius: 10px;
 	background: #c00 url(../img/global/category-bkgnd.png);
 	border-radius: 10px;
-	border: #3f9179 10px solid;
+	border: #393b2e 10px solid;
 	color: #fff;
 	padding: 40px;
 }
@@ -2517,7 +2529,7 @@ hr.thin.tight {
 
  
 .gwm-green {
-	color: #3f9179;
+	color: #393b2e;
 	font-weight: bold;
 }
  

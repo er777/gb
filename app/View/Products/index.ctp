@@ -35,7 +35,7 @@
 	<!--Sidebar -->
 	<div class="col-md-3 col-sm-3" >
     
-       <div id="sidebar-title" class="vendor-css">
+       <div id="sidebar-title" class="vendor-sidebar-title">
    
               <?php if(!empty($user)) : ?>
              <a href="/"> 
@@ -199,7 +199,7 @@
 
 				<?php foreach ($brands as $brnd): ?> 
 			
-					<span class="gwm-nav"><img src="/img/global/dash-2.png"></span>
+					<span class="gwm-nav"></span>
 					<?php echo $this->Html->link($brnd['Brand']['name'], array('controller' => 'products', 'action' => 'brand', $brnd['Brand']['slug'])); ?><br />
 
 				<?php endforeach; ?>
@@ -213,7 +213,7 @@
 		<div style="clear:both"></div>
     
     
-			<a class="btn btn-gb" href="#" id="story">Our Story</a>
+			<a class="btn btn-gwm" href="#" id="story">Our Story</a>
 			
 
 			<!-- Vendor Story -->
@@ -221,7 +221,7 @@
 	<?php echo $this->element('vendor-story'); ?>
    
 			
-			<a class="btn btn-gb" href="/recipes">Our Recipes</a>
+			<a class="btn btn-gwm" href="/recipes">Our Recipes</a>
             
             <br />
 		
@@ -233,7 +233,7 @@
 				<?php $vendor_policy = $user['User']['shipping_policy']; ?>
 			<br />
 
-				<a class="btn btn-gb" href="#" id="policies" >Shipping/Customer Service</a>
+				<a class="btn btn-gwm" href="#" id="policies" >Shipping/Customer Service</a>
 <div>
 			</div>
 </div>
@@ -285,7 +285,7 @@
 	-->
 				<style>
 				#awning1 {
-					<?php echo $user['User']['awning_css']; ?>
+					<?php //echo $user['User']['awning_css']; ?>
 				}
 				</style>
 	

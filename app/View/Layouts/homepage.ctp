@@ -8,14 +8,15 @@
 
 <!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Rosario:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Oregano:400,400italic' rel='stylesheet' type='text/css'>-->
 
-<link href='http://fonts.googleapis.com/css?family=Rosario:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
 
 
 <!-- Stylesheets -->
+
+<link href='http://fonts.googleapis.com/css?family=Rosario:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
 
 <?php echo $this->Html->css(array('master.css','responsive.css','mega-menu.css','mega-menu-responsive.css')); ?>  <!-- 'bootstrap-responsive.min.css', -->
@@ -55,19 +56,19 @@
 
 <div class="page container">
 
+
+
 	<div id="gwm-title"> 
         <!--<div class="issue gwm-heading">July - August 2013</div>-->
         <h1 class="title-description center">A fresh way to shop for, learn about, prepare and enjoy foods of the world.</h1>
-        <p class=" center">Our slogan “Become a World Class Foodie” reflects our committment to help cooks of all kinds, from Moms to chefs, 
+        <p class="slogan center">Our slogan “Become a World Class Foodie” reflects our committment to help cooks of all kinds, from Moms to chefs, 
             novices to professionals and young to old, expand their tastes, techniques and pantries to enjoy the delicious bounties <a href="#" id="welcome">(more) ...</a></p>
 	</div>
     
-    <div id="welcome_content"> <span class="b-close btn-gb"><span>X</span></span>
-        <h2 style="text-align:center;font-size:25px">The Marketplace to Explore and Experience Global Cuisines and Cultures</h2>
+    <div id="welcome_content" class="col-md-7"> <span class="b-close btn-gb"><span>X</span></span>
+        <h2>Welcome to Gourmet World market -<br />The First-Ever World Marketplace and Cultural Cuisine Magazine in one...</h2>
         <hr />
         <div style="text-align:center;position:relative">
-            <div id="welcome-bkngd"> <img src="/img/homepage/markets.png" width="704" height="657">
-        </div>
             <?php echo $welcome['Content']['body']; ?>
         </div>
     </div>
@@ -76,15 +77,19 @@
     <div class="container feature-wrapper">
 
 			<div id="upper">
-			<div><h3>TODAY'S FEATURED VENDORS</h3></div>
+			
 				<div id="myCarousel" class="carousel slide">
 					<div class="carousel-inner">
 						
 						<?php $active = 'active'; ?>
 						<?php foreach($contents as $content) : ?>
 						<?php if (($content['Content']['active']) == 1) : ?>
-						<div class="item <?php echo $active; ?>"> <a href="<?php echo ($content['Content']['link']); ?>"> <?php echo $this->Html->image('homepage/sliders/' . $content['Content']['image']); ?> </a>
+                        
+						<div class="item <?php echo $active; ?>">
+                        
+                         <a href="<?php echo ($content['Content']['link']); ?>"> <?php echo $this->Html->image('homepage/sliders/' . $content['Content']['image']); ?> </a>
 							<div class="carousel-caption">
+                            <h3 class="featured">TODAY'S FEATURED VENDORS</h3>
 								<p class="vendor-name"><?php echo $this->Html->link($content['Content']['name'], $content['Content']['link']); ?></p>
 								<p class="vendor-info"><?php echo $content['Content']['body']; ?></p><br />
 							</div>

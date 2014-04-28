@@ -18,7 +18,7 @@
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
 				
-					<li><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>">HOME</a>
+					<li class="dropdown"><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>">HOME</a>
 							
 					<li class="dropdown mega-menu-4 transition">
                     	<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-home icon-white"></i> VENDORS<b class="caret"></b></a>
@@ -35,6 +35,8 @@
 									if (($i % 15) == 0) { echo "</ul>\n</li>\n<li class=\"two-column loop\">\n<ul>\n";	}
 									endforeach;
 								?>
+								
+									
 								</ul>
 							</li><!-- 2 Column Menu Ends -->
 								

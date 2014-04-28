@@ -56,7 +56,7 @@ body {
 	background-repeat:no-repeat;
 	background-color: #e9e9e9;
 	border-top: none;
-	color: #444;
+	color: #393b2e;
 	font-family: 'Open Sans', verdana, arial, sans-serif;
 	font-size: 13px; /*font-family: "Mako", sans-serif;*/
 	padding-top: 0px;
@@ -103,7 +103,7 @@ h4 {}
  
 h5 {font-size: 13px;}
  
-a {color: #3f9179;}
+a {color: #393b2e;}
  
 ul {
 	list-style-image: url(../img/ul-disc.png);
@@ -112,7 +112,7 @@ ul {
  
 hr {
 	
-	border-top: 1px solid #CCC;
+	border-top: 1px solid #696f4c;
 	margin: 20px 0;
  }
  
@@ -252,16 +252,21 @@ li.gwm-account {
 /**HOMEPAGE **/
 
 h1.title-description {
-	font-family: Marydale Bold, sans-serif;
+	font-family: Rosario, sans-serif;
+	text-transform:uppercase;
 	padding-bottom:5px;
 	margin-bottom:5px;
 	margin-top:30px;
-	font-size: 24px;
+	font-size: 20px;
 	line-height:1.3;
 	position: relative;
 }
 
-
+.slogan {
+	font-family: Rosario, sans-serif;
+	font-size:14px;
+	margin-bottom:20px;
+}
 
 #gwm-title {
 	position: relative;
@@ -306,18 +311,20 @@ h1.title-description {
 .carousel-caption {
 	color: #fff;
 	font-size: 14px;
+	text-align:left;
 	background: none;
 	left: 20px;
 	line-height: 22px;
 	position: absolute;
-	top:10px;
-	padding-top:20px;
-	width: 300px;
+	top:0px;
+	padding-top:0px;
+	width: 315px;
 }
 
 .carousel-caption p {
-	font-size: 175%;
+	font-size: 28px;
 	font-family: 'Marydale Regular', san-serif;
+	
 }
 
 .carousel-caption p a {
@@ -326,12 +333,12 @@ h1.title-description {
 
 
 .carousel-caption .vendor-name {
-	
+	margin-bottom:15px;
 }
 
 .carousel-caption .vendor-info {
 	font-family: Open Sans, sans-serif;
-	font-size: 94%;
+	font-size: 97%;
 }
 
 .carousel-inner {
@@ -363,7 +370,11 @@ h1.title-description {
 		background-image:none;
 	}
 	
-
+h3.featured {
+	font-family:PT Sans, sans-serif;
+	margin-top:15px;;
+	padding-bottom:15px;
+}
 	
 	
 
@@ -473,28 +484,26 @@ h1.title-description {
 	position:absolute;
 }
 #welcome_content h2 {
-	font-family: Oregano, cursive;
-	color: #3f9179;
+	font-family: PT Sans Narrow, sans-serif;
+	font-weight:bold;
+	font-size:19px;
+	line-height:24px;
+	text-align:center;
+	color: #72a63a;
 	margin-bottom: 20px;
+	text-transform:uppercase;
 }
 #welcome_content {
 	display: none;
 	background-color: #FFF;
 	color: #000;
-	width: 700px;
-	-color: #fff;
 	padding: 35px;
 	padding-top: 20px;
 	-webkit-border-radius: 12px; /* Android ≤ 1.6, iOS 1-3.2, Safari 3-4 */
 	border-radius: 12px; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
 	-webkit-box-shadow: 0px 0px 8px 0px #ffffff; /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
 	box-shadow: 0px 0px 8px 0px #ffffff; /* Chrome 6+, Firefox 4+, IE 9+, iOS 5+, Opera 10.50+ */
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f7f1e5)); /* Chrome, Safari 4+ */
-	background-image: -webkit-linear-gradient(top, #ffffff, #f7f1e5); /* Chrome 10-25, iOS 5+, Safari 5.1+ */
-	background-image: -moz-linear-gradient(top, #ffffff, #f7f1e5); /* Firefox 3.6-15 */
-	background-image: -o-linear-gradient(top, #ffffff, #f7f1e5);
-	; /* Opera 11.10-12.00 */
-	background-image: linear-gradient(to bottom, #ffffff, #f7f1e5); /* Chrome 26, Firefox 16+, IE 10+, Opera 12.50+ */
+	background: url(/img/homepage/markets.png);
 }
 #welcome_content p {
 	font-family: 'Ubuntu', sans-serif;
@@ -504,10 +513,13 @@ h1.title-description {
 	text-align: justify;
 }
 #welcome_content p.section-heading {
-	font-family: 'Oregano', cursive;
-	color: #c00;
-	font-size: 25px;
+	font-family: Marydale Bold, sans-serif;
+	color: #393767;
+	font-size: 20px;
 }
+
+
+
 #welcome>img {
 	max-width: none;
 }
@@ -526,10 +538,11 @@ h1.title-description {
 }
 
 .b-close.btn-gb  {
-	background-color: #3f9179;
+	background-color: #393866;
 	border-radius: 12px;
 	box-shadow: none;
 	font: bold 100% sans-serif;
+	font-family:Marydale Bold, cursive;
 	position: absolute;
 	right: 4px;
 	top: 4px;
@@ -566,7 +579,7 @@ h1.title-description {
 }
 
 	.card a {
-		color:#349279;
+		color:#393b2e;
 		clear:none;
 	}
 

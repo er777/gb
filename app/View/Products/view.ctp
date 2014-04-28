@@ -53,7 +53,7 @@ $(document).ready(function() {
    
    <!--Sidebar -->
    <div class="col-md-3 col-sm-3 hidden-xs">
-      <div id="sidebar-title" class="vendor-css">
+      <div id="sidebar-title" class="vendor-sidebar-title">
          <?php if(!empty($user)) : ?>
          <a href="/">
          <h1 class="vendor-title"><?php echo $user['User']['name']; ?></h1>
@@ -225,11 +225,11 @@ $(document).ready(function() {
 					</div>​
 				</div>
 	-->
-         <style>
+         		<!--<style>
 				#awning1 {
-					<?php echo $user['User']['awning_css']; ?>
+					<?php //echo $user['User']['awning_css']; ?>
 				}
-				</style>
+				</style>-->
          <img id="awning1" src="/img/users/awning/half-world-40.png" />
         
       </div>

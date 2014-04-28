@@ -368,7 +368,7 @@ span.special.nolink {
 	color: #3F9179;
 	font-weight: bold;
 	font-size: 16px;
-	font-family: 'Oregano', cursive;
+	font-family: 'Marydale Bold', sans-serif;
 }
 
 .caret {
@@ -756,7 +756,7 @@ div.price {
 h2.product-name {
 	color: #3F9179;
 	font-size: 21px;
-	font-family: 'Oregano', cursive;
+	font-family: 'Marydale Bold', sans-serif;
 	line-height: 25px;
 }
 .product-label {
@@ -1164,7 +1164,7 @@ h3.cat-title {
 	text-align: center;
 	letter-spacing:1px;
 	font-size: 19px;
-	font-family: 'Oregano', cursive;
+	font-family: 'Marydale Bold', sans-serif;
 	line-height: 21px;
 }
 h3.cat-list {
@@ -1178,7 +1178,7 @@ h3.cat-list {
 	text-align: center;
 	letter-spacing: 1px;
 	font-size: 30px;
-	font-family: 'Oregano', cursive;
+	font-family: 'Marydale Bold', sans-serif;
 }
 .img-pantry {
 	padding: 0px;
@@ -1457,7 +1457,7 @@ img.vendor-article-logo {
 	color: #032177;
 	text-align: left;
 	letter-spacing: 1px;
-	font-family: 'Oregano', cursive;
+	font-family: 'Marydale Bold', sans-serif;
 }
 
 .quote-air {
@@ -1959,7 +1959,7 @@ table {
 .article-nav {
 	color: #3F9179;
 	font-size: 110%;
-	font-family: Oregano, cursive;
+	font-family: Marydale Bold, sans-serif;
 }
 .content h1 {
 	padding-top: 20px;
@@ -2121,7 +2121,7 @@ hr.recipe-divider {
 }
 .recipe-title {
 	color: #3f9179;
-	font-family: Oregano, cursive;
+	font-family: Marydale Bold, sans-serif;
 }
 .recipe-name {
 	position:absolute;
@@ -2156,7 +2156,7 @@ hr.recipe-divider {
 }
 .article-name {
 	color: #3f9179;
-	font-family: Oregano, cursive;
+	font-family: Marydale Bold, sans-serif;
 }
 .article-body {
 }
@@ -2205,7 +2205,7 @@ img.article-pic.index {
 	clear:both;
 	margin-bottom:6px;
 	font-size:17px;
-	font-family:'Oregano', cursive;
+	font-family:'Marydale Bold', sans-serif;
 }
 
 div.article-pic-container a.btn btn-inverse {
@@ -2478,7 +2478,7 @@ display:none;
 	color: #3F9179;
 	letter-spacing: 1px;
 	font-size: 24px;
-	font-family: 'Oregano', cursive;
+	font-family: 'Marydale Bold', sans-serif;
 }
 
 hr.article-divide {
@@ -2490,7 +2490,7 @@ hr.article-divide {
 	color: #3F9179;
 	letter-spacing: 1px;
 	font-size: 21px;
-	font-family: 'Oregano', cursive;
+	font-family: 'Marydale Bold', sans-serif;
 }
 .gwm-heading.red, .gwm-heading.red a {
 	color: #c00;
@@ -2509,7 +2509,7 @@ hr.article-divide {
 h2.gwm-heading {
 	color: #3F9179;
 	font-size: 28px;
-	font-family: 'Oregano', cursive;
+	font-family: 'Marydale Bold', sans-serif;
 }
 
 h2.gwm-heading.recipes-heading {
@@ -2542,7 +2542,7 @@ h2.gwm-heading hr {
 	color: #3F9179;
 	letter-spacing: 0px;
 	font-size: 20px;
-	font-family: 'Oregano', cursive;
+	font-family: 'Marydale Bold', sans-serif;
 }
 .article-body .section-heading {
 	margin-top: 0px;
@@ -2556,13 +2556,13 @@ h2.gwm-heading hr {
 	color: #C00;
 	letter-spacing: 1px;
 	font-size: 18px;
-	font-family: 'Oregano', cursive;
+	font-family: 'Marydale Bold', sans-serif;
 }
 
 .source-title {
 	color: #fff;
 	font-size:19px;
-	font-family: 'Oregano', cursive;
+	font-family: 'Marydale Bold', sans-serif;
 }
 .weblinks {
 	margin-top: 0px;
@@ -2594,7 +2594,7 @@ h2.gwm-heading hr {
 	color: #C00;
 	letter-spacing: 1px;
 	font-size: 18px;
-	font-family: 'Oregano', cursive;
+	font-family: 'Marydale Bold', sans-serif;
 }
 
 a.gwm-nav  {
@@ -2680,7 +2680,7 @@ hr.category {
 	text-align:center;
 	letter-spacing: 1px;
 	font-size: 24px;
-	font-family: 'Oregano', cursive;
+	font-family: 'Marydale Bold', sans-serif;
 }
 
 #policy_content .pad {
