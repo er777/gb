@@ -111,7 +111,6 @@
 					</ul>
 				</li>	
 
-						
 				
 				<li class="dropdown mega-menu-1 transition">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-briefcase icon-white"></i>EXPLORE!<b class="caret"></b></a>
@@ -132,12 +131,6 @@
 					</ul>
 				</li>
                 
-                
-                
-                
-                
-                
-                	
 
 <!-- 1 Column Menu Ends -->
 					
