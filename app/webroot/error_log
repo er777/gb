@@ -231,3 +231,33 @@ Stack trace:
 #4 /home/gourmet/public_html/lib/Cake/Cache/Cache.php(151): Cache::_buildEngine('_cake_model_')
 #5 /home/gourmet/public_html/app/Config/core.php(281): Cache::config('_cake_model_', Array)
 #6 /home/gourmet/public_html/lib/Cake/Core/Configure.php(72): include('/home/gourmet/p in /home/gourmet/public_html/lib/Cake/Cache/Engine/FileEngine.php on line 280
+[26-Apr-2014 18:42:40 America/Los_Angeles] PHP Fatal error:  [CakeException] Unknown status code
+#0 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(215): CakeResponse->statusCode(2)
+#1 [internal function]: ExceptionRenderer->error400(Object(SocketException))
+#2 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(178): call_user_func_array(Array, Array)
+#3 /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php(122): ExceptionRenderer->render()
+#4 [internal function]: ErrorHandler::handleException(Object(SocketException))
+#5 {main} in /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php on line 131
+[26-Apr-2014 18:43:30 America/Los_Angeles] PHP Fatal error:  [CakeException] Unknown status code
+#0 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(215): CakeResponse->statusCode(2)
+#1 [internal function]: ExceptionRenderer->error400(Object(SocketException))
+#2 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(178): call_user_func_array(Array, Array)
+#3 /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php(122): ExceptionRenderer->render()
+#4 [internal function]: ErrorHandler::handleException(Object(SocketException))
+#5 {main} in /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php on line 131
+[26-Apr-2014 18:44:10 America/Los_Angeles] PHP Fatal error:  [CakeException] Unknown status code
+#0 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(215): CakeResponse->statusCode(2)
+#1 [internal function]: ExceptionRenderer->error400(Object(SocketException))
+#2 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(178): call_user_func_array(Array, Array)
+#3 /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php(122): ExceptionRenderer->render()
+#4 [internal function]: ErrorHandler::handleException(Object(SocketException))
+#5 {main} in /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php on line 131
+[28-Apr-2014 14:30:00 America/Los_Angeles] PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'SplFileObject::__construct(/home/gourmet/public_html/app/tmp/cache/models/gb_cake_model_default_gourmet_main_brands): failed to open stream: No such file or directory' in /home/gourmet/public_html/lib/Cake/Cache/Engine/FileEngine.php:280
+Stack trace:
+#0 /home/gourmet/public_html/lib/Cake/Cache/Engine/FileEngine.php(280): SplFileObject->__construct('/home/gourmet/p...', 'r')
+#1 /home/gourmet/public_html/lib/Cake/Cache/Engine/FileEngine.php(237): FileEngine->_clearDirectory('/home/gourmet/p...', 1398720600, 1398720540)
+#2 /home/gourmet/public_html/lib/Cake/Cache/Engine/FileEngine.php(102): FileEngine->clear(true)
+#3 /home/gourmet/public_html/lib/Cake/Cache/Cache.php(184): FileEngine->gc()
+#4 /home/gourmet/public_html/lib/Cake/Cache/Cache.php(151): Cache::_buildEngine('_cake_model_')
+#5 /home/gourmet/public_html/app/Config/core.php(281): Cache::config('_cake_model_', Array)
+#6 /home/gourmet/public_html/lib/Cake/Core/Configure.php(72): include('/home/gourmet/p.. in /home/gourmet/public_html/lib/Cake/Cache/Engine/FileEngine.php on line 280
