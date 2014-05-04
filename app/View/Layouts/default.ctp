@@ -58,7 +58,8 @@ opacity: 0.2;
 <?php echo $this->fetch('meta'); ?>
 <?php //echo $this->fetch('css'); ?>
 <?php echo $this->fetch('script'); ?>
-<script type="text/javascript" src="/t/track.php?id=gourmet"></script>
+<!--<script type="text/javascript" src="/t/track.php?id=gourmet"></script>-->
+
 </head>
 <body class="sun <?php  ?>">
 
