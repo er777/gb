@@ -1,3 +1,60 @@
+<?php
+	$subDomain = getSubDomain();
+	//echo($subDomain);
+	echo $subDomain[0];
+	if ($subDomain == 'gwm') :
+		$vendorNav = "active";
+		endif;
+		
+	$strip = $this->here; 
+	echo('<br /> ' . $strip);
+	
+	
+	
+	
+	/**
+        * Parse out url query string into an associative array
+        *
+        * $qry can be any valid url or just the query string portion.
+        * Will return false if no valid querystring found
+        *
+        * @param $qry String
+        * @return Array
+        */
+        function queryToArray($qry)
+        {
+                $result = array();
+                //string must contain at least one = and cannot be in first position
+                if(strpos($qry,'=')) {
+ 
+                 if(strpos($qry,'?')!==false) {
+                   $q = parse_url($qry);
+                   $qry = $q['query'];
+                  }
+                }else {
+                        return false;
+                }
+ 
+                foreach (explode('&', $qry) as $couple) {
+                        list ($key, $val) = explode('=', $couple);
+                        $result[$key] = $val;
+						
+						
+                }
+ 
+                return empty($result) ? false : $result;
+				
+				echo($result);
+        }
+	
+	
+	
+	
+	
+	
+	
+?>
+
 <!doctype html>
 <html>
 <head>
@@ -16,16 +73,22 @@
 <!-- CSS -->
 
 <style type="text/css">
-<?php if(isset($user['User']['awning_css'])) : ?> .btn-gb {
-<?php echo $user['User']['awning_css'];
-?>
+<?php /*?><?php if(isset($user['User']['awning_css'])) : ?><?php */?> .btn-gb {
+	background-color:#393767;
+<?php /*?><?php echo $user['User']['awning_css'];?><?php */?>
 }
+
+a.btn-gb, button.btn.btn-gb i  {
+	color:#fff;
+}
+
+
+
 .bkgnd-gb {
-<?php echo $user['User']['awning_css'];
-?> opacity: 0.2;
+<?php /*?><?php echo $user['User']['awning_css']; ?> <?php */?>
+opacity: 0.2;
 }
-<?php endif;
-?>
+<?php /*?><?php endif; ?><?php */?>
 </style>
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script> 
@@ -39,10 +102,11 @@
 <?php echo $this->fetch('script'); ?>
 <script type="text/javascript" src="/t/track.php?id=gourmet"></script>
 </head>
-<body class="sun">
+<body class="sun <?php  ?>">
 
 <!-- Include Header element --> 
 <?php echo $this->element('header'); ?>
+
 
 <!--<div id="fb-root"></div>-->
 <!--<script>
@@ -63,7 +127,7 @@
 
 <div class="air"></div>
 
-   <div id="dialog-info"> <?php echo $this->Session->flash(); ?> </div>
+   <div id="dialog-info"> <?php echo $this->Session->flash(); ?> 
    <!-- CONTENT --> 
    <?php echo $this->fetch('content'); ?>
    </div>
@@ -167,6 +231,30 @@
 			$(".product-pic img").css('display','inline');
 		});
 
+
+	// For active links
+		var newURL = window.location.protocol + "//" + window.location.host + "/" + window.location.pathname;
+			var pathArray = window.location.pathname.split( '/' );
+
+			var secondLevelLocation = pathArray[1];
+				
+				if (secondLevelLocation == 'vendors')	{
+				   jQuery('ul.nav li.vendors a').addClass('active')
+				   //alert(secondLevelLocation);
+			   }
+
+			   if (secondLevelLocation == 'foods')	{
+				   jQuery('ul.nav li.foods a').addClass('active')
+				   //alert(secondLevelLocation);
+			   }
+			
+			   if (secondLevelLocation == 'recipes')	{
+				   jQuery('ul.nav li.recipes a').addClass('active')
+				   //alert(secondLevelLocation);
+			   }
+			
+			
+		
 
 	})(jQuery);
 

@@ -1,4 +1,5 @@
-	<div class="navbar navbar-inverse">
+   
+    <div class="navbar navbar-inverse">
 	
 		<div class="container">
 		
@@ -20,7 +21,7 @@
 				
 					<li class="dropdown"><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>">HOME</a>
 							
-					<li class="dropdown mega-menu-4 transition">
+					<li class="dropdown mega-menu-4 transition vendors">
                     	<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-home icon-white"></i> VENDORS<b class="caret"></b></a>
 						<ul class="dropdown-menu">
 								
@@ -44,9 +45,8 @@
 			
 					</li>
 					
-					
-							
-					<li class="dropdown mega-menu-4 transition">
+                    							
+					<li class="dropdown mega-menu-4 transition foods">
 						<a href="/categories" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-briefcase icon-white"></i>FOOD TYPES<b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							
@@ -99,7 +99,7 @@
 					</li>	
 				
 
-				<li class="dropdown mega-menu-1 transition">
+				<li class="dropdown mega-menu-1 transition recipes">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-briefcase icon-white"></i>RECIPES<b class="caret"></b></a>
 					<ul class="dropdown-menu">
 						<li class="one-column">
@@ -112,7 +112,7 @@
 				</li>	
 
 				
-				<li class="dropdown mega-menu-1 transition">
+				<li class="dropdown mega-menu-1 transition explore">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-briefcase icon-white"></i>EXPLORE!<b class="caret"></b></a>
 					<ul class="dropdown-menu">
 						<li class="one-column">

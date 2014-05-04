@@ -58,7 +58,7 @@ $(document).ready(function() {
          <a href="/">
          <h1 class="vendor-title"><?php echo $user['User']['name']; ?></h1>
          </a>
-         <div class="white"><?php echo $user['User']['city']; ?>, <?php echo $user['User']['state']; ?></div>
+         <div><?php echo $user['User']['city']; ?>, <?php echo $user['User']['state']; ?></div>
          <?php endif; ?>
       </div>
       <div id="left-sidebar">
@@ -236,7 +236,7 @@ $(document).ready(function() {
       
       <div class="row breadcrumbs">
       	             
-               <ul class="breadcrumb btn-gb">
+               <ul class="breadcrumb light-purple">
                   <li class="read"><?php echo $this->Html->link($user['User']['name'], '/'); ?></li>
                   <li class="read"><a href="http://<?php echo $user['User']['slug'] . '.' . Configure::read('Settings.DOMAIN').'/category/'. $product['Category']['slug']; ?>"><?php echo $product['Category']['name']; ?></a></li>
                   <li class="read"><a href="http://<?php echo $user['User']['slug'] . '.' . Configure::read('Settings.DOMAIN').'/category/'. $product['Category']['slug'] .'/'. $product['Subcategory']['slug']; ?>"><?php echo $product['Subcategory']['name']; ?></a></li>
@@ -325,14 +325,14 @@ $(document).ready(function() {
 				<li class="active"><a href="#ingredients" data-toggle="tab">Ingredients</a></li>
 				<?php $ingredients = 'loaded';
 						endif;?>
-	 <?php if(!empty($product['Product']['generic_description'])) :
-								if ($ingredients == 'loaded') : ?>
+	 <?php //if(!empty($product['Product']['generic_description'])) :
+								//if ($ingredients == 'loaded') : ?>
 				<li><a href="#more" data-toggle="tab">More...</a></li>
-				<?php else : ?>
-				<li><a href="#more" data-toggle="tab">More...</a></li>
-				<?php endif;?>
-	 <?php $description = 'loaded';
-						endif;?>
+				<?php //else : ?>
+				<!--<li><a href="#more" data-toggle="tab">More...</a></li>-->
+				<?php //endif;?>
+	 <?php //$description = 'loaded';
+						//endif;?>
 	 <?php if(!empty($product['Product']['serving_suggestions'])) :
 								if ($description == 'loaded') : ?>
 				<li><a href="#serving" data-toggle="tab">Serving Ideas</a></li>
@@ -379,15 +379,15 @@ $(document).ready(function() {
 					  <?php	echo ($product['Product']['generic_description']); ?>
 				</div>
 				<?php endif; ?>
-	 <?php //if (($description == 'unloaded') && ($serv == 'loaded')) :
-											//$value = 'active';
-									//endif; ?>
+	 <?php if (($description == 'unloaded') && ($serv == 'loaded')) :
+											$value = 'active';
+									endif; ?>
 	 <?php if(!empty($product['Product']['serving_suggestions'])) : ?>
 				<div class="tab-pane <?php //echo $value; ?>" id="serving"> <?php echo ($product['Product']['serving_suggestions']) ; ?> </div>
 				<?php endif; ?>
-	 <?php //if (($description == 'unloaded') && ($serv == 'unloaded') && ($recipes == 'loaded')) :
-											//$value2 = 'active';
-									//endif; ?>
+	 <?php if (($description == 'unloaded') && ($serv == 'unloaded') && ($recipes == 'loaded')) :
+											$value2 = 'active';
+									endif; ?>
 	 <?php if(!empty($product['Product']['recipes'])) : ?>
 				<div class="tab-pane <?php //echo $value2; ?>" id="recipes"> <?php echo $product['Product']['recipes']; ?> </div>
 				<?php endif; ?>
@@ -437,9 +437,9 @@ $(document).ready(function() {
 
 					<?php echo ($product['Brand']['description']);?>"><?php echo $product['Brand']['name'];?></a> <span><img class="hand" src="/img/global/hand.png"/></span>
 				<?php elseif(empty($product['Brand']['name'])) : ?>
-						<a class="btn btn-gb"><?php echo $user['User']['name']; ?></a>
+						<a class="btn white"><?php echo $user['User']['name']; ?></a>
 				<?php else : ?>
-						<a class="btn btn-gb"><?php echo $product['Brand']['name']; ?></a>
+						<a class="btn white"><?php echo $product['Brand']['name']; ?></a>
 				<?php endif; ?>
 
 				<h2 class="product-name"><?php echo $product['Product']['name']; ?></h2>
