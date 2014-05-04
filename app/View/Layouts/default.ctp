@@ -200,7 +200,7 @@ opacity: 0.2;
 			var secondLevelLocation = pathArray[1];
 			
 					if (secondLevelLocation == 'foods') {
-						jQuery('ul.nav li.foods a').addClass('active')
+						jQuery('ul.nav li.foods>a').addClass('active')
 						
 					}
 					else if (secondLevelLocation == 'recipes'){
