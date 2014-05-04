@@ -226,7 +226,7 @@ opacity: 0.2;
 		  
 		  //alert(subdomain);
 		  
-		  if (subdomain !== 'gwm' && subdomain !=="" && subdomain !=="www") {
+		  if (subdomain !== 'gwm' && (subdomain !== 'gogowiz' && subdomain !=="" && subdomain !=="www") {
 			   jQuery('ul.nav li.vendors>a').addClass('active')						 
 		  }
 
