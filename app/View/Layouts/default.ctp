@@ -2,58 +2,16 @@
 	$subDomain = getSubDomain();
 	//echo($subDomain);
 	echo $subDomain[0];
-	if ($subDomain == 'gwm') :
-		$vendorNav = "active";
-		endif;
+	$strip = $subDomain[0];
 		
-	$strip = $this->here; 
-	echo('<br /> ' . $strip);
+	//$strip = $this->here; 
+	//echo('<br /> ' . $strip);
+	?>
+	<script>
+	var strip = '<?php echo($strip); ?>'
+		//alert(strip);
+	</script>
 	
-	
-	
-	
-	/**
-        * Parse out url query string into an associative array
-        *
-        * $qry can be any valid url or just the query string portion.
-        * Will return false if no valid querystring found
-        *
-        * @param $qry String
-        * @return Array
-        */
-        function queryToArray($qry)
-        {
-                $result = array();
-                //string must contain at least one = and cannot be in first position
-                if(strpos($qry,'=')) {
- 
-                 if(strpos($qry,'?')!==false) {
-                   $q = parse_url($qry);
-                   $qry = $q['query'];
-                  }
-                }else {
-                        return false;
-                }
- 
-                foreach (explode('&', $qry) as $couple) {
-                        list ($key, $val) = explode('=', $couple);
-                        $result[$key] = $val;
-						
-						
-                }
- 
-                return empty($result) ? false : $result;
-				
-				echo($result);
-        }
-	
-	
-	
-	
-	
-	
-	
-?>
 
 <!doctype html>
 <html>
@@ -233,28 +191,44 @@ opacity: 0.2;
 
 
 	// For active links
+	
+	
 		var newURL = window.location.protocol + "//" + window.location.host + "/" + window.location.pathname;
 			var pathArray = window.location.pathname.split( '/' );
 
 			var secondLevelLocation = pathArray[1];
+			
+					if (secondLevelLocation == 'foods') {
+						jQuery('ul.nav li.foods a').addClass('active')
+						
+					}
+					else if (secondLevelLocation == 'recipes'){
+						jQuery('ul.nav li.recipes>a').addClass('active')
+						
+					}
+					else if (secondLevelLocation == 'international'){
+						 jQuery('ul.nav li.food-region>a').addClass('active')
+						
+					}	
+					else if (secondLevelLocation == 'us'){
+						 jQuery('ul.nav li.food-region>a').addClass('active')
+						
+					}	
 				
-				if (secondLevelLocation == 'vendors')	{
-				   jQuery('ul.nav li.vendors a').addClass('active')
-				   //alert(secondLevelLocation);
-			   }
-
-			   if (secondLevelLocation == 'foods')	{
-				   jQuery('ul.nav li.foods a').addClass('active')
-				   //alert(secondLevelLocation);
-			   }
 			
-			   if (secondLevelLocation == 'recipes')	{
-				   jQuery('ul.nav li.recipes a').addClass('active')
-				   //alert(secondLevelLocation);
-			   }
-			
-			
-		
+	  //get sub domain
+		  
+		  var parts = location.hostname.split('.');
+		  var subdomain = parts.shift();
+		  var upperleveldomain = parts.join('.');
+		  
+		  var sndleveldomain = parts.slice(-3).join('.');
+		  
+		  //alert(subdomain);
+		  
+		  if (subdomain !== 'gwm' && subdomain !=="" && subdomain !=="www") {
+			   jQuery('ul.nav li.vendors>a').addClass('active')						 
+		  }
 
 	})(jQuery);
 

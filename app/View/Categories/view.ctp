@@ -95,7 +95,7 @@
 
 		<ul class="breadcrumb categories">
 
-			<li><?php echo $this->Html->link('Categories', array('controller' => 'categories', 'action' => 'index')); ?></li>
+			<li><?php echo $this->Html->link('Food Types', array('controller' => 'categories', 'action' => 'index')); ?></li>
 			<span class="divider">/</span>
 
 			<?php if(!empty($category)) : ?>

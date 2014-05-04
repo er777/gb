@@ -1886,15 +1886,7 @@ table {
 	margin: 0 auto;
 	overflow: hidden;
 }
- 
-.recipes {
-	display: inline-block;
-	margin: 5px;
-	padding: 5px;
-	vertical-align: top;
-	
-}
- 
+  
 	.recipes img {
 		border: 1px #CCC solid;
 		margin-bottom: 5px;
@@ -2578,3 +2570,8 @@ select#vendors {
    height: 30px;
    line-height: 30px;
 }
+
+ul.nav li a.active  {
+	color:#acc73a;
+}
+

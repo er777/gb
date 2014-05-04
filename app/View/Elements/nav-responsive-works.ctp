@@ -1,5 +1,4 @@
-   
-    <div class="navbar navbar-inverse">
+	<div class="navbar navbar-inverse">
 	
 		<div class="container">
 		
@@ -69,8 +68,8 @@
 						</ul>
 					</li>			
 										
-					<li class="dropdown mega-menu-3 transition">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-briefcase icon-white"></i>REGIONS<b class="caret"></b></a>
+					<li class="dropdown mega-menu-3 transition food-region">
+						<a href="#" class="dropdown-toggle " data-toggle="dropdown"><i class="icon-briefcase icon-white"></i>REGIONS<b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li class="one-column">
 								<ul><h4>US REGIONS</h4>
