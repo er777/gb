@@ -87,8 +87,12 @@ class CartComponent extends Component {
 		$data['user_id'] = $this->product['Product']['user_id'];
 		$data['product_id'] = $this->product['Product']['id'];
 		$data['name'] = $this->product['Product']['name'];
-		$data['weight'] = $this->product['Product']['weight'];
-		$data['weight_total'] = sprintf('%01.2f', $this->product['Product']['weight'] * $quantity);
+		$data['weight'] = ($this->product['Product']['shipping_weight_oz'] / 16);
+		
+		
+		
+		
+		$data['weight_total'] = sprintf($this->product['Product']['shipping_weight_oz'] * $quantity);
 		$data['price'] = $this->product['Product']['price'];
 		$data['subtotal'] = sprintf('%01.2f', $this->product['Product']['price'] * $quantity);
 		$data['Product'] = $this->product['Product'];

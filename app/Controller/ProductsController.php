@@ -1425,7 +1425,7 @@ public function brand() {
 				$this->request->data['Product']['subsubcategory_id'] = '';
 			}
 
-			$preRound = sprintf('%.1f', $this->request->data['Product']['shipping_weight_oz'] / 16);
+			$preRound = sprintf($this->request->data['Product']['shipping_weight_oz'] / 16);
 
 			$this->request->data['Product']['weight'] = ceil($preRound);
 
