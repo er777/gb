@@ -5,7 +5,7 @@
 		<div class="row">
         
 			<div class="col-md-6">
-				<div class="footer-links"> <a href="/details/view/1">ABOUT</a> <a href="/details/view/3">FAQ</a> <a href="/">TERMS OF USE</a> <a href="/details/view/5">PRIVACY POLICY</a><a href="">BECOME A VENDOR</a>  </div>
+				<div class="footer-links"> <a href="/details/view/1">ABOUT</a> <a href="/details/view/3">FAQ</a> <a href="/">TERMS OF USE</a> <a href="/details/view/5">PRIVACY POLICY</a><a href="/details/view/2">BECOME A VENDOR</a> </div>
 			</div>
             
 			<div class="col-md-6">
