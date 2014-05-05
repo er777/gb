@@ -27,8 +27,8 @@
              
                  <div class="nav-style-heading large">Other US Traditions</div>
                  <div class="list">
-                 <?php foreach ($ustraditions as $ustradition): ?> -
-                     <?php echo $this->Html->link($ustradition['Ustradition']['name'], array('controller' => 'ustraditions', 'action' => 'view', 'slug' => $ustradition['Ustradition']['slug'])); ?><br />
+                 <?php foreach ($ustraditions as $usregion): ?> -
+                     <?php echo $this->Html->link($usregion['Ustradition']['name'], array('controller' => 'ustraditions', 'action' => 'view', 'slug' => $region['Ustradition']['slug'])); ?><br />
                  <?php endforeach; ?>
                  </div>
                  
