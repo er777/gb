@@ -25,7 +25,7 @@
              
              
              
-                 <div class="nav-style-heading large">Other Intl Traditions</div><?php echo ($tradition['Tradition']['banner']); ?>
+                 <div class="nav-style-heading large">Other Intl Traditions</div>
                  <div class="list">
                  <?php foreach ($traditions as $region): ?> -
                      <?php echo $this->Html->link($region['Tradition']['name'], array('controller' => 'traditions', 'action' => 'view', 'slug' => $region['Tradition']['slug'])); ?><br />
