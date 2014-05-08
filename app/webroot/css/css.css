@@ -1291,6 +1291,12 @@ img.tradition, img.vendor-pic {
 	padding: 5px;
 	width: 300px;
 }
+
+.us-map {
+	background:url(/img/global/texture.jpg) repeat;
+}
+
+
  
 img.recipe-pic {
 	-moz-box-shadow: 0px 0px 5px #cccccc;

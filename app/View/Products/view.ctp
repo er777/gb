@@ -437,9 +437,9 @@ $(document).ready(function() {
 
 					<?php echo ($product['Brand']['description']);?>"><?php echo $product['Brand']['name'];?></a> <span><img class="hand" src="/img/global/hand.png"/></span>
 				<?php elseif(empty($product['Brand']['name'])) : ?>
-						<a class="btn white"><?php echo $user['User']['name']; ?></a>
+						<a class="btn brand-btn"><?php echo $user['User']['name']; ?></a>
 				<?php else : ?>
-						<a class="btn white"><?php echo $product['Brand']['name']; ?></a>
+						<a class="btn brand-btn"><?php echo $product['Brand']['name']; ?></a>
 				<?php endif; ?>
 
 				<h2 class="product-name"><?php echo $product['Product']['name']; ?></h2>
