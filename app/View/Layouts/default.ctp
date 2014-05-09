@@ -39,6 +39,11 @@
 a.btn-gb, button.btn.btn-gb i  {
 	color:#fff;
 }
+a.btn-gb:hover {
+	color:#CCC;
+	
+}
+
 
 
 

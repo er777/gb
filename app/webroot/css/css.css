@@ -659,6 +659,10 @@ img.brand {
 	margin-left: 5px;
 	max-width: 100px;
 }
+
+.brand-btn {
+	background:#adb865;
+}
  
 .meganizr > li > a.brands-link {color: #3f3f3f;}
  
@@ -1362,6 +1366,15 @@ blockquote p {
 	padding-bottom: 25px;
 	padding-left: 20px;
 }
+
+#vendor-article h3 {
+	font-size:24px;
+	font-family:'Marydale Bold', cursive;
+	font-weight:bold;
+	color:#393b2e;
+	margin-bottom:10px;
+}
+
  
 	#vendor-article  p.section-heading {font-size: 27px;}
  
@@ -1830,13 +1843,19 @@ table {
 }
  
 /** Tabs **/
-.nav-tabs li {font-size: 10px;}
+.nav-tabs li {font-size: 12px;}
+
+.nav-tabs>li>a {
+	border:solid 1px #DDD;
+	padding:10px 15px!important;
+	margin:0px;
+}
 
 .nav-tabs li.active {
 	border-bottom:none;
 }
  
-.tab-pane {padding: 10px;}
+.tab-pane {padding: 20px;}
 
 .tab-content {
 	background:#fff;
@@ -1844,8 +1863,6 @@ table {
 	border-top-color: rgba(0, 0, 0, 0);
 	cursor: default;
 }
-
-
  
 /*Column */
 .column * {padding-right: 20px;}
