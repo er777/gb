@@ -447,7 +447,7 @@ div.recipe-name, div.recipe-name p, div.recipe-name a {
  
 div.price {
 	font-size: 11px;
-	margin-right: 10px;
+	margin-right: 2px;
 	position: absolute;
 	text-align: right;
 	bottom: 5px;
@@ -1082,7 +1082,7 @@ img.img-responsive.category {
 .awning {
 	margin-bottom: 20px;
 	margin-left:15px;
-	position: relative;
+	
 }
  
 .awning.view {

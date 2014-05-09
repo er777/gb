@@ -1,17 +1,4 @@
-<?php
-	$subDomain = getSubDomain();
-	//echo($subDomain);
-	echo $subDomain[0];
-	$strip = $subDomain[0];
-		
-	//$strip = $this->here; 
-	//echo('<br /> ' . $strip);
-	?>
-	<script>
-	var strip = '<?php echo($strip); ?>'
-		//alert(strip);
-	</script>
-	
+
 
 <!doctype html>
 <html>
