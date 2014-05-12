@@ -1,18 +1,12 @@
-<?php echo $this->Html->script('/tiny_mce/tiny_mce.js'); ?>
+<?php echo $this->Html->script('/ckeditor/ckeditor.js', array('inline' => false)); ?>
 
 
 <script type="text/javascript">
-	tinyMCE.init({
-		mode : "textareas",
-		theme : "advanced",
-		theme_advanced_styles:'',
-		editor_deselector : "mceNoEditor",
-		skin: "thebigreason",
-		plugins : "inlinepopups",
-		plugins : "paste",
-		// Theme options
-		theme_advanced_buttons1 : "styleselect,bold,italic,underline,hr,|,justifyleft,justifycenter,justifyright,justifyfull,|,link,unlink,|,bullist,numlist,|,pastetext,pasteword,selectall,|,removeformat,code",
-		theme_advanced_resizing : true,	});
+
+CKEDITOR.replace( 'textarea', {
+    toolbar: 'Basic',
+    uiColor: '#9AB8F3',
+});
 </script>
 
 <script>
@@ -57,6 +51,7 @@ function doFormatPhone(A){var B=document.getElementById(A);B.onblur=function(){f
 	
 			<div class="span4">
 				<?php echo $this->Form->input('level', array('label' => 'User Level' , 'options' => array( 'admin' => 'Admin','vendor' => 'Vendor'))); ?>
+				<?php echo $this->Form->input('vendor_type', array('label' => 'Vendor Type' ,'empty' => '--', 'options' => array('1' => 'Regular', '2' => 'Super Market', ))); ?>
 				<?php echo $this->Form->input('username'); ?>
 				<?php echo $this->Form->input('name', array('label' => 'Shoppe Name')); ?>
 				<?php echo $this->Form->input('slug', array('label' => 'Domain Prefix <br />do NOT use hyphens here - only one word, no spaces')); ?>
@@ -104,17 +99,9 @@ function doFormatPhone(A){var B=document.getElementById(A);B.onblur=function(){f
 				<?php echo $this->Form->input('contact_alt_email', array('label' => 'Alternate Contact eMail', 'class' => 'span4')); ?>
 	
 			
-                
-                
-                
-                
+
 	
 			</div>
-            
-            
-            
-            
-            
             
             
 			<div class="span4">
@@ -131,7 +118,7 @@ function doFormatPhone(A){var B=document.getElementById(A);B.onblur=function(){f
                <div class="inline"> We ship in&nbsp;<?php echo $this->Form->input('ship_time', array('label' => false, 'class' => 'span1')); ?> days from receipt of order.</div>
               
                <br />
-				<?php echo $this->Form->input('shipping_policy', array('rows' => 10, 'class' => '4span', 'label' => 'Shipping/ Return/ Customer Satisfaction Policies')); ?>
+				<?php echo $this->Form->input('shipping_policy', array('rows' => 10, 'class' => '4span ckeditor', 'label' => 'Shipping/ Return/ Customer Satisfaction Policies')); ?>
                 <br />
 				<?php echo $this->Form->input('min_shipping_check', array('type' => 'checkbox','label' =>'Check if there is a minimum shipping charge.')); ?>
 				<br />
@@ -222,6 +209,7 @@ function doFormatPhone(A){var B=document.getElementById(A);B.onblur=function(){f
 				<?php echo $this->Form->input('warehouse_phone'); ?>
 				<?php echo $this->Form->input('warehouse_ext', array('class' => 'span1','label' =>'Warehouse Extension')); ?>
 				<?php echo $this->Form->input('warehouse_email', array('class' => 'span4')); ?>
+				<?php echo $this->Form->input('warehouse_zip'); ?>
 				
 				<hr />
 				<h3>CUSTOMER SERVICE</h3>
@@ -231,8 +219,8 @@ function doFormatPhone(A){var B=document.getElementById(A);B.onblur=function(){f
 				
 				<hr />
 				<h3>SHOPPE DESCRIPTION</h3>
-				<?php echo $this->Form->input('shop_description', array('rows' => 20, 'class' => '4span')); ?><br />
-				<?php echo $this->Form->input('shop_quote', array('class' => '4span')); ?>
+				<?php echo $this->Form->input('shop_description', array('rows' => 20, 'class' => '5span ckeditor')); ?><br />
+				<?php echo $this->Form->input('shop_quote', array('class' => '4span ckeditor')); ?>
 				<?php echo $this->Form->input('shop_signature'); ?>
                 <?php echo $this->Form->input('min_purchase', array('label' =>'Minimum Purchase','class' => 'span1')); ?>
                 <?php echo $this->Form->input('mini_shipping_policy', array('label' =>'Shipping Info','class' => 'span2')); ?>
@@ -240,6 +228,8 @@ function doFormatPhone(A){var B=document.getElementById(A);B.onblur=function(){f
 			</div>
             
             <div class="span6">
+            	 <h3>SEO VENDOR METADATA</h3>
+            	 <?php echo $this->Form->input('metadata', array('label' => 'Meta Tags')); ?>
             <div style="background-color:#FFC;; border:#CCC thin dotted;padding:10px;">
                   <h3>VENDOR SITE APPROVAL</h3>
                       <?php echo $this->Form->input('Approval.id', array('type' => 'hidden')); ?>

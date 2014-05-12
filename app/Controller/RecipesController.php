@@ -18,6 +18,12 @@ class RecipesController extends AppController {
 		$this->loadModel('User');
 		$user = $this->User->find('first', array(
 			'recursive' => -1,
+			'fields' => array(
+				'User.name',
+				'User.slug',
+				'User.image',
+				'User.awning_css',
+			),
 			'conditions' => array(
 				'User.slug' => $subDomain,
 			)
@@ -33,17 +39,10 @@ class RecipesController extends AppController {
 				'Recipe.name',
 				'Recipe.slug',
 				'Recipe.image_1',
-				'Recipe.image_2',
-				'Recipe.image_3',
-				'Recipe.attr_1',
-				'Recipe.attr_2',
-				'Recipe.attr_3',
-				'Recipe.created',
 				'User.name',
 				'User.slug',
+				
 				'Recipescategory.name',
-				'Tradition.name',
-				'Ustradition.name',
 			),
 			'conditions' => array(
 				$conditions
@@ -51,16 +50,13 @@ class RecipesController extends AppController {
 			'order' => array(
 				'Recipescategory.name' => 'ASC',
 			),
-			'limit' => 20
+			'limit' => 24
 		);
 		$recipes = $this->paginate();
 		$this->set(compact('recipes'));
-	}
-
-////////////////////////////////////////////////////////////
-
-	public function all() {
-
+		
+		
+		
 		$recipescategories = $this->Recipe->find('list', array(
 			'recursive' => -1,
 			'contain' => array(
@@ -69,7 +65,10 @@ class RecipesController extends AppController {
 			),
 			'fields' => array(
 				'Recipescategory.slug',
-				'Recipescategory.name'
+				'Recipescategory.name',
+				'User.name',
+				'User.slug',
+				
 			),
 			'conditions' => array(
 				'Recipe.active' => 1,
@@ -85,7 +84,8 @@ class RecipesController extends AppController {
 			)
 		));
 		$this->set(compact('recipescategories','users'));
-
+		 //debug($recipescategories);
+		
 		$vendors = $this->Recipe->find('list', array(
 			'recursive' => 1,
 			'fields' => array(
@@ -143,7 +143,112 @@ class RecipesController extends AppController {
 		} else {
 			$vendor_selected = '';
 		}
+		
 		$this->set(compact('vendor_selected'));
+			
+		
+	}
+
+////////////////////////////////////////////////////////////
+
+	public function all() {
+		
+
+		$recipescategories = $this->Recipe->find('list', array(
+			'recursive' => -1,
+			'contain' => array(
+				'Recipescategory',
+				'User',
+			),
+			'fields' => array(
+				'Recipescategory.slug',
+				'Recipescategory.name',
+				'User.name',
+				'User.slug',
+				
+			),
+			'conditions' => array(
+				'Recipe.active' => 1,
+				'User.active' => 1,
+			),
+			'group' => array(
+				'Recipe.recipescategory_id',
+				//'Tradition.tradition_id',
+				//'Ustradition.ustradition_id',
+			),
+			'order' => array(
+				'Recipescategory.name'
+			)
+		));
+		$this->set(compact('recipescategories','users'));
+		 //debug($recipescategories);
+		
+		$vendors = $this->Recipe->find('list', array(
+			'recursive' => 1,
+			'fields' => array(
+				'User.slug',
+				'User.name'
+			),
+			'conditions' => array(
+				'Recipe.active' => 1,
+				'User.active' => 1,
+				'User.slug >' => ''
+			),
+			'group' => array(
+				'User.id'
+			),
+			'order' => array(
+				'User.slug' => 'ASC'
+			)
+		));
+
+		$this->set(compact('vendors'));
+		
+
+		$conditions[] = array(
+			'Recipe.active' => 1,
+			
+		);
+
+		if(isset($this->params['named']['category']) ) {
+
+			if (!array_key_exists($this->params['named']['category'], $recipescategories)) {
+				$this->redirect(array('action' => 'index'));
+			}
+
+			$conditions[] = array('Recipescategory.slug' => $this->params['named']['category']);
+
+			$recipescategory_selected = $this->params['named']['category'];
+		} else {
+			$recipescategory_selected = '';
+		}
+		$this->set(compact('recipescategory_selected'));
+		
+		
+		
+
+		if(isset($this->params['named']['vendor']) ) {
+
+			if (!array_key_exists($this->params['named']['vendor'], $vendors)) {
+				$this->redirect(array('action' => 'index'));
+			}
+
+			$conditions[] = array(
+				'User.slug' => $this->params['named']['vendor'],
+				'User.active' => 1,
+				);
+
+			$vendor_selected = $this->params['named']['vendor'];
+		} else {
+			$vendor_selected = '';
+		}
+		$this->set(compact('vendor_selected'));
+		
+		
+		
+		
+		
+		
 
 
 		$this->paginate = array(
@@ -168,7 +273,7 @@ class RecipesController extends AppController {
 		);
 		$recipes = $this->paginate();
 		$this->set(compact('recipes'));
-
+	
 	}
 	
 
@@ -312,6 +417,12 @@ class RecipesController extends AppController {
 		$this->loadModel('User');
 		$user = $this->User->find('first', array(
 			'recursive' => -1,
+			'fields' => array(
+				'User.slug',
+				'User.name',
+				'User.image',				
+				
+			),
 			'conditions' => array(
 				'User.slug' => $subDomain,
 			)
@@ -328,7 +439,8 @@ class RecipesController extends AppController {
 				'Recipe.name',
 				'Recipe.slug',
 				'Recipescategory.name',
-				'User.slug'
+				'User.slug',
+				
 			),
 			'conditions' => array(
 				'User.slug' => $subDomain

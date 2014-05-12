@@ -1,0 +1,197 @@
+/** RESPONSIVE **/
+
+/* Large desktop 
+@media (min-width: 1200px) {
+}*/
+
+/* Portrait tablet to landscape and desktop
+@media (min-width: 768px) and (max-width: 979px) {
+}*/
+
+/* Landscape phone to portrait tablet
+@media (max-width: 767px) {
+}*/
+
+/* Landscape phones and down
+@media (max-width: 480px) {
+}*/
+
+
+
+@media (min-width: 1200px) {.col-md-12, .container}
+ 
+.container.wrapper {}
+ 
+{}
+ 
+@media (max-width: 1199px) {.feature}
+ 
+.feature-product-name {height: 34px;}
+ 
+.container.feature-block {padding-left: 2.5%;}
+ 
+{}
+ 
+@media (max-width: 979px) {.vendor-logo img}
+ 
+.vendor-logo {}
+ 
+#awning-text-wrapper {/**top: 78px;**/}
+ 
+#awning-text {font-size: 98%; line-height:175%;}
+ 
+.feature {width: 17%;}
+ 
+.container.feature-block {padding-left: 3.5%;}
+ 
+.feature-wrapper {max-width: 850px;}
+ 
+.feature {
+	height: 10em;
+	width: 17%;
+}
+ 
+.feature-product-name {
+	height: 52px;
+	width: 97%;
+}
+ 
+.carousel-title {font-size: 92%!important;}
+ 
+{}
+ 
+@media (max-width: 767px) {.vendor-logo}
+ 
+{}
+ 
+@media (max-width: 480px) {.feature}
+ 
+.feature-product-name {
+	height: 84px;
+	width: 97%;
+}
+ 
+.feature-recipe-name {
+	height: 26px;
+	width: 97%;
+}
+ 
+.carousel-title {font-size: 45%;}
+ 
+{}
+ 
+button:focus {outline: none;}
+ 
+.social-main a {padding-left: 2px;}
+ 
+/** Address**/
+.form-group  input {}
+ 
+.form-group  label {min-width: 100px;}
+ 
+form .checkbox {display: inline;}
+ 
+.form-horizontal .control-label {/*text-align: left;*/}
+ 
+.cc {margin-bottom: 30px;}
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+/** RESPONSIVE - for Feature **/
+
+@media (min-width: 1200px) {
+  .col-md-12, .container {
+    	width: 1100px;
+  }
+  
+  .container.feature-block {
+		padding-left:2.5%;
+	}
+}
+
+
+
+@media (max-width: 1199px) {
+	.feature {
+		width:17.8%;
+	}
+	
+	.feature-product-name {
+		height: 34px;
+	}
+	
+	.container.feature-block {
+		padding-left:2.5%;
+	}
+}
+
+
+
+@media (max-width: 480px) {
+	
+	.feature {
+		width: 20.0%;
+		
+	}	
+	.feature-product-name {
+		width: 97%;
+		height: 84px;
+	}
+	
+	.feature-recipe-name {
+		width: 97%;
+		height: 26px;
+	}
+	.carousel-title {
+		font-size:45%;
+	}
+}
+
+
+
+
+	
+		
+@media (max-width: 767px) { /**ER test **/
+	
+	.feature {
+		width: 20.0%;
+		
+	}	
+	.feature-product-name {
+		width: 97%;
+		height: 84px;
+	}
+	
+	.feature-recipe-name {
+		width: 97%;
+		height: 26px;
+	}
+	.carousel-title {
+		font-size:45%;
+	}
+
+	#account {
+		display:none;
+	}
+	
+}
+
+
+@media (max-width: 991px) {
+	.carousel-caption {
+		width:220px;
+	}
+
+}
+

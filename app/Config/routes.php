@@ -34,6 +34,8 @@
 	Router::connect('/cat/*', array('controller' => 'products', 'action' => 'view'));
 
 	Router::connect('/us/:slug', array('controller' => 'ustraditions', 'action' => 'view'), array('pass' => array('slug')));
+	
+	Router::connect('/us/', array('controller' => 'contents', 'action' => 'ustradition'));
 
 	Router::connect('/international/:slug', array('controller' => 'traditions', 'action' => 'view'), array('pass' => array('slug')));
 	

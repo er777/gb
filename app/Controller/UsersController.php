@@ -19,6 +19,7 @@ class UsersController extends AppController {
 				'User.id',
 				'User.name',
 				'User.slug',
+				'User.metadata',
 				'User.image',
 				'User.shop_quote',
 			),

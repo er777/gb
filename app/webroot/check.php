@@ -1,4 +1,3 @@
-
 <?php
 if (function_exists('pspell_new')) {
         $pspell_link = pspell_new("en");

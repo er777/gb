@@ -7,7 +7,6 @@
 <!-- Meganizr Menu Styles -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Oregano:400,400italic' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
 <!--[if lt IE 9]><link href="css/meganizr-ie.css" rel="stylesheet" type="text/css"><![endif]-->
 <!-- end Meganizr Menu Styles -->
@@ -52,9 +51,9 @@
         </div>
         
         <div id="account">
-            <ul class="gb-horiz-account">
-                <li class="gb-account"><a href="/members/register">BECOME A MEMBER</a></li>
-                <li class="gb-account"><a href="/members/login">LOG IN</a></li>
+            <ul class="gwm-horiz-account">
+                <li class="gwm-account"><a href="/members/register">BECOME A MEMBER</a></li>
+                <li class="gwm-account"><a href="/members/login">LOG IN</a></li>
             </ul>
         </div>
         

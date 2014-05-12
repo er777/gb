@@ -23,7 +23,7 @@ Shopping Cart is empty
 			  <table class="table table-striped tcart">
 				<thead>
 				  <tr>
-					<th>#</th>
+				
 					<th>VENDOR</th>
 					<th>IMAGE</th>
 					<th>ITEM</th>
@@ -43,8 +43,6 @@ Shopping Cart is empty
 <?php foreach ($shop['OrderItem'] as $key => $item): ?>
 	
 					<tr>
-					<!-- Index -->
-					<td>1</td>
 					
 					<!-- Vendor  name -->
 					<td><?php echo $shop['Users'][$item['Product']['user_id']]['name']; ?><br />
@@ -79,7 +77,7 @@ Shopping Cart is empty
 					</td>
 
 					<!-- Product Subtotal-->
-					<td><?php echo $item['Product']['price']; ?>
+					<td><?php echo $item['subtotal']; ?>
 					</td>
 					
 					<!-- Remove-->
@@ -233,4 +231,3 @@ Shopping Cart is empty
 
 
 <?php endif; ?>
-

@@ -14,11 +14,11 @@ class AppController extends Controller {
 
 ////////////////////////////////////////////////////////////
 
-  	public $helpers = array(
-	    'Form' => array(
-	        'className' => 'BootstrapForm'
-  	  	)
-	);
+  	//public $helpers = array(
+//	    'Form' => array(
+//	        'className' => 'BootstrapForm'
+//  	  	)
+//	);
 
 ////////////////////////////////////////////////////////////
 
@@ -86,7 +86,7 @@ class AppController extends Controller {
 			}
 			$this->set(compact('menucategories'));
 			
-
+ 
 			$menuvendors = Cache::read('menuvendors');
 			if (!$menuvendors) {
 				$menuvendors = ClassRegistry::init('User')->getVendors();
@@ -97,18 +97,21 @@ class AppController extends Controller {
 			
 			//US Traditions
 			$menu_ustraditions = Cache::read('menu_ustraditions');
-			////Following line are commented as these are showing errors "Ustraditions model is not associated with user Model 24 Jan 2014-HSK"///
 			if (!$menu_ustraditions) {
 				$menu_ustraditions = ClassRegistry::init('Ustradition')->find('all', array(
 					'recursive' => -1,
-					//~ 'contain' => array(
-						//~ 'User',
-						//~ 'Ustradition'
-					//~ ),
+					'contain' => array(
+						//'User',
+						//'Ustradition'
+					),
 					'fields' => array(
 						'Ustradition.id',
 						'Ustradition.name',
 						'Ustradition.slug',
+						'Ustradition.active',
+					),
+					'conditions' => array(
+						'Ustradition.active' => 1,
 					),
 					
 					'order' => array(
@@ -125,7 +128,7 @@ class AppController extends Controller {
 				Cache::write('menu_ustraditions', $menu_ustraditions);
 			}
 			$this->set(compact('menu_ustraditions'));
-			
+			//debug($menu_ustraditions);
 			
 			//Traditions
 				$menu_traditions = Cache::read('menu_traditions');
@@ -133,15 +136,19 @@ class AppController extends Controller {
 				$menu_traditions = ClassRegistry::init('Tradition')->find('all', array(
 					'recursive' => -1,
 					'contain' => array(
-						'User',
-						'Tradition'
+						//'User',
+						//'Tradition'
 					),
 					'fields' => array(
 						'Tradition.id',
 						'Tradition.name',
 						'Tradition.slug',
+						'Tradition.active',
 					),
-					
+					'conditions' => array(
+						'Tradition.active' => 1,
+					),
+
 					'order' => array(
 						'Tradition.name' => 'ASC'
 					),
@@ -156,6 +163,8 @@ class AppController extends Controller {
 				Cache::write('menu_traditions', $menu_traditions);
 			}
 			$this->set(compact('menu_traditions'));
+			
+			
 			
 
 			// Settings for menuBlocks on LearnMore navigation
@@ -208,7 +217,22 @@ class AppController extends Controller {
 			'redirect' => true,
 			'requirePrompt' => true
 		);
+		
+		
+			// https redirect
+	 
+		  // if (in_array($this->params['action'], $this->secureActions) 
+//			   && !isset($_SERVER['HTTPS'])) {
+//				   $this->forceSSL();
+//		   }
 	}
+	
+////////////////////////////////////////////////////////////
+	  
+		// public function forceSSL() {
+//			   $this->redirect('https://' . $_SERVER['SERVER_NAME'] . $this->here);
+//	   }
+		   
 
 ////////////////////////////////////////////////////////////
 
@@ -263,7 +287,7 @@ class AppController extends Controller {
 					'Product.id' => $id
 				)
 			));
-			$markup = (($product['Product']['price'] - $product['Product']['price_wholesale']) / $product['Product']['price']) * 100;
+			$markup = (($product['Product']['price'] - $product['Product']['price_wholesale']) / $product['Product']['price_wholesale']) * 100;
 			$this->$model->saveField('markup', $markup);
 		}
 
@@ -333,5 +357,13 @@ class AppController extends Controller {
 	}
 
 ////////////////////////////////////////////////////////////
+
+	
+	protected $secureActions = array(
+		   'review',
+		   'checkout'
+	   );
+
+
 
 }

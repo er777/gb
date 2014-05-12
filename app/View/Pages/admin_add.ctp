@@ -22,9 +22,9 @@
 
 
 
-<?php echo $this->Form->input('name',array( 'class' => 'input-gb-large')); ?>
+<?php echo $this->Form->input('name',array( 'class' => 'input-gwm-large')); ?>
 <?php echo $this->Form->input('slug'); ?>
-<?php echo $this->Form->input('body', array('rows' => 30, 'class' => 'input-gb-large')); ?>
+<?php echo $this->Form->input('body', array('rows' => 30, 'class' => 'input-gwm-large')); ?>
 
 
 	

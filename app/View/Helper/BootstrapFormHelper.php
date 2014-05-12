@@ -25,7 +25,7 @@ class BootstrapFormHelper extends FormHelper {
                 	'class' => 'form-group'
                 ),
                 'label' => array(
-                	'class' => 'col-lg-2 control-label'
+                	'class' => 'col-lg-5 control-label'
                 ),
                 'between' => '<div class="col-lg-10">',
                 'seperator' => '</div>',

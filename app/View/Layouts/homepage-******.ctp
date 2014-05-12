@@ -10,7 +10,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Rosario:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Oregano:400,400italic' rel='stylesheet' type='text/css'>
+
 <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
 
 
@@ -96,7 +96,7 @@
 			
 				
 				
-				<ul class="gb-horiz-account">
+				<ul class="gwm-horiz-account">
 					<li class="cart">
 						<button class="cart" type="submit">
 						<a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/shops/cart"></i><img src="/img/global/cart.png" width="40" height="29" alt="cart"></a>
@@ -105,8 +105,8 @@
 					<li class="social"><a href="https://www.facebook.com/pages/Gourmet-Basket/603379453015040"><img src="/img/global/fb.png" width="28" height="27" alt="facebook"></a></li>
 					<li class="social"><a href="https://twitter.com/search/users?q=gourmetbasket1"><img src="/img/global/tw.png" width="28" height="27"></a></li>
 					<li class="social"><a href="http://pinterest.com/gourmetbasket1/"><img src="/img/global/pin.png" width="27" height="27" alt="pinterest"></a></li>
-					<!--<li class="gb-account"><a href="/members/register">BECOME A MEMBER</a></li>--> 
-					<!-- <li class="gb-account"><a href="/members/login">LOG IN</a></li>-->
+					<!--<li class="gwm-account"><a href="/members/register">BECOME A MEMBER</a></li>--> 
+					<!-- <li class="gwm-account"><a href="/members/login">LOG IN</a></li>-->
 				</ul>
 
 

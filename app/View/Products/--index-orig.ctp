@@ -27,7 +27,7 @@
 
 	<div class="col-md-4">
 
-		<div class="gb-nav-container">
+		<div class="gwm-nav-container">
 
 		<?php /*?><?php if(!empty($user)) : ?><?php */?>
 
@@ -44,10 +44,10 @@
 
 <hr />
 
-			<a class="gb-nav" href="/">All Our Products</a>
+			<a class="gwm-nav" href="/">All Our Products</a>
 
 
-			<?php if(!empty($category)) : ?><br /><span class="gb-nav"><img src="/img/global/dash-2.png"></span>
+			<?php if(!empty($category)) : ?><br /><span class="gwm-nav"><img src="/img/global/dash-2.png"></span>
 
 				<?php echo $this->Html->link($category['Category']['name'], array('controller' => 'products', 'action' => 'category', $category['Category']['slug'])); ?>
 
@@ -57,14 +57,14 @@
 			<?php endif; ?>
 
 			<?php if(!empty($subcategory)) : ?>
-				<br /><span class="gb-nav"><img src="/img/global/dash-4.png"></span><?php echo $this->Html->link($subcategory['Subcategory']['name'], array('controller' => 'products', 'action' => 'category', $category['Category']['slug'], $subcategory['Subcategory']['slug'])); ?>
+				<br /><span class="gwm-nav"><img src="/img/global/dash-4.png"></span><?php echo $this->Html->link($subcategory['Subcategory']['name'], array('controller' => 'products', 'action' => 'category', $category['Category']['slug'], $subcategory['Subcategory']['slug'])); ?>
 
 				<?php $subcat_crumb = $subcategory['Subcategory']['name']?>
 
 			<?php endif; ?>
 
 			<?php if(!empty($subsubcategory)) : ?>
-				<br /><span class="gb-nav"><img src="/img/global/dash-7.png"></span><?php echo $this->Html->link($subsubcategory['Subsubcategory']['name'], array('controller' => 'products', 'action' => 'category', $category['Category']['slug'], $subcategory['Subcategory']['slug'], $subsubcategory['Subsubcategory']['slug'])); ?>
+				<br /><span class="gwm-nav"><img src="/img/global/dash-7.png"></span><?php echo $this->Html->link($subsubcategory['Subsubcategory']['name'], array('controller' => 'products', 'action' => 'category', $category['Category']['slug'], $subcategory['Subcategory']['slug'], $subsubcategory['Subsubcategory']['slug'])); ?>
 
 				<?php $subsubcat_crumb = $subsubcategory['Subsubcategory']['name']?>
 
@@ -82,7 +82,7 @@
 					<?php if ($subsubcat_crumb !== $subsubcategory['Subsubcategory']['name']) : ?>
 
 
-						<span class="gb-nav"><img src="/img/global/dash-7.png"></span><?php echo $this->Html->link($subsubcategory['Subsubcategory']['name'], array('controller' => 'products', 'action' => 'category', $subsubcategory['Category']['slug'], $subsubcategory['Subcategory']['slug'], $subsubcategory['Subsubcategory']['slug'])); ?><br />
+						<span class="gwm-nav"><img src="/img/global/dash-7.png"></span><?php echo $this->Html->link($subsubcategory['Subsubcategory']['name'], array('controller' => 'products', 'action' => 'category', $subsubcategory['Category']['slug'], $subsubcategory['Subcategory']['slug'], $subsubcategory['Subsubcategory']['slug'])); ?><br />
 
 				   <?php endif ; ?>
 
@@ -103,7 +103,7 @@
 							<?php if ($subcat_crumb !== $subcategory['Subcategory']['name']) : ?>
 						<?php //endif; ?>
 
-							<span class="gb-nav"><img src="/img/global/dash-4.png"></span><?php echo $this->Html->link($subcategory['Subcategory']['name'], array('controller' => 'products', 'action' => 'category', $category['Category']['slug'], $subcategory['Subcategory']['slug'])); ?><br />
+							<span class="gwm-nav"><img src="/img/global/dash-4.png"></span><?php echo $this->Html->link($subcategory['Subcategory']['name'], array('controller' => 'products', 'action' => 'category', $category['Category']['slug'], $subcategory['Subcategory']['slug'])); ?><br />
 
 						<?php //if(!empty($subcat_crumb)) : ?>
 							<?php endif; ?>
@@ -120,7 +120,7 @@
 				<?php if(!empty($usercategories)) : ?>
 
 					<?php foreach ($usercategories as $usercategory): ?>
-					<span class="gb-nav"><img src="/img/global/dash-2.png"></span>
+					<span class="gwm-nav"><img src="/img/global/dash-2.png"></span>
 
 
 					<?php echo $this->Html->link($usercategory['Category']['name'], array('controller' => 'products', 'action' => 'category', $usercategory['Category']['slug'])); ?><br />

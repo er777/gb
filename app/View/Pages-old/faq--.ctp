@@ -1,7 +1,7 @@
 <div class="row">
 
 <div class= "span12 pages">
-<h2 class="gb-heading">Gourmet Basket FAQ’s (Frequently Asked Questions)</h2>
+<h2 class="gwm-heading">Gourmet Basket FAQ’s (Frequently Asked Questions)</h2>
 <h3 class="section-subheading">How do I purchase products or become a Gourmet Basket Customer?</h3>
 
 <p>You can browse the Site (GB) at any time, but to purchase from us users must be over 18 or have the permission or be under the supervision of a parent or guardian. You can register as a member by clicking Become a Member in red near the top right side of the Site home page. You must have a valid email address and complete the registration process, a simple procedure. Doing this allows users to have an easier, faster, and more secure shopping experience that saves time by moving you through checkout more quickly. It allows GB to connect with users more efficiently, save your shipping and billing information so that you never have to retype them, permits GB to follow your order from purchase to delivery, and enables users check their order history. It is a user’s duty to keep their account current and make changes to your address, email, telephone or other data if necessary. </p>

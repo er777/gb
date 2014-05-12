@@ -13,10 +13,10 @@
 		)); ?>
 	</div>
 
-	<div class="span2">
+	<div class="col-md-2">
 		<?php echo $this->Form->input('filter', array(
 			'label' => false,
-			'class' => 'span2',
+			'class' => 'col-md-2',
 			'options' => array(
 				'name' => 'Name',
 			),
@@ -25,11 +25,11 @@
 
 	</div>
 
-	<div class="span2">
+	<div class="col-md-2">
 		<?php echo $this->Form->input('name', array(
 		'label' => false,
 		'id' => false,
-		'class' => 'span2',
+		'class' => 'col-md-2',
 		'required'=> false,
 		'value' => $all['name'])); ?>
 

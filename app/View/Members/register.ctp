@@ -1,4 +1,3 @@
-
 <?php echo $this->element('register', array('plugin' => 'SignMeUp')); ?>
 
 <?php /*?><?php echo $this->Form->create();

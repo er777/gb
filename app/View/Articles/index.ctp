@@ -1,24 +1,17 @@
-<script>
-
-$(".collapse").collapse()
-
-</script>
-
-
 
 	<?php if(!isset($article['Article'])){ ?>
 	<!-- FOR EXCELLENT ADVENTURES BLOCKS LANDING PAGE -->
 
 <div class="row">
-	<div class="span3"> <br />
-		<p class="gb-heading">Magazine Sections</p>
+	<div class="col-md-3"> <br />
+		<p class="gwm-heading">Magazine Sections</p>
 
 		<?php // NAVIGATION
 				echo "<br>";
 				foreach($blocks as $blockskey)
 				{
 
-					echo '<div class="gb-heading red list" style="font-size:120%;">';
+					echo '<div class="gwm-heading red" style="font-size:100%;">-';
 					echo $this->Html->link($blockskey['Block']['name'], '/articles/'.$blockskey['Block']['slug'], array('class' => 'basic-info-'.$blockskey['Block']['id'], 'onmouseover' => 'overlay('.$blockskey['Block']['id'].')'));
 					?>
 	<div class="art-list" style="position: absolute; display: none;" id="populate-overlay-<?php echo $blockskey['Block']['id']?>"><br>
@@ -41,9 +34,9 @@ $(".collapse").collapse()
 
 	<div>
 
-	<div class="span9">
+	<div class="col-md-9">
 		<?php if(!empty($article['Block']['image'])) : ?>
-			<img class="article-pic img-polaroid index" style="float:right;" src="/img/blocks/image/<?php echo $article['Block']['image']?>"  />
+			<img class="article-pic img-responsive index" style="float:right;" src="/img/blocks/image/<?php echo $article['Block']['image']?>"  />
 		<?php endif ; ?>
 
 		<h3 class="article-name"><?php echo $article['Block']['name']; ?></h3>
@@ -52,7 +45,7 @@ $(".collapse").collapse()
 
 		<?php $trigger = $article['Block']['id']; ?>
 
-		<p class="gb-heading air20">Articles in this Section:</p>
+		<p class="gwm-heading air20">Articles in this Section:</p>
 
 		<?php if ($trigger == 2) { ?>
 
@@ -69,7 +62,7 @@ $(".collapse").collapse()
 
 		<div class="tab-pane active" id="intl">
 
-			<p class="gb-heading">INTERNATIONAL CULINARY TRADITIONS</strong></p>
+			<p class="gwm-heading">INTERNATIONAL CULINARY TRADITIONS</strong></p>
        
 			<?php 
 				foreach($blocks as $blockskey) {
@@ -82,7 +75,7 @@ $(".collapse").collapse()
 							echo '<p><span class="prefix">';
 							echo ($articlekey['prefix']) .': ';
 							echo '</span>';
-							echo $this->Html->link( $articlekey['name'], '/articles/'.$blockskey['Block']['slug']."/".$articlekey['slug'],array('class' => array('gb-heading','article')));
+							echo $this->Html->link( $articlekey['name'], '/articles/'.$blockskey['Block']['slug']."/".$articlekey['slug'],array('class' => array('gwm-heading','article')));
 							echo "</p>";
 						}
 					}
@@ -102,7 +95,7 @@ $(".collapse").collapse()
 
 		<div class="tab-pane" id="us">
 
-			<p class="gb-heading">US REGIONAL CULINARY TRADITIONS</p>
+			<p class="gwm-heading">US REGIONAL CULINARY TRADITIONS</p>
 
 <?php 
 				foreach($blocks as $blockskey) {
@@ -115,7 +108,7 @@ $(".collapse").collapse()
 							echo '<p><span class="prefix">';
 							echo ($articlekey['prefix']) .': ';
 							echo '</span>';
-							echo $this->Html->link( $articlekey['name'], '/articles/'.$blockskey['Block']['slug']."/".$articlekey['slug'],array('class' => array('gb-heading','article')));
+							echo $this->Html->link( $articlekey['name'], '/articles/'.$blockskey['Block']['slug']."/".$articlekey['slug'],array('class' => array('gwm-heading','article')));
 							echo "</p>";
 						}
 					}
@@ -160,7 +153,7 @@ $(".collapse").collapse()
 						{
 							echo "<p>";
 							
-							echo $this->Html->link( $articlekey['name'], '/articles/'.$blockskey['Block']['slug']."/".$articlekey['slug'], array('class' => 'gb-heading article'));
+							echo $this->Html->link( $articlekey['name'], '/articles/'.$blockskey['Block']['slug']."/".$articlekey['slug'], array('class' => 'gwm-heading article'));
 
 							if (!empty($articlekey['prefix'])) {
 
@@ -192,16 +185,12 @@ $(".collapse").collapse()
 <!-- FOR ARTICLE CONTENT -->
 
 
-
-
-
-
 <div class="row">
 
 
-	<div class="span4">
+	<div class="col-md-3 articles">
 		<br />
-		<p class="gb-heading">Magazine Sections</p>
+		<p class="gwm-heading">Magazine Sections</p>
         <hr />
 
 
@@ -210,7 +199,7 @@ $(".collapse").collapse()
 				foreach($blocks as $blockskey)
 				{
 
-					echo '<div class="gb-heading red list" style="font-size:120%;">';
+					echo '<div class="gwm-heading red list" style="font-size:120%;">';
 					echo $this->Html->link($blockskey['Block']['name'], '/articles/'.$blockskey['Block']['slug'], array('class' => 'basic-info-'.$blockskey['Block']['id'], 'onmouseover' => 'overlay('.$blockskey['Block']['id'].')'));
 					?>
 	<div class="art-list" style="position: absolute; display: none;" id="populate-overlay-<?php echo $blockskey['Block']['id']?>"> <a href="#" class="close-x">[ x ]</a> <br>
@@ -257,7 +246,7 @@ $(".collapse").collapse()
 						<div class="article-pics-container tight left">
 					<?php endif; ?>
 
-						<img class="article-pic img-polaroid" src="/img/articles/<?php echo $image ; ?>/<?php echo $article['Article'][$image]?>"  />
+						<img class="article-pic img-responsive" src="/img/articles/<?php echo $image ; ?>/<?php echo $article['Article'][$image]?>"  />
 
 					
 
@@ -305,9 +294,10 @@ $(".collapse").collapse()
 
 
 
-<div class="span8 article">
 
-	<h2 class="gb-heading">
+<div class="col-md-9 article">
+
+	<h2 class="gwm-heading">
 	<?php echo $article['Article']['name']; ?> :
 	<?php if (!empty($article['Article']['prefix'])) {
 				echo $article['Article']['prefix']; ?>
@@ -335,7 +325,7 @@ $(".collapse").collapse()
 
 
 			<?php if(!empty($article['Article']['image_1'])) : ?>
-				<img class="article-pic img-polaroid" src="/img/articles/image_1/<?php echo $article['Article']['image_1']?>"  /><br />
+				<img class="article-pic img-responsive" src="/img/articles/image_1/<?php echo $article['Article']['image_1']?>"  /><br />
 			<?php endif ; ?>
 
 			<?php if(!empty($article['Article']['attribution_1'])) : ?>
@@ -404,14 +394,7 @@ $(".collapse").collapse()
 
 </div>
 
-<div class="row">
-
-
-
-
-
-
-	</div>
+</div>
 </div>
 
 

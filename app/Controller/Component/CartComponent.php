@@ -68,7 +68,7 @@ class CartComponent extends Component {
 
 		}
 
-		if($productmod) {
+		if(isset($productmod)) {
 			$this->product['Product']['productmod_id'] = $productmod['Productmod']['id'];
 			$this->product['Product']['productmod_name'] = $productmod['Productmod']['name'];
 			$this->product['Product']['price'] = $productmod['Productmod']['price'];
@@ -87,8 +87,10 @@ class CartComponent extends Component {
 		$data['user_id'] = $this->product['Product']['user_id'];
 		$data['product_id'] = $this->product['Product']['id'];
 		$data['name'] = $this->product['Product']['name'];
-		$data['weight'] = $this->product['Product']['weight'];
-		$data['weight_total'] = sprintf('%01.2f', $this->product['Product']['weight'] * $quantity);
+		$data['weight'] = $this->product['Product']['shipping_weight_oz'];
+		$data['weight_total'] = ($this->product['Product']['weight'] * $quantity);
+		//sprintf('%01.2f', 
+		
 		$data['price'] = $this->product['Product']['price'];
 		$data['subtotal'] = sprintf('%01.2f', $this->product['Product']['price'] * $quantity);
 		$data['Product'] = $this->product['Product'];
@@ -274,6 +276,7 @@ class CartComponent extends Component {
 				'Product.price',
 				'Product.weight_unit',
 				'Product.weight',
+				'Product.shipping_weight_oz',
 				'Product.height',
 				'Product.length',
 				'Product.width',

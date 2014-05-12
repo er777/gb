@@ -1,0 +1,223 @@
+/** RESPONSIVE **/
+
+/* Large desktop  **/
+@media (min-width: 1200px) {
+	
+   .container.feature-block {
+		padding-left: 2.5%;
+	   
+   }
+   
+   	.hidden-logo {
+		display:none;
+	}
+
+
+}
+
+
+
+/* 1 - Large desktop  **/
+@media (min-width: 992px) and (max-width: 1199px) {
+
+
+	.navbar-nav {
+		float: right;
+	}
+	
+	/** FEATURES **/
+	.feature {
+		width:18.9%;
+	}
+	
+	.feature-product-name {
+		height: 34px;
+	}
+	
+	.container.feature-block {
+		padding-left:2.5%;
+	}
+	
+	.feature-recipe {
+		width:23.6%;
+	}
+
+	
+	
+}
+
+
+
+/* 2 - Portrait tablet to landscape and desktop **/
+@media (min-width: 768px) and (max-width: 991px) {
+	
+	body .container { width: auto; }
+
+	a.navbar-brand img {
+		display:none;
+	}
+
+	/**Show small logo **/
+	.hidden-logo {
+		display:block;
+	}
+	
+	
+	
+	.header-tools, .search {
+		display:none;
+	}
+	
+	
+	.container.feature-block {
+		padding-left:3.5%;
+	}
+
+
+	.feature-wrapper {
+		max-width:850px;
+	}
+
+	.feature {
+		width:18.9%;
+		height:10em;
+	}
+	
+	.feature-product-name {
+		width: 97%;
+		height: 38px;
+	}
+	
+	.feature-recipe {
+		width:23.5%;
+	}
+	
+	.carousel-title {
+		font-size:92%!important;
+	}
+	
+	.carousel-caption {
+		width:33%;
+		font-size:73%;
+		
+	}
+
+	#awning-text {
+		display:none;
+	}
+
+
+	.flex-direction-nav .flex-prev,
+	.flex-direction-nav .flex-next {
+		opacity: 1;
+		right: 0;
+ 	}
+
+
+
+
+
+}
+
+
+/* 3 - andscape phone to portrait tablet **/
+@media (min-width: 481px)  and (max-width: 767px)	{
+	
+	body .container { width: auto; }
+	
+	
+	.header-tools, .search {
+		display:none;
+	}
+	
+	
+	#awning-text {
+		display:none;
+	}
+	
+	a.navbar-brand img {
+		display:none;
+	}
+	
+	/**Show small logo **/
+	.hidden-logo {
+		display:block;
+		
+	}
+	
+	
+	.carousel-caption {
+		width:33%;
+		font-size:70%;
+		
+	}
+	.carousel-caption p.vendor-info {
+		display:none;
+	}
+
+	.feature {
+		width:19.5%;
+	}
+	
+	.feature-product-name {
+		height: 34px;
+	}
+
+	.feature-recipe {
+		width:24%;
+	}
+	
+
+
+}
+
+/* 4 - Landscape phones and down **/
+@media (max-width: 480px) {
+		/**Show small logo **/
+	.hidden-logo {
+		display:block;
+		
+	}
+	
+
+	a.navbar-brand img {
+		display:none;
+	}
+	.header-tools, .search {
+		display:none;
+	}
+	
+	.vendor-logo.view {
+	  right: 38%;
+	}
+	
+	.vendor-logo.view img {
+		width: 75%;
+	}
+	
+	ul.nav li a {
+		padding-left:5px!important;
+	}
+
+	.carousel-caption p.vendor-info {
+		display:none;
+	}
+	
+	.feature {
+		width:19.2%;
+		height:110px;
+	}
+	
+	.feature-product-name {
+		bottom:22px;
+	}
+	.feature-recipe-name {
+		bottom:-24px;
+		
+	}
+	
+	#awning-text {
+		display:none;
+	}
+	
+}

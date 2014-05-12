@@ -438,6 +438,7 @@ class ShopsController extends AppController {
 			$this->Shop->appendXmlNode($xmlCompleteTransaction,'api-key', $APIKey);
 			$this->Shop->appendXmlNode($xmlCompleteTransaction,'token-id', $tokenId);
 			$xmlRequest->appendChild($xmlCompleteTransaction);
+			debug($xmlRequest);
 
 			// Process Step Three
 			$data = $this->Shop->sendXMLviaCurl($xmlRequest, $gatewayURL);

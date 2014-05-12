@@ -211,4 +211,3 @@ Shopping Cart is empty
 <br />
 
 <?php endif; ?>
-

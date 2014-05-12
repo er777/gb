@@ -125,7 +125,7 @@ font-size: 13px;
  	width: 440px;
 }
 
-input.gb-text-large {
+input.gwm-text-large {
 	width: 206px;
 	height:50px;
 }
@@ -167,7 +167,7 @@ input::-webkit-inner-spin-button {
 }
 
 /**Admin Pic **/
-.gb, .gb img {
+.gwm, .gwm img {
 	max-width:250px;
 	max-height: 230px;
 }
