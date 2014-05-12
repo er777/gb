@@ -185,6 +185,7 @@ class ProductsController extends AppController {
 				'User.slug',
 				'User.more',
 				'User.name',
+				'User.metadata',
 				'Brand.name'
 			),
 			'limit' => 20,
@@ -206,7 +207,7 @@ class ProductsController extends AppController {
 
 		$title = empty($user) ? 'All Products' : $user['User']['name'];
 
-		$title_for_layout = $title . ' :: GB';
+		$title_for_layout = $title . ' - GWM';
 		$this->set(compact('title_for_layout'));
 
 	}
@@ -430,6 +431,7 @@ class ProductsController extends AppController {
 
 		$category = $this->Product->Category->find('first', array(
 			'conditions' => array(
+				//'Category.metadata',
 				'Category.slug' => $args[0]
 			)
 		));

@@ -41,7 +41,7 @@
              <a href="/"> 
    
                <h1 class="vendor-title"><?php echo $user['User']['name']; ?></h1></a>
-               <div class="white"><?php echo $user['User']['city']; ?>, <?php echo $user['User']['state']; ?></div>
+               <div class="white"><?php echo $user['User']['city']; ?>, <?php echo $user['User']['state']; ?>--<?php echo $user['User']['shop_quote']; ?></div>
    
               
            <?php endif; ?>
