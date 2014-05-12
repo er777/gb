@@ -206,7 +206,7 @@ class ProductsController extends AppController {
 
 		$title = empty($user) ? 'All Products' : $user['User']['name'];
 
-		$title_for_layout = $title . ' :: GB';
+		$title_for_layout = $title . ' - GWM';
 		$this->set(compact('title_for_layout'));
 
 	}

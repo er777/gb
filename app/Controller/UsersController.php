@@ -69,7 +69,7 @@ class UsersController extends AppController {
 					$this->Session->setFlash('Login is incorrect');
 				}
 			} else {
-				$this->Session->setFlash('Login is incorrect');
+				$this->Session->setFlash('Not an authorized login');
 			}
 		}
 	}

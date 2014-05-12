@@ -26,6 +26,7 @@
 		<?php echo $this->Form->input('id'); ?>
 	
 		<?php echo $this->Form->input('name'); ?>
+        <?php echo $this->Form->input('metadata', array('class' => '4span')); ?>
 	
 		<?php echo $this->Form->input('slug'); ?>
         <?php echo $this->Form->input('quote', array('rows' => 5, 'class' => '4span')); ?>
