@@ -19,7 +19,7 @@
 			<li class="mzr-drop"> <a class="parent" href="#" ><span style="color:#a53043;text-shadow:1px 1px #000"></span>VENDORS<b class="caret"></b></a>
 				<div class="mzr-content drop-three-columns popover-content">
 					<div class="wide">
-					<p>ARTISINAL VENDORS</p>
+					<p>ARTISANAL VENDORS</p>
 					<?php foreach($menuvendors as $menuvendor) : ?>
 					<p><?php echo $this->Html->link($menuvendor['User']['name'], 'http://' . $menuvendor['User']['slug'] . '.' . Configure::read('Settings.DOMAIN') . '/'); ?></p>
 					<?php endforeach; ?>
@@ -71,8 +71,6 @@
 					<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/us/deep-south ">Deep South </a></p>
 					<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/us/far-west ">Far West </a></p>
 					<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/us/great-lakes">Great Lakes</a></p>
-					<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/us/hawaii">Hawaii</a></p>
-					<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/us/louisiana">Louisiana</a></p>
 					<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/us/mid-atlantic">Mid-Atlantic</a></p>
 					<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/us/mid-west">Midwest and Plains </a></p>
 					<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/us/native-american">Native American</a></p>
