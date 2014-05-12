@@ -1,7 +1,7 @@
 <?php
 App::uses('AppController', 'Controller');
 class CategoriesController extends AppController {
- 
+
 ////////////////////////////////////////////////////////////
 
 	public function index() {
@@ -15,6 +15,7 @@ class CategoriesController extends AppController {
 				'Category.id',
 				'Category.name',
 				'Category.slug',
+				'Category.metadata',
 				'Category.image',
 			),
 			'conditions' => array(
@@ -47,8 +48,10 @@ class CategoriesController extends AppController {
 			'fields' => array(
 				'Category.id',
 				'Category.slug',
+				'Category.metadata',
 				'Category.name',
 				'Category.quote',
+				'Category.quote_attr',
 				'Category.summary',
 				'Category.image',
 			),
@@ -58,7 +61,7 @@ class CategoriesController extends AppController {
 		));
 		//debug($category);
 		$this->set(compact('category'));
-//print_r($category['Category']['slug']);
+
 		if(empty($category)) {
 			die('invalid category');
 		}
@@ -246,9 +249,46 @@ if(isset($args['2']) && $args['1']=='brand') {
 				);
 			//}
 			
-		}
 	
 ///////////////////////////////End Brand Conditions/////////////////////////////////////////////////
+
+
+
+////// Code brought over from dev to be safe - check it, ER
+
+		if(isset($args[2])) {
+			$subsubcategory = $this->Category->Product->find('first', array(
+				'contain' => array(
+					'User',
+					'Subsubcategory'
+				),
+				'fields' => array(
+					'Subsubcategory.*'
+				),
+				'conditions' => array(
+					'User.active' => 1,
+					'Product.active' => 1,
+					'Subsubcategory.subcategory_id' => $subcategory['Subcategory']['id'],
+					'Subsubcategory.slug' => $args[2]
+				)
+			));
+
+			// debug($subsubcategory);
+			$this->set(compact('subsubcategory'));
+			//if(!empty($subsubcategory)) {
+				$productconditions[] = array(
+					'Product.subsubcategory_id' => $subsubcategory['Subsubcategory']['id']
+				);
+			//}
+
+
+		}
+
+
+
+
+
+
 
 ///////////////////////////////Final Query to fetch products///////////////////////////////
 		$this->paginate = array(
@@ -277,8 +317,8 @@ if(isset($args['2']) && $args['1']=='brand') {
 			),
 			'conditions' => $productconditions,
 			'order' => array(
-				'Product.name' => 'ASC',
 				'Category.name' => 'ASC',
+				'Product.name' => 'ASC',
 			),
 			'limit' => 20,
 			'paramType' => 'querystring',

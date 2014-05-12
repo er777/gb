@@ -19,6 +19,7 @@ class UsersController extends AppController {
 				'User.id',
 				'User.name',
 				'User.slug',
+				'User.metadata',
 				'User.image',
 				'User.shop_quote',
 			),
@@ -123,20 +124,6 @@ class UsersController extends AppController {
 
 		
 		$this->set('user', $this->User->read(null, $this->Auth->user('id')));
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 	}
 
 ////////////////////////////////////////////////////////////
