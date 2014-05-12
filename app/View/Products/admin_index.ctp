@@ -80,13 +80,13 @@ $(document).ready(function() {
 		placement: 'left',
 	});
 
-	$('.width').editable({
-		type: 'text',
-		name: 'width',
-		url: '/admin/products/editable',
-		title: 'Weight',
-		placement: 'left',
-	});
+//	$('.width').editable({
+//		type: 'text',
+//		name: 'width',
+//		url: '/admin/products/editable',
+//		title: 'Weight',
+//		placement: 'left',
+//	});
 
 	$('.length').editable({
 		type: 'text',
@@ -96,13 +96,13 @@ $(document).ready(function() {
 		placement: 'left',
 	});
 
-	$('.shipping_weight_oz').editable({
-		type: 'text',
-		name: 'shipping_weight_oz',
-		url: '/admin/products/editable',
-		title: 'Shipping Weight',
-		placement: 'left',
-	});
+//	$('.shipping_weight_oz').editable({
+//		type: 'text',
+//		name: 'shipping_weight_oz',
+//		url: '/admin/products/editable',
+//		title: 'Shipping Weight',
+//		placement: 'left',
+//	});
 
 });
 </script>

@@ -53,17 +53,17 @@ class UsersController extends AppController {
 				$this->User->id = $this->Auth->user('id');
 				$this->User->saveField('last_login', date('Y-m-d H:i:s'));
 
-				if ($this->Auth->user('level') == 'vendor') {
-					return $this->redirect(array(
-						'controller' => 'users',
-						'action' => 'dashboard',
-						'vendor' => true
-					));
-				} elseif ($this->Auth->user('level') == 'admin') {
+				if ($this->Auth->user('level') == 'admin') {
 					return $this->redirect(array(
 						'controller' => 'users',
 						'action' => 'dashboard',
 						'admin' => true
+					));
+				} elseif ($this->Auth->user('level') == 'vendor') {
+					return $this->redirect(array(
+						'controller' => 'users',
+						'action' => 'dashboard',
+						'vendor' => true
 					));
 				} else {
 					$this->Session->setFlash('Login is incorrect');

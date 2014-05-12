@@ -1427,7 +1427,7 @@ public function brand() {
 
 			$preRound = sprintf($this->request->data['Product']['shipping_weight_oz'] / 16);
 
-			$this->request->data['Product']['weight'] = ceil($preRound);
+			$this->request->data['Product']['weight'] = $preRound;
 
 			if ($this->Product->save($this->request->data)) {
 
