@@ -185,6 +185,7 @@ class ProductsController extends AppController {
 				'User.slug',
 				'User.more',
 				'User.name',
+				'User.metadata',
 				'Brand.name'
 			),
 			'limit' => 20,
@@ -206,7 +207,7 @@ class ProductsController extends AppController {
 
 		$title = empty($user) ? 'All Products' : $user['User']['name'];
 
-		$title_for_layout = $title . ' :: GB';
+		$title_for_layout = $title . ' - GWM';
 		$this->set(compact('title_for_layout'));
 
 	}
@@ -570,6 +571,30 @@ class ProductsController extends AppController {
 				);
 			}
 		}
+		
+		
+		$brands = $this->Product->find('all', array(
+			'contain' => array('Brand'),
+			'fields' => array(
+				'Brand.*',
+			),
+			'conditions' => array(
+				'Product.active' => 1,
+				'Product.show' => 1,
+				'Product.user_id' => $user['User']['id']
+			),
+			'order' => array(
+				'Brand.name' => 'ASC'
+			),
+			'group' => array(
+				'Brand.id'
+			),
+		));
+		$this->set(compact('brands'));
+		
+		
+		
+		
 
 		$this->paginate = array(
 			'contain' => array('User'),
@@ -580,8 +605,9 @@ class ProductsController extends AppController {
 				'Product.slug',
 				'Product.image',
 				'Product.price',
+				'Product.new',
 				'Product.displaygroup',
-				//'Brand.name',
+				'User.name',
 				'User.slug',
 				'User.more',
 			),
@@ -874,6 +900,7 @@ public function brand() {
 					'Product.image',
 					'Product.price',
 					'Brand.name',
+					'User.name',
 					'User.slug',
 				),
 				'conditions' => $conditions,
