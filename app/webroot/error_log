@@ -378,3 +378,8 @@ Stack trace:
 #3 /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php(122): ExceptionRenderer->render()
 #4 [internal function]: ErrorHandler::handleException(Object(SocketException))
 #5 {main} in /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php on line 131
+[11-May-2014 22:50:24 America/Los_Angeles] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 395
+[11-May-2014 22:50:43 America/Los_Angeles] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 395
+[11-May-2014 22:50:44 America/Los_Angeles] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 395
+[11-May-2014 22:51:04 America/Los_Angeles] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 395
+[11-May-2014 22:51:37 America/Los_Angeles] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 395
