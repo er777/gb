@@ -1,10 +1,27 @@
 <!doctype html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="description" content='A fresh way to shop for, learn about, prepare and enjoy foods of the world.'>
-
 <title><?php echo $title_for_layout; ?></title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<!--<meta name="description" content='A fresh way to shop for, learn about, prepare and enjoy foods of the world.'>-->
+
+<?php
+//debug($this->params);
+ $here = $this->params['controller'];
+ 
+ //echo($here);
+ 
+ 	if ($here == 'categories') : ?>
+		<meta name="description" content='<?php echo $category['Category']['metadata']; ?>'
+	<?php endif; 
+
+ 	if ($here == 'products') : ?>
+		<meta name="description" content='<?php echo $user['User']['metadata']; ?>'
+	<?php endif; ?>
+
+
+
 
 <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/themes/smoothness/jquery-ui.css" />
 <!--<link href="http://fonts.googleapis.com/css?family=Mako" rel="stylesheet" type="text/css">-->

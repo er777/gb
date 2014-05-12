@@ -47,6 +47,7 @@ class CategoriesController extends AppController {
 			'fields' => array(
 				'Category.id',
 				'Category.slug',
+				'Category.metadata',
 				'Category.name',
 				'Category.quote',
 				'Category.summary',

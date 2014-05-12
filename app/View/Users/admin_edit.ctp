@@ -228,6 +228,9 @@ function doFormatPhone(A){var B=document.getElementById(A);B.onblur=function(){f
 			</div>
             
             <div class="span6">
+                 <h3>SEO VENDOR METADATA</h3>
+            	 <?php echo $this->Form->input('metadata', array('label' => 'Meta Tags')); ?>
+
             <div style="background-color:#FFC;; border:#CCC thin dotted;padding:10px;">
                   <h3>VENDOR SITE APPROVAL</h3>
                       <?php echo $this->Form->input('Approval.id', array('type' => 'hidden')); ?>
