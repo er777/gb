@@ -3,7 +3,7 @@
             <div class="row">
                <div class="col-md-4 left-corner-img-air"> <?php echo $this->Html->image('users/image/' . $user['User']['image'], array('class' =>'frame vendor-article-logo')); ?> </div>
                <div class="col-md-6 quote-img-air">
-                  <div class="vendor-special vendor-css">
+                  <div class="vendor-special">
                      <blockquote> <?php echo $user['User']['shop_quote'] ?>
                         <div class="signature"><?php echo $user['User']['shop_signature'] ?></div>
                      </blockquote>

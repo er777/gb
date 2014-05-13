@@ -131,15 +131,7 @@ h1.category-title a {
 /** BREADCRUMBS FOR NAVIGATION **/
 
 .breadcrumb {
-	background-color: #b5b2ca;
-	-moz-border-radius: 7px;
-	-webkit-border-radius: 7px;
-	border-radius: 7px;
-	border: #3f4b52 1px solid;
-	-moz-box-shadow: inset 0 0 6px 3px #7d7f94;
-	-webkit-box-shadow: inset 0 0 6px 3px #7d7f94;
-	box-shadow: inset 0 0 6px 3px #7d7f94;
-
+	background-color: #73a441;
 	}
  
 	.breadcrumb.vendor-index {background-color: #f7f1e5;}
@@ -175,7 +167,7 @@ h1.category-title a {
 
  
 .breadcrumb.categories {margin: 0px;
-   background: #bcc081;
+  
   
 }
  
@@ -1172,10 +1164,10 @@ img.img-responsive.category {
  
 .category-summary, .tradition-summary {
 	color: #3a3a3a; /*margin-left: 182px;*/
-	background-color:#f3f4d8;
+	background-color:#f4f3d7;
 	position: relative;
 	text-align: left;
-	border:#72A53A 1px solid;
+	border:#73a441 1px solid;
 	border-radius:9px;
 	padding:15px;
 	margin-top:20px;
@@ -1192,7 +1184,7 @@ img.img-responsive.category {
 }
 
 #left-sidebar {
-	border: #cccccc 1px solid;
+	border: #3a3c2f 1px solid;
 	padding: 15px;
 	padding-top:5px;
 	position:relative;
@@ -1254,6 +1246,9 @@ a.btn-gwm {
 	color:#fff;
 }
 
+a.btn-gwm:hover {
+	color:#CCC;
+}
  
 .left-sidebar {
 	margin-top: 50px;
@@ -1342,11 +1337,9 @@ img.vendor-article-logo {width: 280px;}
 .vendor-special {
 	-moz-border-radius: 15px;
 	-webkit-border-radius: 15px;
-	background-image: url(../img/blockquote-bkgnd.jpg);
-	background-position: 200px 0px;
-	background-repeat: repeat;
+	background-color:#bcc17e;
 	border-radius: 15px;
-	color: #032177;
+	color: #fff;
 	font-family: 'Rosario', sans-serif;
 	letter-spacing: 1px;
 	margin-bottom: 15px;
