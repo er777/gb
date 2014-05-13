@@ -1298,8 +1298,17 @@ img.tradition, img.vendor-pic {
 
 .us-map {
 	background:url(/img/global/texture.jpg) repeat;
+	border:#3a3a3a solid 4px;
+	margin-bottom:20px;
 }
 
+
+.intl-map {
+	background:url(/img/global/intl-texture.jpg) repeat;
+	border:#3a3a3a solid 4px;
+	margin-bottom:20px;
+
+}
 
  
 img.recipe-pic {

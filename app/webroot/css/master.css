@@ -83,7 +83,10 @@ body .page.container {
  }
  
 
-
+.special-font {
+	font-family: 'Marydale Bold', sans-serif;
+	font-size:26px;
+}
 
 
 
@@ -116,7 +119,9 @@ hr {
 	margin: 20px 0;
  }
  
-.center {text-align: center;}
+.center {text-align: center;margin:auto;}
+
+
  
 .small {font-size: 11px;}
  
@@ -127,6 +132,10 @@ hr {
 img {
 	/*border: 0px !important;
 	outline: 0 !important;*/
+}
+
+.img-air-30{
+	padding:30px;
 }
 
 .search-result {

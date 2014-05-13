@@ -89,10 +89,10 @@ opacity: 0.2;
 
 <div class="air"></div>
 
-   <div id="dialog-info"> <?php echo $this->Session->flash(); ?> 
+   <div id="dialog-info"> <?php echo $this->Session->flash(); ?> </div>
    <!-- CONTENT --> 
    <?php echo $this->fetch('content'); ?>
-   </div>
+  
 </div>
 
 </div>
