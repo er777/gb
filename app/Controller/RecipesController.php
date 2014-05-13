@@ -104,15 +104,14 @@ class RecipesController extends AppController {
 				'User.slug' => 'ASC'
 			)
 		));
-
 		$this->set(compact('vendors'));
 		
-
 		$conditions[] = array(
 			'Recipe.active' => 1,
 			
 		);
-
+		
+			
 		if(isset($this->params['named']['category']) ) {
 
 			if (!array_key_exists($this->params['named']['category'], $recipescategories)) {
@@ -140,9 +139,12 @@ class RecipesController extends AppController {
 				);
 
 			$vendor_selected = $this->params['named']['vendor'];
+			
 		} else {
 			$vendor_selected = '';
+			
 		}
+		
 		
 		$this->set(compact('vendor_selected'));
 			

@@ -9,13 +9,18 @@ $(document).ready(function() {
 });
 </script>
 
+<?php  $here = $this->params['controller'];
+ 
+ //echo($here);
+
+?>
 <div class="row">
 
 <!--Sidebar -->
 <div class="col-md-3 col-sm-3 ">
    <div id="sidebar-title" class="recipe">
       <h1 class="category-title">
-      All Gourmet World Recipes
+      All Recipes
       </h14>
       <!--<div style="margin-bottom:20px;margin-top:30px;">
              <img style="width:235px" src="/img/us-traditions/labels/<?php //echo ($ustradition['Ustradition']['logo_image']); ?>" />
@@ -33,7 +38,7 @@ $(document).ready(function() {
       <h3>Recipe Vendors</h3>
       <?php echo $this->Form->input('vendors', array('label' => false, 'class' =>'form-control' ,'options' => $vendors, 'empty' => array('all' => 'All Vendors'), 'default' => $vendor_selected)); ?> </div>
 
-	<?php //echo ($vendor_selected); ?>
+	
 
 </div>
 
@@ -58,6 +63,12 @@ $(document).ready(function() {
 </table>
 <?php */?>
 
+
+<?php //echo ($vendor_selected); ?>
+<?php 
+	//debug($vendors);
+
+?>
    
    <!-- Include Recipes element --> 
 <?php echo $this->element('recipes'); ?> 

@@ -24,7 +24,6 @@ $(document).ready(function() {
 	 
 	<div id="left-sidebar">
     
-    <?php echo $this->Html->image('users/image/' . $user['User']['image'], array( 'width' =>'100%')); ?>
             <h1 class="category-title"><?php echo $user['User']['name']; ?></h1>
     
     <h3>Recipe Categories</h3>

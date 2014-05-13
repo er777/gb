@@ -1,4 +1,4 @@
-<h2 class="gwm-heading">All Gourmet World Recipes</h2>
+<h2 class="gwm-heading">All Recipes</h2>
 
 
 <script>
