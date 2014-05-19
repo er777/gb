@@ -438,7 +438,7 @@ class ShopsController extends AppController {
 			$this->Shop->appendXmlNode($xmlCompleteTransaction,'api-key', $APIKey);
 			$this->Shop->appendXmlNode($xmlCompleteTransaction,'token-id', $tokenId);
 			$xmlRequest->appendChild($xmlCompleteTransaction);
-			debug($xmlRequest);
+			//debug($xmlRequest);
 
 			// Process Step Three
 			$data = $this->Shop->sendXMLviaCurl($xmlRequest, $gatewayURL);
@@ -590,7 +590,7 @@ class ShopsController extends AppController {
 				->subject('Gourmet World Market Order: ' . $vendor['User']['name'])
 				->template('order-vendor')
 				->emailFormat('html')
-				->viewVars(array('order' => $order, 'vendor' => $vendor, 'vendoritems' => $vendoritems, 'orderitems' => $orderitems))
+				->viewVars(array('order' => $order, 'vendor' => $vendor, 'vendoritems' => $vendoritems))
 				->send();
 
 		}
