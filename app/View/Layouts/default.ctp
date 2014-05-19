@@ -4,8 +4,11 @@
 	//echo $subDomain[0];
 	$strip = $subDomain[0];
 		
-	//$strip = $this->here; 
-	//echo('<br /> ' . $strip);
+	$piece= $this->here; 
+	echo('<br /> ' . $piece);
+	
+	
+	
 	?>
 	<script>
 	var strip = '<?php echo($strip); ?>'
@@ -66,7 +69,7 @@ opacity: 0.2;
 <!--<script type="text/javascript" src="/t/track.php?id=gourmet"></script>-->
 
 </head>
-<body class="sun <?php  ?>">
+<body class="sun <?php echo(''); ?>">
 
 <!-- Include Header element --> 
 <?php echo $this->element('header'); ?>
@@ -203,6 +206,7 @@ opacity: 0.2;
 			var pathArray = window.location.pathname.split( '/' );
 
 			var secondLevelLocation = pathArray[1];
+			
 			
 					if (secondLevelLocation == 'foods') {
 						jQuery('ul.nav li.foods>a').addClass('active')

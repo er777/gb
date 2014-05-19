@@ -1383,7 +1383,7 @@ blockquote p {
 	font-size:24px;
 	font-family:'Marydale Bold', cursive;
 	font-weight:bold;
-	color:#393b2e;
+	color: #393767;
 	margin-bottom:10px;
 }
 
@@ -2356,7 +2356,7 @@ h3.gwm-heading {
 .article-body .section-heading {margin-top: 0px;}
  
 .section-subheading {
-	color: #3937670;
+	color: #393767;
 	font-family: 'Marydale Bold', sans-serif;
 	font-size: 18px;
 	letter-spacing: 1px;
@@ -2365,7 +2365,7 @@ h3.gwm-heading {
 }
 
 .legal-subheading {
-	color: #3937670;
+	color: #393767;
 	font-weight:bold;
 	font-size: 18px;
 	letter-spacing: 1px;

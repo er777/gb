@@ -255,6 +255,7 @@ class AppController extends Controller {
 
 ////////////////////////////////////////////////////////////
 
+
 	public function admin_switch($field = null, $id = null) {
 		$this->autoRender = false;
 		$model = $this->modelClass;
