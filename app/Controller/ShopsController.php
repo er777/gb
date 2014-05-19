@@ -590,8 +590,7 @@ class ShopsController extends AppController {
 				->subject('Gourmet World Market Order: ' . $vendor['User']['name'])
 				->template('order-vendor')
 				->emailFormat('html')
-				->viewVars(array('order' => $order, 'vendoritems' => $vendoritems))
-				//, 'vendor' => $vendor
+				->viewVars(array('order' => $order, 'vendor' => $vendor, 'vendoritems' => $vendoritems, 'orderitems' => $orderitems))
 				->send();
 
 		}
