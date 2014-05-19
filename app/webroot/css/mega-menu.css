@@ -600,6 +600,10 @@ ul.nav li.dropdown>a {
 	font-size:22px;
 }
 
+ul.nav li.dropdown li ul li a{
+	font-family: 'Rosario', sans-serif;
+
+}
 #nav-wrapper {
 	height: 49px;
 	width: 100%;
