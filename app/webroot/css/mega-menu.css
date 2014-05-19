@@ -41,7 +41,7 @@
 /* Fonts */
 
 	/* Header */
-	.nav, .nav-title span { font-family: 'PT Sans', sans-serif; font-size:16px; }
+	.nav, .nav-title span { font-family: 'PT Sans Narrow',sans-serif; }
 	.nav-title span { font-weight: normal; }
 
 	/* Header */
