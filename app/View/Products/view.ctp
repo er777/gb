@@ -239,7 +239,7 @@ $(document).ready(function() {
                <ul class="breadcrumb light-purple">
                   <li class="read"><?php echo $this->Html->link($user['User']['name'], '/'); ?></li>
                   <li class="read"><a href="http://<?php echo $user['User']['slug'] . '.' . Configure::read('Settings.DOMAIN').'/category/'. $product['Category']['slug']; ?>"><?php echo $product['Category']['name']; ?></a></li>
-                  <li class="read"><a href="http://<?php echo $user['User']['slug'] . '.' . Configure::read('Settings.DOMAIN').'/category/'. $product['Category']['slug'] .'/'. $product['Subcategory']['slug']; ?>"><?php echo $product['Subcategory']['name']; ?></a></li>
+                  <li class="read"><a href="http://<?php echo $user['User']['slug'] . '.' . Configure::read('Settings.DOMAIN').'/products/category/'. $product['Category']['slug'] .'/'. $product['Subcategory']['slug']; ?>"><?php echo $product['Subcategory']['name']; ?></a></li>
                   <?php if(!empty($subsubcategories)) : ?>
                   <li class="read"><?php echo $this->Html->link($product['Subsubcategory']['name'], array('controller' => 'products', 'action' => 'subsubcategory', 'slug' => $product['Subsubcategory']['id'])); ?> <!--<span class="divider">/</span>--></li>
                   <?php endif; ?>

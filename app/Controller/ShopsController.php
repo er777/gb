@@ -587,10 +587,11 @@ class ShopsController extends AppController {
 			$email->from(Configure::read('Settings.ADMIN_EMAIL'))
 				->cc(Configure::read('Settings.ADMIN_EMAIL'))
 				->to($vendor['User']['email_orders'])
-				->subject('Gourmet Basket Shop Order: ' . $vendor['User']['name'])
+				->subject('Gourmet World Market Order: ' . $vendor['User']['name'])
 				->template('order-vendor')
 				->emailFormat('html')
-				->viewVars(array('order' => $order, 'vendor' => $vendor, 'vendoritems' => $vendoritems))
+				->viewVars(array('order' => $order, 'vendoritems' => $vendoritems))
+				//, 'vendor' => $vendor
 				->send();
 
 		}
