@@ -83,8 +83,12 @@ h1.vendor-title {
  
 .cat-quote {
 	color: #444;
-	font-size: 12px;
+	font-size: 13px;
 	font-style: italic;
+}
+
+.quote-author {
+	font-size: 12px;
 }
 
 h1.category-title {
