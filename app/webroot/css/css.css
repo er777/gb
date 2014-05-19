@@ -131,7 +131,13 @@ h1.category-title a {
 /** BREADCRUMBS FOR NAVIGATION **/
 
 .breadcrumb {
-	background-color: #73a441;
+	background-color: #adb865;
+	-moz-box-shadow: inset 0px 0px 9px 2px #8c905f;
+	-webkit-box-shadow: inset 0px 0px 9px 2px #8c905f;
+	/**border: solid #CCC 3px; **/
+	box-shadow: inset 0px 0px 9px 2px #8c905f;
+
+	
 	}
  
 	.breadcrumb.vendor-index {background-color: #f7f1e5;}
@@ -2319,7 +2325,22 @@ h2.gwm-heading {
 	color: #3a3a3a;
 	font-size: 19px;
 }
- 
+
+.gwm-vendor-title {
+	color: #72a63a;
+	font-size: 19px;
+	margin-bottom:30px;
+}
+
+.vendors p {
+	font-size: 16px;
+}
+
+h3.gwm-heading {
+	color: #72a63a;
+	font-family: 'PT Sans Narrow', sans-serif;
+}
+
 .section-heading {
 	color: #393b2e;
 	font-family: 'Rosario', sans-serif;
@@ -2331,13 +2352,24 @@ h2.gwm-heading {
 .article-body .section-heading {margin-top: 0px;}
  
 .section-subheading {
-	color: #C00;
-	font-family: 'Rosario', sans-serif;
+	color: #3937670;
+	font-family: 'Marydale Bold', sans-serif;
 	font-size: 18px;
 	letter-spacing: 1px;
 	margin-bottom: 10px;
 	margin-top: 20px;
 }
+
+.legal-subheading {
+	color: #3937670;
+	font-weight:bold;
+	font-size: 18px;
+	letter-spacing: 1px;
+	margin-bottom: 10px;
+	margin-top: 20px;
+}
+
+
  
 .source-title {
 	color: #fff;

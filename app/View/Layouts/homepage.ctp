@@ -224,18 +224,18 @@
 			</div>
 
 
- </div>
- <h2 class="feature-label" >Gourmet World Market welcomes our new vendors: </h2>  
- <ul>
-    <li>Tonewood Maple</li>
-    <li>Eleni's Ethiopian</li> 
- </ul>      
- 
-			</div>
+       </div>
+       <!--<h2 class="feature-label" >Gourmet World Market welcomes our new vendors: </h2>  
+       <ul>
+          <li>Tonewood Maple</li>
+          <li>Eleni's Ethiopian</li> 
+       </ul>      -->
+       
+	</div>
             
   
             
-		</div>
+</div>
 
 
 

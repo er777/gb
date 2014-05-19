@@ -25,7 +25,10 @@
 						<ul class="dropdown-menu">
 								
 							<li class="two-column start">
-								<ul><?php 
+								<ul>
+								<li><a href="/users/vendors">FULL VENDOR LIST</a></li>
+								
+								<?php 
 									$i = 0;
 									foreach($menuvendors as $menuvendor) : 
 									$i++;
