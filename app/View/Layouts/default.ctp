@@ -1,24 +1,23 @@
+<?php
+	$subDomain = getSubDomain();
+	//echo($subDomain);
+	//echo $subDomain[0];
+	$strip = $subDomain[0];
+		
+	//$strip = $this->here; 
+	//echo('<br /> ' . $strip);
+	?>
+	<script>
+	var strip = '<?php echo($strip); ?>'
+		//alert(strip);
+	</script>
+	
+
 <!doctype html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<!--<meta name="description" content='A fresh way to shop for, learn about, prepare and enjoy foods of the world.'>
--->
-
-<?php
-//debug($this->params);
- $here = $this->params['controller'];
- 
- //echo($here);
- 
- 	if ($here == 'categories') : ?>
-		<meta name="description" content='<?php echo $category['Category']['metadata']; ?>'
-	<?php endif; 
-
- 	if ($here == 'products') : ?>
-		<meta name="description" content='<?php echo $user['User']['metadata']; ?>'
-	<?php endif; ?>
-
+<meta name="description" content='A fresh way to shop for, learn about, prepare and enjoy foods of the world.'>
 <title><?php echo $title_for_layout; ?></title>
 <!--<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/themes/smoothness/jquery-ui.css" />-->
 <link href='http://fonts.googleapis.com/css?family=Rosario:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -44,6 +43,9 @@ a.btn-gb:hover {
 	color:#CCC;
 	
 }
+
+
+
 
 .bkgnd-gb {
 <?php /*?><?php echo $user['User']['awning_css']; ?> <?php */?>
@@ -89,10 +91,10 @@ opacity: 0.2;
 
 <div class="air"></div>
 
-   <div id="dialog-info"> <?php echo $this->Session->flash(); ?> </div>
+   <div id="dialog-info"> <?php echo $this->Session->flash(); ?> 
    <!-- CONTENT --> 
    <?php echo $this->fetch('content'); ?>
-  
+   </div>
 </div>
 
 </div>
@@ -106,17 +108,30 @@ opacity: 0.2;
 <?php echo $this->element('sqldump'); ?> <br />
 <br />
 
+<!-- IE8 Compatibility --> 
+<script src ="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script> 
 <script>
 	// Drop Down Hover!
 	$(document).ready(function() {
 		$('.js-activated').dropdownHover(true);
 	});
 
+	//Select Customize
+	//$('.selectpicker').selectpicker();
+
+
+	// Pop Up
+
+	// $('#gb_popup').bPopup({
+//            speed: 650,
+//            transition: 'slideIn'
+//        });
 
 // Semicolon (;) to ensure closing of earlier scripting
 	// Encapsulation
 	// $ is assigned to jQuery
 	(function($) {
+		
 		 // Policies
 		$(function() {
 			// Binding a click event
@@ -128,6 +143,7 @@ opacity: 0.2;
 				$('#policy_content').bPopup();
 			});
 		});
+		
 		 // Story
 		 $(function() {
 			$('#story').on('click', function(e) {
@@ -180,14 +196,48 @@ opacity: 0.2;
 		});
 
 
+	// For active links
+	
+	
+		var newURL = window.location.protocol + "//" + window.location.host + "/" + window.location.pathname;
+			var pathArray = window.location.pathname.split( '/' );
+
+			var secondLevelLocation = pathArray[1];
+			
+					if (secondLevelLocation == 'foods') {
+						jQuery('ul.nav li.foods>a').addClass('active')
+						
+					}
+					else if (secondLevelLocation == 'recipes'){
+						jQuery('ul.nav li.recipes>a').addClass('active')
+						
+					}
+					else if (secondLevelLocation == 'international'){
+						 jQuery('ul.nav li.food-region>a').addClass('active')
+						
+					}	
+					else if (secondLevelLocation == 'us'){
+						 jQuery('ul.nav li.food-region>a').addClass('active')
+						
+					}	
+				
+			
+	  //get sub domain
+		  
+		  var parts = location.hostname.split('.');
+		  var subdomain = parts.shift();
+		  var upperleveldomain = parts.join('.');
+		  
+		  var sndleveldomain = parts.slice(-3).join('.');
+		  
+		  //alert(subdomain);
+		  
+		  if (subdomain !== 'gwm' && subdomain !== 'gogowiz' && subdomain !=="" && subdomain !=="www") {
+			   jQuery('ul.nav li.vendors>a').addClass('active')						 
+		  }
+
 	})(jQuery);
 
 </script>
-
-
-
-<!-- IE8 Compatibility --> 
-<script src ="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script> 
-
 </body>
 </html>
