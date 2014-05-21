@@ -154,6 +154,13 @@
 
 <?php if($ccform): ?>
 <div class="col-md3 pull-right">
+	<p style="text-align:right; padding-right:50px"> <strong>Subtotal: $<?php echo $shop['Order']['subtotal']; ?></strong> <br />
+		<strong>Discount ($<?php echo $shop['Order']['discount']; ?>)</strong> <br />
+		<strong>Tax: <?php echo $shop['Order']['tax']; ?></strong> <br />
+		<strong>Shipping: <?php echo $shop['Order']['shipping']; ?></strong> <br />
+		<strong>Order Total: <?php echo $shop['Order']['total']; ?></strong> <br />
+	</p>
+
 <br />
 <h4>Pay by Credit Card</h4>
 <form action="<?php echo $formURL;?>" method="POST">
