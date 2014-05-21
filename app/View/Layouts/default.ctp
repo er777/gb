@@ -5,7 +5,7 @@
 	$strip = $subDomain[0];
 		
 	$piece= $this->here; 
-	echo('<br /> ' . $piece);
+	//echo('<br /> ' . $piece);
 	
 	
 	
