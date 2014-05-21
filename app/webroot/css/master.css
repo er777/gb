@@ -549,12 +549,12 @@ h3.featured {
 	font-weight: normal;
 	font-size: 13px;
 	padding: 20px;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#BFDAD2)); /* Chrome, Safari 4+ */
-	background-image: -webkit-linear-gradient(top, #ffffff, #BFDAD2); /* Chrome 10-25, iOS 5+, Safari 5.1+ */
-	background-image: -moz-linear-gradient(top, #ffffff, #BFDAD2); /* Firefox 3.6-15 */
-	background-image: -o-linear-gradient(top, #ffffff, #BFDAD2);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#b7ba6e)); /* Chrome, Safari 4+ */
+	background-image: -webkit-linear-gradient(top, #ffffff, #b7ba6e); /* Chrome 10-25, iOS 5+, Safari 5.1+ */
+	background-image: -moz-linear-gradient(top, #ffffff, #b7ba6e); /* Firefox 3.6-15 */
+	background-image: -o-linear-gradient(top, #ffffff, #b7ba6e);
 	; /* Opera 11.10-12.00 */
-	background-image: linear-gradient(to bottom, #ffffff, #BFDAD2); /* Chrome 26, Firefox 16+, IE 10+, Opera 12.50+ */
+	background-image: linear-gradient(to bottom, #ffffff, #b7ba6e); /* Chrome 26, Firefox 16+, IE 10+, Opera 12.50+ */
 }
 
 .b-close.btn-gb  {
