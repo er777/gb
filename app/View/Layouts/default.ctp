@@ -20,7 +20,6 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<<<<<<< HEAD
 <meta name="description" content='A fresh way to shop for, learn about, prepare and enjoy foods of the world.'>
 <title><?php echo $title_for_layout; ?></title>
 <!--<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/themes/smoothness/jquery-ui.css" />-->
@@ -30,33 +29,6 @@
 
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
 
-=======
-<!--<meta name="description" content='A fresh way to shop for, learn about, prepare and enjoy foods of the world.'>
--->
-
-<?php
-//debug($this->params);
- $here = $this->params['controller'];
- 
- echo($here);
- 
- 	if ($here == 'categories') : ?>
-		<meta name="description" content='<?php echo $category['Category']['metadata']; ?>'
-	<?php endif; 
-
- 	if ($here == 'products') : ?>
-		<meta name="description" content='<?php echo $user['User']['metadata']; ?>'
-	<?php endif; ?>
-
-<title><?php echo $title_for_layout; ?></title>
-<!--<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/themes/smoothness/jquery-ui.css" />-->
-<link href='http://fonts.googleapis.com/css?family=Rosario:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
-
-<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
-
->>>>>>> 1affd0499456bc692deafca0aa54f82f13fc5c42
 <?php echo $this->Html->css(array('css.css','master.css','responsive.css','mega-menu.css','mega-menu-responsive.css','cakephp_tag_cloud.css')); ?>
 
 <!-- CSS -->
@@ -65,30 +37,19 @@
 <?php /*?><?php if(isset($user['User']['awning_css'])) : ?><?php */?> .btn-gb {
 	background-color:#393767;
 <?php /*?><?php echo $user['User']['awning_css'];?><?php */?>
-<<<<<<< HEAD
 }
 
 a.btn-gb, button.btn.btn-gb i  {
 	color:#fff;
 }
-=======
-}
-
-a.btn-gb, button.btn.btn-gb i  {
-	color:#fff;
-}
->>>>>>> 1affd0499456bc692deafca0aa54f82f13fc5c42
 a.btn-gb:hover {
 	color:#CCC;
 	
 }
 
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> 1affd0499456bc692deafca0aa54f82f13fc5c42
 .bkgnd-gb {
 <?php /*?><?php echo $user['User']['awning_css']; ?> <?php */?>
 opacity: 0.2;
@@ -106,10 +67,9 @@ opacity: 0.2;
 <?php //echo $this->fetch('css'); ?>
 <?php echo $this->fetch('script'); ?>
 <!--<script type="text/javascript" src="/t/track.php?id=gourmet"></script>-->
-<<<<<<< HEAD
 
 </head>
-<body class="sun <?php echo(''); ?>">
+<body class="sun <?php //echo(''); ?>">
 
 <!-- Include Header element --> 
 <?php echo $this->element('header'); ?>
@@ -153,11 +113,6 @@ opacity: 0.2;
 
 <!-- IE8 Compatibility --> 
 <script src ="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script> 
-=======
-<
-
-// KEEP UNTIL SWITCH - ER 5/11/14
->>>>>>> 1affd0499456bc692deafca0aa54f82f13fc5c42
 <script>
 	// Drop Down Hover!
 	$(document).ready(function() {
