@@ -27,7 +27,7 @@
             </div>
          </div>
          
-         <div class="col-md-5 col-sm-5">
+         <div class="col-md-6 col-sm-6 recipe-body">
             <h2 class="gwm-heading recipes-heading"><?php echo $recipe['Recipe']['name']; ?></h2>
             <hr class="recipe-divider" />
             <? //echo $recipe['Recipe']['slug']?>
@@ -51,7 +51,7 @@
             <?php endif ; ?>
          </div>
          
-         <div class="col-md-4 col-sm-4 recipe-pic-block">
+         <div class="col-md-3 col-sm-3 recipe-pic-block">
          
          <img class="recipe-pic img-responsive" src="/img/recipes/image_1/<?php echo $recipe['Recipe']['image_1']?>"  />
             <?php if(!empty($recipe['Recipe']['attr_1'])) : ?>

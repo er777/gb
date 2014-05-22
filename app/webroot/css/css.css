@@ -1327,7 +1327,7 @@ img.recipe-pic {
  
 img.recipe-pic {}
  
-.col-md-3.recipe-pic-block {margin-top: 50px;}
+.col-md-3.recipe-pic-block {margin-top: 7px;}
  
 .category-pic, .intl-image {
 	padding: 10px;
@@ -1999,10 +1999,12 @@ hr.recipe-divider {
 	padding-top:5px;
 }
 
-
+.recipe-body {
+	padding-bottom:30px;
+}
 
 /** Articles **/
-.article-title {}
+
  
 .article-name {
 	color: #393b2e;
@@ -2467,7 +2469,7 @@ div#policy_content {display: none; ;}
 	#policy_content hr {margin-bottom: 0px;}
  
 	#policy_content  .policy-heading {
-		color: #C00;
+		color: #393767;
 		font-family: 'PT Sans', sans-serif;
 		font-size: 24px;
 		letter-spacing: 1px;
