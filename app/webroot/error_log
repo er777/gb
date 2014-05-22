@@ -134,3 +134,5 @@ Stack trace:
 [30-Oct-2013 16:03:20 America/Los_Angeles] PHP Parse error:  syntax error, unexpected $end in /home/gourmet/public_html/app/View/Layouts/homepage.ctp on line 305
 [30-Oct-2013 16:03:24 America/Los_Angeles] PHP Parse error:  syntax error, unexpected $end in /home/gourmet/public_html/app/View/Layouts/homepage.ctp on line 305
 [30-Oct-2013 16:03:24 America/Los_Angeles] PHP Parse error:  syntax error, unexpected $end in /home/gourmet/public_html/app/View/Layouts/homepage.ctp on line 305
+[21-May-2014 21:07:59 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/gourmet/public_html/app/View/Categories/view.ctp on line 73
+[21-May-2014 21:10:00 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/gourmet/public_html/app/View/Categories/view.ctp on line 73
