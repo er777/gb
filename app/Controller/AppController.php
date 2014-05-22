@@ -137,6 +137,10 @@ class AppController extends Controller {
 						'Ustradition.slug',
 					),
 					
+					'conditions' => array(
+						'Ustradition.active' => '1'
+					),
+					
 					'order' => array(
 						'Ustradition.name' => 'ASC'
 					),
