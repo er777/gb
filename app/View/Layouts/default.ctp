@@ -69,7 +69,7 @@ opacity: 0.2;
 <!--<script type="text/javascript" src="/t/track.php?id=gourmet"></script>-->
 
 </head>
-<body class="sun <?php echo(''); ?>">
+<body class="sun <?php //echo(''); ?>">
 
 <!-- Include Header element --> 
 <?php echo $this->element('header'); ?>
