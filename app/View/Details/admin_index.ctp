@@ -1,5 +1,5 @@
 <div class="details index">
-	<h2>Footer Links</h2>
+	<h2><?php echo __('Details'); ?></h2>
 	
 <table class="table table-striped table-bordered table-condensed table-hover">
 	<tr>

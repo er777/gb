@@ -5,12 +5,7 @@
 	function getSubDomain() {
 		$url = explode('.', env('HTTP_HOST'));
 		return $url;
-		if($url[0]=="localhost")
-		{
-			$url = "localhost/gourmet";
-			}
 	}
-	
 	$subDomain = getSubDomain();
 
 	if($subDomain[0] != 'www' && isset($subDomain[2])) {
@@ -24,22 +19,24 @@
 	Router::connect('/product/:id-:slug', array('controller' => 'products', 'action' => 'view'), array('pass' => array('id', 'slug'), 'id' => '[0-9]+', 'routeClass' => 'SubdomainRoute'));
 
 	Router::connect('/category/:slug', array('controller' => 'products', 'action' => 'category'), array('pass' => array('slug'), 'routeClass' => 'SubdomainRoute'));
-	Router::connect('/category/*', array('controller' => 'products', 'action' => 'category'), array('routeClass' => 'SubdomainRoute'));
+	Router::connect('/brand/*', array('controller' => 'products', 'action' => 'brand'), array('routeClass' => 'SubdomainRoute'));
 
 	//Router::connect('/subcategory/:slug', array('controller' => 'products', 'action' => 'subcategory'), array('pass' => array('slug'), 'routeClass' => 'SubdomainRoute'));
 
 	//Router::connect('/subsubcategory/:slug', array('controller' => 'products', 'action' => 'subsubcategory'), array('pass' => array('slug'), 'routeClass' => 'SubdomainRoute'));
 
 	Router::connect('/foods/*', array('controller' => 'categories', 'action' => 'view'), array('pass' => array('slug'), 'routeClass' => 'SubdomainRoute'));
+
 	Router::connect('/admin', array('controller' => 'users', 'action' => 'dashboard', 'admin' => true));
 
 	Router::connect('/vendor', array('controller' => 'users', 'action' => 'dashboard', 'vendor' => true));
 	
 	Router::connect('/cat/*', array('controller' => 'products', 'action' => 'view'));
 
-	Router::connect('/us/*', array('controller' => 'ustraditions', 'action' => 'view'), array('pass' => array('slug')));
 	Router::connect('/us/:slug', array('controller' => 'ustraditions', 'action' => 'view'), array('pass' => array('slug')));
-	Router::connect('/international/*', array('controller' => 'traditions', 'action' => 'view'), array('pass' => array('slug')));
+	
+	Router::connect('/us/', array('controller' => 'contents', 'action' => 'ustradition'));
+
 	Router::connect('/international/:slug', array('controller' => 'traditions', 'action' => 'view'), array('pass' => array('slug')));
 	
 	

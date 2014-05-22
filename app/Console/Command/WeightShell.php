@@ -46,17 +46,15 @@ class WeightShell extends Shell {
 
 		foreach ($products as $product) {
 			$this->out(print_r($product));
-			
-			
 
-			$shipping_weight = ceil(number_format($product['Product']['shipping_weight_oz'] / 16, 2));
+			$shipping_weight_oz = number_format($product['Product']['weight'] / 16, 2);
 
-			$this->out('new weight (lbs) = ' . $shipping_weight);
+			$this->out('new weight (lbs) = ' . $shipping_weight_oz);
 
 			$this->out("\n\n=================\n\n");
 
 			$d['Product']['id'] = $product['Product']['id'];
-			$d['Product']['shipping_weight_oz'] = $shipping_weight;
+			$d['Product']['shipping_weight_oz'] = $shipping_weight_oz;
 			$this->Product->save($d, false);
 
 		}

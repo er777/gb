@@ -1,7 +1,5 @@
-<h2>GWM Vendor Dashboard</h2>
+<h2>GB Vendor</h2>
 
-
-<p>In development...</p>
 <br />
 <br />
 <br />

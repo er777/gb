@@ -5,7 +5,7 @@
 
 	mail('andras@kende.com', 'test', 'test');
 
-	$c = exec('cd /home/andras/sites/gourmetworldmarket.com/public/ && /usr/bin/git pull', $out, $r);
+	$c = exec('cd /home/andras/sites/gourmetdev.com/public/ && /usr/bin/git pull', $out, $r);
 
 	print_r($c);
 	print_r($out);
@@ -15,7 +15,7 @@
 
 	shell_exec('/home/andras/github.sh');
 
-	system('cd /home/andras/sites/gourmetworldmarket.com/public/ && /usr/bin/git pull');
+	system('cd /home/andras/sites/gourmetdev.com/public/ && /usr/bin/git pull');
 
 	system('/home/andras/github.sh');
 

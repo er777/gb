@@ -23,7 +23,7 @@
 
 			<div class="headline-2 span6">
 				<div>
-					<h2> <a href="http://gourmetworldmarket.com/blog/2012/07/11/beverage-trends-2012"> News on Trends! </a> </h2>
+					<h2> <a href="http://gourmetdev.com/blog/2012/07/11/beverage-trends-2012"> News on Trends! </a> </h2>
 				</div>
 				<div></div>
 			</div>

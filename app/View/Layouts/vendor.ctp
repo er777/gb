@@ -30,13 +30,13 @@
 		<div class="navbar-inner">
 			<div class="container-fluid">
 
-			<a class="brand" href="/vendor/">Gourmet World Market Vendor</a>
+			<a class="brand" href="/vendor/">GB VENDOR</a>
 
 			<div class="nav-collapse">
 				<ul class="nav">
 					<li><?php echo $this->Html->link('Products', array('controller' => 'products', 'action' => 'index', 'vendor' => true)); ?></li>
 					<li><?php echo $this->Html->link('Orders',  array('controller' => 'orderusers', 'action' => 'index', 'vendor' => true)); ?></li>
-					<li><?php echo $this->Html->link('Profile/ Pinterest Pics', array('controller' => 'users', 'action' => 'profile', 'vendor' => true)); ?></li>
+					<li><?php echo $this->Html->link('Profile View', array('controller' => 'users', 'action' => 'profile', 'vendor' => true)); ?></li>
 					<li><?php echo $this->Html->link('Profile Edit', array('controller' => 'users', 'action' => 'edit', 'vendor' => true)); ?></li>
 				</ul>
 			</div>

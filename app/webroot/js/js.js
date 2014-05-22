@@ -44,22 +44,13 @@ $(document).ready(function(){
 	};
 	
 	
-// Fly out menus
-
-		//Menu animation						
-		$('.navList ul').css({display: "none"}); //Fix Opera
-  		
-		$('.navList li').hover(function() { 
-		//$('.navList ul').css('background-color','fff');
-		$(this).find('a').stop();
-   		$(this).find('ul:first').css({visibility : "visible", display : "none"}).show(400);
-    
-  		}, function() {
-    		$(this).find('ul:first').css({visibility : "hidden"}).hide(400);
-   			$(this).find('a').stop();
-			});
-
 		
 // Prepend img in Article div
-	$('#theDiv').prepend('<img id="theImg" src="theImg.png" />')
+	$('#theDiv').prepend('<img id="theImg" src="theImg.png" />');
+
+
+// Wrap curly quotes in User Shop Quote
+	$('#awning-text p').prepend('&#8220;&nbsp;');
+	$('#awning-text p').append('&#8221;');
+
 });

@@ -15,7 +15,7 @@ class NotesController extends AppController {
 			),
 			'conditions' => array(
 				'NOT' => array(
-					'Note.priority' => array())
+					'Note.priority' => array('A','D'))
 			),
 			
 		);

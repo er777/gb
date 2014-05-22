@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title><?php echo $title_for_layout; ?></title>
-<?php echo $this->Html->css(array('bootstrap.css')); ?>
+<?php echo $this->Html->css(array('old-bootstrap/bootstrap.css')); ?>
 <?php echo $this->Html->css(array('admin.css')); ?>
 
 <link rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/smoothness/jquery-ui.css" />
@@ -21,7 +21,7 @@
 		<div class="navbar-inner">
 			<div class="container-fluid">
 
-			<a class="brand" href="/admin/">GWM ADMIN</a>
+			<a class="brand" href="/admin/">GB ADMIN</a>
 
 			<div class="nav-collapse">
 				<ul class="nav">
@@ -119,7 +119,6 @@
 							<li><?php echo $this->Html->link('Recipes Categories', array('controller' => 'recipescategories', 'action' => 'index', 'admin' => true)); ?></li>
 							<li><?php echo $this->Html->link('Contents', array('controller' => 'contents', 'action' => 'index', 'admin' => true)); ?></li>
 							<li><?php echo $this->Html->link('Blocks', array('controller' => 'blocks', 'action' => 'index', 'admin' => true)); ?></li>
-							<li><?php echo $this->Html->link('Footer Links', array('controller' => 'details', 'action' => 'index', 'admin' => true)); ?></li>
 							<li><?php echo $this->Html->link('Features', array('controller' => 'features', 'action' => 'index', 'admin' => true)); ?></li>
 							<li><?php echo $this->Html->link('Coupons', array('controller' => 'coupons', 'action' => 'index', 'admin' => true)); ?></li>
 						</ul>

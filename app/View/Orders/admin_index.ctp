@@ -10,9 +10,7 @@
 		<th><?php echo $this->Paginator->sort('tax');?></th>
 		<th><?php echo $this->Paginator->sort('shipping');?></th>
 		<th><?php echo $this->Paginator->sort('total', 'Customer Total'); ?></th>
-		<th><?php echo $this->Paginator->sort('status');?></th>
 		<th><?php echo $this->Paginator->sort('created');?></th>
-
 		<th><?php echo $this->Paginator->sort('modified');?></th>
 		<th class="actions"><?php echo __('Actions');?></th>
 	</tr>
@@ -26,7 +24,6 @@
 		<td><?php echo h($order['Order']['tax']); ?></td>
 		<td><?php echo h($order['Order']['shipping']); ?></td>
 		<td><?php echo h($order['Order']['total']); ?></td>
-		<td><?php echo h($order['Order']['status']); ?></td>
 		<td><?php echo h($order['Order']['created']); ?></td>
 		<td><?php echo h($order['Order']['modified']); ?></td>
 		<td class="actions">

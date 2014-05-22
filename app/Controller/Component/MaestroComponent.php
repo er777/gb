@@ -21,7 +21,7 @@ class MaestroComponent extends Component {
 
 		App::uses('HttpSocket', 'Network/Http');
 		$httpSocket = new HttpSocket();
-		$res = $httpSocket->post(Configure::read('Settings.MAESTRO_API_URL'), $xml);
+		$res = $httpSocket->post(Configure::read('Settings.MAESTRO_API_URL_CARTCHECK'), $xml);
 
 		App::uses('Xml', 'Utility');
 		$response = Xml::toArray(Xml::build($res['body']));
@@ -29,11 +29,11 @@ class MaestroComponent extends Component {
 		 // print_r($response);
 		 // die();
 
-		 //debug($response['checkout']['order']['shippingcharge']);
+		// debug($response['checkout']['order']['shippingcharge']);
 
 		$results[0] = array(
-			'ServiceCode'	=> 'GBM Flat',
-			'ServiceName'	=> 'GBM Flat',
+			'ServiceCode'	=> 'gb flat',
+			'ServiceName'	=> 'gb flat',
 			'TotalCharges'	=> sprintf('%.2f', $response['checkout']['order']['shippingcharge']),
 		);
 

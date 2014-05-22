@@ -125,7 +125,7 @@ font-size: 13px;
  	width: 440px;
 }
 
-input.gb-text-large {
+input.gwm-text-large {
 	width: 206px;
 	height:50px;
 }
@@ -167,7 +167,7 @@ input::-webkit-inner-spin-button {
 }
 
 /**Admin Pic **/
-.gb, .gb img {
+.gwm, .gwm img {
 	max-width:250px;
 	max-height: 230px;
 }
@@ -176,15 +176,6 @@ input::-webkit-inner-spin-button {
 .order-user-pic {
 	height:30px;
 }
-
-.adminUserImages {
-	float:left;
-	margin-right:20px;
-	margin-bottom:20px;
-	max-width:300px;
-}
-
-
 
 @media print
 {

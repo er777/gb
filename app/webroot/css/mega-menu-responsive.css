@@ -18,7 +18,9 @@
 .nav > li { float: left; }
 .nav > li > a { padding: 10px 8px; }
 .nav > li > li > a { padding: 0 0 5px; }
+
 }
+
 
 /* 767px and below */
 /*=================*/
@@ -203,7 +205,6 @@ li.dropdown { margin-top: 0; }
 .navbar-collapse .mega-menu-4 li.with-gallery li img,
 .navbar-collapse .mega-menu-5 li.with-gallery li img,
 .navbar-collapse .mega-menu-6 li.with-gallery li img { margin-bottom: 0; }
-
 
 }
 

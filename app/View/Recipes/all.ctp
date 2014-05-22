@@ -1,6 +1,3 @@
-<h2 class="gb-heading">All Gourmet World Recipes</h2>
-
-
 <script>
 $(document).ready(function() {
 	$('#recipescategories').change(function() {
@@ -12,21 +9,45 @@ $(document).ready(function() {
 });
 </script>
 
-<div class="row">
-	<div class="span3">
+<?php  $here = $this->params['controller'];
  
-    <div class="gb-heading dropdown-air">Recipe Categories</div>
-		<?php echo $this->Form->input('recipescategories', array('class' => 'selectpicker','data-style'=>'btn-primary','options' => $recipescategories, 'label' => false,'empty' => array('all' => 'All Recipes'), 'default' => $recipescategory_selected)); ?>
-	</div>
-	<div class="span3">
-    <div class="gb-heading dropdown-air">Recipe Vendors</div>
-		<?php echo $this->Form->input('vendors', array('label' => false,'options' => $vendors, 'empty' => array('all' => 'All Vendors'), 'default' => $vendor_selected)); ?>
-	</div>
+ //echo($here);
+
+?>
+<div class="row">
+
+<!--Sidebar -->
+<div class="col-md-3 col-sm-3 ">
+   <div id="sidebar-title" class="recipe">
+      <h1 class="category-title">
+      All Recipes
+      </h14>
+      <!--<div style="margin-bottom:20px;margin-top:30px;">
+             <img style="width:235px" src="/img/us-traditions/labels/<?php //echo ($ustradition['Ustradition']['logo_image']); ?>" />
+         </div>--> 
+      
+   </div>
+   <div id="left-sidebar">
+      <h3>Recipe Categories</h3>
+      <?php /*?><?php foreach ($recipescategories as $recipescategory): ?> -  
+                
+           
+                <?php echo $this->Html->link($recipescategory['Recipescategory']['name'], array('controller' => 'recipes', 'action' => 'all', 'slug' => $recipescategory['Recipescategory']['slug'])); ?><br />
+                 <?php endforeach; ?><?php */?>
+      <?php echo $this->Form->input('recipescategories', array('class' => 'selectpicker inline form-control','data-style'=>'btn-primary','options' => $recipescategories, 'label' => false,'empty' => array('all' => 'All Recipes'), 'default' => $recipescategory_selected)); ?>
+      <h3>Recipe Vendors</h3>
+      <?php echo $this->Form->input('vendors', array('label' => false, 'class' =>'form-control' ,'options' => $vendors, 'empty' => array('all' => 'All Vendors'), 'default' => $vendor_selected)); ?> </div>
+
+	
+
 </div>
 
+<!-- Items -->
 
 
-<?php /*?><table cellpadding="5" cellspacing="5">
+
+<div class="col-md-9">
+   <?php /*?><table cellpadding="5" cellspacing="5">
 	<tr>
 		<th><?php echo $this->Paginator->sort('name');?></th>
 		<th><?php echo $this->Paginator->sort('user_id');?></th>
@@ -43,66 +64,19 @@ $(document).ready(function() {
 <?php */?>
 
 
-<br />
+<?php //echo ($vendor_selected); ?>
+<?php 
+	//debug($vendors);
 
+?>
+   
+   <!-- Include Recipes element --> 
+<?php echo $this->element('recipes'); ?> 
 
-
-<div class="row" style="margin-left:25px">
-
-	<?php
-	$i = 0;
-	foreach ($recipes as $recipe):
-		$i++;
-		if (($i % 4) == 0) { echo "\n<div class=\"row\">\n\n";}
-	?>
-        <div class="span3" style="margin-left:10px;">
-        
-            <div class="content-recipe">
-    
-               
-                
-				<?php echo '<a href="http://' . $recipe['User']['slug'] . '.' . Configure::read('Settings.DOMAIN') . '/recipe/' . $recipe['Recipe']['slug'] . '">'; ?>
-					<div class="small"><?php echo $recipe['Recipescategory']['name']; ?>
-					</div>
-                    
-                    <div class="content-img">
-                        <?php echo $this->Html->image('/img/recipes/image_1/' . $recipe['Recipe']['image_1'] , array('width' => 200, 'height' => 200, 'alt' => $recipe['Recipe']['name'], 'class' => 'img-polaroid')); ?>
-                    
-                    
-						<?php /*?><?php echo $this->Html->image('products/image/' . $product['Product']['image'], array('url' => array('subdomain' => $product['User']['slug'], 'controller' => 'products', 'action' => 'view', 'id' => $product['Product']['id'], 'slug' => $product['Product']['slug']), 'alt' => $product['Product']['name'], 'class' => 'img-polaroid img180')); ?><?php */?>
-                    
-                        <div class="recipe-name">
-                            <?php echo $recipe['Recipe']['name']; ?>
-                        
-                        
-                            <?php /*?><!--<a href="/product/<?php echo ($product['Product']['id'].'-'.$product['Product']['slug']);?>"> <?php echo $this->Text->truncate($product['Product']['name'], 40, array('ellipsis' => '...', 'exact' => 'false')); ?>
-                            </a>--><?php */?>
-                        </div>
-                        
-                    </div>
-                    
-                   </a> 
-                
-                  
-            </div>
-    
-        </div>
-        
-	<?php
-	if (($i % 4) == 0) { echo "\n</div>\n\n";}
-	endforeach;
-	?>
+<div class="clearfix">
+<?php $this->Paginator->options(array('url' => $this->passedArgs)); ?>
+<?php echo $this->element('pagination-counter'); ?> <?php echo $this->element('pagination'); ?>
 </div>
 
-<br />
-<br />
 
-<?php $this->Paginator->options(array('url' => $this->passedArgs)); ?>
-
-<?php echo $this->element('pagination-counter'); ?>
-
-<?php echo $this->element('pagination'); ?>
-
-SHOW ALL
-
-<br />
+</div>

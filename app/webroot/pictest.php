@@ -112,9 +112,9 @@ $(function () {
 			
 			<li class="product"><img src=" http://blogs.glam.com/glamchic/files/2008/10/coat.jpg" alt="Coat" /></li>
 			<li class="productLink"><a href="demo1.cfm"><img src=" http://www.bunnyslippers.com/gfx/products/classic-bunny-slippers-2-lg.jpg" alt="Bunny Slippers" /></a></li>
-			<li class="productLink"><a href="http://kartika.gbnew.dev/product/176-thousand-layer-regular-vanilla-roll"><img src="/img/products/image/176.jpg" alt="Thousand-Layer Regular Vanilla Roll " /></a></li>
+			<li class="productLink"><a href="http://kartika.gwmnew.dev/product/176-thousand-layer-regular-vanilla-roll"><img src="/img/products/image/176.jpg" alt="Thousand-Layer Regular Vanilla Roll " /></a></li>
 			<li class="productLink">
-			<a href="http://heirloomcoffee.gbnew.dev/product/1525-tam-chau-flower-oolong-tea"><img src="/img/products/image/1525.jpg" alt="Tam Chau “Flower” Oolong Tea, Loose" /></a></li>
+			<a href="http://heirloomcoffee.gwmnew.dev/product/1525-tam-chau-flower-oolong-tea"><img src="/img/products/image/1525.jpg" alt="Tam Chau “Flower” Oolong Tea, Loose" /></a></li>
 			
 		</ul>
 		

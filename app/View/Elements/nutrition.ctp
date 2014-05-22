@@ -1,15 +1,11 @@
-	 <?php /*?>
-	 <?php if(!empty($nuts)) :
-							if ($serv == 'loaded' || $description == 'loaded' || $recipes == 'loaded') : ?>
-						<li><a href="#nutrition" data-toggle="tab">Nutrition</a></li>
-								<?php else : ?>
-						<li class="active"><a href="#nutrition" data-toggle="tab">Nutrition</a></li>
-								<?php endif;?>
-	 <?php $nutrition = 'loaded';
-						endif;?>
-	 <?php */?>
-     
-
+<?php //if (($description == 'unloaded') && ($serv == 'unloaded') && ($recipes == 'unloaded') &&  ($recipes == 'unloaded') && ($nutrition == 'loaded')) :
+										//$value3 = 'active';
+									//endif; ?>
+	 <?php //if ( !empty($nuts) //&& $product['Product']['vitamin_a_p'] !== ''
+						//&& $product['Product']['vitamin_c_p'] !== ''
+						//&& $product['Product']['calcium_p'] !== ''
+						//&& $product['Product']['iron_p'] !== ''
+						//) : ?>
 	 <?php //debug($nuts); ?>
 				<div class="tab-pane <?php //echo $value3; ?>" id="nutrition" style="display:none">
 					  <table class="NutritionFacts">

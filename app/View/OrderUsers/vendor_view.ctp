@@ -94,7 +94,6 @@
 <?php echo $this->Form->create('OrderUser'); ?>
 <?php echo $this->Form->input('id'); ?>
 <?php echo $this->Form->input('tracking_number'); ?>
-<?php echo $this->Form->input('status',array('type'=>'select','options'=>$status)); ?>
 <?php echo $this->Form->button('Submit', array('class' => 'btn')); ?>
 <?php echo $this->Form->end(); ?>
 

@@ -19,24 +19,10 @@
 			<li class="mzr-drop"> <a class="parent" href="#" ><span style="color:#a53043;text-shadow:1px 1px #000"></span>VENDORS<b class="caret"></b></a>
 				<div class="mzr-content drop-three-columns popover-content">
 					<div class="wide">
-					<p>ARTISANAL VENDORS</p>
 					<?php foreach($menuvendors as $menuvendor) : ?>
 					<p><?php echo $this->Html->link($menuvendor['User']['name'], 'http://' . $menuvendor['User']['slug'] . '.' . Configure::read('Settings.DOMAIN') . '/'); ?></p>
 					<?php endforeach; ?>
-					
-					<p>-------------------</p>
-					<p>SUPERMARKET VENDORS</p>
-					
-					<?php foreach($menu_marketvendors as $menu_marketvendor) : 
-					?>
-					<p><?php echo $this->Html->link($menu_marketvendor['User']['name'], 'http://' . $menu_marketvendor['User']['slug'] . '.' . Configure::read('Settings.DOMAIN') . '/'); ?></p>
-					<?php endforeach; ?>
-					
-					
-					<p>-------------------</p>
-					
 					<span class="special"><a href="/users/vendors">Full Vendor List</a></span>
-
 					</div>
 				</div>
 			</li>
@@ -67,10 +53,12 @@
 					<?php //foreach($menu_ustraditions as $menu_ustradition) : ?>
 					<!--<li><?php //echo $this->Html->link($menu_ustradition['Ustradition']['name'], array('controller' => 'ustraditions', 'action' => 'view', $menu_ustradition['Ustradition']['slug'])); ?></li>-->
 					<?php //endforeach; ?>
-					<!--<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/us/amish">Amish</a></p>-->
+					<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/us/amish">Amish</a></p>
 					<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/us/deep-south ">Deep South </a></p>
 					<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/us/far-west ">Far West </a></p>
 					<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/us/great-lakes">Great Lakes</a></p>
+					<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/us/hawaii">Hawaii</a></p>
+					<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/us/louisiana">Louisiana</a></p>
 					<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/us/mid-atlantic">Mid-Atlantic</a></p>
 					<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/us/mid-west">Midwest and Plains </a></p>
 					<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/us/native-american">Native American</a></p>
@@ -118,14 +106,13 @@
 			<li class="mzr-drop"><a class="parent" href="/">SPECIAL DIETS<b class="caret"></b></a>
 				<div class="mzr-content drop-two-columns popover-content">
 					<div class="wide">
-					<a>Coming soon...</a>
-						<!--<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/">All Natural</a></p>
+						<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/">All Natural</a></p>
 						<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/">No Preservatives</a></p>
 						<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/">Gluten Free</a></p>
 						<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/">Lactose Free</a></p>
 						<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/">Vegetarian</a></p>
 						<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/">Kosher</a></p>
-						<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/">Halal</a></p>-->
+						<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/">Halal</a></p>
 					</div>
 				</div>
 			</li>
@@ -138,11 +125,10 @@
 				</div>
 			</li>
             
-			<li class="mzr-drop"><a class="parent" href="">ARTICLES/BLOG<b class="caret"></b></a>
+			<li class="mzr-drop"><a class="parent" href="http://blog.gourmetworldmarket.com">ARTICLES/BLOG<b class="caret"></b></a>
 				<div class="mzr-content drop-two-columns popover-content">
 					<div class="wide">
-						<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/articles">Articles</a></p>
-						<p><a href="http://blog.gourmetworldmarket.com">Blog</a></p>
+						<p><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/articles">Articles/Blog</a></p>
 					</div>
 				</div>
 			</li>

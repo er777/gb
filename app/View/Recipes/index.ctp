@@ -1,81 +1,73 @@
+<script>
+$(document).ready(function() {
+	$('#recipescategories').change(function() {
+		location.href = 'http://<?php echo Configure::read('Settings.DOMAIN'); ?>/recipes/all/category:' + $(this).val();
+	});
+	$('#vendors').change(function() {
+		location.href = 'http://<?php echo Configure::read('Settings.DOMAIN'); ?>/recipes/all/vendor:' + $(this).val();
+	});
+});
+</script>
+
 <div class="row">
 
-	<div class="span3">
-        <span class="vendor-logo">
-                <a href="/">
-                    <?php echo $this->Html->image('users/image/' . $user['User']['image'], array('class' => 'img-polaroid','width' =>'210px')); ?>
-                </a>
-        </span>
-    </div>
-        
-    <div class="span6 center">  
-		<h2 class="gb-heading"><?php echo $user['User']['name']; ?> Recipes</h3>
-    </div>
+<!--Sidebar -->
+<div class="col-md-3 col-sm-3 ">
+	 <div id="sidebar-title" class="recipe">
+			<h1 class="category-title">Recipes</h1><br />
+            
+			<!--<div style="margin-bottom:20px;margin-top:30px;">
+						 <img style="width:235px" src="/img/us-traditions/labels/<?php //echo ($ustradition['Ustradition']['logo_image']); ?>" />
+				 </div>--> 
+			
+	 </div>
+	 
+	<div id="left-sidebar">
     
-</div>
-
-
-
-<br />
-
-
-<div class="row" style="margin-left:25px">
-
-<div class="recipescontainer">
-	<?php foreach ($recipes as $recipe): ?>
-
+            <h1 class="category-title"><?php echo $user['User']['name']; ?></h1>
     
-<div class="span3" style="margin-left:10px;">
-        
-            <div class="content-recipe">
-    
-               
+    <h3>Recipe Categories</h3>
+      <?php /*?><?php foreach ($recipescategories as $recipescategory): ?> -  
                 
-				<?php echo '<a href="http://' . $recipe['User']['slug'] . '.' . Configure::read('Settings.DOMAIN') . '/recipe/' . $recipe['Recipe']['slug'] . '">'; ?>
-					<div class="small"><?php echo $recipe['Recipescategory']['name']; ?>
-					</div>
-                    
-                    <div class="content-img">
-                        <?php echo $this->Html->image('/img/recipes/image_1/' . $recipe['Recipe']['image_1'] , array('width' => 200, 'height' => 200, 'alt' => $recipe['Recipe']['name'], 'class' => 'img-polaroid')); ?>
-                    
-                    
-						<?php /*?><?php echo $this->Html->image('products/image/' . $product['Product']['image'], array('url' => array('subdomain' => $product['User']['slug'], 'controller' => 'products', 'action' => 'view', 'id' => $product['Product']['id'], 'slug' => $product['Product']['slug']), 'alt' => $product['Product']['name'], 'class' => 'img-polaroid img180')); ?><?php */?>
-                    
-                        <div class="recipe-name">
-                            <?php //echo $recipe['Recipe']['name']; ?>
-                        
-                        
-                            <?php /*?><!--<a href="/product/<?php echo ($product['Product']['id'].'-'.$product['Product']['slug']);?>"> <?php echo $this->Text->truncate($product['Product']['name'], 40, array('ellipsis' => '...', 'exact' => 'false')); ?>
-                            </a>--><?php */?>
-                        </div>
-                        
-                    </div>
-                    
-                   </a> 
-                
-                  
-            </div>
-    
-        </div>
+           
+                <?php echo $this->Html->link($recipescategory['Recipescategory']['name'], array('controller' => 'recipes', 'action' => 'all', 'slug' => $recipescategory['Recipescategory']['slug'])); ?><br />
+                 <?php endforeach; ?><?php */?>
+      <?php echo $this->Form->input('recipescategories', array('class' => 'selectpicker inline form-control','data-style'=>'btn-primary','options' => $recipescategories, 'label' => false,'empty' => array('all' => 'All Recipes'), 'default' => $recipescategory_selected)); ?>
+      <h3>Recipe Vendors</h3>
+      <?php echo $this->Form->input('vendors', array('label' => false,'class' => 'form-control','options' => $vendors, 'empty' => array('all' => 'All Vendors'), 'default' => $vendor_selected)); ?> 
 
-            <?php endforeach; ?>
-    
-        </div>
+	</div>
 
+</div>	 
+	 <div class="col-md-9"> 
+			
+			<!-- Banner -->
+			<div class="awning">
+				 <div class="vendor-logo view"> <?php echo $this->Html->image('users/image/' . $user['User']['image'], array( 'width' =>'226px')); ?> </div>
+				 <!--<div id="div1">
+					<div id="div2">
+				<?php //echo $this->Html->image('users/image/'. $user['User']['image']); ?>
+					</div>​
+				</div>
+	-->
+				 <style>
+				#awning1 {
+					<?php echo $user['User']['awning_css']; ?>
+				}
+				</style>
+				 <img id="awning1" src="/img/users/awning/half-world-40.png" />
+				 <div class="row" id="awning-text-wrapper"> </div>
+			</div>
+			
+
+	
+
+		 
+			<!-- Include Recipes element --> 
+			<?php echo $this->element('recipes'); ?> </div>
 </div>
-
-
-
 <br />
 <br />
-
 <?php $this->Paginator->options(array('url' => $this->passedArgs)); ?>
-
 <?php echo $this->element('pagination-counter'); ?>
-
-<?php echo $this->element('pagination'); ?>
-
-SHOW ALL
-
-<br />
-
+<?php echo $this->element('pagination'); ?> <br />

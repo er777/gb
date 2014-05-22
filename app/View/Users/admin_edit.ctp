@@ -80,7 +80,7 @@ function doFormatPhone(A){var B=document.getElementById(A);B.onblur=function(){f
 				<?php //echo $this->Form->input('mycategories'); ?>
                 
                 
-				<?php echo $this->Form->input('business_ownership', array('empty' => '--','label' => 'Type of Business Ownership' , 'options' => array( 'family owned' => 'Family Owned','individual' => 'Individual', 'small corporation' => 'Small Corporation', 'large corporation' => 'Large Corporation', 'llc' => 'LLC', 'other' => 'Other'))); ?>
+				<?php echo $this->Form->input('business_ownership', array('empty' => '--','label' => 'Type of Business Ownership' , 'options' => array( 'family owned' => 'Family Owned','individual' => 'Individual', 'small corporation' => 'Small Corporation', 'large corporation' => 'Large Corporation', 'other' => 'Other'))); ?>
 				<?php echo $this->Form->input('business_established', array('class' => 'span1','label' => 'Year the business was established')); ?>
 				
 				<hr />
@@ -228,9 +228,8 @@ function doFormatPhone(A){var B=document.getElementById(A);B.onblur=function(){f
 			</div>
             
             <div class="span6">
-                 <h3>SEO VENDOR METADATA</h3>
+            	 <h3>SEO VENDOR METADATA</h3>
             	 <?php echo $this->Form->input('metadata', array('label' => 'Meta Tags')); ?>
-
             <div style="background-color:#FFC;; border:#CCC thin dotted;padding:10px;">
                   <h3>VENDOR SITE APPROVAL</h3>
                       <?php echo $this->Form->input('Approval.id', array('type' => 'hidden')); ?>

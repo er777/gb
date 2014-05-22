@@ -1,62 +1,118 @@
+<?php
+	$subDomain = getSubDomain();
+	//echo($subDomain);
+	//echo $subDomain[0];
+	$strip = $subDomain[0];
+		
+	$piece= $this->here; 
+	//echo('<br /> ' . $piece);
+	
+	
+	
+	?>
+	<script>
+	var strip = '<?php echo($strip); ?>'
+		//alert(strip);
+	</script>
+	
+
 <!doctype html>
 <html>
 <head>
-<title><?php echo $title_for_layout; ?></title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
-<!--<meta name="description" content='A fresh way to shop for, learn about, prepare and enjoy foods of the world.'>-->
-
-<?php
-//debug($this->params);
- $here = $this->params['controller'];
- 
- //echo($here);
- 
- 	if ($here == 'categories') : ?>
-		<meta name="description" content='<?php echo $category['Category']['metadata']; ?>'
-	<?php endif; 
-
- 	if ($here == 'products') : ?>
-		<meta name="description" content='<?php echo $user['User']['metadata']; ?>'
-	<?php endif; ?>
-
-
-
-
-<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/themes/smoothness/jquery-ui.css" />
-<!--<link href="http://fonts.googleapis.com/css?family=Mako" rel="stylesheet" type="text/css">-->
+<meta name="description" content='A fresh way to shop for, learn about, prepare and enjoy foods of the world.'>
+<title><?php echo $title_for_layout; ?></title>
+<!--<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/themes/smoothness/jquery-ui.css" />-->
+<link href='http://fonts.googleapis.com/css?family=Rosario:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-<!--<link href='http://fonts.googleapis.com/css?family=Simonetta:400,400italic' rel='stylesheet' type='text/css'>-->
-<link href='http://fonts.googleapis.com/css?family=Oregano:400,400italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
 
-<?php echo $this->Html->css(array('bootstrap.min.css','css.css','meganizr.css','cakephp_tag_cloud.css')); ?>
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+
+<?php echo $this->Html->css(array('css.css','master.css','responsive.css','mega-menu.css','mega-menu-responsive.css','cakephp_tag_cloud.css')); ?>
 
 <!-- CSS -->
 
 <style type="text/css">
-<?php if(isset($user['User']['awning_css'])) : ?>
-.btn-gb {
-	<?php echo $user['User']['awning_css']; ?>
+<?php /*?><?php if(isset($user['User']['awning_css'])) : ?><?php */?> .btn-gb {
+	background-color:#393767;
+<?php /*?><?php echo $user['User']['awning_css'];?><?php */?>
 }
+
+a.btn-gb, button.btn.btn-gb i  {
+	color:#fff;
+}
+a.btn-gb:hover {
+	color:#CCC;
+	
+}
+
+
+
+
 .bkgnd-gb {
-	<?php echo $user['User']['awning_css']; ?>
-	opacity: 0.2;  /**Android 2.1+, Chrome 4+, Firefox 2+, IE 9+, iOS 3.2+, Opera 9+, Safari 3.1+ **/
+<?php /*?><?php echo $user['User']['awning_css']; ?> <?php */?>
+opacity: 0.2;
 }
-<?php endif; ?>
+<?php /*?><?php endif; ?><?php */?>
 </style>
 
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script> 
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
-<?php echo $this->Html->script(array('bootstrap.min.js','twitter-bootstrap-hover-dropdown.js','js.js','jquery.columnizer.min.js','jquery.bpopup-0.9.3.min.js','jquery.easing.1.3.js','jquery.cj-object-scaler.min.js')); ?>
-
+<?php echo $this->Html->script(array('twitter-bootstrap-hover-dropdown.js','js.js','jquery.bpopup-0.9.3.min.js','jquery.easing.1.3.js','jquery.cj-object-scaler.min.js')); ?>
 <?php //echo $this->Html->css('bootstrap.less?','stylesheet/less') ?>
-
 <?php echo $this->App->js(); ?>
 <?php echo $this->fetch('meta'); ?>
-<?php echo $this->fetch('css'); ?>
+<?php //echo $this->fetch('css'); ?>
 <?php echo $this->fetch('script'); ?>
-
 <!--<script type="text/javascript" src="/t/track.php?id=gourmet"></script>-->
+
+</head>
+<body class="sun <?php echo(''); ?>">
+
+<!-- Include Header element --> 
+<?php echo $this->element('header'); ?>
+
+
+<!--<div id="fb-root"></div>-->
+<!--<script>
+				(function(d, s, id) {
+					var js, fjs = d.getElementsByTagName(s)[0];
+					if (d.getElementById(id)) return;
+					js = d.createElement(s); js.id = id;
+					js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+					fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));
+				</script>-->
+
+<!-- Include Nav element --> 
+<?php echo $this->element('nav-responsive-works'); ?>
+
+
+<div class="page container">
+
+<div class="air"></div>
+
+   <div id="dialog-info"> <?php echo $this->Session->flash(); ?> </div>
+   <!-- CONTENT --> 
+   <?php echo $this->fetch('content'); ?>
+  
+</div>
+
+</div>
+<?php echo $this->element('footer'); ?>
+</div>
+</div>
+<!-- end outer wrapper --> 
+
+<br /> 
+<br />
+<?php echo $this->element('sqldump'); ?> <br />
+<br />
+
+<!-- IE8 Compatibility --> 
+<script src ="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script> 
 <script>
 	// Drop Down Hover!
 	$(document).ready(function() {
@@ -66,11 +122,6 @@
 	//Select Customize
 	//$('.selectpicker').selectpicker();
 
-	 //Columnizer
-	$(function(){
-		$('.wide').columnize({width:250});
-		//$('.thin').columnize({width:200});
-	});
 
 	// Pop Up
 
@@ -83,6 +134,7 @@
 	// Encapsulation
 	// $ is assigned to jQuery
 	(function($) {
+		
 		 // Policies
 		$(function() {
 			// Binding a click event
@@ -94,6 +146,7 @@
 				$('#policy_content').bPopup();
 			});
 		});
+		
 		 // Story
 		 $(function() {
 			$('#story').on('click', function(e) {
@@ -146,85 +199,49 @@
 		});
 
 
+	// For active links
+	
+	
+		var newURL = window.location.protocol + "//" + window.location.host + "/" + window.location.pathname;
+			var pathArray = window.location.pathname.split( '/' );
+
+			var secondLevelLocation = pathArray[1];
+			
+			
+					if (secondLevelLocation == 'foods') {
+						jQuery('ul.nav li.foods>a').addClass('active')
+						
+					}
+					else if (secondLevelLocation == 'recipes'){
+						jQuery('ul.nav li.recipes>a').addClass('active')
+						
+					}
+					else if (secondLevelLocation == 'international'){
+						 jQuery('ul.nav li.food-region>a').addClass('active')
+						
+					}	
+					else if (secondLevelLocation == 'us'){
+						 jQuery('ul.nav li.food-region>a').addClass('active')
+						
+					}	
+				
+			
+	  //get sub domain
+		  
+		  var parts = location.hostname.split('.');
+		  var subdomain = parts.shift();
+		  var upperleveldomain = parts.join('.');
+		  
+		  var sndleveldomain = parts.slice(-3).join('.');
+		  
+		  //alert(subdomain);
+		  
+		  if (subdomain !== 'gwm' && subdomain !== 'gogowiz' && subdomain !=="" && subdomain !=="www") {
+			   jQuery('ul.nav li.vendors>a').addClass('active')						 
+		  }
+
 	})(jQuery);
 
 </script>
-
-<!--<script src="//load.sumome.com/" data-sumo-site-id="fa87711ce256eef716c4cf02f4018e9f19c0b7aea52eaaecbbed7a35eb6887f3" async></script>
--->
-</head>
-<body>
-
-<div id="outer-wrapper">
-
-	<div id="header">
-
-	<div class="social-main">
-		<a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/shops/cart">
-			<button class="cart" type="submit"></button>
-		</a>
-		<a href="https://www.facebook.com/pages/Gourmet-Basket/603379453015040"><img src="/img/global/fb.png" width="29" height="30" alt="facebook"></a>
-		<a href="https://twitter.com/search/users?q=gourmetbasket1"><img src="/img/global/tw.png" width="30" height="30" alt="twitter"></a>
-		<a href="http://pinterest.com/gourmetbasket1/"><img src="/img/global/pin.png" width="30" height="30" alt="pinterest"></a>
-	</div>
-
-		<a class="home" href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>">
-			<div class="basket">HOME<!--<img src="/img/global/gwm-oval-new.png" width="80" height="80" alt="gourmet basket">--></div>
-		 </a>
-
-		 <div id="search-box">
-			<!-- Search Box -->
-			<?php echo $this->Form->create('Product', array('type' => 'GET', 'class' => 'navbar-form pull-right', 'url' => array('controller' => 'products', 'action' => 'search'))); ?>
-			<?php echo $this->Form->input('search', array('label' => false, 'div' => false, 'autocomplete' => 'on')); ?>
-			<?php echo $this->Form->button('<i class="icon-search icon-white"></i> Search', array('div' => false, 'class' => 'btn btn-gb', 'escape' => false)); ?>
-			<?php echo $this->Form->end(); ?>
-		</div>
-
-		<div id="nav-wrapper">
-			<!-- Include Nav element -->
-			<?php echo $this->element('nav'); ?>
-		</div>
-
-	</div>
-
-	<div class="container content">
-
-		<div class="visible-desktop">
-			<div class="left-sun"></div>
-			<div class="right-sun"></div>
-		</div>
-
-		<div id="dialog-info">
-		<?php echo $this->Session->flash(); ?>
-		<?php echo $this->fetch('content'); ?>
-		</div>
-
-	</div>
-
-	<?php echo $this->element('footer'); ?>
-
-</div>
-
-</div><!-- end outer wrapper -->
-
-	<br />
-	<br />
-	<?php echo $this->element('sqldump'); ?>
-	<br />
-	<br />
-	
-
-	<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-43074664-1', 'gourmetworldmarket.com');
-  ga('send', 'pageview');
-
-</script>
-	
-
 </body>
 </html>

@@ -33,7 +33,7 @@
 
 <div id="wrapper">
 
-	<div class="title">VENDOR EDIT</div>
+	<div class="title">VENDOR PROFILE</div>
 	
 
 	

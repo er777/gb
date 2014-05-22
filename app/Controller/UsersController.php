@@ -19,6 +19,7 @@ class UsersController extends AppController {
 				'User.id',
 				'User.name',
 				'User.slug',
+				'User.metadata',
 				'User.image',
 				'User.shop_quote',
 			),
@@ -53,23 +54,23 @@ class UsersController extends AppController {
 				$this->User->id = $this->Auth->user('id');
 				$this->User->saveField('last_login', date('Y-m-d H:i:s'));
 
-				if ($this->Auth->user('level') == 'admin') {
-					return $this->redirect(array(
-						'controller' => 'users',
-						'action' => 'dashboard',
-						'admin' => true
-					));
-				} elseif ($this->Auth->user('level') == 'vendor') {
+				if ($this->Auth->user('level') == 'vendor') {
 					return $this->redirect(array(
 						'controller' => 'users',
 						'action' => 'dashboard',
 						'vendor' => true
 					));
+				} elseif ($this->Auth->user('level') == 'admin') {
+					return $this->redirect(array(
+						'controller' => 'users',
+						'action' => 'dashboard',
+						'admin' => true
+					));
 				} else {
 					$this->Session->setFlash('Login is incorrect');
 				}
 			} else {
-				$this->Session->setFlash('Not an authorized login');
+				$this->Session->setFlash('Login is incorrect');
 			}
 		}
 	}
@@ -94,49 +95,7 @@ class UsersController extends AppController {
 ////////////////////////////////////////////////////////////
 
 	public function vendor_profile() {
-		//$this->set('user', $this->User->read(null, $this->Auth->user('id')));
-		
-		if (isset($this->request->data['User']['image_type'])) {
-
-			$slug = $this->request->data['User']['slug'];
-			$image = $this->request->data['User']['slug'] . '.jpg';
-
-			$type = $this->request->data['User']['image_type'];
-
-			$targetdir = IMAGES . 'users/' . $type . '/';
-
-			$this->Image = $this->Components->load('Image');
-
-			$upload = $this->Image->upload($this->request->data['User']['image']['tmp_name'], $targetdir, $image);
-
-			if($upload == 'Success') {
-				$this->User->id = $this->request->data['User']['id'];
-				$this->User->saveField($type, $image);
-				$uploadedfile = $targetdir . '/' . $image;
-				//$this->Image->resample($uploadedfile, IMAGES . '/user_image/' . $slug . '/', $image, 900, 600, 1, 0);
-				//$this->Image->resample($uploadedfile, IMAGES . '/user_image/', $image, 200, 200, 1, 0);
-			}
-
-			$this->Session->setFlash($upload);
-			$this->redirect($this->referer());
-		}
-
-		
 		$this->set('user', $this->User->read(null, $this->Auth->user('id')));
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 	}
 
 ////////////////////////////////////////////////////////////

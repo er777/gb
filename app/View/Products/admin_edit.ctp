@@ -78,9 +78,8 @@ $(document).ready(function(){
 	</div>
 
     <div class="span3 offset3">
-			<?php echo $this->Form->input('active', array('type' => 'checkbox')); ?><br />
-            <?php echo $this->Form->input('show', array('type' => 'checkbox')); ?><br />
-			<?php echo $this->Form->input('new', array('type' => 'checkbox')); ?><br />
+			<?php echo $this->Form->input('active', array('type' => 'checkbox', 'label' => 'Active')); ?><br />
+            <?php echo $this->Form->input('show', array('type' => 'checkbox', 'label' => 'Show')); ?><br />
 
 		</div>
 
@@ -269,9 +268,7 @@ $(document).ready(function(){
                 '1' => 'Mid',
                 '2' => 'Early',
                 '3' => 'Late',
-            	)
-			)
-		); ?>
+            ))); ?>
 
 		<?php echo $this->Form->input('seasonal_stock_date', array('id' => 'monthpicker', 'label' => false,'class' => 'mceNoEditor')); ?>
         <?php echo $this->Form->input('seasonal_stock_note', array('rows' => 5, 'class' => '4span ckeditor')); ?>
@@ -413,15 +410,16 @@ $(document).ready(function(){
 
 <?php if(!empty($productmods)): ?>
 
-<table cellpadding="5" cellspacing="10">
+<table cellpadding="0" cellspacing="0">
 	<tr>
 		<th>id</th>
 		<th>product_id</th>
 		<th>sku</th>
 		<th>name</th>
-		<th>price</th>
-		
-		<th>positiion</th>
+		<th>change</th>
+		<th>active</th>
+		<th>created</th>
+		<th>modified</th>
 		<th>action</th>
 	</tr>
 	<?php foreach ($productmods as $productmod): ?>
@@ -430,12 +428,10 @@ $(document).ready(function(){
 		<td><?php echo h($productmod['Productmod']['product_id']); ?></td>
 		<td><?php echo h($productmod['Productmod']['sku']); ?></td>
 		<td><?php echo h($productmod['Productmod']['name']); ?></td>
-		<td><?php echo h($productmod['Productmod']['price']); ?></td>		
-		<td><?php echo h($productmod['Productmod']['position']); ?></td>
-        
-        
-        
-		
+		<td><?php echo h($productmod['Productmod']['change']); ?></td>
+		<td><?php echo h($productmod['Productmod']['active']); ?></td>
+		<td><?php echo h($productmod['Productmod']['created']); ?></td>
+		<td><?php echo h($productmod['Productmod']['modified']); ?></td>
 		<td class="actions">
 			<?php echo $this->Html->link('View', array('controller' => 'productmods', 'action' => 'view', $productmod['Productmod']['id'])); ?>
 			<?php echo $this->Html->link('Edit', array('controller' => 'productmods', 'action' => 'edit', $productmod['Productmod']['id'])); ?>

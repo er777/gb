@@ -25,7 +25,7 @@ define('DB_USER', 'gourmet_main');
 define('DB_PASSWORD', 'gour7met!');
 
 /** MySQL hostname */
-define('DB_HOST', 'localhost');
+define('DB_HOST', 'gourmetworldmarket.com');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
@@ -92,3 +92,4 @@ require_once(ABSPATH . 'wp-settings.php');
 
 /* Fix for tiny mce ? **/
 define('CONCATENATE_SCRIPTS', false);
+

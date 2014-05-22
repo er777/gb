@@ -23,22 +23,29 @@ th {
             <td width="22%" scope="col"><?php echo $order['Order']['created'];?></td>
         </tr>
         <tr>
+        <?php $i=1; ?>
+        <?php foreach ($vendoritems as $orderitem): ?>
+        
         <tr>
             <td><?php echo $orderitem['User']['name']; ?></td>
         </tr>
-        <tr>
-            <td><?php echo $orderitem['User']['address']; ?></td>
+        <!--<tr>
+            <td><?php //echo $orderitem['User']['address']; ?></td>
         </tr>
         <tr>
-            <td><?php echo $orderitem['User']['city']; ?>,&nbsp;<?php echo $orderitem['User']['state'] . $orderitem['User']['zip']; ?></td>
+            <td><?php //echo $orderitem['User']['city']; ?>,&nbsp;<?php //echo $orderitem['User']['state'] . $orderitem['User']['zip']; ?></td>
         </tr>
         <tr>
-            <td><?php echo $orderitem['User']['email']; ?></td>
+            <td><?php //echo $orderitem['User']['email']; ?></td>
         </tr>
         <tr>
-            <td><?php echo $orderitem['User']['phone']; ?></td>
+            <td><?php //echo $orderitem['User']['phone']; ?></td>
         </tr>
-        <tr> </tr>
+        <tr> </tr>-->
+        
+        <?php if ($i == 1) break;
+				endforeach; ?>
+        
     </table>
     <br />
     <br />

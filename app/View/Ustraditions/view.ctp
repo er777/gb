@@ -1,106 +1,79 @@
 
-<div class="row">
-
-    <div class="span3" style="width:270px">
-        
-        
-        <div style="margin-bottom:20px;margin-left:0px;">
-			<img style="width:235px" src="/img/us-traditions/labels/<?php echo ($ustradition['Ustradition']['logo_image']); ?>" />
-		</div>
-        
-        
-        
-        <div id="subcat-menu">
-            <div> <?php echo $ustradition['Ustradition']['summary']; ?> </div>
-			<a style="font-style:italic" href="/articles/excellent-food-advenures/<?php echo $ustradition['Ustradition']['slug']; ?>">Read more</a>
-            
-        </div>
-        
-        <div class="gb-heading">Other US Traditions: </div>
-        <div class="gb-heading red list" style="font-size:120%;margin-left:30px">
-        <?php foreach ($ustraditions as $tradition): ?>
-                <?php echo $this->Html->link($tradition['Ustradition']['name'], array('controller' => 'ustraditions', 'action' => 'view', $tradition['Ustradition']['slug'])); ?><br />
-        <?php endforeach; ?>
-        </div>
-         <div class="gb-heading">Brands: </div>
-        
-        <?php foreach ($brands as $brandslink): ?>
-		 <span class="gb-nav"><img src="/img/global/dash-2.png"></span>
-        <?php echo $this->Html->link($brandslink['Brand']['name'], array('controller' => 'ustraditions', 'action' => 'view',$fst,'brand',$brandslink['Brand']['slug'])); ?>
-         <br />
-        <?php endforeach; ?>
-        
-    </div>
-
-<div class="span8" style="width:690px;margin-left:0px;">
-    
-        <div class="awning"> 
-           
-            <?php if (($ustradition['Ustradition']['awning_image'])) :
-					echo $this->Html->image('/img/us-traditions/awning_image/'. $ustradition['Ustradition']['awning_image']);
-				else :
-					echo ' <img src="/img/us-traditions/awning_image/far-west.jpg" /> ';
-				endif;
-			?>
-        </div>
-		<div class="section-subheading">
-		<?php
-			echo $this->here;
-		?>
-		</div>
-
-        
-       
-        
-        <div class="row product">
-        
-            <?php
-            	$i = 0;
-            	foreach ($products as $product):
-            	$i++;
-            	//if (($i % 4) == 0) { echo "\n<div class=\"row\">\n\n";}
-            ?>
-            
-            <div class="span2">
-        
-            
-                <div class="content-product">
-				
-					<div class="displaygroup"><?php echo $product['Product']['displaygroup']; ?></div>
-                
-                    <div class="product-pic">
-  
-
-					<?php echo $this->Html->image('products/image/' . $product['Product']['image'], array('url' => array('subdomain' => $product['User']['slug'], 'controller' => 'products', 'action' => 'view', 'id' => $product['Product']['id'], 'slug' => $product['Product']['slug']), 'alt' => $product['Product']['name'])); ?>
-                        <div class="product-name"> <a href="/product/<?php echo ($product['Product']['id'].'-'.$product['Product']['slug']);?>"> <?php echo $this->Text->truncate($product['Product']['name'], 40, array('ellipsis' => '...', 'exact' => 'false')); ?></a>
-                        </div>
-                        
-                    </div>
-                    
-                    <div class="price">$<?php echo $product['Product']['price']; ?></div>
-                    
-                    <div class="brand"><?php echo $this->Html->link($product['User']['name'], array('subdomain' => $product['User']['slug'], 'controller' => 'products', 'action' => 'index')); ?> </div>
-                    
-                </div>
-                
+ <div class="row">
+ 
+ <!--Sidebar -->
+     <div class="col-md-3 col-sm-3 ">
+         
+         
+          <div id="sidebar-title" class="region">
+         <!--<div style="margin-bottom:20px;margin-top:30px;">
+             <img style="width:235px" src="/img/us-traditions/labels/<?php //echo ($ustradition['Ustradition']['logo_image']); ?>" />
+         </div>-->
+         
+            <div id="subcat-menu">
+                   <div class="region-title">			
+                       U.S. REGIONS:
+                       <h4><?php echo $ustradition['Ustradition']['name']; ?></h4>
+                   </div>
                 
             </div>
-            
-            <?php
-				if (($i % 4) == 0) { echo "</div>\n\n\t\t<div class=\"row product\">\n\n";}
-				endforeach;
-			?>
+         </div>	
+         <div id="left-sidebar">
+                 <div class="summary"> <?php echo $ustradition['Ustradition']['summary']; ?> </div>
+                 <a style="font-style:italic" href="/articles/excellent-food-adventures/<?php echo $ustradition['Ustradition']['slug']; ?>">Read more</a>
+                 
+             
+             
+             
+                 <div class="nav-style-heading large">Other US Traditions</div>
+                 <div class="list">
+                 <?php foreach ($ustraditions as $usregion): ?> -
+                     <?php echo $this->Html->link($usregion['Ustradition']['name'], array('controller' => 'ustraditions', 'action' => 'view', 'slug' => $ustradition['Ustradition']['slug'])); ?><br />
+                 <?php endforeach; ?>
+                 </div>
+                 
+             </div>
+         </div>
+         
+     
+     
+   
+ 
+ <!-- Main Content -->
+ <div class="col-md-9 col-sm-9">
+     <!-- Banner -->
+     <div class="awning us-tradition"> 
         
-        </div>
-        
-        
-        
-        
-        
-        <?php echo $this->element('pagination-counter'); ?> <?php echo $this->element('pagination'); ?> <br />
-        
-        <br />
-        <br />
-        
-    </div> 
+         <?php if (($ustradition['Ustradition']['banner'])) :
+                 echo $this->Html->image('/img/us-traditions/banner/'. $ustradition['Ustradition']['banner']);
+             else :
+                 echo ' <img src="/img/us-traditions/banner/default.png" /> ';
+             endif;
+         ?>
+     </div>
+     
+     <!-- Breadcrumb -->
+     <!--<ul class="breadcrumb"></ul>-->
+     
+     <div class="clearfix"></div>
+     
+         <?php $product = 0 ?>
+
+         <!-- Include Products element -->
+         <?php echo $this->element('products'); ?>
+
+
+         <?php $more = ($product['User']['more']); ?>
+
+         <?php if($more == 1) : ?>
+         <div class="more btn-gb">More products to come!</div>
+         <?php endif; ?>
+         
+         <?php echo $this->element('pagination-counter'); ?>
+
+         <?php echo $this->element('pagination'); ?>
+
+
+ </div>
+
 </div>

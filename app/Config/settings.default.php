@@ -2,7 +2,7 @@
 
 $config = array(
 	'Settings' => array(
-		'DOMAIN' => 'gwm.live',
+		'DOMAIN' => 'gourmetdev.com',
 		'ADMIN_EMAIL' => '',
 		'USPS_USERID' => '',
 		'UPS_MODE' => 'test',

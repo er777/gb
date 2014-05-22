@@ -6,14 +6,7 @@
 		echo $this->Form->input('id');
 		echo $this->Form->input('product_id');
 		echo $this->Form->input('sku');
-		echo $this->Form->input('active', array('type' => 'checkbox' ));
-		echo $this->Form->input('position', array('type' => 'select', 'empty' => '--','options' => array(
-                '1' => 'First',
-                '2' => 'Second',
-                '3' => 'Third',
-                '4' => 'Fourth',
-            	)
-			));
+		echo $this->Form->input('active');
 		echo $this->Form->input('name');
 		echo $this->Form->input('shipping_weight_oz');
 		echo $this->Form->input('price');
