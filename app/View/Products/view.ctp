@@ -404,7 +404,7 @@ $(document).ready(function() {
 				<?php endif ?>
 			 </div>
 
-			<div class="col-md-6 col-sm-6">
+			<div class="col-md-7 col-sm-7">
 
 				<div class="purchase-block">
 					<div class="product-price">Price: $<span id="productprice"><?php echo $product['Product']['price']; ?></span>

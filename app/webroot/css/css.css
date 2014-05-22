@@ -675,7 +675,6 @@ img.brand {
 .search-image {margin-bottom: 10px;}
  
 /** PRODUCT DESCRIPTION **/
-.product-description {width: 360px;}
  
 	.product-description .hand {width: 25px;}
  
@@ -1351,7 +1350,7 @@ img.vendor-article-logo {width: 280px;}
 	-webkit-border-radius: 15px;
 	background-color:#bcc17e;
 	border-radius: 15px;
-	color: #fff;
+	color: #393767;
 	font-family: 'PT Sans', sans-serif;
 	letter-spacing: 1px;
 	margin-bottom: 15px;
@@ -1374,6 +1373,7 @@ img.vendor-article-logo {width: 280px;}
 blockquote p {
 	font-size: 17px;
 	line-height: 19px;
+	
 }
  
 #vendor-article {
