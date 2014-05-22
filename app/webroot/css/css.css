@@ -1208,7 +1208,7 @@ img.img-responsive.category {
 	}
 	
 	#left-sidebar a#policies {
-		margin-top:10px;
+		
 	}
  
 #sidebar-title {
@@ -1255,6 +1255,7 @@ img.img-responsive.category {
 a.btn-gwm {
 	background-color:#393767;
 	color:#fff;
+	margin-bottom:5px;
 }
 
 a.btn-gwm:hover {

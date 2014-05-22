@@ -222,18 +222,16 @@
    
 			
 			<a class="btn btn-gwm" href="/recipes">Our Recipes</a>
-            
-            <br />
-		
+       
 
 			<!--<ul class="navList">
 						<li><a href="#vendor-unit">Our Regions</a></li>
 			</ul>-->
 
 				<?php $vendor_policy = $user['User']['shipping_policy']; ?>
-			<br />
+			
 
-				<a class="btn btn-gwm" href="#" id="policies" >Shipping/Customer Service</a>
+				<a class="btn btn-gwm" href="#" id="policies" >Shipping/<br />Customer Service</a>
 <div>
 			</div>
 </div>
@@ -245,7 +243,7 @@
 				<?php echo ($vendor_policy); ?>
 				</div>
 			</div>
-			<br />
+			
 
 
 			<!-- Vendor Sidebar Pics -->
