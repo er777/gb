@@ -2,7 +2,7 @@
 Author URI: http://www.jasonbobich.com
 Contributors: themeblvd
 Tags: slider, sliders, slideshow, slideshows, flexslider, gallery, Theme Blvd, themeblvd, Jason Bobich
-Stable Tag: 1.0.4
+Stable Tag: 1.2.1
 
 When using a Theme Blvd theme, this plugin gives you slick interface to build custom sliders.
 
@@ -18,7 +18,7 @@ When using a Theme Blvd theme, this plugin gives you slick interface to build cu
 * A shortcode for inserting custom sliders into pages and posts - `[slider id="your-slider"]`
 * A shortcode for inserting sliders generated from posts (with Theme Blvd framework v2.2.1+) - `[post_slider category="foo"]` `[post_slider tag="bar"]`
 * Sliders are responsive and will scale to fit their surrounding container.
-* Two slider types included by default - [Flexslider](http://flexslider.woothemes.com) and [Roundabout](http://fredhq.com/projects/roundabout)
+* Three slider types included by default for custom sliders - [Flexslider](http://flexslider.woothemes.com), [Nivo](http://dev7studios.com/nivo-slider/), and [Roundabout](http://fredhq.com/projects/roundabout)
 * Slider types are extendable through Theme Blvd framework API. - [View Docs](http://dev.themeblvd.com/tutorial/add-custom-slider/)
 
 **NOTE: For this plugin to do anything, you must have a theme with Theme Blvd framework v2.2+ activated.**
@@ -31,7 +31,7 @@ When using a Theme Blvd theme, this plugin gives you slick interface to build cu
 
 = Displaying your custom sliders =
 
-Sliders you create can be utilized within your website in two ways. 
+Sliders you create can be utilized within your website in two ways.
 
 1. You can insert them with the slider shortcode like this: `[slider id="your-slider"]`
 2. If you have the [Layout Builder](http://wordpress.org/extend/plugins/theme-blvd-layout-builder/) running, you can insert the sliders you've created into your custom layout via the "Slider" element.
@@ -43,6 +43,44 @@ Sliders you create can be utilized within your website in two ways.
 3. Edit a custom slider with the Sliders interface.
 
 == Changelog ==
+
+= 1.2.1 =
+
+* Added support for thumbnail navigation with Bootstrap Carousel (requires Theme Blvd framework v2.4.2+).
+
+= 1.2.0 =
+
+* Admin style updates for WordPress 3.8 (requires Theme Blvd framework v2.4+).
+* Added "Bootstrap Carousel" slider type.
+* Fixed 3D Carousel slider's navigation for FontAwesome 4.
+* Added filter `themeblvd_nivo_image` to image output of Nivo type sliders.
+
+= 1.1.5 =
+
+Added filters onto slider headline, description, and button text.
+
+= 1.1.4 =
+
+* Admin jQuery improvements for 1.9 - Converted all .live() to .on()
+
+= 1.1.3 =
+
+* Fixed bug with Slider Manager not showing currently selected image crop size properly.
+
+= 1.1.2 =
+
+* Fixed Slider Manager UI bug with switching "Media Display" and "Slide Elements" not adjusting correctly.
+
+= 1.1.1 =
+
+* Fixed "category" parameter not working with `[post_slider]` shortcode.
+
+= 1.1.0 =
+
+* Improved and moved Sliders API functionality to plugin.
+* Minor improvements to admin javascript.
+* Added `themeblvd_sliders_post_type_args` filter on registered `tb_sliders` post type's `$args`.
+* Added compatibility for [Portfolios](http://wordpress.org/plugins/portfolios/) plugin with Post Slider. With this plugin activated you can use "portfolio" and "portfolio_tag" parameters with `[post_slider]`.
 
 = 1.0.4 =
 

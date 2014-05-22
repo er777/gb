@@ -1,8 +1,8 @@
 === Theme Blvd Widget Pack ===
-Author URI: http://www.jasonbobich.com
+Author URI: http://www.themeblvd.com
 Contributors: themeblvd
 Tags: widgets, Theme Blvd, themeblvd, Jason Bobich
-Stable Tag: 1.0.1
+Stable Tag: 1.0.3
 
 When using a Theme Blvd theme, this plugin adds six widgets to extend some of the functionality already built into the framework.
 
@@ -18,13 +18,9 @@ This widget utilizes the theme framework's post grid system to display a grid of
 
 This widget utilizes the theme framework's post list system to display a simple list of post titles and their associated featured images. Standard framework featured image link settings will be utilized here and the posts used for the list can queried in different ways.
 
-= Simple Contact = 
+= Simple Contact =
 
 This widget provides you with some standard contact information you can fill out. Additionally you can setup a 1-6 icons linking to your relevant social networks; the 30 standard social network icons are included as possible selections for each.
-
-= Twitter =
-
-Nothing unique here. This widget will allow you to utilize the framework's internal system for pulling a list of tweets from your desired Twitter account. Tweets are cached and updated every two hours.
 
 = Video =
 
@@ -47,11 +43,20 @@ This widget allows you to select from any menus you've created under *Appearance
 1. Mini Post Grid
 2. Mini Post List
 3. Simple Contact
-4. Twitter
-5. Video
-6. Horizontal Menu
+4. Video
+5. Horizontal Menu
 
 == Changelog ==
+
+= 1.0.3 =
+
+* Deleted Twitter widget. -- Use [Tweeple](http://wordpress.org/plugins/tweeple/) instead.
+* Mini Post Grid widget now accepts `[gallery]` shortcode usage for the Gallery Override feature. -- i.e. `[gallery link="file" ids="1,2,3"]`
+
+= 1.0.2 =
+
+* Added better compatibility for WPML with Mini Post List and Mini Post Grid widgets.
+* Fixed wording in warning when Theme Blvd framework isn't installed, and added "Dismiss" link.
 
 = 1.0.1 =
 

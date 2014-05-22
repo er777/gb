@@ -2,7 +2,7 @@
 Author URI: http://www.jasonbobich.com
 Contributors: themeblvd
 Tags: layouts, custom, homepage, builder, Theme Blvd, themeblvd, Jason Bobich
-Stable Tag: 1.1.0
+Stable Tag: 1.2.3
 
 When using a Theme Blvd theme, this plugin gives you slick interface to build custom layouts.
 
@@ -25,7 +25,7 @@ There are two separate methods for applying a custom layouts as your theme's hom
 
 Method 1: Create your custom layout, apply it to a static page, and then assign that page as your static frontpage under *Settings > Reading > Frontpage Displays*.
 
-Method 2: Under *Settings > Reading > Frontpage Displays*, select "your latest posts." Create your custom layout. Then, go to *Appearance > Theme Options > Content > Homepage*, and select your new custom layout as the content for the homepage. 
+Method 2: Under *Settings > Reading > Frontpage Displays*, select "your latest posts." Create your custom layout. Then, go to *Appearance > Theme Options > Content > Homepage*, and select your new custom layout as the content for the homepage.
 
 *Note: If you're using an element in your custom layout that uses post pagination, make sure you use method #2.*
 
@@ -37,14 +37,41 @@ Method 2: Under *Settings > Reading > Frontpage Displays*, select "your latest p
 
 == Changelog ==
 
+= 1.2.3 =
+
+* Added Jumbotron element (requires Theme Blvd Framework 2.4.2+).
+* Added support for "element-unstyled" CSS class (requires Theme Blvd Framework 2.4.2+).
+
+= 1.2.2 =
+
+* Admin style updates for WordPress 3.8 and MP6 (requires Theme Blvd Framework 2.4+).
+
+= 1.2.1 =
+
+* Added "Screen Options" tab to Builder interface.
+* Added "CSS Classes" advanced option for all elements.
+
+= 1.2.0 =
+
+* Added support for WordPress 3.5 media uploader (requires Theme Blvd framework v2.3+).
+* Added support for Theme Blvd framework v2.3's Builder API modifications.
+* Fixed issue of homepage layout not displaying after toggling WP Reading settings back and forth.
+* Improved Builder API functionality and moved here to the plugin.
+* Fixed bug with creating a new layout from Edit Page meta box when no current layout is selected.
+* Some minor admin javascript improvements.
+* Styled Custom Layout meta box to take up less visual space when no layout is selected (i.e. it isn't being used).
+* Fixed Layout Information not saving properly from Builder.
+* Fixed custom layout selection not displaying on Edit Page screen when no layouts exist yet.
+* Removed "Tweet" element. Use [Tweeple](http://wordpress.org/extend/plugins/tweeple) instead.
+* Fixed any conflicts when activated with [Theme Blvd Bundle](http://wordpress.org/extend/plugins/theme-blvd-bundle).
+
 = 1.1.0 =
 
-* **WARNING: Jump Start users, make sure you've updated to Jump Start v1.0.1+ before applying this update for the Layout Builder.**
-* Update requires Theme Blvd framework v2.2.1+.
 * Added Meta Box to apply and edit custom layouts directly from Edit page screen.
 * Added support for "Post Slider" when used with [Theme Blvd Sliders](http://wordpress.org/extend/plugins/theme-blvd-sliders) plugin.
 * Minor internal improvements to cut down on database queries.
 * Added check so if user designates a "posts page" under Settings > Reading, the homepage custom layout option will not get applied (many people do this by accident).
+* Update requires Theme Blvd framework v2.2.1+.
 
 = 1.0.1 =
 

@@ -2,7 +2,7 @@
 Author URI: http://www.themeblvd.com
 Contributors: themeblvd
 Tags: custom sidebars, sidebar, sidebars, widget, widgets, widget areas, unlimited sidebars, Theme Blvd, themeblvd, Jason Bobich
-Stable Tag: 1.1.1
+Stable Tag: 1.2.0
 
 When using a Theme Blvd theme, this plugin extends the framework's widget area system.
 
@@ -33,6 +33,30 @@ Custom widget areas have two attributes to understand when being setup.
 2. Add a new custom widget areas and edit assignments.
 
 == Changelog ==
+
+= 1.2.0 =
+
+* Admin style updates for WordPress 3.8 and MP6 (requires Theme Blvd framework v2.4+).
+* Fixed bug with not being able to use `&&` operator in custom conditionals.
+
+= 1.1.5 =
+
+* Removed deprecated media uploader script.
+
+= 1.1.4 =
+
+* Admin jQuery improvements for 1.9 - Converted all .live() to .on()
+
+= 1.1.3 =
+
+* Fixed "Dismiss" link not working for notices on some admin pages.
+* Fixed any conflicts when activated with [Theme Blvd Bundle](http://wordpress.org/extend/plugins/theme-blvd-bundle).
+
+= 1.1.2 =
+
+* Some minor admin javascript improvements.
+* Added fix for rare PHP warning resulting from `_tb_sidebars` meta not being saved properly.
+* Added `themeblvd_sidebars_post_type_args` filter on registered `tb_sidebar` post type's `$args`.
 
 = 1.1.1 =
 
