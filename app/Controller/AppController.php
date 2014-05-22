@@ -14,14 +14,6 @@ class AppController extends Controller {
 
 ////////////////////////////////////////////////////////////
 
-  	//public $helpers = array(
-//	    'Form' => array(
-//	        'className' => 'BootstrapForm'
-//  	  	)
-//	);
-
-////////////////////////////////////////////////////////////
-
 	public $paginate = array('limit' => 100);
 
 ////////////////////////////////////////////////////////////
@@ -86,32 +78,63 @@ class AppController extends Controller {
 			}
 			$this->set(compact('menucategories'));
 			
- 
+
 			$menuvendors = Cache::read('menuvendors');
 			if (!$menuvendors) {
-				$menuvendors = ClassRegistry::init('User')->getVendors();
-				Cache::set(array('duration' => '+10 minutes'));
+				$menuvendors = ClassRegistry::init('User')->find('all',array(				
+					'conditions' => array(
+						'User.active' => 1,
+						'User.vendor_type' => 1,
+					)	,
+					'fields' => array(
+						'User.name',
+						'User.slug'
+					),
+					'order' => array(
+						'User.name' => 'ASC'
+					),					
+				));
+				
+				Cache::set(array('duration' => '+5 minutes'));
 				Cache::write('menuvendors', $menuvendors);
 			}
 			$this->set(compact('menuvendors'));
 			
-			//US Traditions
+			
+			$menu_marketvendors = Cache::read('menu_marketvendors');
+			if (!$menu_marketvendors) {
+				$menu_marketvendors = ClassRegistry::init('User')->find('all',array(				
+					'conditions' => array(
+						'User.active' => 1,
+						'User.vendor_type' => 2,
+					)	,
+					'fields' => array(
+						'User.name',
+						'User.slug'
+					),
+					'order' => array(
+						'User.name' => 'ASC'
+					),					
+				));
+				
+				Cache::set(array('duration' => '+5 minutes'));
+				Cache::write('menu_marketvendors', $menu_marketvendors);
+			}
+			$this->set(compact('menu_marketvendors'));
+						
+			
 			$menu_ustraditions = Cache::read('menu_ustraditions');
 			if (!$menu_ustraditions) {
 				$menu_ustraditions = ClassRegistry::init('Ustradition')->find('all', array(
 					'recursive' => -1,
 					'contain' => array(
-						//'User',
-						//'Ustradition'
+						'User',
+						'Ustradition'
 					),
 					'fields' => array(
 						'Ustradition.id',
 						'Ustradition.name',
 						'Ustradition.slug',
-						'Ustradition.active',
-					),
-					'conditions' => array(
-						'Ustradition.active' => 1,
 					),
 					
 					'order' => array(
@@ -217,22 +240,7 @@ class AppController extends Controller {
 			'redirect' => true,
 			'requirePrompt' => true
 		);
-		
-		
-			// https redirect
-	 
-		  // if (in_array($this->params['action'], $this->secureActions) 
-//			   && !isset($_SERVER['HTTPS'])) {
-//				   $this->forceSSL();
-//		   }
 	}
-	
-////////////////////////////////////////////////////////////
-	  
-		// public function forceSSL() {
-//			   $this->redirect('https://' . $_SERVER['SERVER_NAME'] . $this->here);
-//	   }
-		   
 
 ////////////////////////////////////////////////////////////
 
@@ -254,7 +262,6 @@ class AppController extends Controller {
 	}
 
 ////////////////////////////////////////////////////////////
-
 
 	public function admin_switch($field = null, $id = null) {
 		$this->autoRender = false;
@@ -288,7 +295,7 @@ class AppController extends Controller {
 					'Product.id' => $id
 				)
 			));
-			$markup = (($product['Product']['price'] - $product['Product']['price_wholesale']) / $product['Product']['price_wholesale']) * 100;
+			$markup = (($product['Product']['price'] - $product['Product']['price_wholesale']) / $product['Product']['price']) * 100;
 			$this->$model->saveField('markup', $markup);
 		}
 
@@ -334,6 +341,35 @@ class AppController extends Controller {
 		$this->redirect($this->referer());
 
 	}
+
+
+////////////////////////////////////////////////////////////
+
+	public function vendor_deleteimage() {
+
+		// debug($this->request->data);
+		// die;
+		$model = $this->modelClass;
+
+		$id = $this->request->data[$model]['id'];
+		$field = $this->request->data[$model]['field'];
+		$path = $this->request->data[$model]['path'];
+		$file = $this->request->data[$model]['file'];
+		// debug($id);
+		// debug($field);
+		// debug($path);
+		// debug($file);
+
+		$this->$model->id = $id;
+		$this->$model->saveField($field, '');
+
+		$im = IMAGES . $path . $file;
+		@unlink($im);
+
+		$this->redirect($this->referer());
+
+	}
+
 
 ////////////////////////////////////////////////////////////
 

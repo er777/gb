@@ -26,8 +26,9 @@
 								
 							<li class="two-column start">
 								<ul>
-								<li><a href="/users/vendors">FULL VENDOR LIST</a></li>
-								
+								<li><a href="/users/vendors">GO TO FULL VENDOR LIST</a></li>
+                                <p>----------------------</p>
+								<li>ARTISANAL VENDORS</li>
 								<?php 
 									$i = 0;
 									foreach($menuvendors as $menuvendor) : 
@@ -38,7 +39,14 @@
 									if (($i % 15) == 0) { echo "</ul>\n</li>\n<li class=\"two-column loop\">\n<ul>\n";	}
 									endforeach;
 								?>
-								
+                                
+                                <p>----------------------</p>
+                                <li>SUPERMARKET VENDORS</li>
+								<?php
+                                	foreach($menu_marketvendors as $menu_marketvendor) : 
+								?>
+									<li><?php echo $this->Html->link($menu_marketvendor['User']['name'], 'http://' . $menu_marketvendor['User']['slug'] . '.' . Configure::read('Settings.DOMAIN') . '/'); ?></li>
+								<?php endforeach; ?>
 									
 								</ul>
 							</li><!-- 2 Column Menu Ends -->

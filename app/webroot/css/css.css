@@ -148,13 +148,13 @@ h1.category-title a {
  
 	.breadcrumb li {text-shadow: 0 0 6px #FFF;}
  
-		.breadcrumb li a {color: #393b2e; font-size:12px; font-weight:bold;}
+		.breadcrumb li a {color: #393b2e; font-size:14px; font-weight:bold;}
  
 		.breadcrumb li.read a {color: #393b2e;}
  
 		.breadcrumb li.active {
 			color: #fff;
-			 font-size:12px;
+			 font-size:13px;
 			
 		}
 		 
@@ -562,7 +562,7 @@ div.price {
  
 h2.product-name {
 	color: #393b2e;
-	font-family: 'Rosario', sans-serif;
+	font-family: 'PT Sans', sans-serif;
 	font-size: 21px;
 	line-height: 25px;
 }
@@ -988,7 +988,7 @@ body.categories .content {
  
 h3.cat-title {
 	color: #393b2e;
-	font-family: 'Rosario', sans-serif;
+	font-family: 'PT Sans', sans-serif;
 	font-size: 19px;
 	letter-spacing: 1px;
 	line-height: 21px;
@@ -1352,7 +1352,7 @@ img.vendor-article-logo {width: 280px;}
 	background-color:#bcc17e;
 	border-radius: 15px;
 	color: #fff;
-	font-family: 'Rosario', sans-serif;
+	font-family: 'PT Sans', sans-serif;
 	letter-spacing: 1px;
 	margin-bottom: 15px;
 	margin-left: 0px;
@@ -2006,7 +2006,7 @@ hr.recipe-divider {
  
 .article-name {
 	color: #393b2e;
-	font-family: Rosario, sans-serif;
+	font-family: PT Sans, sans-serif;
 }
  
 .article-body {}
@@ -2052,7 +2052,7 @@ img.article-pic {
  
 .pic-title {
 	clear: both;
-	font-family: 'Rosario', sans-serif;
+	font-family: 'PT Sans', sans-serif;
 	font-size: 12px;
 	margin-bottom: 6px;
 }
@@ -2276,7 +2276,7 @@ div.attr {
  
 #story_content .gwm-heading, #policy_content .gwm-heading, #welcome_content .gwm-heading, #vendor-article span.gwm-heading {
 	color: #393b2e;
-	font-family: 'Rosario', sans-serif;
+	font-family: 'PT Sans', sans-serif;
 	font-size: 24px;
 	letter-spacing: 1px;
 	margin-top: 20px;
@@ -2289,7 +2289,7 @@ hr.article-divide {
  
 .gwm-heading {
 	color: #393b2e;
-	font-family: 'Rosario', sans-serif;
+	font-family: 'PT Sans', sans-serif;
 	font-size: 21px;
 	letter-spacing: 1px;
 }
@@ -2307,7 +2307,7 @@ hr.article-divide {
  
 h2.gwm-heading {
 	color: #393b2e;
-	font-family: 'Rosario', sans-serif;
+	font-family: 'PT Sans', sans-serif;
 	font-size: 28px;
 }
  
@@ -2349,7 +2349,7 @@ h3.gwm-heading {
 
 .section-heading {
 	color: #393b2e;
-	font-family: 'Rosario', sans-serif;
+	font-family: 'PT Sans', sans-serif;
 	font-size: 20px;
 	letter-spacing: 0px;
 	margin-top: 20px;
@@ -2379,7 +2379,7 @@ h3.gwm-heading {
  
 .source-title {
 	color: #fff;
-	font-family: 'Rosario', sans-serif;
+	font-family: 'PT Sans', sans-serif;
 	font-size: 19px;
 }
  
@@ -2468,7 +2468,7 @@ div#policy_content {display: none; ;}
  
 	#policy_content  .policy-heading {
 		color: #C00;
-		font-family: 'Rosario', sans-serif;
+		font-family: 'PT Sans', sans-serif;
 		font-size: 24px;
 		letter-spacing: 1px;
 		margin-bottom: 10px;

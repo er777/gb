@@ -112,6 +112,17 @@ box-shadow: none; }
 
 .dropdown .dropdown-menu li li{ margin-left: 0; margin-right: 0; }
 
+
+
+.dropdown-menu li li {
+	color:#393b2e;
+	font-family: 'PT Sans', sans-serif;
+	font-weight:bold;
+
+}
+
+
+
 /* Title */
 .dropdown-menu li.nav-title {
 display: block;
@@ -135,7 +146,7 @@ letter-spacing: 0.5px; }
 
 .dropdown-menu .active > a,
 .dropdown-menu li > a,
-.dropdown-submenu > a { color: #555; padding: 0 0 5px; }
+.dropdown-submenu > a { color: #393b2e; padding: 0 0 5px; }
 
 .dropdown-menu .active > a,
 .dropdown-menu .active > a:hover,
@@ -601,7 +612,7 @@ ul.nav li.dropdown>a {
 }
 
 ul.nav li.dropdown li ul li a{
-	font-family: 'Rosario', sans-serif;
+	font-family: 'PT Sans', sans-serif;
 
 }
 #nav-wrapper {
