@@ -221,7 +221,7 @@
 	<?php echo $this->element('vendor-story'); ?>
    
 			
-			<a class="btn btn-gwm" href="/recipes">Our Recipes</a>
+			<a class="btn btn-gwm" id="recipes" href="/recipes">Our Recipes</a>
        
 
 			<!--<ul class="navList">
