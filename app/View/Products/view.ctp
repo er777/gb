@@ -446,7 +446,7 @@ $(document).ready(function() {
 				<span class="description"><?php echo $product['Product']['description']; ?></span>
 				<?php if(!empty($productmodshtml)):?>
 					<div id="productmods">
-						<span style="font-weight:bold">Product Options:&nbsp;</span> <?php echo $productmodshtml;?>
+						<div style="font-weight:bold">Product Options:&nbsp; </span><?php echo $productmodshtml;?>
 						<?php endif;?>
 					</div>
 
