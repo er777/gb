@@ -20,7 +20,7 @@
          </div>	
          <div id="left-sidebar">
                  <div class="summary"> <?php echo $ustradition['Ustradition']['summary']; ?> </div>
-                 <a style="font-style:italic" href="/articles/excellent-food-adventures/<?php echo $ustradition['Ustradition']['slug']; ?>">Read more</a>
+                <!-- <a style="font-style:italic" href="/articles/excellent-food-adventures/<?php echo $ustradition['Ustradition']['slug']; ?>">Read more</a>-->
                  
              
              
