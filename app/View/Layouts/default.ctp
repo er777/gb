@@ -234,9 +234,9 @@ opacity: 0.2;
 		  
 		  var sndleveldomain = parts.slice(-3).join('.');
 		  
-		  //alert(subdomain);
+		  alert(subdomain);
 		  
-		  if (subdomain !== 'gwm' && subdomain !== 'gogowiz' && subdomain !=="" && subdomain !=="www") {
+		  if (subdomain !== 'gourmetworldmarket'  && subdomain !=="" && subdomain !=="www") {
 			   jQuery('ul.nav li.vendors>a').addClass('active')						 
 		  }
 
