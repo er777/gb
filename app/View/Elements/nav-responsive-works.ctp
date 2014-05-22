@@ -122,13 +122,13 @@
 				</li>	
 
 				
-				<li class="dropdown mega-menu-1 transition explore">
+				<!--<li class="dropdown mega-menu-1 transition explore">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-briefcase icon-white"></i>EXPLORE!<b class="caret"></b></a>
 					<ul class="dropdown-menu">
 						<li class="one-column">
 							<ul>
                                 <!--<li><a href="/articles"> <i class="icon-briefcase icon-white"></i>ARTICLES</a></li>-->
-                                <li><a href="http://www.blog.<?php echo Configure::read('Settings.DOMAIN'); ?>">BLOG</a></li>
+                                <!--<li><a href="http://www.blog.<?php echo Configure::read('Settings.DOMAIN'); ?>">BLOG</a></li>-->
 						<!--<li><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/">All Natural</a></p>
 						<li><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/">No Preservatives</a></li>
 						<li><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/">Gluten Free</a></li>
@@ -136,10 +136,10 @@
 						<li><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/">Vegetarian</a></li>
 						<li><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/">Kosher</a></li>
 						<li><a href="http://www.<?php echo Configure::read('Settings.DOMAIN'); ?>/">Halal</a></li>-->			
-							</ul>
+							<!--</ul>
 						</li>
 					</ul>
-				</li>
+				</li>-->
                 
 
 <!-- 1 Column Menu Ends -->
