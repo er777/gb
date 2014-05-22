@@ -357,6 +357,7 @@ Stack trace:
 #3 /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php(122): ExceptionRenderer->render()
 #4 [internal function]: ErrorHandler::handleException(Object(SocketException))
 #5 {main} in /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php on line 131
+<<<<<<< HEAD
 =======
 [08-Apr-2014 14:44:45 America/Los_Angeles] PHP Fatal error:  [CakeException] Unknown status code
 #0 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(215): CakeResponse->statusCode(2)
@@ -586,25 +587,41 @@ Stack trace:
 Stack trace:
 #0 /home/gourmet/public_html/lib/Cake/Cache/Engine/FileEngine.php(280): SplFileObject->__construct('/home/gourmet/p...', 'r')
 #1 /home/gourmet/public_html/lib/Cake/Cache/Engine/FileEngine.php(237): FileEngine->_clearDirectory('/home/gourmet/p...', 1398110300, 1398110240)
+=======
+[10-May-2014 10:20:00 America/Los_Angeles] PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'SplFileObject::__construct(/home/gourmet/public_html/app/tmp/cache/models/gb_cake_model_default_gourmet_main_subcategories): failed to open stream: No such file or directory' in /home/gourmet/public_html/lib/Cake/Cache/Engine/FileEngine.php:280
+Stack trace:
+#0 /home/gourmet/public_html/lib/Cake/Cache/Engine/FileEngine.php(280): SplFileObject->__construct('/home/gourmet/p...', 'r')
+#1 /home/gourmet/public_html/lib/Cake/Cache/Engine/FileEngine.php(237): FileEngine->_clearDirectory('/home/gourmet/p...', 1399742400, 1399742340)
+>>>>>>> 1affd0499456bc692deafca0aa54f82f13fc5c42
 #2 /home/gourmet/public_html/lib/Cake/Cache/Engine/FileEngine.php(102): FileEngine->clear(true)
 #3 /home/gourmet/public_html/lib/Cake/Cache/Cache.php(184): FileEngine->gc()
 #4 /home/gourmet/public_html/lib/Cake/Cache/Cache.php(151): Cache::_buildEngine('_cake_model_')
 #5 /home/gourmet/public_html/app/Config/core.php(281): Cache::config('_cake_model_', Array)
+<<<<<<< HEAD
 #6 /home/gourmet/public_html/lib/Cake/Core/Configure.php(72): include('/home/gourmet/p in /home/gourmet/public_html/lib/Cake/Cache/Engine/FileEngine.php on line 280
 [26-Apr-2014 18:42:40 America/Los_Angeles] PHP Fatal error:  [CakeException] Unknown status code
+=======
+#6 /home/gourmet/public_html/lib/Cake/Core/Configure.php(72): include('/home/gour in /home/gourmet/public_html/lib/Cake/Cache/Engine/FileEngine.php on line 280
+[11-May-2014 09:43:24 America/Los_Angeles] PHP Fatal error:  [CakeException] Unknown status code
+>>>>>>> 1affd0499456bc692deafca0aa54f82f13fc5c42
 #0 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(215): CakeResponse->statusCode(2)
 #1 [internal function]: ExceptionRenderer->error400(Object(SocketException))
 #2 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(178): call_user_func_array(Array, Array)
 #3 /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php(122): ExceptionRenderer->render()
 #4 [internal function]: ErrorHandler::handleException(Object(SocketException))
 #5 {main} in /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php on line 131
+<<<<<<< HEAD
 [26-Apr-2014 18:43:30 America/Los_Angeles] PHP Fatal error:  [CakeException] Unknown status code
+=======
+[11-May-2014 09:43:56 America/Los_Angeles] PHP Fatal error:  [CakeException] Unknown status code
+>>>>>>> 1affd0499456bc692deafca0aa54f82f13fc5c42
 #0 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(215): CakeResponse->statusCode(2)
 #1 [internal function]: ExceptionRenderer->error400(Object(SocketException))
 #2 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(178): call_user_func_array(Array, Array)
 #3 /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php(122): ExceptionRenderer->render()
 #4 [internal function]: ErrorHandler::handleException(Object(SocketException))
 #5 {main} in /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php on line 131
+<<<<<<< HEAD
 [26-Apr-2014 18:44:10 America/Los_Angeles] PHP Fatal error:  [CakeException] Unknown status code
 #0 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(215): CakeResponse->statusCode(2)
 #1 [internal function]: ExceptionRenderer->error400(Object(SocketException))
@@ -895,3 +912,54 @@ Stack trace:
 #5 /home/gourmet/public_html/app/Config/core.php(281): Cache::config('_cake_model_', Array)
 #6 /home/gourmet/public_html/lib/Cake/Core/Configure.php(72): include('/home/gourm in /home/gourmet/public_html/lib/Cake/Cache/Engine/FileEngine.php on line 280
 >>>>>>> d6d41d2d4a2ac0280dc3d2bc1e34287840c751b8
+=======
+[11-May-2014 22:50:24 America/Los_Angeles] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 395
+[11-May-2014 22:50:43 America/Los_Angeles] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 395
+[11-May-2014 22:50:44 America/Los_Angeles] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 395
+[11-May-2014 22:51:04 America/Los_Angeles] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 395
+[11-May-2014 22:51:37 America/Los_Angeles] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 395
+>>>>>>> 1affd0499456bc692deafca0aa54f82f13fc5c42
+[21-May-2014 23:54:41 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 187
+[21-May-2014 23:54:45 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 187
+[21-May-2014 23:54:51 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 187
+[21-May-2014 23:55:01 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 187
+[21-May-2014 23:55:16 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 187
+[21-May-2014 23:55:20 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 187
+[21-May-2014 23:55:36 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 187
+[21-May-2014 23:55:41 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 187
+[21-May-2014 23:55:46 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 187
+[21-May-2014 23:55:50 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 187
+[21-May-2014 23:55:56 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 187
+[21-May-2014 23:56:01 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 187
+[21-May-2014 23:56:06 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 187
+[21-May-2014 23:56:11 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 187
+[21-May-2014 23:56:21 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 187
+[21-May-2014 23:56:25 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 187
+[21-May-2014 23:56:31 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 187
+[21-May-2014 23:56:35 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 187
+[21-May-2014 23:56:45 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 187
+[21-May-2014 23:56:51 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 187
+[21-May-2014 23:57:06 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 187
+[21-May-2014 23:57:20 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 187
+[21-May-2014 23:57:26 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 187
+[21-May-2014 23:57:36 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 187
+[21-May-2014 23:57:51 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 187
+[21-May-2014 23:57:55 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 187
+[21-May-2014 23:58:06 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 187
+[21-May-2014 23:58:21 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 187
+[21-May-2014 23:58:22 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 187
+[21-May-2014 23:58:36 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 187
+[21-May-2014 23:58:46 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 187
+[21-May-2014 23:58:50 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 187
+[21-May-2014 23:58:51 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 187
+[21-May-2014 23:58:56 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 187
+[21-May-2014 23:59:11 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 187
+[21-May-2014 23:59:16 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 187
+[21-May-2014 23:59:20 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 187
+[21-May-2014 23:59:21 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 187
+[21-May-2014 23:59:36 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 187
+[21-May-2014 23:59:44 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 187
+[21-May-2014 23:59:50 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 187
+[22-May-2014 00:00:00 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 187
+[22-May-2014 00:00:11 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 187
+[22-May-2014 00:00:36 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 187

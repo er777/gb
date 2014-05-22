@@ -184,8 +184,54 @@ class CategoriesController extends AppController {
 					'Product.subsubcategory_id' => $subsubcategory['Subsubcategory']['id']
 				);
 			//}
+<<<<<<< HEAD
 		}
 
+=======
+			
+	
+///////////////////////////////End Brand Conditions/////////////////////////////////////////////////
+
+
+
+////// Code brought over from dev to be safe - check it, ER
+
+		if(isset($args[2])) {
+			$subsubcategory = $this->Category->Product->find('first', array(
+				'contain' => array(
+					'User',
+					'Subsubcategory'
+				),
+				'fields' => array(
+					'Subsubcategory.*'
+				),
+				'conditions' => array(
+					'User.active' => 1,
+					'Product.active' => 1,
+					'Subsubcategory.subcategory_id' => $subcategory['Subcategory']['id'],
+					'Subsubcategory.slug' => $args[2]
+				)
+			));
+
+			// debug($subsubcategory);
+			$this->set(compact('subsubcategory'));
+			//if(!empty($subsubcategory)) {
+				$productconditions[] = array(
+					'Product.subsubcategory_id' => $subsubcategory['Subsubcategory']['id']
+				);
+			//}
+
+
+		}
+
+
+
+
+
+
+
+///////////////////////////////Final Query to fetch products///////////////////////////////
+>>>>>>> 1affd0499456bc692deafca0aa54f82f13fc5c42
 		$this->paginate = array(
 			'recursive' => -1,
 			'contain' => array(
