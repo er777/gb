@@ -16,7 +16,7 @@ $(document).ready(function() {
 		}
 	});
 
-	$('.modselector').change(function(){
+	$('.form-control').change(function(){
 		$('#productprice').html($(this).find(':selected').data('price'));
 	});
 
