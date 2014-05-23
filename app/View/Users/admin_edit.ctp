@@ -51,6 +51,7 @@ function doFormatPhone(A){var B=document.getElementById(A);B.onblur=function(){f
 				<?php echo $this->Form->input('vendor_type', array('label' => 'Vendor Type' ,'empty' => '--', 'options' => array('1' => 'Regular', '2' => 'Super Market', ))); ?>
 				<?php echo $this->Form->input('username'); ?>
 				<?php echo $this->Form->input('name', array('label' => 'Shoppe Name')); ?>
+                <?php echo $this->Form->input('notes', array('label' => 'Vendor Payment Notes')); ?>
 				<?php echo $this->Form->input('slug', array('label' => 'Domain Prefix <br />do NOT use hyphens here - only one word, no spaces')); ?>
 				<?php echo $this->Form->input('business_name', array('label' => 'Business Name')); ?>
 				<?php echo $this->Form->input('business_name_dba', array('label' => 'DBA - List all' , 'rows'=> '3', 'cols' => '3', 'class' => 'mceNoEditor')); ?>
