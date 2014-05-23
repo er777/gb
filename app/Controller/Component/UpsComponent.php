@@ -96,7 +96,7 @@ class UpsComponent extends Component {
 				<RequestOption>shop</RequestOption>
 			</Request>
 			<PickupType>
-				<Code>' . $this->defaults['PickupType'] . '</Code>
+				<Code>01</Code>
 			</PickupType>
 			<Shipment>
 				<Shipper>

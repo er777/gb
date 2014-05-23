@@ -23,14 +23,14 @@ class Productmod extends AppModel {
 				'Productmod.product_id' => $id
 			),
 			'order' => array(
-				'Productmod.sku' => 'ASC',
+				'Productmod.position' => 'ASC',
 				'Productmod.name' => 'ASC',
 			),
 		));
 
 		$product_mods = '';
 		if(!empty($productmods)) {
-			$productmodshtml = '<select class="form-control" name="mods">';
+			$productmodshtml = '<select class="modselector"  name="mods">';
 			//$productmodshtml .= '<option selected="Make a choice" value="" data-price="'.$price.'"></option>';
 			foreach ($productmods as $productmod) {
 				$productmodshtml .= '<option value="' . $productmod['Productmod']['id'] . '" data-price="' . $productmod['Productmod']['price'] . '">' . $productmod['Productmod']['name'] . ' - ($'. $productmod['Productmod']['price'] . ')</option>';
