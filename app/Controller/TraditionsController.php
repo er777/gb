@@ -46,7 +46,7 @@ class TraditionsController extends AppController {
 				'Tradition.id',
 				'Tradition.slug',
 				'Tradition.name',
-				'Tradition.banner',
+				'Tradition.awning_image',
 			),
 			'order' => array(
 				'Tradition.name' => 'ASC'
@@ -112,7 +112,6 @@ class TraditionsController extends AppController {
 				'Product.slug',
 				'Product.price',
 				'Product.displaygroup',
-				'Product.new',
 				'Product.image',
 				'User.id',
 				'User.slug',

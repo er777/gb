@@ -5,6 +5,7 @@ class BrandsController extends AppController {
 ////////////////////////////////////////////////////////////
 
 	public function index() {
+
 		$subDomain = $this->_getSubDomain();
 
 		if(!isset($this->params->query['debug'])) {
@@ -51,7 +52,6 @@ class BrandsController extends AppController {
 				'Product.image',
 				'Product.price',
 				'Product.displaygroup',
-				'Product.new',
 				'Product.brand_id',
 				'User.slug',
 				'User.name',
@@ -156,7 +156,6 @@ class BrandsController extends AppController {
 				'Product.image',
 				'Product.price',
 				'Product.displaygroup',
-				'Product.new',
 				'Product.brand_id',
 				'User.slug',
 				'User.more',

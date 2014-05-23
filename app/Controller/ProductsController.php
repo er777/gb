@@ -185,7 +185,6 @@ class ProductsController extends AppController {
 				'User.slug',
 				'User.more',
 				'User.name',
-				'User.metadata',
 				'Brand.name'
 			),
 			'limit' => 20,
@@ -373,8 +372,6 @@ class ProductsController extends AppController {
 
 				$gbrequest = 'https://www.maestrolico.com/api/checkstockstatus.asp?distributorid=' . Configure::read('Settings.MAESTRO_DISTRIBUTOR_ID') . '&productid=' . $product['Product']['vendor_sku'];
 
-
-
 				$response = @file_get_contents($gbrequest);
 				// echo '<br />';
 				// echo '<pre>';
@@ -402,6 +399,30 @@ class ProductsController extends AppController {
 			}
 		}
 
+
+		// if $product['Product']['stock_updated'] > 1 day
+		// check stock from maestro
+		// update $product['Product']['stock_updated']
+		// update $product['Product']['stock']
+		// endif
+
+		// $product['Product']['last_viewed']
+
+		// $d = date('Y-m-d H:i:s');
+		// echo $d;
+		// $days_ago = date('Y-m-d H:i:s', strtotime('-2 days', strtotime($d)));
+		// echo $days_ago;
+
+		// App::uses('HttpSocket', 'Network/Http');
+		// $httpSocket = new HttpSocket();
+		// $response = $httpSocket->get('https://www.maestrolico.com/api/checkstockstatus.asp?distributorid=' . Configure::read('Settings.MAESTRO_DISTRIBUTOR_ID') . '&productid=' . $this->product['Product']['vendor_sku']);
+		// $res = explode('|', $response['body']);
+		// if($res[1] < $quantity) {
+
+		// cron
+		// $product['Product']['stock_updated'] > 2 weeks AND $product['Product']['stock'] == 0
+		// check stock from maestro
+		// disable from store if stock = 0 ???
 
 		$this->Product->updateAll(
 			array(
@@ -431,7 +452,6 @@ class ProductsController extends AppController {
 
 		$category = $this->Product->Category->find('first', array(
 			'conditions' => array(
-				//'Category.metadata',
 				'Category.slug' => $args[0]
 			)
 		));
@@ -550,30 +570,6 @@ class ProductsController extends AppController {
 				);
 			}
 		}
-		
-		
-		$brands = $this->Product->find('all', array(
-			'contain' => array('Brand'),
-			'fields' => array(
-				'Brand.*',
-			),
-			'conditions' => array(
-				'Product.active' => 1,
-				'Product.show' => 1,
-				'Product.user_id' => $user['User']['id']
-			),
-			'order' => array(
-				'Brand.name' => 'ASC'
-			),
-			'group' => array(
-				'Brand.id'
-			),
-		));
-		$this->set(compact('brands'));
-		
-		
-		
-		
 
 		$this->paginate = array(
 			'contain' => array('User'),
@@ -584,9 +580,8 @@ class ProductsController extends AppController {
 				'Product.slug',
 				'Product.image',
 				'Product.price',
-				'Product.new',
 				'Product.displaygroup',
-				'User.name',
+				//'Brand.name',
 				'User.slug',
 				'User.more',
 			),
@@ -879,7 +874,6 @@ public function brand() {
 					'Product.image',
 					'Product.price',
 					'Brand.name',
-					'User.name',
 					'User.slug',
 				),
 				'conditions' => $conditions,
@@ -1431,9 +1425,9 @@ public function brand() {
 				$this->request->data['Product']['subsubcategory_id'] = '';
 			}
 
-			$preRound = sprintf('%.1f', $this->request->data['Product']['shipping_weight_oz'] / 16);
+			$preRound = sprintf($this->request->data['Product']['shipping_weight_oz'] / 16);
 
-			$this->request->data['Product']['weight'] = ceil($preRound);
+			$this->request->data['Product']['weight'] = $preRound;
 
 			if ($this->Product->save($this->request->data)) {
 

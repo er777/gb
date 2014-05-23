@@ -176,6 +176,7 @@ class AppModel extends Model {
 		'Luxembourg' => 'Luxembourg',
 		'Macedonia' => 'Macedonia',
 		'Madagascar' => 'Madagascar',
+		'Malawi' => 'Malawi',
 		'Malaysia' => 'Malaysia',
 		'Mali' => 'Mali',
 		'Martinique' => 'Martinique',
@@ -219,6 +220,7 @@ class AppModel extends Model {
 		'Switzerland' => 'Switzerland',
 		'Syria' => 'Syria',
 		'Taiwan' => 'Taiwan',
+		'Tanzania' => 'Tanzania',
 		'Thailand' => 'Thailand',
 		'Trinidad And Tobago' => 'Trinidad And Tobago',
 		'Tunisia' => 'Tunisia',
@@ -229,6 +231,7 @@ class AppModel extends Model {
 		'Uruguay' => 'Uruguay',
 		'Venezuela' => 'Venezuela',
 		'Vietnam' => 'Viet Nam',
+		'Zimbabwe' => 'Zimbabwe',
 		);
 		if($id) {
 			if(isset($countries[$id])) {
