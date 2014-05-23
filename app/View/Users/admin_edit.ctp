@@ -32,7 +32,6 @@ function doFormatPhone(A){var B=document.getElementById(A);B.onblur=function(){f
   </script>
   
 
-<div id="wrapper">
 
 	<div class="title">VENDOR PROFILE</div>
 	
@@ -46,10 +45,8 @@ function doFormatPhone(A){var B=document.getElementById(A);B.onblur=function(){f
 			<?php echo $this->Form->button('Submit', array('class' => 'btn btn-primary')); ?><br />
 		</div>
 	
-		<div class="span16">
-	
-	
-			<div class="span4">
+		
+			<div class="span3">
 				<?php echo $this->Form->input('level', array('label' => 'User Level' , 'options' => array( 'admin' => 'Admin','vendor' => 'Vendor'))); ?>
 				<?php echo $this->Form->input('vendor_type', array('label' => 'Vendor Type' ,'empty' => '--', 'options' => array('1' => 'Regular', '2' => 'Super Market', ))); ?>
 				<?php echo $this->Form->input('username'); ?>
@@ -63,7 +60,7 @@ function doFormatPhone(A){var B=document.getElementById(A);B.onblur=function(){f
 				<?php echo $this->Form->input('phone', array('label' => 'Phone - General')); ?>
                 <?php echo $this->Form->input('cell', array('label' => 'Cell - General')); ?>
 				<?php echo $this->Form->input('fax', array('label' => 'Fax - General')); ?>
-				<?php echo $this->Form->input('email', array('label' => 'email - General', 'class' => 'span4')); ?>
+				<?php echo $this->Form->input('email', array('label' => 'email - General', 'class' => 'span3')); ?>
 				<?php echo $this->Form->input('address', array('label' => 'Address - Line 1')); ?>
 				<?php echo $this->Form->input('address2', array('label' => 'Address - Line 2')); ?>
 				<?php echo $this->Form->input('city'); ?>
@@ -89,14 +86,14 @@ function doFormatPhone(A){var B=document.getElementById(A);B.onblur=function(){f
 				<?php echo $this->Form->input('contact_title'); ?>
 				<?php echo $this->Form->input('contact_phone'); ?>
                 <?php echo $this->Form->input('contact_cell'); ?>
-				<?php echo $this->Form->input('contact_email', array('class' => 'span4')); ?>
+				<?php echo $this->Form->input('contact_email', array('class' => 'span3')); ?>
 				
 				<hr />
 				<?php echo $this->Form->input('contact_alt_name', array('label' => 'Alternate Contact Name')); ?>
 				<?php echo $this->Form->input('contact_alt_title', array('label' => 'Alternate Contact Title')); ?>
 				<?php echo $this->Form->input('contact_alt_phone', array('label' => 'Alternate Contact Phone')); ?>
                 <?php echo $this->Form->input('contact_alt_cell', array('label' => 'Alternate Contact Cell')); ?>
-				<?php echo $this->Form->input('contact_alt_email', array('label' => 'Alternate Contact eMail', 'class' => 'span4')); ?>
+				<?php echo $this->Form->input('contact_alt_email', array('label' => 'Alternate Contact eMail', 'class' => 'span3')); ?>
 	
 			
 
@@ -104,7 +101,7 @@ function doFormatPhone(A){var B=document.getElementById(A);B.onblur=function(){f
 			</div>
             
             
-			<div class="span4">
+			<div class="span3">
             
                
 			<h3>SHIPPING</h3>
@@ -118,8 +115,6 @@ function doFormatPhone(A){var B=document.getElementById(A);B.onblur=function(){f
                <div class="inline"> We ship in&nbsp;<?php echo $this->Form->input('ship_time', array('label' => false, 'class' => 'span1')); ?> days from receipt of order.</div>
               
                <br />
-				<?php echo $this->Form->input('shipping_policy', array('rows' => 10, 'class' => '4span ckeditor', 'label' => 'Shipping/ Return/ Customer Satisfaction Policies')); ?>
-                <br />
 				<?php echo $this->Form->input('min_shipping_check', array('type' => 'checkbox','label' =>'Check if there is a minimum shipping charge.')); ?>
 				<br />
 				 <?php echo $this->Form->input('min_shipping', array('class' => 'span1','label' =>'Minimum shipping charge')); ?>
@@ -223,17 +218,23 @@ function doFormatPhone(A){var B=document.getElementById(A);B.onblur=function(){f
 				<?php echo $this->Form->input('shop_quote', array('class' => '4span ckeditor')); ?>
 				<?php echo $this->Form->input('shop_signature'); ?>
                 <?php echo $this->Form->input('min_purchase', array('label' =>'Minimum Purchase','class' => 'span1')); ?>
-                <?php echo $this->Form->input('mini_shipping_policy', array('label' =>'Shipping Info','class' => 'span2')); ?>
+                
 	
 			</div>
             
+  
+            
+            
             <div class="span6">
+            
+            	<?php echo $this->Form->input('shipping_policy', array('rows' => 10, 'class' => '4span ckeditor', 'label' => 'Shipping/ Return/ Customer Satisfaction Policies')); ?>
+                <?php echo $this->Form->input('mini_shipping_policy', array('label' =>'Shipping Info')); ?>
+                <br />
+
+            
             	 <h3>SEO VENDOR METADATA</h3>
-<<<<<<< HEAD
             	 <?php echo $this->Form->input('metadata', array('label' => 'Meta Tags')); ?>
-=======
-            	 <h3><?php echo $this->Form->input('metadata', array('label' => 'Meta Tags')); ?></h3>
->>>>>>> 1affd0499456bc692deafca0aa54f82f13fc5c42
+
             <div style="background-color:#FFC;; border:#CCC thin dotted;padding:10px;">
                   <h3>VENDOR SITE APPROVAL</h3>
                       <?php echo $this->Form->input('Approval.id', array('type' => 'hidden')); ?>
@@ -249,8 +250,9 @@ function doFormatPhone(A){var B=document.getElementById(A);B.onblur=function(){f
             
             
 			
-			<div class="span3 offset3">
+			<div class="span3">
 				<h3>FINANCIAL INFO</h3>
+                <?php echo $this->Form->input('email_orders', array('label' => 'email - Orders','class' => 'span4 special')); ?><br />
 				<?php echo $this->Form->input('fin_contact_name', array('label' => 'Financial Contact Name')); ?>
 				<?php echo $this->Form->input('fin_contact_title', array('label' => 'Financial Contact Title')); ?>
 				<?php echo $this->Form->input('fin_contact_phone', array('label' => 'Financial Contact Phone')); ?>
@@ -261,7 +263,7 @@ function doFormatPhone(A){var B=document.getElementById(A);B.onblur=function(){f
 				<?php echo $this->Form->input('payment_city'); ?>
 				<?php echo $this->Form->input('payment_state', array('options' => $states,'empty' => '--')); ?>
 				<?php echo $this->Form->input('payment_zip'); ?>
-				<?php echo $this->Form->input('email_orders', array('label' => 'email - Orders','class' => 'span4')); ?>
+				
 
 				<hr />
 				<h3>INSURANCE</h3>
@@ -297,8 +299,11 @@ function doFormatPhone(A){var B=document.getElementById(A);B.onblur=function(){f
 			<!--<div class="span2">
 	
 			</div>-->
+		
 		</div>
-	</div>
+  
+    
+    
     
     
 <div class="row">
@@ -377,7 +382,7 @@ function doFormatPhone(A){var B=document.getElementById(A);B.onblur=function(){f
               
 			</div>
             
-         </div>    
+         
    <?php endif; ?>
          
     
