@@ -240,6 +240,7 @@
 			<div class="policy-heading ">Customer Satisfaction, Shipping and Return Policy</div>
 			 <hr />
 				<div class="pad">
+               <span class="b-close btn-gb"><span>X</span></span>
 				<?php echo ($vendor_policy); ?>
 				</div>
 			</div>
