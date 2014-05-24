@@ -137,6 +137,10 @@ class AppController extends Controller {
 						'Ustradition.slug',
 					),
 					
+					'conditions' => array(
+						'Ustradition.active' => '1',
+					),
+					
 					'order' => array(
 						'Ustradition.name' => 'ASC'
 					),
@@ -151,6 +155,42 @@ class AppController extends Controller {
 				Cache::write('menu_ustraditions', $menu_ustraditions);
 			}
 			$this->set(compact('menu_ustraditions'));
+			//debug($menu_ustraditions);
+			
+			//Traditions
+				$menu_traditions = Cache::read('menu_traditions');
+			if (!$menu_traditions) {
+				$menu_traditions = ClassRegistry::init('Tradition')->find('all', array(
+					'recursive' => -1,
+					'contain' => array(
+						//'User',
+						//'Tradition'
+					),
+					'fields' => array(
+						'Tradition.id',
+						'Tradition.name',
+						'Tradition.slug',
+						'Tradition.active',
+					),
+					'conditions' => array(
+						'Tradition.active' => 1,
+					),
+
+					'order' => array(
+						'Tradition.name' => 'ASC'
+					),
+					'group' => array(
+						'Tradition.id'
+					)
+				));
+				
+				
+				
+				Cache::set(array('duration' => '+10 minutes'));
+				Cache::write('menu_traditions', $menu_traditions);
+			}
+			$this->set(compact('menu_traditions'));
+			
 			
 			
 
@@ -262,7 +302,6 @@ class AppController extends Controller {
 			$markup = (($product['Product']['price'] - $product['Product']['price_wholesale']) / $product['Product']['price']) * 100;
 			$this->$model->saveField('markup', $markup);
 		}
-				
 
 		if($model == 'OrderUser' && $field == 'shipping_actual') {
 			$orderuser = $this->$model->find('first', array(
@@ -360,6 +399,11 @@ class AppController extends Controller {
 
 ////////////////////////////////////////////////////////////
 
+	
+	protected $secureActions = array(
+		   'review',
+		   'checkout'
+	   );
 
 
 
