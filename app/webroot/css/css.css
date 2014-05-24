@@ -1318,6 +1318,20 @@ img.tradition, img.vendor-pic {
 
 }
 
+.map-nav {
+	padding-left:60px;
+	margin-bottom:20px;
+}
+
+.map-nav div {
+	margin-bottom:15px;
+}
+
+.map-nav div span {
+	padding-left:10px;
+}
+
+
  
 img.recipe-pic {
 	-moz-box-shadow: 0px 0px 5px #cccccc;
