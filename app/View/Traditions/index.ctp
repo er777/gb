@@ -185,7 +185,7 @@
 			 </div>
 		</div>
 
-</div>
+
 
 </div>
 <script type="text/javascript" src="js/jquery.rwdImageMaps.min.js"></script> 
