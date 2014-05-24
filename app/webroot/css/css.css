@@ -2492,6 +2492,10 @@ div#policy_content {display: none; ;}
 		padding-right: 35px;
 		width: 800px;
 	}
+	
+	#policy_content h3 {
+		font-weight:bold;
+	}
  
 .disclaimer {
 	color: #72a62a;
