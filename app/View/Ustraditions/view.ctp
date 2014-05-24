@@ -69,7 +69,7 @@
          <div class="more btn-gb">More products to come!</div>
          <?php endif; ?>
          
-         <?php echo $this->element('pagination-counter'); ?>
+         <?php //echo $this->element('pagination-counter'); ?>
 
          <?php echo $this->element('pagination'); ?>
 
