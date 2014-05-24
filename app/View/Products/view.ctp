@@ -188,7 +188,7 @@ $(document).ready(function() {
 
 
          <hr />
-         <a class="btn btn-gb" href="#" id="story">Our Story</a> 
+         <a class="btn btn-gwm" href="#" id="story">Our Story</a> 
          
          
    <!-- Include Vendor Story element --> 
@@ -196,7 +196,7 @@ $(document).ready(function() {
    
 
       
-        <a class="btn btn-gb" href="/recipes">Our Recipes</a>
+        <a class="btn btn-gwm" href="/recipes" id="recipes">Our Recipes</a>
          
          
          <?php $vendor_policy = $user['User']['shipping_policy']; ?>

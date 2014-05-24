@@ -62,6 +62,9 @@
 							
 							<li class="two-column start">
 								<ul><li>
+									<li><a href="http://www.<?php echo Configure::read('Settings.DOMAIN') . '/categories/'; ?>">Stop by our "Pantry"</a>
+                                    </li>
+
 									<?php
                                     $i = 0; ?>
 									<?php foreach($menucategories as $menucategory) : ?>
@@ -71,9 +74,6 @@
 									<?php
                                     if (($i % 15) == 0) { echo "</ul>\n</li>\n<li class=\"two-column loop\">\n<ul>\n";	}
 									endforeach; ?>
-                                    <li><a href="http://www.<?php echo Configure::read('Settings.DOMAIN') . '/categories/'; ?>">Stop by our "Pantry"</a>
-                                    	
-                                    </li>
 								</ul>
 							</li>
 						</ul>
