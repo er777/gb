@@ -215,7 +215,7 @@
 
 
 
-<script type="text/javascript" src="js/jquery.rwdImageMaps.min.js"></script> 
+<script type="text/javascript" src="/js/jquery.rwdImageMaps.min.js"></script> 
 <script>
 $(document).ready(function(e) {
     $('img[usemap]').rwdImageMaps();
