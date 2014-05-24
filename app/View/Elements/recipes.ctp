@@ -22,7 +22,7 @@
             
              <?php echo ' <a href=" ' . $recipeLink ; ?> 
             
-                <?php echo $this->Html->image('/img/recipes/image_1/' . $recipe['Recipe']['image_1'] , array('width' => 200, 'height' => 200, 'alt' => $recipe['Recipe']['name'])); ?>
+                <?php echo $this->Html->image('/img/recipes/image_1/' . $recipe['Recipe']['image_1'] , array('class' =>'img-responsive', 'alt' => $recipe['Recipe']['name'])); ?>
                
             <?php echo '</a>';?>
            </div>

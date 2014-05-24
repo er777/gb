@@ -22,7 +22,9 @@ class UstraditionsController extends AppController {
 		///////////////// Left Panel - Other Us Traditions Start ///////////////////////
 		$ustraditions = $this->Ustradition->find('all', array(
 			'recursive' => -1,
-			'conditions' => array(),
+			'conditions' => array(
+				'Ustradition.active' => 1
+			),
 			'order' => array(
 				'Ustradition.name' => 'ASC'
 			)

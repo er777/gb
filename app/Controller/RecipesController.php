@@ -529,6 +529,10 @@ public function admin_index() {
 		));
 
 		$ustraditions = $this->Recipe->Ustradition->find('list', array(
+			'conditions' => array(
+				'Ustradition.active' => 1
+				
+			),
 			'order' => array(
 				'Ustradition.name' => 'ASC'
 			)
