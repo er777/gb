@@ -2644,7 +2644,7 @@ ul.nav li a.active  {
 }
 
 select.form-control {
-	width:65%;
+	width:49%;
 	display:inline-block;
 	background-color:#fcfcfc;
 }
