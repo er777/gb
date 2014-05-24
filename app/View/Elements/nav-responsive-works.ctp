@@ -27,7 +27,7 @@
 							<li class="two-column start">
 								<ul>
 								<li><a href="/users/vendors">GO TO FULL VENDOR LIST</a></li>
-                                <p>----------------------</p>
+                                <li>----------------------</li>
 								<li>ARTISANAL VENDORS</li>
 								<?php 
 									$i = 0;
@@ -40,7 +40,7 @@
 									endforeach;
 								?>
                                 
-                                <p>----------------------</p>
+                                <li>----------------------</li>
                                 <li>SUPERMARKET VENDORS</li>
 								<?php
                                 	foreach($menu_marketvendors as $menu_marketvendor) : 
@@ -83,7 +83,8 @@
 						<a href="#" class="dropdown-toggle " data-toggle="dropdown"><i class="icon-briefcase icon-white"></i>REGIONS<b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li class="one-column">
-								<ul><h4><a href="/ustraditions">US REGIONS</a></h4>
+								<ul>
+                                	<li><a href="/ustraditions">US REGIONS</a></li>
                                 	<?php
                                     $i = 0; ?>
 									<?php foreach($menu_ustraditions as $menu_ustradition) : ?>
@@ -96,7 +97,8 @@
 								</ul>
 							</li>
 							<li class="two-column">
-								<ul><h4><a href="/traditions">INTERNATIONAL REGIONS</a></h4>
+								<ul>
+                                	<li><a href="/traditions">INTERNATIONAL REGIONS</a></li>
                                 	<?php
                                     $i = 0; ?>
 									<?php foreach($menu_traditions as $menu_tradition) : ?>

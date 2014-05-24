@@ -16,7 +16,7 @@
 	</script>
 	
 
-<html>
+<!DOCTYPE html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="description" content='A fresh way to shop for, learn about, prepare and enjoy foods of the world.'>
@@ -92,24 +92,21 @@ opacity: 0.2;
 
 <div class="page container">
 
-<div class="air"></div>
+	<div class="air"></div>
 
-   <div id="dialog-info"> <?php echo $this->Session->flash(); ?> </div>
-   <!-- CONTENT --> 
-   <?php echo $this->fetch('content'); ?>
-  
+	<div id="dialog-info"> <?php echo $this->Session->flash(); ?>
+	</div>
+	<!-- CONTENT --> 
+	<?php echo $this->fetch('content'); ?>
 </div>
 
-</div>
-<?php echo $this->element('footer'); ?>
-</div>
-</div>
+	<?php echo $this->element('footer'); ?>
+
+
+
 <!-- end outer wrapper --> 
 
-<br /> 
-<br />
-<?php echo $this->element('sqldump'); ?> <br />
-<br />
+<?php echo $this->element('sqldump'); ?> 
 
 <!-- IE8 Compatibility --> 
 <script src ="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script> 
