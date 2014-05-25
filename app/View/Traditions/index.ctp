@@ -6,16 +6,18 @@
 	 
 </div>
 
-<div class="row"
+<div class="row">
 
-	 <div class="col-md-12 intl-map"> <?php //echo $this->Html->image('/img/traditions/intl-map.png', array('class' =>'img-responsive center img-air-30'));?>
+	 <div class="col-md-12"> <?php //echo $this->Html->image('/img/traditions/intl-map.png', array('class' =>'img-responsive center img-air-30'));?>
 	 
 	 
- 	<img src="http://gwm.live/img/traditions/intl-map.png" width="1074" height="565" usemap="#Map" border="0" class="img-responsive center img-air-30"/>
+ 	<img src="/img/traditions/intl-map.png" width="1074" height="565" usemap="#Map" border="0" class="img-responsive center img-air-30"/>
+	
+	</div>
 	<map name="Map" id="Map">
 		<area shape="poly" coords="5,84,7,151,29,163,60,142,86,146,128,190,131,224,149,247,184,248,212,272,265,268,345,190,307,134,320,108,269,62,272,42,321,5,250,5" href="/international/north-america" name="N America" />
 		<area shape="poly" coords="151,249,175,279,186,287,216,302,243,318,266,331,273,321,254,301,244,283,211,276,206,268,183,249" href="/international/mexico" name="Mexico/Central America" />
-		<area shape="poly" coords="274,318,287,309,320,314,350,333,355,347,398,363,401,376,389,404,377,422,335,469,313,489,307,510,298,525,311,536,293,542,273,523,279,475,288,410,273,398,256,367,259,344" href="/international/south-america" name="South America/>
+		<area shape="poly" coords="274,318,287,309,320,314,350,333,355,347,398,363,401,376,389,404,377,422,335,469,313,489,307,510,298,525,311,536,293,542,273,523,279,475,288,410,273,398,256,367,259,344" href="/international/south-america" name="South America">
 		<area shape="poly" coords="525,160,518,146,515,129,541,90,568,78,600,83,590,96,593,115,595,126,588,137,569,140,561,153,549,160,539,162,511,175,527,186,522,196,534,196,543,195,551,193,552,187,545,187,541,183,540,179,546,176,545,165" href="#" />
 		<area shape="poly" coords="493,140,480,148,469,165,470,177,484,177,487,185,505,179,512,170,503,147" href="/international/british-isles" name="British Isles" />
 		<area shape="poly" coords="476,212,485,212,483,232,463,261,476,266,517,292,541,278,554,279,576,289,580,281,612,279,606,260,609,247,627,239,627,232,637,230,636,220,628,213,587,212,574,211,567,217,563,207,561,197,554,194,545,196,522,198,527,186,514,179,491,187" href="/international/mediterranean" name="The Mediterranean" />
@@ -116,102 +118,7 @@
               ?>
               <span>The Caribbean</span>
        </div>
-       <div class="col-md-3 col-sm-4 col-xs-6">
-              <?php  echo $this->Html->image("traditions/dots/Mediterranean.png", array(
-                      "alt" => "",
-                      'url' => array('controller' => 'international','action' => 'mediterranean'),
-                  ));
-              ?>
-              <span>The Mediterranean</span>
-       </div>
-       <div class="col-md-3 col-sm-4 col-xs-6">
-              <?php  echo $this->Html->image("traditions/dots/S-Africa.png", array(
-                      "alt" => "",
-                      'url' => array('controller' => 'international','action' => 'southern-africa'),
-                  ));
-              ?>
-              <span>Southern Africa</span>
-       </div>
-       <div class="col-md-3 col-sm-4 col-xs-6">
-              <?php  echo $this->Html->image("traditions/dots/Korea.png", array(
-                      "alt" => "",
-                      'url' => array('controller' => 'international','action' => 'korea'),
-                  ));
-              ?>
-              <span>S. Korea/ N. Korea</span>
-       </div>
-       <div class="col-md-3 col-sm-4 col-xs-6">
-              <?php  echo $this->Html->image("traditions/dots/S-America.png", array(
-                      "alt" => "",
-                      'url' => array('controller' => 'international','action' => 'south-america'),
-                  ));
-              ?>
-              <span>South America</span>
-       </div>
-       <div class="col-md-3 col-sm-4 col-xs-6">
-              <?php  echo $this->Html->image("traditions/dots/E-Europe.png", array(
-                      "alt" => "",
-                      'url' => array('controller' => 'international','action' => 'eastern-europe'),
-                  ));
-              ?>
-              <span>Eastern Europe</span>
-       </div>
-       <div class="col-md-3 col-sm-4 col-xs-6">
-              <?php  echo $this->Html->image("traditions/dots/C-Africa.png", array(
-                      "alt" => "",
-                      'url' => array('controller' => 'international','action' => 'central-africa'),
-                  ));
-              ?>
-              <span>Central Africa</span>
-       </div>
-       <div class="col-md-3 col-sm-4 col-xs-6">
-              <?php  echo $this->Html->image("traditions/dots/S-Asia.png", array(
-                      "alt" => "",
-                      'url' => array('controller' => 'international','action' => 'south-asia'),
-                  ));
-              ?>
-              <span>South Asia</span>
-       </div>
-       <div class="col-md-3 col-sm-4 col-xs-6">
-              <?php  echo $this->Html->image("traditions/dots/W-Europe.png", array(
-                      "alt" => "",
-                      'url' => array('controller' => 'international','action' => 'north-america'),
-                  ));
-              ?>
-              <span>Western Europe</span>
-       </div>
-       <div class="col-md-3 col-sm-4 col-xs-6">
-              <?php  echo $this->Html->image("traditions/dots/C-Asia.png", array(
-                      "alt" => "",
-                      'url' => array('controller' => 'international','action' => 'central-asia'),
-                  ));
-              ?>
-              <span>The Caucasus/ Central Asia</span>
-       </div>
-       <div class="col-md-3 col-sm-4 col-xs-6">
-              <?php  echo $this->Html->image("traditions/dots/M-East.png", array(
-                      "alt" => "",
-                      'url' => array('controller' => 'international','action' => 'west-africa'),
-                  ));
-              ?>
-              <span>West Africa</span>
-       </div>
-       <div class="col-md-3 col-sm-4 col-xs-6">
-              <?php  echo $this->Html->image("traditions/dots/SE-Asia.png", array(
-                      "alt" => "",
-                      'url' => array('controller' => 'international','action' => 'southeast-asia'),
-                  ));
-              ?>
-              <span>Southeast Asia</span>
-       </div>
-       <div class="col-md-3 col-sm-4 col-xs-6">
-              <?php  echo $this->Html->image("traditions/dots/Oceania.png", array(
-                      "alt" => "",
-                      'url' => array('controller' => 'international','action' => 'oceania'),
-                  ));
-              ?>
-              <span>Oceania</span>
-       </div>
+      
    </div>
 
 </div>
