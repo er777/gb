@@ -27,8 +27,8 @@
 							<li class="two-column start">
 								<ul>
 								<li><a href="/users/vendors">GO TO FULL VENDOR LIST</a></li>
-                                <li>----------------------</li>
-								<li>ARTISANAL VENDORS</li>
+                                <li>------------------------------</li>
+								<li style="padding-bottom:5px">ARTISANAL VENDORS</li>
 								<?php 
 									$i = 0;
 									foreach($menuvendors as $menuvendor) : 
@@ -40,8 +40,8 @@
 									endforeach;
 								?>
                                 
-                                <li>----------------------</li>
-                                <li>SUPERMARKET VENDORS</li>
+                                <li>-----------------------------------</li>
+                                <li style="padding-bottom:5px">SUPERMARKET VENDORS</li>
 								<?php
                                 	foreach($menu_marketvendors as $menu_marketvendor) : 
 								?>

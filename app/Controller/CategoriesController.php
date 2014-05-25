@@ -50,6 +50,7 @@ class CategoriesController extends AppController {
 				'Category.metadata',
 				'Category.name',
 				'Category.quote',
+				'Category.quote_attr',
 				'Category.summary',
 				'Category.image',
 			),

@@ -892,3 +892,9 @@ html[xmlns] .slides {display: block;}
 .details.view {
 	padding-bottom:30px;
 }
+
+/** Mega Menu **/
+
+.mega-menu-4 li.two-column, .mega-menu-4 li.one-column {
+	line-height:16px;
+}
