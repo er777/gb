@@ -1303,3 +1303,62 @@ Stack trace:
 [22-May-2014 01:18:41 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 187
 [22-May-2014 01:19:10 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 187
 [22-May-2014 01:19:26 America/Los_Angeles] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/gourmet/public_html/app/Controller/CategoriesController.php on line 187
+[25-May-2014 21:38:32 America/Los_Angeles] PHP Fatal error:  [CakeException] Unknown status code
+#0 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(215): CakeResponse->statusCode(2)
+#1 [internal function]: ExceptionRenderer->error400(Object(SocketException))
+#2 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(178): call_user_func_array(Array, Array)
+#3 /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php(122): ExceptionRenderer->render()
+#4 [internal function]: ErrorHandler::handleException(Object(SocketException))
+#5 {main} in /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php on line 131
+[28-May-2014 16:33:20 America/Los_Angeles] PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'SplFileObject::__construct(/home/gourmet/public_html/app/tmp/cache/persistent/gb_cake_core_default_eng): failed to open stream: No such file or directory' in /home/gourmet/public_html/lib/Cake/Cache/Engine/FileEngine.php:280
+Stack trace:
+#0 /home/gourmet/public_html/lib/Cake/Cache/Engine/FileEngine.php(280): SplFileObject->__construct('/home/gourmet/p...', 'r')
+#1 /home/gourmet/public_html/lib/Cake/Cache/Engine/FileEngine.php(237): FileEngine->_clearDirectory('/home/gourmet/p...', 1401320000, 1401319940)
+#2 /home/gourmet/public_html/lib/Cake/Cache/Engine/FileEngine.php(102): FileEngine->clear(true)
+#3 /home/gourmet/public_html/lib/Cake/Cache/Cache.php(184): FileEngine->gc()
+#4 /home/gourmet/public_html/lib/Cake/Cache/Cache.php(151): Cache::_buildEngine('_cake_core_')
+#5 /home/gourmet/public_html/app/Config/core.php(268): Cache::config('_cake_core_', Array)
+#6 /home/gourmet/public_html/lib/Cake/Core/Configure.php(72): include('/home/gourmet/p...')
+#7 /home/go in /home/gourmet/public_html/lib/Cake/Cache/Engine/FileEngine.php on line 280
+[31-May-2014 17:36:59 America/Los_Angeles] PHP Fatal error:  [CakeException] Unknown status code
+#0 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(215): CakeResponse->statusCode(2)
+#1 [internal function]: ExceptionRenderer->error400(Object(SocketException))
+#2 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(178): call_user_func_array(Array, Array)
+#3 /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php(122): ExceptionRenderer->render()
+#4 [internal function]: ErrorHandler::handleException(Object(SocketException))
+#5 {main} in /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php on line 131
+[31-May-2014 17:37:21 America/Los_Angeles] PHP Fatal error:  [CakeException] Unknown status code
+#0 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(215): CakeResponse->statusCode(2)
+#1 [internal function]: ExceptionRenderer->error400(Object(SocketException))
+#2 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(178): call_user_func_array(Array, Array)
+#3 /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php(122): ExceptionRenderer->render()
+#4 [internal function]: ErrorHandler::handleException(Object(SocketException))
+#5 {main} in /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php on line 131
+[31-May-2014 17:41:58 America/Los_Angeles] PHP Fatal error:  [CakeException] Unknown status code
+#0 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(215): CakeResponse->statusCode(2)
+#1 [internal function]: ExceptionRenderer->error400(Object(SocketException))
+#2 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(178): call_user_func_array(Array, Array)
+#3 /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php(122): ExceptionRenderer->render()
+#4 [internal function]: ErrorHandler::handleException(Object(SocketException))
+#5 {main} in /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php on line 131
+[03-Jun-2014 16:46:54 America/Los_Angeles] PHP Fatal error:  [CakeException] Unknown status code
+#0 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(215): CakeResponse->statusCode(2)
+#1 [internal function]: ExceptionRenderer->error400(Object(SocketException))
+#2 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(178): call_user_func_array(Array, Array)
+#3 /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php(122): ExceptionRenderer->render()
+#4 [internal function]: ErrorHandler::handleException(Object(SocketException))
+#5 {main} in /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php on line 131
+[03-Jun-2014 19:39:58 America/Los_Angeles] PHP Fatal error:  [CakeException] Unknown status code
+#0 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(215): CakeResponse->statusCode(2)
+#1 [internal function]: ExceptionRenderer->error400(Object(SocketException))
+#2 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(178): call_user_func_array(Array, Array)
+#3 /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php(122): ExceptionRenderer->render()
+#4 [internal function]: ErrorHandler::handleException(Object(SocketException))
+#5 {main} in /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php on line 131
+[03-Jun-2014 19:41:54 America/Los_Angeles] PHP Fatal error:  [CakeException] Unknown status code
+#0 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(215): CakeResponse->statusCode(2)
+#1 [internal function]: ExceptionRenderer->error400(Object(SocketException))
+#2 /home/gourmet/public_html/lib/Cake/Error/ExceptionRenderer.php(178): call_user_func_array(Array, Array)
+#3 /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php(122): ExceptionRenderer->render()
+#4 [internal function]: ErrorHandler::handleException(Object(SocketException))
+#5 {main} in /home/gourmet/public_html/lib/Cake/Error/ErrorHandler.php on line 131
