@@ -1,3 +1,15 @@
+
+@font-face {
+	font-family: 'franchiseregular';
+	font-style: normal;
+	font-weight: normal;
+	src: url('franchise-bold/franchise-bold-webfont.eot');
+	src: url('franchise-bold/franchise-bold-webfont.eot?#iefix') format('embedded-opentype'),
+	url('franchise-bold/franchise-bold-webfont.svg#franchiseregular') format('svg');
+	url('franchise-bold/franchise-bold-webfont.ttf') format('truetype'),
+	url('franchise-bold/franchise-bold-webfont.woff') format('woff'),
+ }
+ 
 @font-face {
 	font-family: 'Marydale Regular';
 	font-style: normal;
